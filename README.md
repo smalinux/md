@@ -1,3 +1,3 @@
 
-- 2025-04-28: [fastboot](fastboot.md)
+- 2025-04-28: [fastboot](content/fastboot.md)
 - 
