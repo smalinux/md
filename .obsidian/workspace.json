@@ -165,9 +165,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "8522c2ebda74eb87",
+  "active": "06819ee7248cfa6e",
   "lastOpenFiles": [
-    "fastboot.md",
+    "content",
+    "content/fastboot.md",
     "README.md",
     "Makefile"
   ]
