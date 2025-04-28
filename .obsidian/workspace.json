@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "fastboot.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "fastboot"
+              "title": "README"
             }
           }
         ]
@@ -167,6 +167,8 @@
   },
   "active": "8522c2ebda74eb87",
   "lastOpenFiles": [
-    "fastboot.md"
+    "fastboot.md",
+    "README.md",
+    "Makefile"
   ]
 }
