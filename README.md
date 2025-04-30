@@ -11,4 +11,6 @@
 - dotfiles: makeshift
 - My embedded linux dev setup
 - NeoPixel matrix: DMA & I2S
-- 
+- [am335x USB mode](content/am335x%20USB%20mode.md)
+- [dnsmasq](content/dnsmasq.md)
+- [My home server](content/My%20home%20server.md)

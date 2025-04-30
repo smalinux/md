@@ -19,3 +19,4 @@ Ubuntu@barebox $ ln -s /src/build/barebox/bbb/images/barebox-am33xx-beaglebone.i
 وثق اعدادات dnsmasq
 وليه استخدمت dnsmasq
 
+--------
