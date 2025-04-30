@@ -5,12 +5,17 @@
 change dns user
 
 
-  15  __success__ = echo all good; cp build/images/barebox-am33xx-beaglebone.img /tftpboot/none-barebox-am335x-bone-black
 
 
-
-add symlinks list of make shift
+==add symlinks list of make shift==
 ```
-Ubuntu@barebox $ ln -s /src/build/barebox/bbb/images/barebox-beagleboard.img /tftpboot/none-barebox-am335x-bone-black
+Ubuntu@barebox $ ln -s /src/build/barebox/bbb/images/barebox-am33xx-beaglebone.img /tftpboot/none-barebox-am335x-bone-black
 
 ```
+
+
+
+
+وثق اعدادات dnsmasq
+وليه استخدمت dnsmasq
+
