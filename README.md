@@ -4,6 +4,7 @@
 - [[Yocto]]
 - [Audio USB](Clippings/Audio%20USB.md)
 - [Pinctrl subsystem](Clippings/Pinctrl%20subsystem.md)
+- [Linux kernel setup](content/Linux%20kernel%20setup.md)
 - [Electronics - Shopping list](content/Electronics%20-%20Shopping%20list.md)
 - [fastboot](content/fastboot.md)
 - [barebox](content/barebox.md)
