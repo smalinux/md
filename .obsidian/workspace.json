@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
-                "mode": "source",
+                "file": "content/barebox.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "barebox"
             }
           },
           {
@@ -35,8 +35,7 @@
               "title": "Linux kernel setup"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -180,11 +179,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "81d3de04fe530c49",
+  "active": "df9ecd1b83199b1f",
   "lastOpenFiles": [
     "README.md",
     "content/Linux kernel setup.md",
     "content/Electronics - Shopping list.md",
+    "Clippings/Audio USB.md",
     "content/Secure boot.md",
     "content/tmp.md",
     "content/Tips.md",
@@ -198,7 +198,6 @@
     "content/am335x USB mode.md",
     "content/makeshift.md",
     "Clippings/Pinctrl subsystem.md",
-    "Clippings/Audio USB.md",
     "assets/Pasted image 20250429224658.png",
     "Clippings",
     "content/Linux corner.md",
