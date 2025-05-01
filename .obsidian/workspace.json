@@ -35,7 +35,8 @@
               "title": "Linux kernel setup"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -179,8 +180,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "df9ecd1b83199b1f",
+  "active": "81d3de04fe530c49",
   "lastOpenFiles": [
+    "content/barebox.md",
     "README.md",
     "content/Linux kernel setup.md",
     "content/Electronics - Shopping list.md",
@@ -190,7 +192,6 @@
     "content/Tips.md",
     "content/Yocto.md",
     "content/dnsmasq.md",
-    "content/barebox.md",
     "content/My home server.md",
     "content/BBBlfs.md",
     "content/hacker spaces in Vienna.md",
