@@ -19,3 +19,11 @@ https://fosdem.org/2025/schedule/event/fosdem-2025-6103-usb9pfs-network-booting-
 ____
 تخيل ان overlayfs دا filesystem فى اللينكس! :)
 __________
+Proxmox
+____
+Git bisect
+____
+postmarketos
+____
+بيقارن بين الاسعار: https://geizhals.at/
+___

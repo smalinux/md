@@ -51,6 +51,7 @@ A3f setup:
 - 2 usb hub
 - NUC form factor: server up 24 hour
 - https://www.bee-link.com/products/beelink-mini-s12-pro-n100
+- لازم يكون intel nuc علشان الـ infrastructure ما تقعدش تعدل فيها كل شويه
 
 ____
 Labgrid

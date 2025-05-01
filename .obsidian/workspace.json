@@ -83,12 +83,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "content/Tips.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "Tips"
             }
           },
           {
@@ -280,15 +280,15 @@
   },
   "active": "8cd00adb55929dca",
   "lastOpenFiles": [
-    "content/Secure boot.md",
     "README.md",
+    "content/Yocto.md",
+    "content/My home server.md",
+    "content/Secure boot.md",
     "content/Electronics - Shopping list.md",
     "content/barebox.md",
-    "content/My home server.md",
     "content/BBBlfs.md",
     "content/Tips.md",
     "content/tmp.md",
-    "content/Yocto.md",
     "content/hacker spaces in Vienna.md",
     "assets/Pasted image 20250430225243.png",
     "content/am335x USB mode.md",
