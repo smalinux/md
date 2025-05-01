@@ -16,4 +16,5 @@
 - [dnsmasq](content/dnsmasq.md)
 - [My home server](content/My%20home%20server.md)
 - [Tips](content/Tips.md)
+- [Secure boot](content/Secure%20boot.md)
 - 

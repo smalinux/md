@@ -167,3 +167,6 @@ Miscellaneous
       https://powkiddy.com/products/pre-sale-powkiddy-rgb30-rk3566-handheld-game-console-built-in-wifi
 - [ ] Cheap imx board: https://linuxgizmos.com/debix-model-b-sbc-targets-industrial-applications/
 - [x] conecto, Hohlstecker-Adapter, Niedervolt-Ladekabel, 2.5mm Hohlstecker auf USB Typ A Stecker, 60cm, schwarz
+- [x] https://pine64eu.com/product/pinepower-65w-gan-portable-power-supply/
+- [ ] https://wiki.pine64.org/wiki/Pinecil_Power_Supplies
+- [x] UGREEN USB C Cable 240 W Power Delivery 3.1 Charging Cable USB C to USB C Compatible with iPhone 16, iPhone 15, M3 MacBook Pro/Air, Gaming Laptop, iPad Pro/Air 2024, Galaxy S24 Ultra Steam Deck etc.
