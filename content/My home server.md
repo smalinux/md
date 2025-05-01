@@ -45,4 +45,14 @@ https://olayiwolaayinde.medium.com/embedded-systems-how-to-become-an-industry-ex
 A3f setup:
 - fritzbox : router
 - https://github.com/a3f/cloudflare-dyndns
-- 
+- WireGuard VPN
+- cloudflare zero trust tunnel
+- labgrid https://linux-automation.com/en/products/lxa-tac.html
+- 2 usb hub
+- NUC form factor: server up 24 hour
+- https://www.bee-link.com/products/beelink-mini-s12-pro-n100
+
+____
+Labgrid
+
+https://pengutronix.de/en/blog/2021-09-16-labgrid-tutorials.html

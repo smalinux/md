@@ -29,3 +29,12 @@ There is initial support upstream and some more support here:
 https://github.com/jmaselbas/barebox
 You can reach out to the author on the barebox IRC
 More hardware support is always welcome
+
+--------
+
+uboot:
+	user nv.user=none
+	server: netserver ip
+	nfs: server port, use env vars to fix this port number, and choose high number of nfs
+	global.nfsserver
+	

@@ -130,8 +130,9 @@ Miscellaneous
 - [x] ~~Multimeter (for measurements and debugging, DMM)~~  
 - [ ] Oscilloscope  
 - [ ] Signal generator  
-- [ ] Soldering kit (optional, for advanced projects)  
-      There’s USB-C soldering irons, which I’d probably go for if I didn’t already have one  
+- [x] Soldering kit (optional, for advanced projects)  
+	- [ ] https://www.ifixit.com/de-de/products/fixhub-power-series-portable-soldering-station
+	- [ ] 
 - [ ] Adhesive materials (double-sided tape, glue)  
 - [x] ~~Arduino~~  
 - [x] ~~Arduino starter kit~~  
@@ -152,8 +153,7 @@ Miscellaneous
 - [ ] اشترى Digilent Discovery
 
 - [x] [https://uart-adapter.com/](https://uart-adapter.com/)  
-- [ ] [https://pine64.com/product/pinecil-smart-mini-portable-soldering-iron/](https://pine64.com/product/pinecil-smart-mini-portable-soldering-iron/)  
-- [ ] 
+- [x] [https://pine64.com/product/pinecil-smart-mini-portable-soldering-iron/](https://pine64.com/product/pinecil-smart-mini-portable-soldering-iron/)  
 
 ---
 - [x] D-link (DUB-H7) (840356736006) 7-Port
