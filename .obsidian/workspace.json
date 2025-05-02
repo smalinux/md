@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "raindrop/BBB/Search Results.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "Search Results"
             }
           }
         ],
@@ -93,7 +93,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 569.5
   },
   "right": {
     "id": "00e8531b7b73c201",
@@ -181,34 +181,40 @@
       "obsidian-raindrop-highlights:Sync your Raindrop bookmarks": false
     }
   },
-  "active": "81d3de04fe530c49",
+  "active": "06819ee7248cfa6e",
   "lastOpenFiles": [
     "content/Linux kernel setup.md",
+    "raindrop/BBB/Dave Cheney  The acme of foolishness.md",
+    "raindrop/BBB/armhf.com  Ubuntu and Wheezy Images for ARMhf Devices.md",
+    "raindrop/BBB/Two Six Technologies  Mission Focused. Impact Driven.md",
+    "raindrop/BBB/Kiwi Electronics.md",
+    "raindrop/BBB/IoT modems and IoT shields [LTE CATM1, NBIoT, 4G, 3G, GSM], GNSS and SENSORS - Arduino, Teensy, Beaglebone and Raspberry PI compatible - home of THE ALPHABET PROJECT.md",
+    "raindrop/BBB/Jürgen Stuber.md",
+    "raindrop/BBB/casualhacking.md",
+    "raindrop/BBB/Cycling and Coding Around the World.md",
+    "raindrop/BBB/Yours for the making - Instructables.md",
+    "raindrop/BBB/Linux Automation - Linux Automation GmbH.md",
+    "raindrop/BBB/Leading IoT Wireless Product &amp; Solution Provider  Feasycom.md",
+    "raindrop/BBB/Microcontroller Tutorials.md",
+    "raindrop/BBB/The lunatic’s Blog.md",
+    "raindrop/BBB/Jamesfitzsimons.com.md",
+    "raindrop/BBB/Modbus &amp; Embedded Systems.md",
+    "raindrop/BBB/Blog  embear GmbH.md",
+    "raindrop/BBB/Wired &amp;&amp; Coded;.md",
+    "raindrop/BBB/NCC Group  Leading Cyber Security &amp; Managed Services.md",
+    "raindrop/BBB/There’s A Hole In Your SoC Glitching The MediaTek BootROM.md",
+    "raindrop/BBB/sysplaybbb Experiments, Learning, Sharing done at SysPlay on BeagleBone Black.md",
+    "raindrop/BBB/Preface  Introduction.md",
+    "raindrop/BBB/Uros Popovic.md",
+    "raindrop/BBB/Beyondlogic – Electronics Hardware – Embedded Linux – Internet of Things.md",
+    "raindrop/BBB/BeyondLogic.md",
+    "raindrop/BBB/Beej&39;s Guide to Network Programming.md",
+    "raindrop/BBB",
     "raindrop",
-    "content/barebox.md",
-    "README.md",
-    "content/Electronics - Shopping list.md",
-    "Clippings/Audio USB.md",
-    "content/Secure boot.md",
-    "content/tmp.md",
-    "content/Tips.md",
-    "content/Yocto.md",
-    "content/dnsmasq.md",
-    "content/My home server.md",
-    "content/BBBlfs.md",
-    "content/hacker spaces in Vienna.md",
     "assets/Pasted image 20250430225243.png",
-    "content/am335x USB mode.md",
-    "content/makeshift.md",
-    "Clippings/Pinctrl subsystem.md",
     "assets/Pasted image 20250429224658.png",
     "Clippings",
-    "content/Linux corner.md",
-    "content/rootfs.md",
-    "content/labgrid.md",
-    "content/fastboot.md",
     "assets/Pasted image 20250429002224.png",
-    "content/rand.md",
     "assets/Pasted image 20250429001740.png",
     "assets",
     "Pasted image 20250429001648.png",

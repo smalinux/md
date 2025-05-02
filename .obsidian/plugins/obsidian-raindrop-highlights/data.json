@@ -7,7 +7,7 @@
   "collectionsFolders": true,
   "onlyBookmarksWithHl": false,
   "highlightsFolder": "raindrop",
-  "collectionGroups": false,
+  "collectionGroups": true,
   "autoSyncSuccessNotice": true,
   "syncCollections": {
     "0": {
@@ -18,7 +18,8 @@
     "53875792": {
       "id": 53875792,
       "title": "BBB",
-      "sync": false
+      "sync": true,
+      "lastSyncDate": "2025-05-02T18:48:07.531Z"
     },
     "54031135": {
       "id": 54031135,
