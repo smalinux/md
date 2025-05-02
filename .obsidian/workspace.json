@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Linux kernel setup.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Linux kernel setup"
+              "title": "README"
             }
           }
         ],
@@ -177,14 +177,16 @@
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
-      "command-palette:Open command palette": false
+      "command-palette:Open command palette": false,
+      "obsidian-raindrop-highlights:Sync your Raindrop bookmarks": false
     }
   },
   "active": "81d3de04fe530c49",
   "lastOpenFiles": [
+    "content/Linux kernel setup.md",
+    "raindrop",
     "content/barebox.md",
     "README.md",
-    "content/Linux kernel setup.md",
     "content/Electronics - Shopping list.md",
     "Clippings/Audio USB.md",
     "content/Secure boot.md",
