@@ -31,4 +31,19 @@ time sudo bmaptool copy build/images/sdcard.img /dev/sda
 الحاجه الوحيده اللى الكلام دا ماينطبقش عليها هو الكيرنال, غير كدا اى package او init system بلاش تعمل حلول custom 
 
 
-update git buildroot-bbb
+Git worktree: https://github.com/smalinux/buildroot-bbb
+
+
+
+
+- rootfs read-only: BR2_ROOTFS_READ_ONLY
+
+>
+>Write a small systemd service or script to:
+>Check if the device is formatted.
+>If not, format it.
+>Mount it or let mnt-data.mount handle it afterward.
+
+زى ما مهم بالنسبالى ان الـ rootfs يكون ابسط ما يمكن, كمان مهم بالنسبالى ان الـ rootfs يكون scalable
+اقدر انقل منه لاى rootfs تانى, دا هيسهل حياتى وهيسهل انى اكتب configuration 
+
