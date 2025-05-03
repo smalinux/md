@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Linux kernel setup.md",
+                "file": "raindrop/BBB/FOSDEM 2025 - usb9pfs network booting without the network.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Linux kernel setup"
+              "title": "FOSDEM 2025 - usb9pfs network booting without the network"
             }
           }
         ],
@@ -68,7 +68,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "9p",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -89,7 +89,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -183,9 +184,9 @@
   },
   "active": "81d3de04fe530c49",
   "lastOpenFiles": [
+    "content/Linux kernel setup.md",
     "README.md",
     "raindrop/BBB/Search Results.md",
-    "content/Linux kernel setup.md",
     "raindrop/BBB/Dave Cheney  The acme of foolishness.md",
     "raindrop/BBB/armhf.com  Ubuntu and Wheezy Images for ARMhf Devices.md",
     "raindrop/BBB/Two Six Technologies  Mission Focused. Impact Driven.md",
