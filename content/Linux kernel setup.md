@@ -47,3 +47,17 @@ Git worktree: https://github.com/smalinux/buildroot-bbb
 زى ما مهم بالنسبالى ان الـ rootfs يكون ابسط ما يمكن, كمان مهم بالنسبالى ان الـ rootfs يكون scalable
 اقدر انقل منه لاى rootfs تانى, دا هيسهل حياتى وهيسهل انى اكتب configuration 
 
+
+## Systemd
+
+> restart
+
+systemctl daemon-reexec
+systemctl daemon-reload
+systemctl list-unit-files | grep overlay
+
+
+
+عايز احتفظ بأى .config موجود فى كل الـ package
+مش بس بتاع uboot & linux & buildroot
+
