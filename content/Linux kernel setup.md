@@ -48,7 +48,7 @@ Git worktree: https://github.com/smalinux/buildroot-bbb
 اقدر انقل منه لاى rootfs تانى, دا هيسهل حياتى وهيسهل انى اكتب configuration 
 
 
-## Systemd
+## [systemd](systemd.md)
 
 > restart
 
