@@ -1,8 +1,10 @@
-What I want?
-1. عايز cheat sheet
-2. عايز list بكل الحاجات الممكنه اللى ممكن تتعمل فى الدنيا بالـ systemd
-3. عايز اتفرج على جهاز موجود فى الـ production واعرف كل الحاجات اللى بيعملها
-4. عايز اشوف الـ host machine بتاعتى فيها services ايه
+انا عايز ايه؟
+ - [x] عايز cheat sheet
+- [ ] عايز list بكل الحاجات الممكنه اللى ممكن تتعمل فى الدنيا بالـ systemd
+- [ ] عايز اتفرج على جهاز موجود فى الـ production واعرف كل الحاجات اللى بيعملها
+- [ ] عايز اشوف الـ host machine بتاعتى فيها services ايه
+   عيب لما تبقى مش عارف, لو مش عارف, هتضطر تخترع العجله.
+- [ ] how to add default list for all ur enabled units
 _____
 
 [29-Day-14\_Understanding\_Systemd - YouTube](https://youtu.be/KnPd955zBcE?si=xlSGD1YZWC0Gk2pS)
@@ -14,11 +16,30 @@ _____
 | $ jornald        | syslog & rsyslog      |
 
 
+
+| systemd active               | systemd enabled                      |
+| ---------------------------- | ------------------------------------ |
+| means it is active right now | means it will be enable at boot time |
+
+
 ```bash
-$ systemctrl
-$ jornald
+$ systemctrl -h
+$ journalctrl -h
 ```
 
+
+```shell
+systemctl <tab><tab>
+```
+
+ملفات الـ units كلها هنا:
+```
+ls /usr/lib/systemd
+```
+ لو عملت لاى منهم enable بيتعملها symlink تحت:
+```
+/etc/systemd/system 
+```
 
 
 # [Systemd cheatsheet](https://gist.github.com/mbodo/8f87c96ce11e91f80fbf6175412a2206#linux---systemd-cheatsheet)
@@ -62,12 +83,25 @@ systemctl disable foo.service
 ```
 
 Check whether a service is already enabled or not:
-
 0 indicates that it is enabled. 1 indicates that it is disabled
 
 ```shell
 systemctl is-enabled foo.service; echo $?
 ```
+
+الامر دا هيعمل block تماماً, مهما تحاول تشغل الـ service هتفضل مقفوله, حتى لو قولها start
+دا بيحميك تغلط وتفتح service مش مسموحلها انها تشتغل, بسبب ان فيه service تانيه شغاله على نفس الـ port وعايز تعمل block علشان حتى لو نسيت وحاولت تشغلها ما تشتغلش
+مثلا apache & nginx بسبب انهم شغالين على نفس الـ port
+
+```shell
+systemctl mask crond
+```
+
+عايز اشيل البلوك:
+```shell
+systemctl unmask crond
+```
+
 
 Change ad-hoc runlevel with systemctl isolate command:
 
@@ -169,10 +203,141 @@ sshd.service                                  enabled
 sysstat.service                               enabled 
 ...
 ```
+systemctl list-unit-files == for listing files under */usr/lib/systemd/system*
 
 > Link
 
 - [how-to-list-all-enabled-services-from-systemctl](https://askubuntu.com/questions/795226/how-to-list-all-enabled-services-from-systemctl)
+
+==systemctl list-unit-files==
+
+لو عدلت فى ملفات target لازم تعمل reload لكل ملفات الـ configuration بتاعت systemd
+```shell
+systemctl daemon-reload
+```
+
+## target
+اظن التسميه الأحلى هو الاسم القديمه: runlevel
+احلى شرح هو شرح باشمهندس مصطفى حموده.
+
+لو قارنّاها بـ `runlevels` في النظام القديم (SysVinit):
+
+| SysV Runlevel | systemd Target    |
+| ------------- | ----------------- |
+| 1             | rescue.target     |
+| 3             | multi-user.target |
+| 5             | graphical.target  |
+| 0             | poweroff.target   |
+| 6             | reboot.target     |
+
+- `multi-user.target` ⇠ هو وضع النظام الذي يشغّل الخدمات الأساسية + الشبكة + تسجيل الدخول عن طريق الطرفية (بدون واجهة رسومية).
+
+- `graphical.target` ⇠ نفس `multi-user` بالإضافة إلى واجهة رسومية (GUI).
+
+- `rescue.target` ⇠ وضع الإنقاذ (وضع صيانة، يشغّل أقل عدد ممكن من الخدمات).
+
+- `default.target` ⇠ هو الرابط الرمزي (`symlink`) الذي يحدد أي Target يتم تشغيله عند الإقلاع (boot).
+
+الـ tricks فى الموضوع:
+لو عايز تقفل حاجه اعملها mask
+
+عرض التارجت الحالي:
+```
+systemctl get-default
+```
+تغييره:
+```
+sudo systemctl set-default multi-user.target
+```
+التبديل إليه حالًا:
+```
+sudo systemctl isolate multi-user.target
+```
+
+عرض كل التارجتس:
+```
+systemctl list-units --type=target --all
+```
+
+✅ مثال عملي
+لو أردت تشغيل نظام بدون واجهة رسومية (مثلاً على BeagleBone أو سيرفر):
+
+```
+sudo systemctl set-default multi-user.target
+```
+
+ولو أردت إعادة الواجهة الرسومية بعدين:
+
+```
+sudo systemctl set-default graphical.target
+```
+
+### ازاى تعمل target خاص بيك فى مشروع:
+العنوان دا مش دقيق. الصح: ازاى تضيف unit او service علشان تشتغل تحت target معين
+فى الـ SysVinit كام Sxxname و Kxxname
+
+### ✅ **متى تحتاج `target` مخصص؟**
+
+- لو عندك مجموعة من الخدمات تعمل معًا لمهمة واحدة.
+- لو عايز تقلّل وقت الإقلاع بتشغيل الضروري فقط.
+- لو عايز تبني نظام صغير (مثل kiosk، أو جهاز ذكي).
+
+### 🛠️ **خطوات إنشاء `target` مخصص**
+
+#### 1. **أنشئ ملف الـ target**
+
+مثلاً نعمل واحد اسمه `myproject.target`:
+
+```ini
+# /etc/systemd/system/myproject.target
+[Unit]
+Description=My Custom Project Target
+Requires=myapp.service
+After=network.target
+
+[Install]
+WantedBy=multi-user.target
+```
+
+- `Requires=` ⇠ يحدد الوحدات الضرورية (يتم إيقاف التشغيل إن فشلت).
+- `After=` ⇠ الترتيب الزمني.
+- `WantedBy=multi-user.target` ⇠ يعني إنه ممكن تفعيله ضمن الإقلاع العادي.
+
+#### 2. **أضف الخدمات الخاصة بك**
+
+مثلاً `myapp.service`:
+
+```ini
+# /etc/systemd/system/myapp.service
+[Unit]
+Description=My App Service
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/myapp
+Restart=always
+
+[Install]
+WantedBy=myproject.target
+```
+
+#### 3. **فعّل الـ target الجديد**
+
+```bash
+sudo systemctl daemon-reexec
+sudo systemctl daemon-reload
+sudo systemctl enable myproject.target
+```
+#### 4. **اجعله الهدف الافتراضي (اختياري)**
+
+```bash
+sudo systemctl set-default myproject.target
+```
+### ✅ **تشغيله يدويًا للتجربة**
+
+```bash
+sudo systemctl isolate myproject.target
+```
 
 
 ## journal
@@ -187,6 +352,133 @@ Show logs for ssh only
 jornalctrl
 ```
 
+## 🧠 ما هو `journal` في systemd؟
+
+`journal` هو نظام تسجيل (Logging system) مدمج في `systemd`. وظيفته الأساسية هي:
+
+> **تخزين وعرض كل رسائل السجل (logs)** التي تنتجها الخدمات (services)، النواة (kernel)، والمكونات الأخرى للنظام.
+
+هو بديل حديث لـ `rsyslog` أو `syslog` التقليدي.
+
+
+### ✅ مميزات `systemd-journald`
+
+- يدمج كل أنواع الرسائل: `kernel logs` + `stdout/stderr` من الخدمات + رسائل النظام.
+- يُخزَّن بشكل ثنائي (binary) وليس نص عادي.
+- يدعم الفلترة القوية (حسب الخدمة، الوقت، الأولوية، ...).
+- يمكن إرساله إلى syslog أو ملفات نصية لو تحب.
+
+
+## 🛠️ أهم الأوامر مع `journalctl`
+
+|الأمر|الوظيفة|
+|---|---|
+|`journalctl`|عرض كل السجلات|
+|`journalctl -b`|عرض سجلات الإقلاع الحالي فقط|
+|`journalctl -xe`|عرض الأخطاء الأخيرة بتفاصيل موسعة|
+|`journalctl -u myservice.service`|عرض السجل الخاص بخدمة معينة|
+|`journalctl --since "10 minutes ago"`|عرض السجل من وقت معين|
+|`journalctl -f`|متابعة السجل لحظة بلحظة (مثل `tail -f`)|
+
+
+## 📁 أين يُخزَّن السجل؟
+
+1. إذا كان التخزين الدائم مفعلًا:
+
+    ```bash
+    /var/log/journal/
+    ```
+
+2. إذا لم يكن مفعلًا، يُخزَّن مؤقتًا في:
+
+    ```bash
+    /run/log/journal/
+    ```
+
+
+> التخزين المؤقت يختفي عند إعادة التشغيل.
+
+### ⚙️ كيف أفعل التخزين الدائم؟
+
+```bash
+sudo mkdir -p /var/log/journal
+sudo systemd-tmpfiles --create --prefix /var/log/journal
+sudo systemctl restart systemd-journald
+```
+
+### ✅ مثال عملي
+
+لو عندك خدمة اسمها `myapp.service` وتريد تشوف سجلها:
+
+```bash
+journalctl -u myapp.service -f
+```
+
+
+# 🧾 `journalctl` Cheat Sheet
+
+## 📦 الأساسيات
+
+|الأمر|المعنى|
+|---|---|
+|`journalctl`|عرض كل السجلات|
+|`journalctl -b`|سجلات جلسة الإقلاع الحالية|
+|`journalctl -b -1`|سجلات الإقلاع السابق|
+|`journalctl -f`|متابعة السجل مباشرة (مثل `tail -f`)|
+|`journalctl -r`|عرض السجلات بترتيب عكسي (الأحدث أولًا)|
+
+## 🔍 فلترة حسب خدمة
+
+|الأمر|المعنى|
+|---|---|
+|`journalctl -u myservice`|سجلات خدمة محددة|
+|`journalctl -u myservice -b`|سجلات الخدمة منذ الإقلاع الحالي فقط|
+|`journalctl -u myservice -f`|متابعة حيّة لسجلات الخدمة|
+
+## ⏰ فلترة حسب الوقت
+
+|الأمر|المعنى|
+|---|---|
+|`journalctl --since "2025-05-01 12:00"`|من وقت معين|
+|`journalctl --until "2025-05-01 13:00"`|إلى وقت معين|
+|`journalctl --since "1 hour ago"`|من آخر ساعة|
+|`journalctl --since yesterday`|من البارحة|
+
+## ⚠️ فلترة حسب الأولوية (Priority)
+
+| الأمر                   | المعنى                      |
+| ----------------------- | --------------------------- |
+| `journalctl -p err`     | فقط الأخطاء (`err` فما فوق) |
+| `journalctl -p warning` | التحذيرات فما فوق           |
+| `journalctl -p debug`   | كل شيء حتى `debug`          |
+
+|القيمة|المعنى|
+|---|---|
+|0|emerg (كارثة)|
+|1|alert|
+|2|crit|
+|3|err (خطأ)|
+|4|warning|
+|5|notice|
+|6|info|
+|7|debug|
+
+## 🧰 خيارات مفيدة
+
+|الأمر|المعنى|
+|---|---|
+|`journalctl -xe`|عرض الأخطاء الموسعة (مفيد عند فشل خدمة)|
+|`journalctl --no-pager`|عرض بدون شاشة تمرير (`less`)|
+|`journalctl --disk-usage`|معرفة حجم السجل على القرص|
+|`journalctl --list-boots`|عرض جميع جلسات الإقلاع المتاحة|
+
+## 💾 تمكين التخزين الدائم
+
+```bash
+sudo mkdir -p /var/log/journal
+sudo systemd-tmpfiles --create --prefix /var/log/journal
+sudo systemctl restart systemd-journald
+```
 
 
 ----

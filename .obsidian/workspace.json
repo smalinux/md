@@ -34,9 +34,37 @@
               "icon": "lucide-file",
               "title": "systemd"
             }
+          },
+          {
+            "id": "19ddf243b67fb9f4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/fstab.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "fstab"
+            }
+          },
+          {
+            "id": "ff2b723e3cb3dee9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/Genimage.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Genimage"
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -182,11 +210,14 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "b19a30b1ae0cc265",
+  "active": "ff2b723e3cb3dee9",
   "lastOpenFiles": [
+    "content/Genimage.md",
+    "content/fstab.md",
+    "content/systemd.md",
+    "Untitled.md",
     "content/Linux kernel setup.md",
     "README.md",
-    "content/systemd.md",
     "content/barebox.md",
     "raindrop/BBB/FOSDEM 2025 - usb9pfs network booting without the network.md",
     "raindrop/BBB/Search Results.md",
@@ -207,9 +238,6 @@
     "raindrop/BBB/Modbus &amp; Embedded Systems.md",
     "raindrop/BBB/Blog  embear GmbH.md",
     "raindrop/BBB/Wired &amp;&amp; Coded;.md",
-    "raindrop/BBB/NCC Group  Leading Cyber Security &amp; Managed Services.md",
-    "raindrop/BBB/There’s A Hole In Your SoC Glitching The MediaTek BootROM.md",
-    "raindrop/BBB/sysplaybbb Experiments, Learning, Sharing done at SysPlay on BeagleBone Black.md",
     "raindrop/BBB",
     "raindrop",
     "assets/Pasted image 20250430225243.png",
