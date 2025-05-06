@@ -49,6 +49,9 @@ Git worktree: https://github.com/smalinux/buildroot-bbb
 
 
 ## [systemd](systemd.md)
+ليه انا اظطريت اركز مع systemd غصب عنى: علشان احتاجت data partition
+وبعد بحث كتير لقيت ان احسن طريقه يتعمل بيها هو الـ init system 
+دى الطريقه الواقعيه
 
 > restart
 
@@ -58,6 +61,8 @@ systemctl list-unit-files | grep overlay
 
 
 
-عايز احتفظ بأى .config موجود فى كل الـ package
-مش بس بتاع uboot & linux & buildroot
+==عايز احتفظ بأى .config موجود فى كل الـ package مش بس بتاع uboot & linux & buildroot==
 
+## [fstab](fstab.md)
+## [Genimage](Genimage.md)
+## [[Rauc]]

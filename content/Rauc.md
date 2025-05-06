@@ -1,0 +1,1 @@
+minimal Rauc integration with buildroot

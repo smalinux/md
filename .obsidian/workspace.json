@@ -22,6 +22,20 @@
             }
           },
           {
+            "id": "fd1ab125d5f3c781",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/Rauc.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Rauc"
+            }
+          },
+          {
             "id": "b19a30b1ae0cc265",
             "type": "leaf",
             "state": {
@@ -63,8 +77,7 @@
               "title": "Genimage"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -210,13 +223,15 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "ff2b723e3cb3dee9",
+  "active": "13e934eaeac885e9",
   "lastOpenFiles": [
+    "raindrop/BBB/CLFS Trac.md",
+    "content/Rauc.md",
+    "content/Linux kernel setup.md",
     "content/Genimage.md",
     "content/fstab.md",
     "content/systemd.md",
     "Untitled.md",
-    "content/Linux kernel setup.md",
     "README.md",
     "content/barebox.md",
     "raindrop/BBB/FOSDEM 2025 - usb9pfs network booting without the network.md",
@@ -236,8 +251,6 @@
     "raindrop/BBB/The lunatic’s Blog.md",
     "raindrop/BBB/Jamesfitzsimons.com.md",
     "raindrop/BBB/Modbus &amp; Embedded Systems.md",
-    "raindrop/BBB/Blog  embear GmbH.md",
-    "raindrop/BBB/Wired &amp;&amp; Coded;.md",
     "raindrop/BBB",
     "raindrop",
     "assets/Pasted image 20250430225243.png",
