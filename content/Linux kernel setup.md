@@ -1,5 +1,4 @@
 
-dotfiles: makeshift
 
 - [dnsmasq](content/dnsmasq.md)
 - load rootfs from tftp, better than nfs!
@@ -13,9 +12,14 @@ bmaptool create build/images/sdcard.img > build/images/sdcard.bmap
 time sudo bmaptool copy build/images/sdcard.img /dev/sda
 ```
 
-
+# Buildroot
+- [ ] use external Linux source, (out-of-tree)
+- [x] enable systemd
+- [x] use fs_overlay
+- [ ] 
 # makeshift
-- I added make savedefconfig with everysingle make
+- [x] run $ m savedefconfig  after every $ m
+- [ ] 
 
 
 # persistent data partition
@@ -69,6 +73,15 @@ systemctl list-unit-files | grep overlay
 
 
 ## NFS
+علشان تخلى الكيرنال تعمل nfs boot لازم توفر الـ kernel configs اللى تسمح بكده
+من غيره, الـ nfs server اللى هتسطبه ولا ليه اى لزمه:
+```
+CONFIG_NFS_FS=y
+CONFIG_ROOT_NFS=y
+CONFIG_IP_PNP=y
+CONFIG_IP_PNP_DHCP=y
+CONFIG_NFS_V3=y
+```
 
 ```
 sudo apt install nfs-kernel-server nfs-common
@@ -78,3 +91,9 @@ sudo systemctl enable nfs-server
 ```
 
 عايز احاول اعمل symlinks لكل الـ target dirs فى nfs
+
+# U-boot env
+```
+dhcp; setenv serverip 192.168.0.134; setenv kernel_file zImage; setenv fdt_file am335x-boneblack.dtb; setenv loadaddr 0x82000000; setenv fdtaddr 0x88000000; setenv tftpbootcmd 'tftp ${loadaddr} ${kernel_file}; tftp ${fdtaddr} ${fdt_file}'; setenv nfsroot /src/build/buildroot/bbb/target; setenv bootargs 'console=ttyO0,115200 root=/dev/nfs nfsroot=${serverip}:${nfsroot},nolock,rw,v3 ip=dhcp rootwait'; setenv bootcmd 'run tftpbootcmd; bootz ${loadaddr} - ${fdtaddr}'; saveenv; reset
+
+```
