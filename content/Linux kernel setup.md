@@ -126,6 +126,7 @@ sudo apt install gcc-arm-linux-gnueabihf
 - [ ] شيل الحاجات اللى بتبطأ الـ boot من yocto وحاول تخلى الـ boot اسرع ما يمكن
 - [ ] انقل الكيرنال مع rootfs علشان تعرف تعمل update بسهوله
 - [x] الـ data patition موجود already !!
+- [ ] شغل barebox جوا poky بدل uboot
 - [ ] 
 
 
