@@ -66,3 +66,15 @@ systemctl list-unit-files | grep overlay
 ## [fstab](fstab.md)
 ## [Genimage](Genimage.md)
 ## [[Rauc]]
+
+
+## NFS
+
+```
+sudo apt install nfs-kernel-server nfs-common
+sudo exportfs -ra
+sudo systemctl start nfs-server
+sudo systemctl enable nfs-server
+```
+
+عايز احاول اعمل symlinks لكل الـ target dirs فى nfs
