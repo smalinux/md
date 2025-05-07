@@ -16,6 +16,7 @@ time sudo bmaptool copy build/images/sdcard.img /dev/sda
 - [ ] use external Linux source, (out-of-tree)
 - [x] enable systemd
 - [x] use fs_overlay
+- [ ] use external toolchain
 - [ ] 
 # makeshift
 - [x] run $ m savedefconfig  after every $ m
@@ -94,6 +95,27 @@ sudo systemctl enable nfs-server
 
 # U-boot env
 ```
-dhcp; setenv serverip 192.168.0.134; setenv kernel_file zImage; setenv fdt_file am335x-boneblack.dtb; setenv loadaddr 0x82000000; setenv fdtaddr 0x88000000; setenv tftpbootcmd 'tftp ${loadaddr} ${kernel_file}; tftp ${fdtaddr} ${fdt_file}'; setenv nfsroot /src/build/buildroot/bbb/target; setenv bootargs 'console=ttyO0,115200 root=/dev/nfs nfsroot=${serverip}:${nfsroot},nolock,rw,v3 ip=dhcp rootwait'; setenv bootcmd 'run tftpbootcmd; bootz ${loadaddr} - ${fdtaddr}'; saveenv; reset
+setenv serverip 192.168.0.134
+setenv ipaddr 192.168.0.10
 
+tftpboot 0x82000000 zImage
+tftpboot 0x88000000 am335x-boneblack.dtb
+
+setenv bootargs "console=ttyO0,115200 root=/dev/nfs rw nfsroot=192.168.1.100:/srv/nfs/rootfs,tcp ip=192.168.1.10:::::eth0:"
+setenv bootargs "console=ttyO0,115200 root=/dev/nfs rw nfsroot=192.168.0.134:/nfsroot,tcp ip=dhcp"
+
+bootz 0x82000000 - 0x88000000
 ```
+
+
+# apt
+```
+# toolchain
+sudo apt install gcc-arm-linux-gnueabihf
+```
+
+
+
+# Progress
+- [ ] NFS & u-boot ❌
+- [ ] use 

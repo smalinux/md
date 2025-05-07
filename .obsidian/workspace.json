@@ -150,6 +150,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "content/Linux kernel setup.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -159,7 +160,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for Linux kernel setup"
             }
           },
           {
@@ -196,20 +197,21 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "content/Linux kernel setup.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of Linux kernel setup"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -223,7 +225,7 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "13e934eaeac885e9",
+  "active": "05a75b5dfb1f9cb3",
   "lastOpenFiles": [
     "raindrop/BBB/CLFS Trac.md",
     "content/Rauc.md",
