@@ -539,3 +539,13 @@ Digital Ocean:
 - [systemd-essentials-working-with-services-units-and-the-journal] ([https://www.digitalocean.com/community/tutorials/systemd-essentials-working-with-services-units-and-the-journal](https://www.digitalocean.com/community/tutorials/systemd-essentials-working-with-services-units-and-the-journal))
 - [How-to-use-systemctl-to-manage-systemd-services-and-units] ([https://www.digitalocean.com/community/tutorials/how-to-use-systemctl-to-manage-systemd-services-and-units](https://www.digitalocean.com/community/tutorials/how-to-use-systemctl-to-manage-systemd-services-and-units))
 - [Understanding-systemd-units-and-unit-files] [https://www.digitalocean.com/community/tutorials/understanding-systemd-units-and-unit-files](https://www.digitalocean.com/community/tutorials/understanding-systemd-units-and-unit-files)
+
+
+
+
+_____
+# فرغ اللينكات دى
+- [ ] [systemctl cheat sheet - Linux Audit](https://linux-audit.com/cheat-sheets/systemctl/)
+- [ ] [access.redhat.com/sites/default/files/attachments/12052018\_systemd\_6.pdf](https://access.redhat.com/sites/default/files/attachments/12052018_systemd_6.pdf)
+- [ ] [systemd embedded - YouTube](https://www.youtube.com/results?search_query=systemd+embedded)
+- [ ] 

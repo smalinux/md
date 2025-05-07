@@ -225,14 +225,15 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "05a75b5dfb1f9cb3",
+  "active": "13e934eaeac885e9",
   "lastOpenFiles": [
+    "content/systemd.md",
+    "raindrop/BBB/Your list  embedded 🥰.md",
+    "content/Linux kernel setup.md",
     "raindrop/BBB/CLFS Trac.md",
     "content/Rauc.md",
-    "content/Linux kernel setup.md",
     "content/Genimage.md",
     "content/fstab.md",
-    "content/systemd.md",
     "Untitled.md",
     "README.md",
     "content/barebox.md",
@@ -252,7 +253,6 @@
     "raindrop/BBB/Microcontroller Tutorials.md",
     "raindrop/BBB/The lunatic’s Blog.md",
     "raindrop/BBB/Jamesfitzsimons.com.md",
-    "raindrop/BBB/Modbus &amp; Embedded Systems.md",
     "raindrop/BBB",
     "raindrop",
     "assets/Pasted image 20250430225243.png",

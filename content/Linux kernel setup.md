@@ -1,47 +1,51 @@
 
+التصور العام, انا عايز ايه؟
+
+فيه اتجاهين:
+1- وقت التطوير
+2- وقت الـ deploy
+
+**وقت التطوير:**
+عندى repo برا تماماً yocto بعملها build وبتدينى شويه ملفات بيروحو تلقائى فى TFTP
+الـ uboot env فيها الوضع الافتراضى bootcmd=bootp
+وبالتالى مع كل repo بياخد الكيرنال من الـ TFTP وبياخد الـ rootfs من الـ poky-exporter
+تم!
+لو غيرت فى الـ Linux core هقدر اولد بتشات بسهوله واحطها فى yocto 
+الميزات:
+اكبر ميزه انى ما احتاجتش اشغل bitbake تانى علشان اشوف تغيراتى
+الـ rootfs بنسبه كبيره جدا سليم بسبب poky exporter
+العيوب:
+- 1
+- 2
+
+**وقت الـ deploy:**
+هتشغل bitbake مره واحده بس, بعيدن هشغل rauc وبكده هبقى غيرت كل الـ rootfs واخدت الكيرنال الجديده
+_____
 
 - [dnsmasq](content/dnsmasq.md)
-- load rootfs from tftp, better than nfs!
-- use external toolchain in buildroot
+- use external toolchain in yocto
 
 
-> flash buildroot sdcard.img FAST!
-
-```
-bmaptool create build/images/sdcard.img > build/images/sdcard.bmap
-time sudo bmaptool copy build/images/sdcard.img /dev/sda
-```
-
-# Buildroot
+# ~~Buildroot~~
 - [ ] use external Linux source, (out-of-tree)
 - [x] enable systemd
 - [x] use fs_overlay
 - [ ] use external toolchain
-- [ ] 
-# makeshift
-- [x] run $ m savedefconfig  after every $ m
-- [ ] 
-
-
-# persistent data partition
-## enable systemd
-## fs_overlay
-## use mmc as persistent data partition for now
-
-
-
 
 تجنب ديما تعدل اى حاجه فى buildroot غير من خلال الـ menuconfig
 اى تعديلات custom هتخليك تنقل بصعوبه جدا لـ version جديد
 الحاجه الوحيده اللى الكلام دا ماينطبقش عليها هو الكيرنال, غير كدا اى package او init system بلاش تعمل حلول custom 
+# makeshift
+- [x] run $ m savedefconfig  after every $ m
+- [ ] Git worktree: https://github.com/smalinux/buildroot-bbb
+- [ ] 
 
 
-Git worktree: https://github.com/smalinux/buildroot-bbb
-
-
-
-
-- rootfs read-only: BR2_ROOTFS_READ_ONLY
+# persistent data partition
+enable systemd
+fs_overlay
+use mmc as persistent data partition for now
+rootfs read-only: BR2_ROOTFS_READ_ONLY
 
 >
 >Write a small systemd service or script to:
@@ -66,7 +70,7 @@ systemctl list-unit-files | grep overlay
 
 
 
-==عايز احتفظ بأى .config موجود فى كل الـ package مش بس بتاع uboot & linux & buildroot==
+==عايز احتفظ بأى .config موجود فى كل الـ package مش بس بتاع uboot & linux & yocto==
 
 ## [fstab](fstab.md)
 ## [Genimage](Genimage.md)
@@ -101,8 +105,8 @@ setenv ipaddr 192.168.0.10
 tftpboot 0x82000000 zImage
 tftpboot 0x88000000 am335x-boneblack.dtb
 
-setenv bootargs "console=ttyO0,115200 root=/dev/nfs rw nfsroot=192.168.1.100:/srv/nfs/rootfs,tcp ip=192.168.1.10:::::eth0:"
-setenv bootargs "console=ttyO0,115200 root=/dev/nfs rw nfsroot=192.168.0.134:/nfsroot,tcp ip=dhcp"
+
+setenv bootargs "console=ttyO0,115200 root=/dev/nfs rw nfsroot=192.168.0.134:/src/yocto/build/bbb/nfsroot-core-image-bbb-bbb,nfsvers=3,port=3048,udp,mountport=3048"
 
 bootz 0x82000000 - 0x88000000
 ```
@@ -114,8 +118,21 @@ bootz 0x82000000 - 0x88000000
 sudo apt install gcc-arm-linux-gnueabihf
 ```
 
-
+ازاى ممكن اسرع bitbake؟ 
+هل ممكن استخدم toolchain خارجى؟
 
 # Progress
 - [ ] NFS & u-boot ❌
-- [ ] use 
+- [ ] شيل الحاجات اللى بتبطأ الـ boot من yocto وحاول تخلى الـ boot اسرع ما يمكن
+- [ ] انقل الكيرنال مع rootfs علشان تعرف تعمل update بسهوله
+- [x] الـ data patition موجود already !!
+- [ ] 
+
+
+_____
+قررت ارجع تانى لـ Yocto :
+- يكتو اسهل تضيفله features مع الـ scale 
+- الـ community والامثله متوفره اكتر
+- مش هحتاج اعمل configure لكل حاجه from scratch زى مع buildroot
+- محتاج جداً استخدم poky exporter مش معتمد تماماً على nfs بتاع الـ host 
+- سهل الـ upgrade سواء لنسخه يكتو احدث او لـ arch مختلف
