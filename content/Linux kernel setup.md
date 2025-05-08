@@ -124,13 +124,12 @@ sudo apt install gcc-arm-linux-gnueabihf
 # Progress
 - [ ] NFS & u-boot ❌
 - [ ] شيل الحاجات اللى بتبطأ الـ boot من yocto وحاول تخلى الـ boot اسرع ما يمكن
-- [ ] انقل الكيرنال مع rootfs علشان تعرف تعمل update بسهوله
 - [x] الـ data patition موجود already !!
 - [ ] شغل barebox جوا poky بدل uboot
 - [ ] لقيت أمر بالصدفه فى uboot اسمه usb_boot عايز اجربه!!
+- [ ] عايز انظف طريقه احط بيها الكيرنال برا yocto واخلى يكتو يستخدمها وفى نفس الوقت ما اعملش gap كبيره وما اعرفش ارجع استخدم الكيرنال اللى جوا yocto
+- [ ] تاسك: انى انقل الـ zImage والـ dtb لـ rootfs علشان تعرف تعمل update بسهوله
 - [ ] 
-
-
 _____
 قررت ارجع تانى لـ Yocto :
 - يكتو اسهل تضيفله features مع الـ scale 
@@ -138,6 +137,30 @@ _____
 - مش هحتاج اعمل configure لكل حاجه from scratch زى مع buildroot
 - محتاج جداً استخدم poky exporter مش معتمد تماماً على nfs بتاع الـ host 
 - سهل الـ upgrade سواء لنسخه يكتو احدث او لـ arch مختلف
+
+____
+```
+recipes-bsp/u-boot/files/boot.cmd
+```
+واضح كدا ان rauc بيضيف الـ env vars اللى انا بحطها لكن بعد أول reboot
+
+____
+> تاسك: انى انقل الـ zImage والـ dtb لـ rootfs
+
+أولا عايز افهم الوضع الحالى الأول:
+
+```
+./poky/scripts/lib/wic/plugins/source/bootimg-partition.py
+
+```
+
+images/bbb/fw_env.config ???
+images/bbb/boot.scr ???
+
+```
+$ bitbake -e core-image-bbb | grep ^IMAGE_BOOT_FILES=
+IMAGE_BOOT_FILES="u-boot.img MLO boot.scr"
+```
 
 ____
 
