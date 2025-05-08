@@ -127,6 +127,7 @@ sudo apt install gcc-arm-linux-gnueabihf
 - [ ] انقل الكيرنال مع rootfs علشان تعرف تعمل update بسهوله
 - [x] الـ data patition موجود already !!
 - [ ] شغل barebox جوا poky بدل uboot
+- [ ] لقيت أمر بالصدفه فى uboot اسمه usb_boot عايز اجربه!!
 - [ ] 
 
 
@@ -137,3 +138,6 @@ _____
 - مش هحتاج اعمل configure لكل حاجه from scratch زى مع buildroot
 - محتاج جداً استخدم poky exporter مش معتمد تماماً على nfs بتاع الـ host 
 - سهل الـ upgrade سواء لنسخه يكتو احدث او لـ arch مختلف
+
+____
+
