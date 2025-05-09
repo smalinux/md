@@ -57,7 +57,7 @@ rootfs read-only: BR2_ROOTFS_READ_ONLY
 اقدر انقل منه لاى rootfs تانى, دا هيسهل حياتى وهيسهل انى اكتب configuration 
 
 
-## [systemd](systemd.md)
+# [systemd](systemd.md)
 ليه انا اظطريت اركز مع systemd غصب عنى: علشان احتاجت data partition
 وبعد بحث كتير لقيت ان احسن طريقه يتعمل بيها هو الـ init system 
 دى الطريقه الواقعيه
@@ -72,12 +72,14 @@ systemctl list-unit-files | grep overlay
 
 ==عايز احتفظ بأى .config موجود فى كل الـ package مش بس بتاع uboot & linux & yocto==
 
-## [fstab](fstab.md)
-## [Genimage](Genimage.md)
-## [[Rauc]]
+# [fstab](fstab.md)
+# [Genimage](Genimage.md)
+# [Rauc](Rauc.md)
 
 
-## NFS
+# NFS
+احسن NFS بالنسبالى هو اللى جاى من poky-nfsroot لانى مش محتاج اعمل install لأى حاجه زياده.
+
 علشان تخلى الكيرنال تعمل nfs boot لازم توفر الـ kernel configs اللى تسمح بكده
 من غيره, الـ nfs server اللى هتسطبه ولا ليه اى لزمه:
 ```
@@ -88,14 +90,6 @@ CONFIG_IP_PNP_DHCP=y
 CONFIG_NFS_V3=y
 ```
 
-```
-sudo apt install nfs-kernel-server nfs-common
-sudo exportfs -ra
-sudo systemctl start nfs-server
-sudo systemctl enable nfs-server
-```
-
-عايز احاول اعمل symlinks لكل الـ target dirs فى nfs
 
 # U-boot env
 ```
