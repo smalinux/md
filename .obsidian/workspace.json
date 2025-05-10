@@ -42,7 +42,7 @@
               "type": "markdown",
               "state": {
                 "file": "content/systemd.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
@@ -227,12 +227,12 @@
   },
   "active": "13e934eaeac885e9",
   "lastOpenFiles": [
-    "content/Rauc.md",
+    "content/systemd.md",
     "content/Linux kernel setup.md",
+    "content/Rauc.md",
     "content/Genimage.md",
     "raindrop/BBB/Welcome to the Mike’s homepage!.md",
     "raindrop/BBB/sigrok.md",
-    "content/systemd.md",
     "raindrop/BBB/Your list  embedded 🥰.md",
     "raindrop/BBB/CLFS Trac.md",
     "content/fstab.md",
