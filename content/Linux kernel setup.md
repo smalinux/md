@@ -56,6 +56,9 @@ _____
 
 - [ ] شوف ازاى تقلل الـ boot time
 - [ ] نظف الـ commit messages اكتر
+- [ ] هل ينفع استخدم bmaptool مثلا علشان اعمل flash over http؟
+	- [ ] هل ينفع اقلب الـ BBB لـ usb gadget واستخدم bmaptool مباشر؟ 
+	- [ ] او اقلب الـ BBB eMMC لـ usb gadget واعملها flash بـ bmaptool؟
 - [ ] 
 
 # makeshift
@@ -96,6 +99,9 @@ systemctl list-unit-files | grep overlay
 - [ ] شوف امثله كتير عامه على systemd وايه اللى الناس بتعمله بـ systemd 
 - [ ] شوف المتاح عندك على الـ host وايه الـ units اللى موجوده وبتعمل ايه
 - [ ] خد الـ udev من احمد فطوم
+- [ ] جرب تحط custom unit زى اللى حطيتها مع buildroot overlay
+- [ ] جرب تحتفظ بـ overlay خارجى! هل دا مفيد فعلا؟ مع yocto؟
+- [ ] كمل مذاكره systemd واجمع tricks على اد ما تقدر ونظف الـ cheat sheet بتاعك
 - [ ] 
 # [fstab](fstab.md)
 # [Genimage](Genimage.md)
@@ -152,12 +158,14 @@ bootz 0x82000000 - 0x88000000
 ```
 - [ ] فى المستقبل خلى rauc يستخدم الـ emmc
 # barebox
+- [ ] اقرأ الـ docs كويس 🟡
 - [ ] barebox & yocto integration
 	- [ ] ايه احسن طريقه للتبديل بينهم فى نفس الـ bbb image؟ عايز اغير سطر الـ prefered virtual provider بس
 - [ ] [Pengutronix - Bringing Barebox into OE-Core (Yocto)](https://pengutronix.de/en/blog/2024-10-23-bringing-barebox-in-oe-core.html)
 - [ ] توفير مكان خارجى لتطوير barebox وانك تاخد linux من الـ tftp
 	- [ ] مازال استخدام barebox لوحده برا yocto اسرع واحسن لو عايز تركز بس فى تطوير barebox
 	- [ ] مهمه barebox بتنتهى مع بدايه اللينكس, so انت مش محتاج yocto integration فى حاجه غير للـ deploy النهائى, مش لتطوير barebox نفسه
+- [ ] 
 
 # external toolchain
 ```
@@ -234,3 +242,19 @@ The **in-tree `rtl8192cu` driver** is **known to be buggy**, especially with new
 - [GitHub - aircrack-ng/rtl8188eus: RealTek RTL8188eus WiFi driver with monitor mode & frame injection support](https://github.com/aircrack-ng/rtl8188eus)
 
 ____
+- [ ]  linux config
+افهم الـ config دا بيعمل ايه: FW_LOADER_USER_HELPER
+- [ ] احتفظ بكل الـ device tree الكامل برا واعمله tracking 🟡
+- [ ] ذاكر الـ linux_build وشوف الـ device tree موجودين فين
+- [ ] مشكله ان الـ device tree بتاعت beaglebone black ديما اصغر ما يمكن مقارنه باللى موجوده مع debian
+- [ ] محتاج اعمل ملف dts نظف لجوا yocto ولبرا yocto علشان اغير براحتى واحس بتغيراتى  🟡
+
+ابحث جوا الـ dir دا: 
+```bash 
+cd kernel.org/doc/Documentation/devicetree/bindings/
+ack am33xx-
+```
+
+____
+The official debain/beaglebone device tree :
+https://github.com/beagleboard/BeagleBoard-DeviceTrees

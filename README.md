@@ -1,6 +1,7 @@
 
 > TODO: I want to convert this repo to normal static website, using: https://pedantic.software/git/blogit like Luke Smith, but I don't have time to fix try this...
 
+- [Roadmap](content/Roadmap.md)
 - [[Yocto]]
 - [Audio USB](Clippings/Audio%20USB.md)
 - [Pinctrl subsystem](Clippings/Pinctrl%20subsystem.md)
@@ -16,3 +17,4 @@
 - [Tips](content/Tips.md)
 - [Secure boot](content/Secure%20boot.md)
 - [systemd](content/systemd.md)
+- 
