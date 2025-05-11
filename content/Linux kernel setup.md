@@ -187,7 +187,7 @@ env set netargs 'setenv bootargs console=${console} ${optargs} root=/dev/nfs rw 
 env set netboot 'echo Booting from net ...; run netargs; run netload; bootz ${loadaddr} - ${fdtaddr}'
 
 env set serverip 192.168.0.134
-env set nfsroot "/src/yocto/build/bbb/nfsroot-core-image-bbb-bbb,nfsvers=3,port=3049,udp,mountport=3049"
+env set nfsroot "/src/yocto/build/bbb/nfsroot-core-image-bbb-bbb,nfsvers=3,port=3048,udp,mountport=3048"
 env set image zImage
 env set fdt_file "am335x-boneblack.dtb"
 env set ipaddr 192.168.0.90
@@ -203,9 +203,7 @@ setenv ipaddr 192.168.0.10
 tftpboot 0x82000000 zImage
 tftpboot 0x88000000 am335x-boneblack.dtb
 
-
-setenv bootargs "console=ttyO0,115200 root=/dev/nfs rw nfsroot=192.168.0.134:/src/yocto/build/bbb/nfsroot-core-image-bbb-bbb,nfsvers=3,proto=tcp,port=3049,mountport=3049"
-setenv bootargs "console=ttyO0,115200n8 root=/dev/nfs rw nfsroot=192.168.0.134:/src/yocto/build/bbb/nfsroot-core-image-bbb-bbb,nfsvers=3,proto=tcp,port=3049,mountport=3049"
+setenv bootargs "console=${console} root=/dev/nfs rw rootfstype=nfs ip=dhcp nfsroot=192.168.0.134:/src/yocto/build/bbb/nfsroot-core-image-bbb-bbb,nfsvers=3,proto=tcp,port=3048,mountport=3048 init=/usr/sbin/init"
 
 bootz 0x82000000 - 0x88000000
 ```

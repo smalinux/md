@@ -20,6 +20,20 @@
               "icon": "lucide-file",
               "title": "Linux kernel setup"
             }
+          },
+          {
+            "id": "ecf671656c5c6ed0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/Timeline.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Timeline"
+            }
           }
         ]
       }
@@ -156,7 +170,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -172,9 +187,10 @@
   },
   "active": "13e934eaeac885e9",
   "lastOpenFiles": [
+    "content/Timeline.md",
+    "content/Linux kernel setup.md",
     "raindrop/BBB/gmolveau - Overview.md",
     "content/Roadmap.md",
-    "content/Linux kernel setup.md",
     "README.md",
     "content/Genimage.md",
     "content/fstab.md",
@@ -197,7 +213,6 @@
     "raindrop/BBB/Dave Cheney  The acme of foolishness.md",
     "raindrop/BBB/armhf.com  Ubuntu and Wheezy Images for ARMhf Devices.md",
     "raindrop/BBB/Two Six Technologies  Mission Focused. Impact Driven.md",
-    "raindrop/BBB/Kiwi Electronics.md",
     "raindrop/BBB",
     "raindrop",
     "assets/Pasted image 20250430225243.png",
