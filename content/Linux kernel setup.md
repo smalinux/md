@@ -59,19 +59,16 @@ _____
 انا مهتم بالكيرنال والـ bootloader 
 انما انى اعمل enable لأى package لازم يكون بسرعه وسريع, انا مش عندى الوقت انى اعمل enable لكل حاجه from scratch
 
-- [ ] شوف ازاى تقلل الـ boot time
+- [ ] شوف ازاى تقلل الـ boot time 🥱
 - [ ] نظف الـ commit messages اكتر
-- [ ] هل ينفع استخدم bmaptool مثلا علشان اعمل flash over http؟
-	- [ ] هل ينفع اقلب الـ BBB لـ usb gadget واستخدم bmaptool مباشر؟ 
-	- [ ] او اقلب الـ BBB eMMC لـ usb gadget واعملها flash بـ bmaptool؟
+- [ ] هل ينفع استخدم bmaptool مثلا علشان اعمل flash over http؟ 🥱
+	- [ ] هل ينفع اقلب الـ BBB لـ usb gadget واستخدم bmaptool مباشر؟ 🥱
+	- [ ] او اقلب الـ BBB eMMC لـ usb gadget واعملها flash بـ bmaptool؟🥱
 - [ ] شوف ازاى ممكن تضيف kernel modules directly after boot زى etc/modules/
 	- [ ] جرب تضيف واحد
-- [ ] 
-
 # makeshift
 - [x] run $ m savedefconfig  after every $ m
-- [ ] Git worktree: https://github.com/smalinux/buildroot-bbb
-- [ ] 
+- [x] Git worktree: https://github.com/smalinux/buildroot-bbb
 
 
 # persistent data partition
@@ -86,11 +83,10 @@ rootfs read-only: BR2_ROOTFS_READ_ONLY
 >If not, format it.
 >Mount it or let mnt-data.mount handle it afterward.
 
-زى ما مهم بالنسبالى ان الـ rootfs يكون ابسط ما يمكن, كمان مهم بالنسبالى ان الـ rootfs يكون scalable
-اقدر انقل منه لاى rootfs تانى, دا هيسهل حياتى وهيسهل انى اكتب configuration 
 
 
-# [systemd](systemd.md)
+
+# [systemd](systemd.md) 🥱
 ليه انا اظطريت اركز مع systemd غصب عنى: علشان احتاجت data partition
 وبعد بحث كتير لقيت ان احسن طريقه يتعمل بيها هو الـ init system 
 دى الطريقه الواقعيه
@@ -110,23 +106,18 @@ systemctl list-unit-files | grep overlay
 - [ ] جرب تحتفظ بـ overlay خارجى! هل دا مفيد فعلا؟ مع yocto؟
 - [ ] كمل مذاكره systemd واجمع tricks على اد ما تقدر ونظف الـ cheat sheet بتاعك
 - [ ] 
-# [fstab](fstab.md)
-# [Genimage](Genimage.md)
+# [fstab](fstab.md) 🥱
+# ~~[Genimage](Genimage.md)~~
 - [ ] اقرأ الـ docs
 - [ ] [GitHub - a3f/genimages: Very simple Makefile for genimage(1)](https://github.com/a3f/genimages)
-- [ ] 
 # [Rauc](Rauc.md)
 - [ ] اتأكد فعلا ان Rauc قادر يعمل update لكل حاجه ماعدا uboot
 	- [ ] فى المستقبل هتخلى rauc كمان يعمل update لـ uboot فى mmcblk1boot0
 - [ ] ارفع الاسكربت بتاع raucintall
 - [ ] اقرأ الاسكربتس اللى موجوده already وافهم ازاى شغاله كويس جدا
 - [ ] افهم met-rauc-bbb
-- [ ] اقرأ الـ docs
-- [ ] (غير ضرورى): بعد ما تقرأ الـ docs كاملاً فكر ازاى تسرع الموضوع جدا
-	- [ ] [Pengutronix - Saving Download Bandwidth with RAUC Adaptive Updates](https://pengutronix.de/en/blog/2022-10-12-rauc-adaptive-updates.html)
-	- [ ] delta based update (aka Rauc adaptive updates)
+- [ ] بعد ما تقرأ الـ docs كاملاً فكر ازاى تسرع الموضوع جدا 🥱 هنا: [Pengutronix - Saving Download Bandwidth with RAUC Adaptive Updates](https://pengutronix.de/en/blog/2022-10-12-rauc-adaptive-updates.html)
 - [ ] غير حاجه فى الكيرنال واتأكد ان التأثير موجود بعد استخدام raucinstall
-- [ ] 
 
 # Network boot
 احسن NFS بالنسبالى هو اللى جاى من poky-nfsroot لانى مش محتاج اعمل install لأى حاجه زياده.
@@ -135,7 +126,7 @@ systemctl list-unit-files | grep overlay
 - [ ] شغل الـ network boot وضيف env vars فى yocto خاصه بيك فى اخر الملف
 - [ ] اقرأ كل الـ man بتاعت dnsmasq وجرب كل الـ params بتاعته
 
-الاوامر دى اشغلت معايا كويس ومع poky-nfsboot لكن عطلت وقت لما systemd بدأ:
+الاوامر دى اشغلت معايا كويس ومع poky-nfsboot لكن عطلت وقت لما systemd بدأ:-
 
 ```
 setenv serverip 192.168.0.134
@@ -149,13 +140,12 @@ setenv bootargs "console=${console} root=/dev/nfs rw rootfstype=nfs ip=dhcp nfsr
 bootz 0x82000000 - 0x88000000
 ```
 - [ ] فى المستقبل خلى rauc يستخدم الـ emmc
-- [ ] [\[U-Boot,v3,1/3\] AM335x : Add USB support for AM335x in u-boot - Patchwork](https://patchwork.ozlabs.org/project/uboot/patch/1340703483-27276-2-git-send-email-harman_sohanpal@ti.com/)
-- [ ] [Programming eMMC with USB for OSD335x (AM335x System in Package) - Octavo Systems](https://octavosystems.com/docs/programming-emmc-with-usb-for-osd335x/)
-- [ ] 
+- [ ] [\[U-Boot,v3,1/3\] AM335x : Add USB support for AM335x in u-boot - Patchwork](https://patchwork.ozlabs.org/project/uboot/patch/1340703483-27276-2-git-send-email-harman_sohanpal@ti.com/) 🥱
+- [ ] [Programming eMMC with USB for OSD335x (AM335x System in Package) - Octavo Systems](https://octavosystems.com/docs/programming-emmc-with-usb-for-osd335x/) 🥱
 # barebox
 - [ ] اقرأ الـ docs كويس 🟡
-- [ ] barebox & yocto integration
-	- [ ] ايه احسن طريقه للتبديل بينهم فى نفس الـ bbb image؟ عايز اغير سطر الـ prefered virtual provider بس
+- [ ] barebox & yocto integration 
+	- [ ] ايه احسن طريقه للتبديل بينهم فى نفس الـ bbb image؟ عايز اغير سطر الـ prefered virtual provider بس 🥱
 - [ ] [Pengutronix - Bringing Barebox into OE-Core (Yocto)](https://pengutronix.de/en/blog/2024-10-23-bringing-barebox-in-oe-core.html)
 - [ ] توفير مكان خارجى لتطوير barebox وانك تاخد linux من الـ tftp
 	- [ ] مازال استخدام barebox لوحده برا yocto اسرع واحسن لو عايز تركز بس فى تطوير barebox
@@ -170,7 +160,6 @@ sudo apt install gcc-arm-linux-gnueabihf
 
 ازاى ممكن اسرع bitbake؟ 
 هل ممكن استخدم toolchain خارجى؟
-
 # Boot time
 - [ ] 
 - [ ] 
@@ -188,7 +177,6 @@ sudo apt install gcc-arm-linux-gnueabihf
 - [ ] Google: "processor sdk linux software developer guide"
 - [ ] [GitHub - mvp/uhubctl: uhubctl - USB hub per-port power control](https://github.com/mvp/uhubctl)
 - [ ] استخدم git worktree وامسح كل الـ branches
-- [ ] كمل الـ فيديوهات الـ live بتاعت yocto
 - [ ] حط متغير فى الملفين دول وشوف ليهم تأثير ولا لا تماماً, لو لا ضيف comment قول فيه ان الملف دا مات
 ```
 meta-bbb/recipes-bsp/u-boot-scr/files/boot.cmd
@@ -303,6 +291,3 @@ ack am33xx-
 ____
 The official debain/beaglebone device tree :
 https://github.com/beagleboard/BeagleBoard-DeviceTrees
-
-_____
-- [ ] 
