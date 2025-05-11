@@ -155,6 +155,46 @@ See 'systemctl status proc-fs-nfsd.mount' for details.
 - [ ] اعمل nfs setup عدل 🟡
 - [ ] شغل الـ network boot وضيف env vars فى yocto خاصه بيك فى اخر الملف
 - [ ] اقرأ كل الـ man بتاعت dnsmasq وجرب كل الـ params بتاعته
+
+### خطوات حل مشكله unfsd & poky exporter
+
+حاولت اعمل mount على الـ host فى dir تانى, الامر دا اشتغل معايا:
+```
+mount -t nfs 192.168.0.134:/src/yocto/build/bbb/nfsroot-core-image-bbb-bbb ./xxx/ -o nfsvers=3,proto=tcp,port=3049,mountport=3049
+```
+
+
+```
+setenv machine bbb;  
+env set netload 'tftpboot ${loadaddr} ${image};  
+tftpboot ${fdtaddr} ${fdt_file}';  
+env set netargs 'setenv bootargs console=${console} ${optargs} root=/dev/nfs nfsrootdebug ip=${ipaddr} nfsroot=${serverip}:${nfsroot}';  
+env set netboot 'echo Booting from net ...;  
+run netargs;  
+run netload;  
+bootz ${loadaddr} - ${fdtaddr}';  
+env set serverip 192.168.0.134;  
+env set nfsroot "/src/yocto/build/bbb/nfsroot-core-image-bbb-bbb,nfsvers=3,port=3049,udp,mountport=3049";
+env set image zImage;  
+env set fdt_file "am335x-boneblack.dtb";  
+env set ipaddr 192.168.0.90;  
+env set bootcmd 'run netboot';
+
+
+=========================================
+env set netload 'tftpboot ${loadaddr} ${image}; tftpboot ${fdtaddr} ${fdt_file}'
+env set netargs 'setenv bootargs console=${console} ${optargs} root=/dev/nfs rw nfsroot=${serverip}:${nfsroot} ip=${ipaddr}'
+env set netboot 'echo Booting from net ...; run netargs; run netload; bootz ${loadaddr} - ${fdtaddr}'
+
+env set serverip 192.168.0.134
+env set nfsroot "/src/yocto/build/bbb/nfsroot-core-image-bbb-bbb,nfsvers=3,port=3049,udp,mountport=3049"
+env set image zImage
+env set fdt_file "am335x-boneblack.dtb"
+env set ipaddr 192.168.0.90
+env set console ttyO0,115200
+env set bootcmd 'run netboot'
+
+```
 # U-boot
 ```
 setenv serverip 192.168.0.134
@@ -164,7 +204,8 @@ tftpboot 0x82000000 zImage
 tftpboot 0x88000000 am335x-boneblack.dtb
 
 
-setenv bootargs "console=ttyO0,115200 root=/dev/nfs rw nfsroot=192.168.0.134:/src/yocto/build/bbb/nfsroot-core-image-bbb-bbb,nfsvers=3,port=3048,udp,mountport=3048"
+setenv bootargs "console=ttyO0,115200 root=/dev/nfs rw nfsroot=192.168.0.134:/src/yocto/build/bbb/nfsroot-core-image-bbb-bbb,nfsvers=3,proto=tcp,port=3049,mountport=3049"
+setenv bootargs "console=ttyO0,115200n8 root=/dev/nfs rw nfsroot=192.168.0.134:/src/yocto/build/bbb/nfsroot-core-image-bbb-bbb,nfsvers=3,proto=tcp,port=3049,mountport=3049"
 
 bootz 0x82000000 - 0x88000000
 ```
@@ -250,7 +291,8 @@ index 13f439c5ff..fc4631c200 100644
 
 ```
 
-
+- [ ] ضيف الألوان فى الـ shell ديماً من خلال الـ overlay, لان الـ shell دلوقتى ناشف جدا
+- [ ] 
 # continuous tasks 🔄
 - [ ] وثق الاوامر اللى بتسخدمها مع bitbake فى README
 - [ ] بعد ما كل حاجه تشتغل اعمل performance monitoring وراجع ايه اللى ناقص كدا وايه اللى ممكن تخليه يكون اسرع فى الـ cycle دى. 
