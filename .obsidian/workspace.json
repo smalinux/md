@@ -170,8 +170,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -187,8 +186,9 @@
   },
   "active": "13e934eaeac885e9",
   "lastOpenFiles": [
-    "content/Timeline.md",
+    "content/test.md",
     "content/Linux kernel setup.md",
+    "content/Timeline.md",
     "raindrop/BBB/gmolveau - Overview.md",
     "content/Roadmap.md",
     "README.md",
@@ -212,7 +212,6 @@
     "raindrop/BBB/Search Results.md",
     "raindrop/BBB/Dave Cheney  The acme of foolishness.md",
     "raindrop/BBB/armhf.com  Ubuntu and Wheezy Images for ARMhf Devices.md",
-    "raindrop/BBB/Two Six Technologies  Mission Focused. Impact Driven.md",
     "raindrop/BBB",
     "raindrop",
     "assets/Pasted image 20250430225243.png",

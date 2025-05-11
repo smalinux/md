@@ -128,74 +128,15 @@ systemctl list-unit-files | grep overlay
 - [ ] غير حاجه فى الكيرنال واتأكد ان التأثير موجود بعد استخدام raucinstall
 - [ ] 
 
-# NFS
+# Network boot
 احسن NFS بالنسبالى هو اللى جاى من poky-nfsroot لانى مش محتاج اعمل install لأى حاجه زياده.
 
-علشان تخلى الكيرنال تعمل nfs boot لازم توفر الـ kernel configs اللى تسمح بكده
-```
-CONFIG_NFS_FS=y
-CONFIG_ROOT_NFS=y
-CONFIG_IP_PNP=y
-CONFIG_IP_PNP_DHCP=y
-CONFIG_NFS_V3=y
-```
-مع rauc لقيت فيه systemd unit بتشغل nftd, صلح الحته دى:
-```
-         Mounting NFSD configuration filesystem...
-         Starting Virtual Console Setup...
-[  OK  ] Mounted /boot.
-[   26.750494] EXT4-fs (mmcblk0p4): recovery complete
-[  OK  ] Finished Load Kernel Module fuse   26.765389] EXT4-fs (mmcblk0p4): mounted filesystem 373a7fb4-3bba-4bf7-90b0-21b45e8aea03 r/w with ordered data mode. Quota mode: disabled.
-m.
-[  OK  ] Mounted /data.
-[FAILED] Failed to mount NFSD configuration filesystem.
-See 'systemctl status proc-fs-nfsd.mount' for details.
-
-```
 - [ ] اعمل nfs setup عدل 🟡
 - [ ] شغل الـ network boot وضيف env vars فى yocto خاصه بيك فى اخر الملف
 - [ ] اقرأ كل الـ man بتاعت dnsmasq وجرب كل الـ params بتاعته
 
-### خطوات حل مشكله unfsd & poky exporter
+الاوامر دى اشغلت معايا كويس ومع poky-nfsboot لكن عطلت وقت لما systemd بدأ:
 
-حاولت اعمل mount على الـ host فى dir تانى, الامر دا اشتغل معايا:
-```
-mount -t nfs 192.168.0.134:/src/yocto/build/bbb/nfsroot-core-image-bbb-bbb ./xxx/ -o nfsvers=3,proto=tcp,port=3049,mountport=3049
-```
-
-
-```
-setenv machine bbb;  
-env set netload 'tftpboot ${loadaddr} ${image};  
-tftpboot ${fdtaddr} ${fdt_file}';  
-env set netargs 'setenv bootargs console=${console} ${optargs} root=/dev/nfs nfsrootdebug ip=${ipaddr} nfsroot=${serverip}:${nfsroot}';  
-env set netboot 'echo Booting from net ...;  
-run netargs;  
-run netload;  
-bootz ${loadaddr} - ${fdtaddr}';  
-env set serverip 192.168.0.134;  
-env set nfsroot "/src/yocto/build/bbb/nfsroot-core-image-bbb-bbb,nfsvers=3,port=3049,udp,mountport=3049";
-env set image zImage;  
-env set fdt_file "am335x-boneblack.dtb";  
-env set ipaddr 192.168.0.90;  
-env set bootcmd 'run netboot';
-
-
-=========================================
-env set netload 'tftpboot ${loadaddr} ${image}; tftpboot ${fdtaddr} ${fdt_file}'
-env set netargs 'setenv bootargs console=${console} ${optargs} root=/dev/nfs rw nfsroot=${serverip}:${nfsroot} ip=${ipaddr}'
-env set netboot 'echo Booting from net ...; run netargs; run netload; bootz ${loadaddr} - ${fdtaddr}'
-
-env set serverip 192.168.0.134
-env set nfsroot "/src/yocto/build/bbb/nfsroot-core-image-bbb-bbb,nfsvers=3,port=3048,udp,mountport=3048"
-env set image zImage
-env set fdt_file "am335x-boneblack.dtb"
-env set ipaddr 192.168.0.90
-env set console ttyO0,115200
-env set bootcmd 'run netboot'
-
-```
-# U-boot
 ```
 setenv serverip 192.168.0.134
 setenv ipaddr 192.168.0.10
