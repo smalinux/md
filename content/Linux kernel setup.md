@@ -1,5 +1,10 @@
 
 التصور العام, انا عايز ايه؟
+
+> [!NOTE]
+> وثق تماما كل قرار اخدته وليه
+
+
 الهدف انى يكون عندى setup حلو وسريع وبقدر اضيف واعدل فيه زى ما انا حابب
 سريع يعنى سريع. لو اى حاجه بطيئه فى الـ من وقت الـ build لحد الـ deploy دا معناه انى حياتى عطلانه
 
@@ -59,6 +64,8 @@ _____
 - [ ] هل ينفع استخدم bmaptool مثلا علشان اعمل flash over http؟
 	- [ ] هل ينفع اقلب الـ BBB لـ usb gadget واستخدم bmaptool مباشر؟ 
 	- [ ] او اقلب الـ BBB eMMC لـ usb gadget واعملها flash بـ bmaptool؟
+- [ ] شوف ازاى ممكن تضيف kernel modules directly after boot زى etc/modules/
+	- [ ] جرب تضيف واحد
 - [ ] 
 
 # makeshift
@@ -105,6 +112,9 @@ systemctl list-unit-files | grep overlay
 - [ ] 
 # [fstab](fstab.md)
 # [Genimage](Genimage.md)
+- [ ] اقرأ الـ docs
+- [ ] [GitHub - a3f/genimages: Very simple Makefile for genimage(1)](https://github.com/a3f/genimages)
+- [ ] 
 # [Rauc](Rauc.md)
 - [ ] اتأكد فعلا ان Rauc قادر يعمل update لكل حاجه ماعدا uboot
 	- [ ] فى المستقبل هتخلى rauc كمان يعمل update لـ uboot فى mmcblk1boot0
@@ -115,6 +125,7 @@ systemctl list-unit-files | grep overlay
 - [ ] (غير ضرورى): بعد ما تقرأ الـ docs كاملاً فكر ازاى تسرع الموضوع جدا
 	- [ ] [Pengutronix - Saving Download Bandwidth with RAUC Adaptive Updates](https://pengutronix.de/en/blog/2022-10-12-rauc-adaptive-updates.html)
 	- [ ] delta based update (aka Rauc adaptive updates)
+- [ ] غير حاجه فى الكيرنال واتأكد ان التأثير موجود بعد استخدام raucinstall
 - [ ] 
 
 # NFS
@@ -142,7 +153,8 @@ See 'systemctl status proc-fs-nfsd.mount' for details.
 
 ```
 - [ ] اعمل nfs setup عدل 🟡
-- [ ] 
+- [ ] شغل الـ network boot وضيف env vars فى yocto خاصه بيك فى اخر الملف
+- [ ] اقرأ كل الـ man بتاعت dnsmasq وجرب كل الـ params بتاعته
 # U-boot
 ```
 setenv serverip 192.168.0.134
@@ -157,6 +169,9 @@ setenv bootargs "console=ttyO0,115200 root=/dev/nfs rw nfsroot=192.168.0.134:/sr
 bootz 0x82000000 - 0x88000000
 ```
 - [ ] فى المستقبل خلى rauc يستخدم الـ emmc
+- [ ] [\[U-Boot,v3,1/3\] AM335x : Add USB support for AM335x in u-boot - Patchwork](https://patchwork.ozlabs.org/project/uboot/patch/1340703483-27276-2-git-send-email-harman_sohanpal@ti.com/)
+- [ ] [Programming eMMC with USB for OSD335x (AM335x System in Package) - Octavo Systems](https://octavosystems.com/docs/programming-emmc-with-usb-for-osd335x/)
+- [ ] 
 # barebox
 - [ ] اقرأ الـ docs كويس 🟡
 - [ ] barebox & yocto integration
@@ -177,6 +192,9 @@ sudo apt install gcc-arm-linux-gnueabihf
 هل ممكن استخدم toolchain خارجى؟
 
 # Boot time
+- [ ] 
+- [ ] 
+- [ ] 
 # Progress
 - [ ] شيل الحاجات اللى بتبطأ الـ boot من yocto وحاول تخلى الـ boot اسرع ما يمكن
 - [x] الـ data patition موجود already !!
@@ -187,12 +205,58 @@ sudo apt install gcc-arm-linux-gnueabihf
 - [ ] استخدم uhubctl
 - [ ] شغل الـ wireless usb dongle 🟡
 	- [ ] افهم الـ systemd unit دا كويس جدا وخليه يعمل cache للـ web interface علشان ما يضيعش وقت فى الـ scan مع كل reboot
-- [ ] 
+- [ ] Google: "processor sdk linux software developer guide"
+- [ ] [GitHub - mvp/uhubctl: uhubctl - USB hub per-port power control](https://github.com/mvp/uhubctl)
+- [ ] استخدم git worktree وامسح كل الـ branches
+- [ ] كمل الـ فيديوهات الـ live بتاعت yocto
+- [ ] حط متغير فى الملفين دول وشوف ليهم تأثير ولا لا تماماً, لو لا ضيف comment قول فيه ان الملف دا مات
+```
+meta-bbb/recipes-bsp/u-boot-scr/files/boot.cmd
+meta-bbb/recipes-bsp/u-boot-scr/files/emmc-boot.cmd
+meta-bbb/recipes-bsp/u-boot-scr/u-boot-scr_1.0.bb
+```
+
+- [ ] ايه دلاله الارقام دى! هل دى احسن حاجه؟!
+```
+Ubuntu@yocto $ git diff meta-bbb/recipes-core/images/core-image-bbb.bb
+diff --git a/meta-bbb/recipes-core/images/core-image-bbb.bb b/meta-bbb/recipes-core/images/core-image-bbb.bb
+index 13f439c5ff..fc4631c200 100644
+--- a/meta-bbb/recipes-core/images/core-image-bbb.bb
++++ b/meta-bbb/recipes-core/images/core-image-bbb.bb
+@@ -10,7 +10,9 @@ LICENSE = "MIT"
+ # REMOVEME
+ inherit core-image
+
++# ???
+ IMAGE_ROOTFS_SIZE ?= "8192"
++# ???
+ IMAGE_ROOTFS_EXTRA_SPACE:append = "${@bb.utils.contains("DISTRO_FEATURES", "systemd", " + 4096", "", d)}"
+
+ #
+@@ -52,8 +54,13 @@ IMAGE_INSTALL:append = " vim-tiny"
+ IMAGE_INSTALL:append = " util-linux-lsblk"
+ IMAGE_INSTALL:append = " alsa-plugins alsa-utils alsa-lib alsa-tools alsa-state alsa-equal"
+ IMAGE_INSTALL:append = " usbutils"
++IMAGE_INSTALL:append = " nfs-utils"
+ #IMAGE_INSTALL:append = " dropbear"
+ #IMAGE_INSTALL:append = " bc"
++### USB Wireless
++IMAGE_INSTALL:append = " linux-firmware-rtl8192cu wpa-supplicant connman connman-client"
++
++
+
+ #
+ # buildhistory
+
+```
+
 
 # continuous tasks 🔄
 - [ ] وثق الاوامر اللى بتسخدمها مع bitbake فى README
 - [ ] بعد ما كل حاجه تشتغل اعمل performance monitoring وراجع ايه اللى ناقص كدا وايه اللى ممكن تخليه يكون اسرع فى الـ cycle دى. 
 	- [ ] انك تضيع وقت دلوقتى فى انك تسرع كل حاجه اهم من انك تكمل dev على حاجه بطيئه وممله🟡
+- [ ] راجع كشاكيلك
+- [ ] انك تراجع الحاجات اللى بتنزل مع كل release من Rauc و barebox ولينكس و uboot والخ
 - [ ] 
 
 _____
@@ -258,3 +322,6 @@ ack am33xx-
 ____
 The official debain/beaglebone device tree :
 https://github.com/beagleboard/BeagleBoard-DeviceTrees
+
+_____
+- [ ] 

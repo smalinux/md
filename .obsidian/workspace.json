@@ -20,93 +20,8 @@
               "icon": "lucide-file",
               "title": "Linux kernel setup"
             }
-          },
-          {
-            "id": "fd1ab125d5f3c781",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/Rauc.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Rauc"
-            }
-          },
-          {
-            "id": "b19a30b1ae0cc265",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/systemd.md",
-                "mode": "preview",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "systemd"
-            }
-          },
-          {
-            "id": "19ddf243b67fb9f4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/fstab.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "fstab"
-            }
-          },
-          {
-            "id": "ff2b723e3cb3dee9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/Genimage.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Genimage"
-            }
-          },
-          {
-            "id": "de9a658b7978c45c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "README.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "README"
-            }
-          },
-          {
-            "id": "78a9a66acb775565",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/Roadmap.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Roadmap"
-            }
           }
-        ],
-        "currentTab": 6
+        ]
       }
     ],
     "direction": "vertical"
@@ -138,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "9p",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -163,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 569.5
+    "width": 357.5,
+    "collapsed": true
   },
   "right": {
     "id": "00e8531b7b73c201",
@@ -226,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/Roadmap.md",
+                "file": "content/Linux kernel setup.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Roadmap"
+              "title": "Outline of Linux kernel setup"
             }
           }
         ],
@@ -254,19 +170,25 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "78a9a66acb775565",
+  "active": "13e934eaeac885e9",
   "lastOpenFiles": [
-    "README.md",
-    "content/Linux kernel setup.md",
     "content/Roadmap.md",
+    "content/Linux kernel setup.md",
+    "README.md",
+    "content/Genimage.md",
+    "content/fstab.md",
     "content/systemd.md",
     "content/Rauc.md",
-    "content/Genimage.md",
+    "raindrop/BBB/how to do linux kernel development - Google Search.md",
+    "raindrop/BBB/HOWTO do Linux kernel development — The Linux Kernel documentation.md",
+    "raindrop/BBB/a guide to the kernel development process - Google Search.md",
+    "content/Logic analyzer with BBB.md",
+    "raindrop/BBB/Embedded Linux Completely from Scratch.md",
+    "content/am335x USB mode.md",
     "raindrop/BBB/Welcome to the Mike’s homepage!.md",
     "raindrop/BBB/sigrok.md",
     "raindrop/BBB/Your list  embedded 🥰.md",
     "raindrop/BBB/CLFS Trac.md",
-    "content/fstab.md",
     "Untitled.md",
     "content/barebox.md",
     "raindrop/BBB/FOSDEM 2025 - usb9pfs network booting without the network.md",
@@ -276,12 +198,6 @@
     "raindrop/BBB/Two Six Technologies  Mission Focused. Impact Driven.md",
     "raindrop/BBB/Kiwi Electronics.md",
     "raindrop/BBB/IoT modems and IoT shields [LTE CATM1, NBIoT, 4G, 3G, GSM], GNSS and SENSORS - Arduino, Teensy, Beaglebone and Raspberry PI compatible - home of THE ALPHABET PROJECT.md",
-    "raindrop/BBB/Jürgen Stuber.md",
-    "raindrop/BBB/casualhacking.md",
-    "raindrop/BBB/Cycling and Coding Around the World.md",
-    "raindrop/BBB/Yours for the making - Instructables.md",
-    "raindrop/BBB/Linux Automation - Linux Automation GmbH.md",
-    "raindrop/BBB/Leading IoT Wireless Product &amp; Solution Provider  Feasycom.md",
     "raindrop/BBB",
     "raindrop",
     "assets/Pasted image 20250430225243.png",

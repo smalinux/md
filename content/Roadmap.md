@@ -1,2 +1,31 @@
 
+عايز اقسم اللينكات دى حسب الـ topic
+
+- [ ] [pwn.college](https://pwn.college/)
+- [ ] [CAT Hangouts \| Introduction to Operating Systems Kernels - YouTube](https://www.youtube.com/watch?v=rm-zXeNOtQY&ab_channel=CATReloaded%28Hangouts%29)
+- [ ] [Cat Live : Understanding Linux Kernel \| in Arabic - YouTube](https://www.youtube.com/watch?v=NhNUXMLstRg&ab_channel=CATReloaded%28Hangouts%29)
+- [ ] [CAT Live \| Linux Kernel Modules \| in Arabic - YouTube](https://www.youtube.com/watch?v=bDnq792OsQg&ab_channel=CATReloaded%28Hangouts%29)
+- [ ] [KarimAllah Ahmed \| Facebook](https://www.facebook.com/karim.allah.ahmed)
+- [ ] [مصطفى حموده linux - YouTube](https://www.youtube.com/results?search_query=%D9%85%D8%B5%D8%B7%D9%81%D9%89+%D8%AD%D9%85%D9%88%D8%AF%D9%87+linux)
+- [ ] [C-language Roadmap - Google Docs](https://docs.google.com/document/d/1nAkMyH-bPJ5W3YPujbOXqKblYiM_dWeHuPfaBWqOnBg/edit?tab=t.0)
+- [ ] [Before you continue to YouTube](https://www.youtube.com/c/AhmedSallams/playlists)
+- [ ] [Professional Assembly Language: 9780764579011: Computer Science Books @ Amazon.com](https://www.amazon.com/Professional-Assembly-Language-Richard-Blum/dp/0764579010)
+- [ ] [The Eudyptula Challenge](http://eudyptula-challenge.org/)
+- [ ] dinosaurs Operating System book
+- [ ] [Write your own Operating System](https://www.youtube.com/playlist?list=PLHh55M_Kq4OApWScZyPl5HhgsTJS9MZ6M)
+- [ ] [Amateur Makes an OS](https://www.youtube.com/playlist?list=PLT7NbkyNWaqajsw8Xh7SP9KJwjfpP8TNX)
+- [ ] [Expanded Main Page - OSDev Wiki](https://wiki.osdev.org/Expanded_Main_Page)
+- [ ] [The Kernelnewbies Archives](https://lists.kernelnewbies.org/pipermail/kernelnewbies/)
+- [ ] [Amazon.com: Linux Kernel Development: 8601300366272: Love, Robert: Books](https://www.amazon.com/Linux-Kernel-Development-Robert-Love/dp/0672329468)
+- [ ] [Linux Device Drivers, Third Edition \[LWN.net\]](https://lwn.net/Kernel/LDD3/)
+- [ ] [Robert Love - Quora](https://www.quora.com/profile/Robert-Love-1)
+- [ ] [The Linux Kernel Module Programming Guide](https://tldp.org/LDP/lkmpg/2.6/html/index.html)
+- [ ] [What's next step?! · Issue #141 · cirosantilli/linux-kernel-module-cheat](https://github.com/cirosantilli/linux-kernel-module-cheat/issues/141)
+- [ ] [Vim meetup](https://www.youtube.com/playlist?list=PL8tzorAO7s0jy7DQ3Q0FwF3BnXGQnDirs)
+- [ ] [Vim Will Actually Change Your Life. - YouTube](https://www.youtube.com/watch?v=ST7vnfKjfvY&ab_channel=LukeSmith)
+- [ ] [Algorithms analysis & Design course](https://www.youtube.com/playlist?list=PLJy_Searp12mIkGlnuJLFGPpGeFE2G3_Y)
+- [ ] [Computer Organization](https://www.youtube.com/playlist?list=PLRlW03129fyy2uVqK0kqnA6ehJN_XDLhz)
+- [ ] [نصائح لطلاب علوم الحاسب](https://www.youtube.com/playlist?list=PLJpb_xuKcFoseuYoWiYyFwauw4VpE70LF)
+- [ ] [Embedded Linux Completely from Scratch](https://ericdraken.com/embedded-linux/)
+- [ ] Google: "HOWTO do Linux kernel development"
 - [ ] 

@@ -17,4 +17,5 @@
 - [Tips](content/Tips.md)
 - [Secure boot](content/Secure%20boot.md)
 - [systemd](content/systemd.md)
+- [Logic analyzer with BBB](content/Logic%20analyzer%20with%20BBB.md)
 - 
