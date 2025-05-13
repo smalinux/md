@@ -125,6 +125,10 @@ systemctl list-unit-files | grep overlay
 - [ ] اعمل nfs setup عدل 🟡
 - [ ] شغل الـ network boot وضيف env vars فى yocto خاصه بيك فى اخر الملف
 - [ ] اقرأ كل الـ man بتاعت dnsmasq وجرب كل الـ params بتاعته
+- [ ] نظف جدا اوامر الـ uboot فى الملف, كل سطر يكون مقروء ومفيش قيم مريبه
+- [ ] ما تحطش الـ ip والـ serverip بايدك
+- [ ] اعمل boot menu لطيفه زى اللى عندك فى الشغل جوا uboot
+- [ ] 
 
 الاوامر دى اشغلت معايا كويس ومع poky-nfsboot لكن عطلت وقت لما systemd بدأ:-
 
@@ -137,9 +141,38 @@ tftpboot 0x88000000 am335x-boneblack.dtb
 
 setenv bootargs "console=${console} root=/dev/nfs rw rootfstype=nfs ip=dhcp nfsroot=192.168.0.134:/src/yocto/build/bbb/nfsroot-core-image-bbb-bbb,nfsvers=3,proto=tcp,port=3048,mountport=3048 init=/usr/sbin/init"
 
+
 bootz 0x82000000 - 0x88000000
 ```
+
+
+
+
+```
+
+env set serverip 192.168.0.134;
+env set ipaddr 192.168.0.90;
+
+env set image zImage;
+env set fdt_file "am335x-boneblack.dtb";
+
+tftpboot ${loadaddr} ${image};
+tftpboot ${fdtaddr} ${fdt_file};
+
+env set nfsroot "/home/smalinux/xxx,nfsvers=3,port=3048,udp,mountport=3048";
+
+
+env set netargs 'setenv bootargs console=${console} ${optargs} root=/dev/nfs rootwait debug loglevel=7 earlyprintk ignore_loglevel initcall_debug nfsrootdebug ip=${ipaddr} nfsroot=${serverip}:${nfsroot},v3,tcp';
+
+run netargs;
+
+bootz ${loadaddr} - ${fdtaddr}';
+```
+
+
+
 - [ ] فى المستقبل خلى rauc يستخدم الـ emmc
+
 - [ ] [\[U-Boot,v3,1/3\] AM335x : Add USB support for AM335x in u-boot - Patchwork](https://patchwork.ozlabs.org/project/uboot/patch/1340703483-27276-2-git-send-email-harman_sohanpal@ti.com/) 🥱
 - [ ] [Programming eMMC with USB for OSD335x (AM335x System in Package) - Octavo Systems](https://octavosystems.com/docs/programming-emmc-with-usb-for-osd335x/) 🥱
 # barebox

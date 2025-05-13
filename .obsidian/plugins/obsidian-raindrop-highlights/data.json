@@ -19,11 +19,16 @@
       "id": 53875792,
       "title": "BBB",
       "sync": true,
-      "lastSyncDate": "2025-05-12T03:52:11.949Z"
+      "lastSyncDate": "2025-05-13T15:55:50.130Z"
     },
     "54031135": {
       "id": 54031135,
       "title": "blogger",
+      "sync": false
+    },
+    "55244750": {
+      "id": 55244750,
+      "title": "Repos to try",
       "sync": false
     },
     "-1": {
