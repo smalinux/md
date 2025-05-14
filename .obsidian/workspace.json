@@ -50,7 +50,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -171,13 +171,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/U-boot.md",
+                "file": "content/Timeline.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of U-boot"
+              "title": "Outline of Timeline"
             }
           }
         ],
@@ -199,15 +199,16 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "4e54f2c76b23451e",
+  "active": "ecf671656c5c6ed0",
   "lastOpenFiles": [
     "content/Linux kernel setup.md",
+    "content/Timeline.md",
+    "raindrop/BBB/openbmcopenbmc OpenBMC Distribution.md",
     "content/U-boot.md",
     "raindrop/BBB/FOSDEM 2024 - Linux Matchmaking Helping devices and drivers find each other.md",
     "raindrop/BBB/Embedded Linux and beyond – Linux, Yocto, Firmware Updates, FOTA.md",
     "raindrop/BBB/A guide to the Kernel Development Process — The Linux Kernel documentation.md",
     "content/test.md",
-    "content/Timeline.md",
     "raindrop/BBB/gmolveau - Overview.md",
     "content/Roadmap.md",
     "README.md",
@@ -226,7 +227,6 @@
     "raindrop/BBB/Your list  embedded 🥰.md",
     "raindrop/BBB/CLFS Trac.md",
     "Untitled.md",
-    "content/barebox.md",
     "raindrop/BBB",
     "raindrop",
     "assets/Pasted image 20250430225243.png",

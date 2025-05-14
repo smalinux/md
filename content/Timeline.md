@@ -1,2 +1,22 @@
-2025-05-11
-	NFS & TFTP boot: Fixed!
+###### 2025-05-11
+- [ ] NFS & TFTP boot: Fixed!
+###### 2025-05-14
+- [ ] NFS & TFTP boot: Fixed!
+- [ ] <- I think meta-rauc-bbb/recipe-core/ need to mv somewhere under meta-bbb
+- [ ] Reset all uboot env vars
+- [ ] nice uboot bootmenu
+- [ ] understand all uboot env vars that are already exist
+- [ ] makeshift: delete symlink under /tftp and create a new one
+- [ ] /srv/nfs/MACHINE : default location for any nfs rootfs
+- [ ] copy yocto/linux.config to makeshift/linux and boot using makeshift kernel
+- [ ] Cleanup your uboot env all put all your boot options together
+- [ ] delete evvvvvv & document boot_net & boot_net_dbg (earlyprintk ignore_loglevel initcall_debug nfsrootdebug)
+- [ ] set up U-Boot RNDIS over USB on BeagleBone Black using Yocto to enable TFTP boot without manually specifying IP addresses each time
+- [ ] Supscribe claude and try it for month
+- [ ] fs_overlay
+- [ ] port for barebox
+- [ ] faster build & deploy cycle
+- [ ] colors in bash
+- [ ] usb wireless
+- [ ] use uhubctl
+- [ ] 

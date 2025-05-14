@@ -130,22 +130,7 @@ systemctl list-unit-files | grep overlay
 - [ ] اعمل boot menu لطيفه زى اللى عندك فى الشغل جوا uboot
 - [ ] 
 
-الاوامر دى اشغلت معايا كويس ومع poky-nfsboot لكن عطلت وقت لما systemd بدأ:-
-
-```
-setenv serverip 192.168.0.134
-setenv ipaddr 192.168.0.10
-
-tftpboot 0x82000000 zImage
-tftpboot 0x88000000 am335x-boneblack.dtb
-
-setenv bootargs "console=${console} root=/dev/nfs rw rootfstype=nfs ip=dhcp nfsroot=192.168.0.134:/src/yocto/build/bbb/nfsroot-core-image-bbb-bbb,nfsvers=3,proto=tcp,port=3048,mountport=3048 init=/usr/sbin/init"
-
-
-bootz 0x82000000 - 0x88000000
-```
-
-
+الاوامر دى اشغلت معايا كويس ومع poky-nfsboot:
 
 
 ```
