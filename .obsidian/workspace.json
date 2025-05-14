@@ -50,7 +50,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -171,13 +171,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/Timeline.md",
+                "file": "content/U-boot.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Timeline"
+              "title": "Outline of U-boot"
             }
           }
         ],
@@ -199,10 +199,10 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "ecf671656c5c6ed0",
+  "active": "4e54f2c76b23451e",
   "lastOpenFiles": [
-    "content/Linux kernel setup.md",
     "content/Timeline.md",
+    "content/Linux kernel setup.md",
     "raindrop/BBB/openbmcopenbmc OpenBMC Distribution.md",
     "content/U-boot.md",
     "raindrop/BBB/FOSDEM 2024 - Linux Matchmaking Helping devices and drivers find each other.md",

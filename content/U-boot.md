@@ -8,7 +8,7 @@ B="/mnt/_OUTPUT/tmp/poky-bbb-glibc/work/bbb-poky-linux-gnueabi/u-boot/2024.01/bu
 
 builddir $ grep -r 'boot_efi_binary' .
 
-builddir $ u-boot-initial-env
+builddir $ vim u-boot-initial-env
 هنا المتغيرات اللى مبدياً هتاخدها معاك, دا اول مكان
 ```
 
