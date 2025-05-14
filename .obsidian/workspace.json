@@ -49,8 +49,7 @@
               "title": "Timeline"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -171,13 +170,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/U-boot.md",
+                "file": "content/Linux kernel setup.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of U-boot"
+              "title": "Outline of Linux kernel setup"
             }
           }
         ],
@@ -199,14 +198,14 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "4e54f2c76b23451e",
+  "active": "13e934eaeac885e9",
   "lastOpenFiles": [
+    "content/U-boot.md",
+    "content/Linux kernel setup.md",
+    "content/Timeline.md",
     "raindrop/BBB/Embedded Recipes 2025.md",
     "raindrop/BBB/after hours coding.md",
-    "content/Timeline.md",
-    "content/Linux kernel setup.md",
     "raindrop/BBB/openbmcopenbmc OpenBMC Distribution.md",
-    "content/U-boot.md",
     "raindrop/BBB/FOSDEM 2024 - Linux Matchmaking Helping devices and drivers find each other.md",
     "raindrop/BBB/Embedded Linux and beyond – Linux, Yocto, Firmware Updates, FOTA.md",
     "raindrop/BBB/A guide to the Kernel Development Process — The Linux Kernel documentation.md",
