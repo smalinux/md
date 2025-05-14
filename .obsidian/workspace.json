@@ -49,7 +49,8 @@
               "title": "Timeline"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -170,13 +171,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/Linux kernel setup.md",
+                "file": "content/Timeline.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Linux kernel setup"
+              "title": "Outline of Timeline"
             }
           }
         ],
@@ -198,10 +199,10 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "13e934eaeac885e9",
+  "active": "ecf671656c5c6ed0",
   "lastOpenFiles": [
-    "content/U-boot.md",
     "content/Linux kernel setup.md",
+    "content/U-boot.md",
     "content/Timeline.md",
     "raindrop/BBB/Embedded Recipes 2025.md",
     "raindrop/BBB/after hours coding.md",
