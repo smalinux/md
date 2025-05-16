@@ -69,12 +69,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/SPI.md",
+                "file": "content/Linux kernel setup.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "SPI"
+              "title": "Linux kernel setup"
             }
           }
         ],
@@ -198,13 +198,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/SPI.md",
+                "file": "content/Linux kernel setup.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of SPI"
+              "title": "Outline of Linux kernel setup"
             }
           }
         ],
@@ -229,6 +229,10 @@
   "active": "f3728ecc6051cf6f",
   "lastOpenFiles": [
     "README.md",
+    "content/am335x USB mode.md",
+    "content/initramfs.md",
+    "content/Uboot.md",
+    "content/NeoPixel matrix.md",
     "content/SPI.md",
     "content/dts.md",
     "Clippings/pinctrl.md",
@@ -245,15 +249,11 @@
     "content/Boot time optimization.md",
     "content/udev.md",
     "content/libgpiod.md",
-    "content/NeoPixel matrix.md",
     "raindrop/BBB/sbabicmeta-swupdate Yocto receipes to generate a swupdate rootfilesystem as initrd.md",
     "raindrop/BBB/sbabicmeta-swupdate-boards Examples how to use SWUpdate.md",
     "content/dbus.md",
     "raindrop/BBB/fwupdfwupd A system daemon to allow session software to update firmware.md",
     "content/pwm subsystem.md",
-    "content/poky-nfsroot.md",
-    "content/ssh.md",
-    "content/Yocto.md",
     "http",
     "raindrop/BBB",
     "raindrop",

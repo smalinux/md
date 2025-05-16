@@ -5,7 +5,7 @@
 - [Yocto](content/Yocto.md)
 - [Audio USB](Clippings/Audio%20USB.md)
 - [pinctrl](Clippings/pinctrl.md)
-- [Linux kernel setup](content/Linux%20kernel%20setup.md) ****
+- [Linux kernel setup](content/Linux%20kernel%20setup.md) ###
 - [Electronics - Shopping list](content/Electronics%20-%20Shopping%20list.md)
 - [fastboot](content/fastboot.md)
 - [barebox](content/barebox.md)
@@ -18,7 +18,7 @@
 - [systemd](content/systemd.md)
 - [Logic analyzer](content/Logic%20analyzer.md) - [[JTag]] - 
 - [Boot time optimization](content/Boot%20time%20optimization.md)
-- [[tftp]] - [[dhcp]] - [[unfsd]] - [[nfsd]] - [[ssh]] - [[http]] - [[mDNS]]
+- [[tftp]] - [[proftpd]] - [[atftpd]] - [[dhcp]] - [[unfsd]] - [[nfsd]] - [[ssh]] - [[http]] - [[mDNS]]
 - [[libgpiod]]
 - [[pwm subsystem]]
 - [[poky-nfsroot]]
@@ -46,4 +46,8 @@
 - [[dotfiles]]
 - [[dts]]
 - [[SPI]]
+- [[Uboot|U-boot]]
+- [[fastboot]] - [[snagboot]] - [[dfu-util]] - [[usbboot]] - [[ums]]
+- [[initramfs]]
+- [[WireGuard]] - [[Tailscale]] ***
 - 

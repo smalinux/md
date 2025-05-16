@@ -73,6 +73,23 @@ _____
 	- [ ] او اقلب الـ BBB eMMC لـ usb gadget واعملها flash بـ bmaptool؟🥱
 - [ ] شوف ازاى ممكن تضيف kernel modules directly after boot زى etc/modules/
 	- [ ] جرب تضيف واحد
+- [ ] poky/meta-skeleton/recipes-kernel/hello-mod/hello-mod_0.1.bb
+- [ ] https://docs.yoctoproject.org/kernel-dev/maint-appx.html
+      محتاج اقرأها تانى. مهم. خصوصاً لما اقرر اعتمد yocto-linux كمصدر ليا فى تطوير الكيرنال... هنا بيوصفو علمياً ازاى yocto team شغال على تطوير الكيرنال, والصفحه اللى قبلها هى الجانب النظرى للموضوع [4 Advanced Kernel Concepts — The Yocto Project ® 5.2 documentation](https://docs.yoctoproject.org/kernel-dev/concepts-appx.html) صفحه مهمه جدا لدرجه انى نفسى اقرأها مره كل كام شهر!
+
+**ليه تستخدم الـ yocto-linux اللى بتقدمها يكتو؟**
+لانك مش هتضطر تعملها صيانه و upgrade بايدك, لان الناس اللى وراها عندهم تكنيك وخبره سنين انه يعمل وايه احسن design
+تغيراتك اللى بتضيفها هى الشر, لازم تتعلم تشتغل معاهم, وتـ integrate حاجات بشكل nice من غير conflicts كتير
+كل لما تضيف حاجات custom ومش عارف تبقى friendly كفايه مع الـ upstream دا معناه انك بتخلق gap مش هتعرف تحله بعدين,
+مشكلتك قابلت ناس كتير غيرك, وديما فيه حلول جاهزه انت جاهل بيها, لانك مش مُطلع على كل الحلول.
+احسن حاجه ممكن تعملها انك تخلى حلولك الـ custom معتمده على حاجه upstream وتـ hold الـ version وتكتب unit test علشان لما يحصل break تعرف.
+وتحالو ما تحلش كل المشاكل بنفسك وتضيع وقت. بس وثق المشاكل وكمل استكشاف وتجربه
+اقتل الشغف بتاع انك تكتب حاجه very custom ةتكون perfect لان دا مش هيحصل ... 
+اسوء حاجه تعلمها انك تكتب حلول تبعدك عن الـ upstream ,,, حاول على اد ما تقدر تحل مشاكلك مع الـ community, علشان تفكر مع الناس.
+**ليه ماتستخدمش yocto-linux اللى بتقدمه يكتو؟**
+لو عندك تعديلات very custom
+لو عندك كيرنال عايز تفضل قاعد جنبها من غير ما تعمل اى update فى المستقبل!
+
 # makeshift
 - [x] run $ m savedefconfig  after every $ m
 - [x] Git worktree: https://github.com/smalinux/buildroot-bbb
