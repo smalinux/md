@@ -53,6 +53,13 @@ _____
 دا بيأدى انى مش هعرف اعمل upgrade بسهوله. so انا قررت اريح دماغى
 الهدف من buildroot بالنسبالى او yocto انه يدينى rootfs محترم من غير وجع دماغ كبيره وكمان يصمد معايا فى الـ scale فى الـ upgrade من غير وجع دماغ كتير, so هكمل مع yocto
 # Yocto
+قررت ارجع تانى لـ Yocto :
+- يكتو اسهل تضيفله features مع الـ scale 
+- الـ community والامثله متوفره اكتر
+- مش هحتاج اعمل configure لكل حاجه from scratch زى مع buildroot
+- محتاج جداً استخدم poky exporter مش معتمد تماماً على nfs بتاع الـ host 
+- سهل الـ upgrade سواء لنسخه يكتو احدث او لـ arch مختلف
+
 اكبر عيب مع yocto over buildroot هو انه بيجى مع pre config واغلبها مش احسن حاجه وهحتاج اقفل كتير منها علشان اخليه اسرع
 الـ rootfs اللى بيطلع من yocto ديما scalable 
 من اغلس العيوب فى buildroot ان علشان تعمل enable لحاجه, بتاخد وقت كتير علشان بحط كل الـ settings from scratch ودى حاجه مش مهتم بيها تماماً فى الوقت الحالى.
@@ -195,14 +202,12 @@ sudo apt install gcc-arm-linux-gnueabihf
 - [ ] Google: "processor sdk linux software developer guide"
 - [ ] [GitHub - mvp/uhubctl: uhubctl - USB hub per-port power control](https://github.com/mvp/uhubctl)
 - [ ] استخدم git worktree وامسح كل الـ branches
-- [ ] حط متغير فى الملفين دول وشوف ليهم تأثير ولا لا تماماً, لو لا ضيف comment قول فيه ان الملف دا مات
-```
-meta-bbb/recipes-bsp/u-boot-scr/files/boot.cmd
-meta-bbb/recipes-bsp/u-boot-scr/files/emmc-boot.cmd
-meta-bbb/recipes-bsp/u-boot-scr/u-boot-scr_1.0.bb
-```
+- [ ] شغل Qemu واسكربت على سيرفر يشتغل جوا docker كل يوم ويعمل testing ,, على feature بحيث تكون ديما بتعمل integration testing كل لما تتقدم لقدام
+- [ ] ضيف الألوان فى الـ shell ديماً من خلال الـ overlay, لان الـ shell دلوقتى ناشف جدا
+- [ ] عايز اركز مع كل اللى مكتوب فى dmesg واصلح كل المشاكل اللى مكتوبه
+_____
 
-- [ ] ايه دلاله الارقام دى! هل دى احسن حاجه؟!
+ايه دلاله الارقام دى! هل دى احسن حاجه؟!
 ```
 Ubuntu@yocto $ git diff meta-bbb/recipes-core/images/core-image-bbb.bb
 diff --git a/meta-bbb/recipes-core/images/core-image-bbb.bb b/meta-bbb/recipes-core/images/core-image-bbb.bb
@@ -236,23 +241,17 @@ index 13f439c5ff..fc4631c200 100644
 
 ```
 
-- [ ] ضيف الألوان فى الـ shell ديماً من خلال الـ overlay, لان الـ shell دلوقتى ناشف جدا
-- [ ] 
+
+
+____
+
 # continuous tasks 🔄
 - [ ] وثق الاوامر اللى بتسخدمها مع bitbake فى README
 - [ ] بعد ما كل حاجه تشتغل اعمل performance monitoring وراجع ايه اللى ناقص كدا وايه اللى ممكن تخليه يكون اسرع فى الـ cycle دى. 
 	- [ ] انك تضيع وقت دلوقتى فى انك تسرع كل حاجه اهم من انك تكمل dev على حاجه بطيئه وممله🟡
 - [ ] راجع كشاكيلك
 - [ ] انك تراجع الحاجات اللى بتنزل مع كل release من Rauc و barebox ولينكس و uboot والخ
-- [ ] 
 
-_____
-قررت ارجع تانى لـ Yocto :
-- يكتو اسهل تضيفله features مع الـ scale 
-- الـ community والامثله متوفره اكتر
-- مش هحتاج اعمل configure لكل حاجه from scratch زى مع buildroot
-- محتاج جداً استخدم poky exporter مش معتمد تماماً على nfs بتاع الـ host 
-- سهل الـ upgrade سواء لنسخه يكتو احدث او لـ arch مختلف
 
 ____
 ```

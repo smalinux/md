@@ -1,0 +1,2 @@
+- ضيف libgpiod لـ yocto
+- اعمل مثال blinking led

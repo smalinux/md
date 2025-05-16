@@ -1,0 +1,3 @@
+- compatible = "spi-gpio"
+- SPI driver with NeoPixel LEDs
+- 

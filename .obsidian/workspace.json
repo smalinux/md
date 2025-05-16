@@ -8,20 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "13e934eaeac885e9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/Linux kernel setup.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Linux kernel setup"
-            }
-          },
-          {
             "id": "4e54f2c76b23451e",
             "type": "leaf",
             "state": {
@@ -48,9 +34,51 @@
               "icon": "lucide-file",
               "title": "Timeline"
             }
+          },
+          {
+            "id": "a22bddf04703fb61",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/dbus.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "dbus"
+            }
+          },
+          {
+            "id": "dead1c286a96992b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/Boot time optimization.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Boot time optimization"
+            }
+          },
+          {
+            "id": "f3728ecc6051cf6f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/SPI.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "SPI"
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -107,8 +135,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 357.5,
-    "collapsed": true
+    "width": 357.5
   },
   "right": {
     "id": "00e8531b7b73c201",
@@ -171,13 +198,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/Timeline.md",
+                "file": "content/SPI.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Timeline"
+              "title": "Outline of SPI"
             }
           }
         ],
@@ -199,34 +226,35 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "ecf671656c5c6ed0",
+  "active": "f3728ecc6051cf6f",
   "lastOpenFiles": [
-    "content/Linux kernel setup.md",
-    "content/U-boot.md",
-    "content/Timeline.md",
-    "raindrop/BBB/Embedded Recipes 2025.md",
-    "raindrop/BBB/after hours coding.md",
-    "raindrop/BBB/openbmcopenbmc OpenBMC Distribution.md",
-    "raindrop/BBB/FOSDEM 2024 - Linux Matchmaking Helping devices and drivers find each other.md",
-    "raindrop/BBB/Embedded Linux and beyond – Linux, Yocto, Firmware Updates, FOTA.md",
-    "raindrop/BBB/A guide to the Kernel Development Process — The Linux Kernel documentation.md",
-    "content/test.md",
-    "raindrop/BBB/gmolveau - Overview.md",
-    "content/Roadmap.md",
     "README.md",
-    "content/Genimage.md",
-    "content/fstab.md",
-    "content/systemd.md",
-    "content/Rauc.md",
-    "raindrop/BBB/how to do linux kernel development - Google Search.md",
-    "raindrop/BBB/HOWTO do Linux kernel development — The Linux Kernel documentation.md",
-    "raindrop/BBB/a guide to the kernel development process - Google Search.md",
-    "content/Logic analyzer with BBB.md",
-    "raindrop/BBB/Embedded Linux Completely from Scratch.md",
-    "content/am335x USB mode.md",
-    "raindrop/BBB/Welcome to the Mike’s homepage!.md",
-    "raindrop/BBB/sigrok.md",
-    "raindrop/BBB/Your list  embedded 🥰.md",
+    "content/SPI.md",
+    "content/dts.md",
+    "Clippings/pinctrl.md",
+    "content/dotfiles.md",
+    "content/Timeline.md",
+    "content/Logic analyzer.md",
+    "content/Watchdog.md",
+    "content/U-boot.md",
+    "content/Linux kernel setup.md",
+    "content/flashing emmc.md",
+    "content/meta-arm.md",
+    "content/nginx.md",
+    "content/umpf.md",
+    "content/Boot time optimization.md",
+    "content/udev.md",
+    "content/libgpiod.md",
+    "content/NeoPixel matrix.md",
+    "raindrop/BBB/sbabicmeta-swupdate Yocto receipes to generate a swupdate rootfilesystem as initrd.md",
+    "raindrop/BBB/sbabicmeta-swupdate-boards Examples how to use SWUpdate.md",
+    "content/dbus.md",
+    "raindrop/BBB/fwupdfwupd A system daemon to allow session software to update firmware.md",
+    "content/pwm subsystem.md",
+    "content/poky-nfsroot.md",
+    "content/ssh.md",
+    "content/Yocto.md",
+    "http",
     "raindrop/BBB",
     "raindrop",
     "assets/Pasted image 20250430225243.png",

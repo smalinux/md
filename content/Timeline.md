@@ -33,7 +33,7 @@
 - [x] makeshift: delete symlink under /tftp and create a new one
 - [ ] faster build & deploy cycle
 	- [ ] yocto boot time
-- [ ] use uhubctl
+- [ ] use uhubctl ❗❗❗❗❗
 - [ ] pinctrl
 - [ ] usb wireless
 - [ ] logic analyzer
@@ -59,3 +59,6 @@ _____
 - [ ] port for barebox❗
 
 - [ ] colors in bash❗
+- [ ] عايز اعمل QA quality assurance لكل feature عملتها, مثلا عملت runqemu, عايز اتأكد انها ديما شغاله
+- [ ] شيل الـ list الافتراضيه الفتراضيه بتاع الـ core-image-bbb اللى بتضاف بسبب الـ group واعمل list خاصه بيك فيها كل الـ packages اللى انت عايزها بالضبط علشان يبقى عندك تحكم فى كل حاجه
+- [ ] 

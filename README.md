@@ -2,20 +2,48 @@
 > TODO: I want to convert this repo to normal static website, using: https://pedantic.software/git/blogit like Luke Smith, but I don't have time to fix try this...
 
 - [Roadmap](content/Roadmap.md)
-- [[Yocto]]
+- [Yocto](content/Yocto.md)
 - [Audio USB](Clippings/Audio%20USB.md)
-- [Pinctrl subsystem](Clippings/Pinctrl%20subsystem.md)
-- [Linux kernel setup](content/Linux%20kernel%20setup.md)
+- [pinctrl](Clippings/pinctrl.md)
+- [Linux kernel setup](content/Linux%20kernel%20setup.md) ****
 - [Electronics - Shopping list](content/Electronics%20-%20Shopping%20list.md)
 - [fastboot](content/fastboot.md)
 - [barebox](content/barebox.md)
-- Rauc: A/B update
-- set up some udev rules, so you don't need to use sudo
-- NeoPixel matrix: DMA & I2S
+- [udev](udev)
+- [[NeoPixel matrix]]
 - [am335x USB mode](content/am335x%20USB%20mode.md)
 - [My home server](content/My%20home%20server.md)
 - [Tips](content/Tips.md)
 - [Secure boot](content/Secure%20boot.md)
 - [systemd](content/systemd.md)
-- [Logic analyzer with BBB](content/Logic%20analyzer%20with%20BBB.md)
+- [Logic analyzer](content/Logic%20analyzer.md) - [[JTag]] - 
+- [Boot time optimization](content/Boot%20time%20optimization.md)
+- [[tftp]] - [[dhcp]] - [[unfsd]] - [[nfsd]] - [[ssh]] - [[http]] - [[mDNS]]
+- [[libgpiod]]
+- [[pwm subsystem]]
+- [[poky-nfsroot]]
+- [[dbus]]
+- [[RAUC]] - [[SWUpdate]]
+- mkenvimage
+- fw_printenv
+- spi-tools
+- rng-tools
+- pciutils
+- openocd
+- i2c-tools
+- hwdata
+- dtbocfg
+- dbus
+- Buildroot > Target Packages > Hardware Handling
+- [[nginx]] on host - [[SQlite]] on target
+- [[umpf]]
+- [[meta-arm]]
+- [[flashing emmc]]
+- Secure Boot
+- OpenOCD
+- [[Watchdog]]
+- [[GPIO subsytem]]
+- [[dotfiles]]
+- [[dts]]
+- [[SPI]]
 - 
