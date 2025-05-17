@@ -90,3 +90,17 @@ Overlays:
 https://github.com/beagleboard/bb.org-overlays
 
 ____
+
+الـ Linux kernel بتاعت Beaglebone هنا: https://github.com/beagleboard/linux
+وتحديداً بـ uname الكيرنال بتاعتى: https://github.com/beagleboard/linux/tree/v5.10.168-ti-r72
+
+بصيت على الـ git commit ولقيت انهم ضافو حوالى 200 commit فوق 
+```c
+# git commit
+707c48210a5384a72c82655a37895b7e822755f2 (tag: v5.10.168) Linux 5.10.168
+```
+
+حلو جدا, دلوقتى بقى عندى فرصه اعرف كل التغيرات اللى ti بتعملها!
+____
+عملت ملف اسمه what-is-new فيه كل الاضافات بتاعتهم
+

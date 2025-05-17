@@ -97,7 +97,8 @@
 - [x] ارفع الاسكربت بتاع raucintall
 - [ ] افهم met-rauc-bbb
 - [ ] اقرأ الاسكربتس اللى موجوده already وافهم ازاى شغاله كويس جدا
-- [ ] بعد ما تقرأ الـ docs كاملاً فكر ازاى تسرع الموضوع جدا 🥱 هنا: [Pengutronix - Saving Download Bandwidth with RAUC Adaptive Updates](https://pengutronix.de/en/blog/2022-10-12-rauc-adaptive-updates.html)
+- [ ] بعد ما تقرأ الـ docs كاملاً فكر ازاى تسرع الموضوع جدا
+- [ ] [Pengutronix - Saving Download Bandwidth with RAUC Adaptive Updates](https://pengutronix.de/en/blog/2022-10-12-rauc-adaptive-updates.html)
 - [ ] غير حاجه فى الكيرنال واتأكد ان التأثير موجود بعد استخدام raucinstall
 - [ ] فى المستقبل خلى rauc يستخدم الـ emmc
 - [ ] [\[U-Boot,v3,1/3\] AM335x : Add USB support for AM335x in u-boot - Patchwork](https://patchwork.ozlabs.org/project/uboot/patch/1340703483-27276-2-git-send-email-harman_sohanpal@ti.com/) 🥱

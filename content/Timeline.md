@@ -44,7 +44,8 @@
 
 
 #### Day: 2025-05-17
-- [ ] [[Understand bbb debian]]
+- [ ] عايز افهم الـ device tree الزياده جه منين [[Understand bbb debian]] 
+- [ ] 
 
 
 
