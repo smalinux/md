@@ -39,7 +39,7 @@
 - [ ] logic analyzer
 - [ ] make minimal barebox setup without yocto
 	- [ ] yocto & barebox = one line change virtual provider, until then don't use barebox with yocto!
-- [ ] 
+- [ ] RAUC delta update❗
 
 
 
@@ -61,4 +61,6 @@ _____
 - [ ] colors in bash❗
 - [ ] عايز اعمل QA quality assurance لكل feature عملتها, مثلا عملت runqemu, عايز اتأكد انها ديما شغاله
 - [ ] شيل الـ list الافتراضيه الفتراضيه بتاع الـ core-image-bbb اللى بتضاف بسبب الـ group واعمل list خاصه بيك فيها كل الـ packages اللى انت عايزها بالضبط علشان يبقى عندك تحكم فى كل حاجه
+- [ ] Resistance data partition
+- [ ] fs_overlay
 - [ ] 
