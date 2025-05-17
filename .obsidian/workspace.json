@@ -36,21 +36,21 @@
             }
           },
           {
-            "id": "d0cd9eb8802ca434",
+            "id": "fd4d508e2fe07976",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Dev Setup.md",
+                "file": "content/tmp.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Dev Setup"
+              "title": "tmp"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -170,13 +170,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/Understand bbb debian.md",
+                "file": "content/tmp.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Understand bbb debian"
+              "title": "Outline of tmp"
             }
           }
         ],
@@ -198,19 +198,19 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "9abd51e14e212101",
+  "active": "fd4d508e2fe07976",
   "lastOpenFiles": [
-    "content/bbb debian/Untitled.md",
     "content/Understand bbb debian.md",
-    "content/bbb debian",
+    "content/tmp.md",
     "content/Dev Setup.md",
+    "content/bbb debian/Untitled.md",
+    "content/bbb debian",
     "content/Timeline.md",
     "README.md",
     "content/Boot time optimization.md",
     "content/dbus.md",
     "content/U-boot.md",
     "content/Linux kernel setup.md",
-    "content/tmp.md",
     "CLAUDE.md",
     "content/am335x USB mode.md",
     "content/initramfs.md",
