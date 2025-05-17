@@ -36,6 +36,20 @@
             }
           },
           {
+            "id": "9abd51e14e212101",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/Understand bbb debian.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Understand bbb debian"
+            }
+          },
+          {
             "id": "a22bddf04703fb61",
             "type": "leaf",
             "state": {
@@ -76,9 +90,19 @@
               "icon": "lucide-file",
               "title": "README"
             }
+          },
+          {
+            "id": "703798a11c83e11b",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -198,13 +222,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/Timeline.md",
+                "file": "content/Understand bbb debian.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Timeline"
+              "title": "Outline of Understand bbb debian"
             }
           }
         ],
@@ -226,8 +250,10 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "ecf671656c5c6ed0",
+  "active": "9abd51e14e212101",
   "lastOpenFiles": [
+    "content/Understand bbb debian.md",
+    "content/Timeline.md",
     "content/Boot time optimization.md",
     "content/Linux kernel setup.md",
     "README.md",
@@ -242,7 +268,6 @@
     "content/dts.md",
     "Clippings/pinctrl.md",
     "content/dotfiles.md",
-    "content/Timeline.md",
     "content/Logic analyzer.md",
     "content/Watchdog.md",
     "content/U-boot.md",
@@ -253,7 +278,6 @@
     "content/udev.md",
     "content/libgpiod.md",
     "raindrop/BBB/sbabicmeta-swupdate Yocto receipes to generate a swupdate rootfilesystem as initrd.md",
-    "raindrop/BBB/sbabicmeta-swupdate-boards Examples how to use SWUpdate.md",
     "http",
     "raindrop/BBB",
     "raindrop",
