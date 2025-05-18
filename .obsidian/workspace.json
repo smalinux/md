@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Understand bbb debian.md",
+                "file": "content/Understand BBB Debian.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Understand bbb debian"
+              "title": "Understand BBB Debian"
             }
           },
           {
@@ -170,13 +170,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/Understand bbb debian.md",
+                "file": "content/Understand BBB Debian.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Understand bbb debian"
+              "title": "Outline of Understand BBB Debian"
             }
           }
         ],
@@ -200,15 +200,16 @@
   },
   "active": "9abd51e14e212101",
   "lastOpenFiles": [
-    "raindrop/BBB/DigiKey TechForum - An Electronic Component and Engineering Solution Forum.md",
-    "content/Timeline.md",
-    "content/Understand bbb debian.md",
     "content/tmp.md",
+    "README.md",
+    "content/Timeline.md",
+    "content/Understand BBB Debian.md",
+    "raindrop/BBB/BeagleBoard Documentation — BeagleBoard Documentation.md",
+    "raindrop/BBB/DigiKey TechForum - An Electronic Component and Engineering Solution Forum.md",
     "content/My home server.md",
     "assets/Pasted image 20250518170753.jpg",
     "assets/Pasted image 20250518170742.jpg",
     "assets/l7316hlvaah21.webp",
-    "README.md",
     "raindrop/BBB/MarkAYoderPRUCookbook This is a cookbook of the Programmable Realtime Unit on the BeagleBoard.md",
     "raindrop/BBB/PRU Cookbook.md",
     "content/Dev Setup.md",
@@ -229,7 +230,6 @@
     "content/dotfiles.md",
     "content/Logic analyzer.md",
     "content/Watchdog.md",
-    "content/flashing emmc.md",
     "http",
     "raindrop/BBB",
     "raindrop",

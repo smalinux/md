@@ -50,4 +50,5 @@
 - [[fastboot]] - [[snagboot]] - [[dfu-util]] - [[usbboot]] - [[ums]]
 - [[initramfs]]
 - [[WireGuard]] - [[Tailscale]] ***
+- [Understand BBB Debian](content/Understand%20BBB%20Debian.md)
 - 
