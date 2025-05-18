@@ -50,7 +50,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -170,13 +170,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/tmp.md",
+                "file": "content/Understand bbb debian.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of tmp"
+              "title": "Outline of Understand bbb debian"
             }
           }
         ],
@@ -198,10 +198,12 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "fd4d508e2fe07976",
+  "active": "9abd51e14e212101",
   "lastOpenFiles": [
-    "content/Understand bbb debian.md",
     "content/tmp.md",
+    "content/Understand bbb debian.md",
+    "raindrop/BBB/MarkAYoderPRUCookbook This is a cookbook of the Programmable Realtime Unit on the BeagleBoard.md",
+    "raindrop/BBB/PRU Cookbook.md",
     "content/Dev Setup.md",
     "content/bbb debian/Untitled.md",
     "content/bbb debian",
@@ -225,8 +227,6 @@
     "content/flashing emmc.md",
     "content/meta-arm.md",
     "content/nginx.md",
-    "content/umpf.md",
-    "content/udev.md",
     "http",
     "raindrop/BBB",
     "raindrop",

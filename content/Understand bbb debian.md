@@ -163,6 +163,10 @@ https://git.beagleboard.org/beagleboard/capes
 https://git.beagleboard.org/beagleboard/BeagleBoard-DeviceTrees
 
 
+علشان افهم uEnv.txt اقرأ: https://elinux.org/Beagleboard:U-boot_partitioning_layout_2.0
+
+
+
 _____
 
 # مستودعات BeagleBoard 
@@ -2151,4 +2155,403 @@ cat /sys/kernel/debug/pinctrl/44e10800.pinmux/pingroups
 
 يعد مستودع `beagle-pin-mux` أداة أساسية للمطورين الذين يعملون مع لوحات BeagleBoard وBeagleBone، حيث يوفر الأدوات والوثائق اللازمة لفهم وتكوين منافذ الإدخال/الإخراج على هذه اللوحات. من خلال فهم كيفية عمل نظام PinMux، يمكن للمطورين الاستفادة الكاملة من إمكانيات الأجهزة والتحكم في المنافذ بمرونة كبيرة لتناسب متطلبات مشاريعهم المختلفة.
 
--
+# مستودع BeagleBoard/mpfs-6.6.y-riscv64
+
+## نظرة عامة
+
+مستودع `mpfs-6.6.y-riscv64` الموجود على منصة GitLab التابعة لـ BeagleBoard.org هو مستودع مخصص لنواة لينكس مصممة خصيصًا للوحة BeagleV-Fire الحاسوبية وحيدة اللوح (SBC). هذا المستودع يحتوي على نسخة معدلة من فرع نواة لينكس 6.6.y تم تكييفها للعمل مع معالج Microchip PolarFire SoC (MPFS) المبني على بنية RISC-V والمستخدم في لوحة BeagleV-Fire.
+
+المصطلحات في اسم المستودع:
+
+- **mpfs**: اختصار لـ Microchip PolarFire SoC
+- **6.6.y**: إشارة إلى فرع نواة لينكس
+- **riscv64**: تحديد للبنية المستهدفة وهي RISC-V ذات 64 بت
+
+## السياق العتادي لـ BeagleV-Fire
+
+لوحة BeagleV-Fire هي حاسوب وحيد اللوح بسعر 150 دولار أمريكي مبنية على معالج Microchip PolarFire MPFS025T SoC، والذي يتميز بـ:
+
+- 5 أنوية RISC-V:
+    - 4 أنوية SiFive U54-MC ذات 64 بت (مجموعة تعليمات RV64GC)
+    - نواة واحدة SiFive E51 للتحكم/المراقبة ذات 64 بت (مجموعة تعليمات RV64IMAC)
+- نسيج FPGA مع 23 ألف عنصر منطقي
+- ذاكرة LPDDR4 سعة 2 جيجابايت
+- تخزين eMMC سعة 16 جيجابايت
+- موصلات cape متوافقة مع BeagleBone
+- موصل SYZYGY عالي السرعة لتوسيع FPGA
+
+## الغرض من المستودع
+
+يخدم هذا المستودع عدة وظائف حيوية:
+
+1. **صيانة النواة**: يوفر فرعًا مصانًا من نواة لينكس خصيصًا لبنية RISC-V مع دعم PolarFire SoC
+2. **دعم العتاد**: يحتوي على برامج تشغيل الأجهزة والرموز المحددة للعتاد لمكونات BeagleV-Fire
+3. **مواصفات شجرة الأجهزة**: يتضمن ملفات مصدر شجرة الأجهزة التي تصف تخطيط العتاد لـ BeagleV-Fire
+4. **نظام البناء**: يمكّن المستخدمين من بناء أنوية مخصصة بتكوينات محددة لاحتياجاتهم
+
+## المكونات الرئيسية
+
+بناءً على مستودعات نواة لينكس المماثلة ووثائق BeagleV-Fire، من المحتمل أن المستودع يحتوي على:
+
+1. **شجرة الأجهزة**: ملفات مصدر شجرة الأجهزة (`.dts`) مخصصة للوحة BeagleV-Fire
+2. **Defconfig**: التكوين الافتراضي للنواة لـ BeagleV-Fire
+3. **برامج تشغيل PolarFire**: برامج تشغيل محددة لمكونات عتاد MPFS
+4. **واجهة FPGA**: رمز للتفاعل مع نسيج FPGA من لينكس
+
+## الاستخدام
+
+يُستخدم هذا المستودع من قبل المطورين الذين يرغبون في:
+
+- بناء نواة لينكس مخصصة للوحة BeagleV-Fire الخاصة بهم
+- إضافة أو تعديل برامج تشغيل الأجهزة للعتاد المحدد
+- التجريب مع تطوير نواة RISC-V
+- إنشاء دعم cape مخصص في النواة
+
+## العلاقة بالمستودعات الأخرى
+
+تحتفظ منظمة BeagleBoard بالعديد من المستودعات ذات الصلة لـ BeagleV-Fire، بما في ذلك:
+
+- محمل تمهيد Hart Software Services (HSS)
+- نصوص بناء صور Ubuntu
+- برامج Gateware لنسيج FPGA
+- الوثائق
+
+يكمل مستودع النواة هذا المكونات الأخرى لتشكيل مجموعة برمجية كاملة للوحة BeagleV-Fire.
+
+## سياق التطوير
+
+نواة لينكس 6.6.y هي إصدار أحدث مما يأتي مع صورة BeagleV-Fire القياسية (التي تستخدم عادة 6.1.x). وهذا يشير إلى أن هذا المستودع قد يكون للتطوير المستقبلي أو لتوفير ميزات نواة أحدث للمنصة.
+
+## عملية بناء وتثبيت النواة المخصصة
+
+لبناء نواة مخصصة باستخدام هذا المستودع، يمكن اتباع الخطوات التالية:
+
+1. استنساخ المستودع:
+    
+    bash
+    
+    ```bash
+    git clone https://git.beagleboard.org/beagleboard/mpfs-6.6.y-riscv64.git
+    cd mpfs-6.6.y-riscv64
+    ```
+    
+2. تكوين النواة:
+    
+    bash
+    
+    ```bash
+    make ARCH=riscv CROSS_COMPILE=riscv64-linux-gnu- mpfs_defconfig
+    ```
+    
+3. (اختياري) تخصيص التكوين:
+    
+    bash
+    
+    ```bash
+    make ARCH=riscv CROSS_COMPILE=riscv64-linux-gnu- menuconfig
+    ```
+    
+4. بناء النواة:
+    
+    bash
+    
+    ```bash
+    make ARCH=riscv CROSS_COMPILE=riscv64-linux-gnu- -j$(nproc)
+    ```
+    
+5. توليد صورة نواة قابلة للتثبيت:
+    
+    bash
+    
+    ```bash
+    make ARCH=riscv CROSS_COMPILE=riscv64-linux-gnu- -j$(nproc) Image.gz
+    ```
+    
+6. تجميع وتثبيت وحدات النواة:
+    
+    bash
+    
+    ```bash
+    make ARCH=riscv CROSS_COMPILE=riscv64-linux-gnu- -j$(nproc) modules
+    make ARCH=riscv CROSS_COMPILE=riscv64-linux-gnu- INSTALL_MOD_PATH=path/to/rootfs modules_install
+    ```
+    
+
+## تحديثات وتطويرات مستقبلية
+
+يتم تحديث هذا المستودع دوريًا لدمج إصلاحات الأمان والتحسينات من مستودع لينكس الرئيسي، بالإضافة إلى التحسينات المحددة لدعم عتاد BeagleV-Fire. يمكن للمطورين المساهمة في المستودع عن طريق تقديم طلبات الدمج (MRs) أو الإبلاغ عن المشكلات عبر نظام تتبع المشكلات الخاص بـ GitLab.
+
+## ملخص
+
+يعد مستودع BeagleBoard/mpfs-6.6.y-riscv64 موردًا قيمًا للمطورين الذين يعملون مع لوحة BeagleV-Fire، حيث يوفر أساسًا لبناء صور نواة لينكس مخصصة. إنه يجسد التزام مجتمع BeagleBoard بدعم بنية RISC-V والتطوير المفتوح المصدر لأنظمة الحوسبة المضمنة. من خلال هذا المستودع، يمكن للمستخدمين استكشاف إمكانيات معالج PolarFire SoC ونسيج FPGA، مما يجعل BeagleV-Fire منصة قوية ومرنة للابتكار والتعلم.
+
+
+# مستودع MicroBlocks لـ BeagleBoard
+
+## نظرة عامة
+
+مستودع MicroBlocks على منصة GitLab التابعة لـ BeagleBoard.org هو مشروع مخصص لدعم برمجة MicroBlocks على أجهزة BeagleBoard، وخاصة لوحة BeagleConnect Freedom. يعد هذا المستودع جزءًا من جهود مؤسسة BeagleBoard.org لجعل البرمجة سهلة الوصول للمبتدئين والمعلمين والهواة.
+
+## ما هو MicroBlocks؟
+
+MicroBlocks هي لغة برمجة رسومية مجانية ومفتوحة المصدر، شبيهة بـ Scratch، مصممة خصيصًا للحوسبة الفيزيائية وألواح المتحكمات الدقيقة التعليمية. تم إنشاؤها لجعل برمجة المتحكمات الدقيقة في متناول المبتدئين، بما في ذلك الأطفال من سن التاسعة فما فوق، مع توفير عمق كافٍ للمستخدمين الأكثر تقدمًا.
+
+الميزات الرئيسية لـ MicroBlocks تشمل:
+
+- واجهة برمجة مرئية مع كتل سحب وإفلات ملونة مشابهة لـ Scratch
+- بيئة برمجة مباشرة حيث تعمل التغييرات فورًا على الجهاز
+- القدرة على تشغيل نصوص برمجية متعددة في وقت واحد للمعالجة المتوازية
+- توافق متعدد المنصات عبر العديد من ألواح المتحكمات الدقيقة المختلفة
+- دعم لأنواع بيانات متنوعة بما في ذلك الأعداد الصحيحة والقيم المنطقية والسلاسل النصية والقوائم
+
+## تكامل BeagleBoard وMicroBlocks
+
+عملت مؤسسة BeagleBoard.org على نقل MicroBlocks إلى منصة BeagleConnect Freedom، وهي إحدى منصات الأجهزة التي تقدمها. يتيح هذا التكامل للمستخدمين برمجة أجهزة BeagleBoard باستخدام بيئة MicroBlocks سهلة الاستخدام للمبتدئين.
+
+هذا المستودع على git.beagleboard.org/beagleboard/microblocks يستضيف البرنامج الثابت للآلة الافتراضية (VM) لـ MicroBlocks المهيأة خصيصًا لأجهزة BeagleBoard. يعد هذا المكون حاسمًا لتمكين تشغيل برامج MicroBlocks على أجهزة BeagleBoard.
+
+## التنفيذ التقني
+
+تعتمد الآلة الافتراضية لـ MicroBlocks لـ BeagleBoard على:
+
+1. **نظام Zephyr RTOS** - كنظام تشغيل أساسي
+2. **وحدة Arduino لـ Zephyr** - نظرًا لأن MicroBlocks تستخدم واجهات برمجة تطبيقات Arduino، يتم استخدام وحدة Arduino لـ Zephyr لسد هذه الفجوة
+3. **تراكبات شجرة الأجهزة** - لتكوين الوصول إلى الأجهزة
+
+يتيح التنفيذ ميزات مثل:
+
+- دعم ADC (تحويل تناظري إلى رقمي)
+- قدرات PWM (تعديل عرض النبضة)
+- وظائف GPIO العامة
+
+## استخدام MicroBlocks على BeagleConnect Freedom
+
+لاستخدام MicroBlocks على BeagleConnect Freedom:
+
+1. تثبيت البرنامج الثابت للآلة الافتراضية لـ MicroBlocks على اللوحة
+2. توصيل اللوحة عبر USB بجهاز الكمبيوتر الخاص بك
+3. استخدام بيئة تطوير MicroBlocks IDE (متاحة عبر الإنترنت أو كتطبيق مستقل)
+4. يجب أن تكتشف بيئة التطوير لوحة BeagleConnect Freedom تلقائيًا
+
+يمكن العثور على أحدث إصدارات البرنامج الثابت لأجهزة BeagleBoard على صفحة الإصدارات في المستودع، مع تسمية الإصدار المستقر الحالي بـ "MicroBlocks VM 250".
+
+## المستودعات ذات الصلة
+
+يبدو أن مستودع BeagleBoard MicroBlocks جزء من نظام بيئي أكبر:
+
+- يتم الاحتفاظ برمز المصدر الأساسي لـ MicroBlocks في مستودع "smallvm"، الذي ينسخه BeagleBoard في [https://github.com/beagleboard/smallvm](https://github.com/beagleboard/smallvm)
+- تحتفظ BeagleBoard بنسختها الخاصة مع تعديلات محددة لأجهزة BeagleBoard
+- هناك تطوير نشط لتحسين التوافق وإضافة الميزات
+
+## التطورات الأخيرة
+
+تشمل التحديثات الأخيرة لـ MicroBlocks على BeagleBoard:
+
+- دعم MicroBlocks v2.0
+- تحسين التكوينات الافتراضية التي تدعم ADC وPWM بدون تراكبات
+- التكامل مع أداة BeagleBoard Rust imager لإعداد أسهل
+- تحديثات منتظمة للبرنامج الثابت للحفاظ على التوافق مع بيئة تطوير MicroBlocks IDE
+
+## الخلاصة
+
+يمثل هذا المشروع التزام مؤسسة BeagleBoard.org بتكنولوجيا التعليم وجعل برمجة الأنظمة المدمجة أكثر سهولة من خلال بيئات البرمجة المرئية. من خلال توفير منصة بسيطة وقوية في نفس الوقت، يفتح MicroBlocks على أجهزة BeagleBoard الباب أمام الأطفال والمبتدئين والمعلمين لاستكشاف عالم الإلكترونيات والبرمجة بطريقة ملموسة وتفاعلية.
+
+# مستودع BeagleBoard/xuantie-6.6.y-riscv64
+
+## نظرة عامة
+
+مستودع `xuantie-6.6.y-riscv64` الموجود على منصة GitLab التابعة لـ BeagleBoard.org هو مستودع مخصص لنواة لينكس مصممة خصيصًا للوحة BeagleV-Ahead التي تعتمد على معالج XuanTie C910 RISC-V من شركة T-Head (التابعة لمجموعة علي بابا). يحتوي هذا المستودع على نسخة معدلة من فرع نواة لينكس 6.6.y مكيفة للعمل مع بنية RISC-V وخاصةً معالج TH1520 المستخدم في لوحة BeagleV-Ahead.
+
+المصطلحات في اسم المستودع:
+
+- **xuantie**: إشارة إلى معمارية معالج XuanTie C910 من شركة T-Head
+- **6.6.y**: إشارة إلى فرع نواة لينكس الإصدار 6.6
+- **riscv64**: تحديد للبنية المستهدفة وهي RISC-V ذات 64 بت
+
+## السياق العتادي لـ BeagleV-Ahead
+
+لوحة BeagleV-Ahead هي حاسوب وحيد اللوح مفتوح المصدر بسعر حوالي 150 دولار أمريكي، مبنية على معالج Alibaba T-Head TH1520 SoC، والذي يتميز بـ:
+
+- معالج رباعي النواة من نوع XuanTie C910 RISC-V 64GC بتردد يصل إلى 2.0 GHz
+- معمارية إصدار خارج الترتيب (out-of-order) مع 8 وحدات تنفيذ
+- ذاكرة مخبأة L1 بحجم 64 كيلوبايت للتعليمات و 64 كيلوبايت للبيانات لكل نواة
+- ذاكرة مخبأة L2 مشتركة بحجم 1 ميجابايت
+- وحدة معالجة عصبية (NPU) بقدرة 4 TOPS عند تشغيل بيانات INT8
+- وحدة معالجة رسومية (GPU) من نوع Imagination BXM-4-64 بقدرة 50 GFLOPS
+- وحدتين لمعالجة الإشارات الصورية (ISP)
+- دعم ترميز وفك ترميز الفيديو H.265/H.264
+
+لوحة BeagleV-Ahead تأتي مع:
+
+- ذاكرة وصول عشوائي (RAM) سعة 4 جيجابايت من نوع LPDDR4
+- وحدة تخزين eMMC سعة 16 جيجابايت
+- منافذ موسعة متوافقة مع BeagleBone Black
+- دعم واي فاي وبلوتوث وإيثرنت
+
+## الغرض من المستودع
+
+يخدم هذا المستودع عدة وظائف أساسية:
+
+1. **صيانة النواة**: يوفر فرعًا محدثًا من نواة لينكس 6.6.y مع دعم معالج XuanTie RISC-V
+2. **دعم العتاد**: يحتوي على برامج تشغيل وتعريفات خاصة بمكونات لوحة BeagleV-Ahead
+3. **شجرة الأجهزة**: يضم ملفات Device Tree (.dts) المخصصة للوحة BeagleV-Ahead
+4. **تطبيقات الإضافية**: دعم ميزات خاصة مثل وحدة المعالجة العصبية (NPU) ووحدة معالجة الرسومات
+
+## المكونات الرئيسية في المستودع
+
+يحتوي المستودع على العديد من المكونات الرئيسية المصممة خصيصًا لدعم معالج XuanTie RISC-V:
+
+1. **ملفات شجرة الأجهزة**:
+    - `arch/riscv/boot/dts/thead/th1520-beaglev-ahead.dts` - ملف شجرة الأجهزة الرئيسي للوحة
+    - ملفات تعريف أخرى خاصة بمكونات معالج TH1520
+2. **برامج تشغيل محددة للمعالج**:
+    - برامج تشغيل خاصة بوحدات TH1520 مثل eMMC والواجهات المختلفة
+    - دعم لوحدة المعالجة العصبية (NPU)
+    - دعم لوحدة معالجة الرسومات
+3. **تكوينات النواة الافتراضية**:
+    - ملف `arch/riscv/configs/defconfig` المعدل لدعم لوحة BeagleV-Ahead
+4. **رقع (Patches) خاصة**:
+    - تعديلات على النواة الأساسية لدعم ميزات XuanTie C910
+    - دعم لملحقات معمارية XuanTie الخاصة
+
+## تاريخ التطوير وعلاقته بالنواة الرئيسية
+
+بدأ دعم لوحة BeagleV-Ahead في النواة الرئيسية مع الإصدار 6.6، حيث تم تقديم الدعم الأساسي (GPIO، المنافذ التسلسلية، الذاكرة) ضمن نواة لينكس الرئيسية. ومع ذلك، لا تزال بعض الوحدات مثل eMMC في مرحلة الاختبار والتطوير للإدماج الكامل في النواة الرئيسية.
+
+مستودع BeagleBoard/xuantie-6.6.y-riscv64 يعتبر جسرًا بين النسخة المقدمة من الشركة المصنعة (T-Head) والنواة الرئيسية، حيث يوفر دعمًا أكثر اكتمالاً للوحة مع الحفاظ على التوافق مع تحديثات النواة الرسمية.
+
+## ميزات خاصة في النواة
+
+تتضمن هذه النواة ميزات خاصة لدعم معالج XuanTie C910 منها:
+
+1. **دعم امتدادات T-Head الخاصة**:
+    - دعم امتدادات XTheadVector المشتقة من RISC-V Vector 0.7.1
+    - دعم التعليمات الخاصة بـ XuanTie C910
+2. **تحسينات أداء**:
+    - تحسينات في جدولة المهام لاستغلال معمارية out-of-order
+    - تحسينات في إدارة الذاكرة
+3. **دعم للوحدات المتخصصة**:
+    - واجهة برمجة لوحدة المعالجة العصبية (NPU)
+    - دعم تسريع فك/ترميز الفيديو
+    - دعم وحدة معالجة الرسومات
+
+## استخدام وبناء النواة
+
+لبناء النواة من المصدر، يمكن اتباع الخطوات التالية:
+
+1. استنساخ المستودع:
+    
+    bash
+    
+    ```bash
+    git clone https://git.beagleboard.org/beagleboard/xuantie-6.6.y-riscv64.git
+    cd xuantie-6.6.y-riscv64
+    ```
+    
+2. تكوين النواة للوحة BeagleV-Ahead:
+    
+    bash
+    
+    ```bash
+    export ARCH=riscv
+    export CROSS_COMPILE=riscv64-linux-gnu-
+    make defconfig
+    ```
+    
+3. (اختياري) تخصيص التكوين:
+    
+    bash
+    
+    ```bash
+    make menuconfig
+    ```
+    
+4. بناء النواة:
+    
+    bash
+    
+    ```bash
+    make -j$(nproc)
+    ```
+    
+5. بناء وحدات النواة:
+    
+    bash
+    
+    ```bash
+    make modules
+    ```
+    
+
+## العلاقة بمستودعات BeagleBoard الأخرى
+
+يرتبط هذا المستودع بمشاريع BeagleBoard الأخرى:
+
+1. **مستودع xuantie-ubuntu**: يستخدم هذه النواة لبناء صور نظام تشغيل أوبونتو للوحة BeagleV-Ahead
+2. **image-builder**: أداة لإنشاء صور نظام كاملة للوحة
+3. **مستودع beaglev-ahead**: يحتوي على وثائق وملفات تصميم اللوحة
+
+## الوضع الحالي والتطوير المستقبلي
+
+مستودع xuantie-6.6.y-riscv64 هو مشروع مستمر، حيث يتم تحديثه بانتظام لدمج:
+
+1. تصحيحات الأمان والاستقرار من النواة الرئيسية
+2. تحسينات خاصة بدعم عتاد BeagleV-Ahead
+3. تطويرات من مجتمع RISC-V
+4. العمل على تحسين دعم الوحدات الخاصة في TH1520
+
+هناك جهود مستمرة لنقل المزيد من الميزات الخاصة بمعالج XuanTie إلى النواة الرئيسية، مما سيسمح في النهاية بدعم أفضل للوحة في توزيعات لينكس القياسية.
+
+## الخلاصة
+
+يمثل مستودع BeagleBoard/xuantie-6.6.y-riscv64 موردًا أساسيًا لمستخدمي لوحة BeagleV-Ahead، حيث يوفر نواة لينكس محدثة ومحسنة لدعم معالج XuanTie C910 RISC-V. من خلال هذه النواة المخصصة، يمكن للمستخدمين الاستفادة الكاملة من إمكانيات اللوحة، بما في ذلك المعالج متعدد النوى، ووحدة المعالجة العصبية، ووحدة معالجة الرسومات، وغيرها من الميزات المتقدمة.
+
+يعكس هذا المستودع التزام مجتمع BeagleBoard بدعم معمارية RISC-V المفتوحة والمساهمة في تطوير النظام البيئي للحوسبة المفتوحة المصدر. مع استمرار تطور المستودع، من المتوقع أن يزداد دعم لوحة BeagleV-Ahead في نواة لينكس الرئيسية، مما يجعل هذه اللوحة خيارًا أكثر قوة وفعالية للمطورين والباحثين المهتمين بمعمارية RISC-V.
+
+________________
+
+# https://github.com/beagleboard/image-builder
+
+اخيرا لقيت حاجه نورت معايا
+دا بيبنى نسخه debian كامله من الـ source
+دا الأمر اللى استخدمته علشان ابنى كل حاجه:
+```
+./RootStock-NG.sh -c bb.org-debian-bookworm-iot-v5.10-ti-armhf-am335x.conf
+```
+لو عايز فعلا تشوف نتيجه اللى حصل بالتفصيل افتح ignore dir وشوف جواه ايه
+## Create an SD Card Image
+
+After building the root filesystem, you need to create an SD card image:
+```bash
+cd tools
+sudo ./setup_sdcard.sh --img-2gb [image-name] --dtb beaglebone [options]
+```
+
+Common options include:
+- `--rootfs_label rootfs` - Sets the filesystem label
+- `--hostname beaglebone` - Sets the hostname
+- `--enable-cape-universal` - Enables universal cape support
+- `--emmc-flasher` - Makes the SD card an eMMC flasher
+
+
+Example:
+```bash
+sudo ./setup_sdcard.sh --img-2gb bone-debian-11-console-armhf --dtb beaglebone --rootfs_label rootfs --hostname beaglebone --enable-cape-universal
+```
+
+For creating an image that will flash to the eMMC (internal storage):
+```bash
+sudo ./setup_sdcard.sh --img-2gb bone-debian-11-console-armhf --dtb beaglebone --rootfs_label rootfs --hostname beaglebone --enable-cape-universal --emmc-flasher
+```
+
+## Flash the Image to an SD Card
+
+The previous step creates an .img file in the deploy directory. You can flash this to an SD card using a tool like balenaEtcher, dd, or Win32DiskImager.
+
+
+**Versioning**: The image-builder repository is regularly updated. If you need to build images for a specific release, you may want to check out a specific tag:
+```bash
+git checkout bb.org-v[YYYY.MM.DD]
+```
+
+
