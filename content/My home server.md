@@ -57,3 +57,22 @@ ____
 Labgrid
 
 https://pengutronix.de/en/blog/2021-09-16-labgrid-tutorials.html
+
+
+___
+عايز اشوف حل لاسلاك والـ usb hub والحاجات الكتير اللى عامله دوشه
+احلى حل لقيته لحد دلوقتى: https://www.reddit.com/r/homelab/comments/aruxro/wall_mounted_ha_setup/
+
+اسم الموقع دا عاجبنى: https://www.racksolutions.eu/
+
+
+![](../assets/l7316hlvaah21.webp)
+
+
+![](../assets/Pasted%20image%2020250518170742.jpg)
+
+![](../assets/Pasted%20image%2020250518170753.jpg)
+
+
+Google: Wall-Mounted Network Setup
+Google: ikea skadis pegboard

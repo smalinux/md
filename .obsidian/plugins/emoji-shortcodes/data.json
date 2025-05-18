@@ -1,0 +1,13 @@
+{
+  "immediateReplace": true,
+  "suggester": true,
+  "historyPriority": true,
+  "historyLimit": 100,
+  "history": [
+    ":thumbsdown:",
+    ":thumbsup:",
+    ":1st_place_medal:",
+    ":smile:",
+    ":dizzy_face:"
+  ]
+}
