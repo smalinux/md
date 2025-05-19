@@ -28,4 +28,5 @@
 - [ ] [نصائح لطلاب علوم الحاسب](https://www.youtube.com/playlist?list=PLJpb_xuKcFoseuYoWiYyFwauw4VpE70LF)
 - [ ] [Embedded Linux Completely from Scratch](https://ericdraken.com/embedded-linux/)
 - [ ] Google: "HOWTO do Linux kernel development"
+- [ ] https://youtu.be/lvkjvPllwZw?si=CIK0O81BG7DwpL6X
 - [ ] 
