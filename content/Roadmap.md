@@ -28,5 +28,5 @@
 - [ ] [نصائح لطلاب علوم الحاسب](https://www.youtube.com/playlist?list=PLJpb_xuKcFoseuYoWiYyFwauw4VpE70LF)
 - [ ] [Embedded Linux Completely from Scratch](https://ericdraken.com/embedded-linux/)
 - [ ] Google: "HOWTO do Linux kernel development"
-- [ ] https://youtu.be/lvkjvPllwZw?si=CIK0O81BG7DwpL6X
-- [ ] 
+- [ ] [The Panel Discussion "Egypt Better Future : Search for the Young Talents " CSCAMP 2015 - YouTube](https://youtu.be/lvkjvPllwZw?si=CIK0O81BG7DwpL6X)
+- [ ] [Build a Modern Computer from First Principles: From Nand to Tetris (Project-Centered Course) \| Coursera](https://www.coursera.org/learn/build-a-computer)
