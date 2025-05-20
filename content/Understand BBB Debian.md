@@ -171,7 +171,7 @@ _____
 
 # مستودعات BeagleBoard 
 
-# [linux](https://git.beagleboard.org/beagleboard/linux) - [linux](https://github.com/beagleboard/linux) 👍
+# [linux](https://git.beagleboard.org/beagleboard/linux) - [linux](https://github.com/beagleboard/linux) 👍👍👍👍 [mirror-ti-linux-kernel](https://github.com/beagleboard/mirror-ti-linux-kernel)
 
 المستودع الرسمي الذي يحتوي على نواة لينكس للوحات BeagleBoard و BeagleBone. هذا المستودع يوفر كود نواة لينكس المخصص والمُعدل خصيصاً لتعمل بشكل مثالي مع أجهزة BeagleBoard، حيث يتضمن تعريفات الأجهزة وبرامج تشغيل للأجهزة الطرفية المختلفة والكثير من التحسينات الخاصة بهذه الأجهزة.
 
@@ -222,9 +222,7 @@ $ f *.fw
 
 يُستخدم هذا المستودع بشكل أساسي من قبل مطوري نواة لينكس ومطوري أنظمة التشغيل المدمجة الذين يعملون على لوحات BeagleBoard. يتم دمج هذه البرامج الثابتة في صور نظام التشغيل التي يتم إنشاؤها باستخدام مستودعات أخرى مثل image-builder وbuildroot، مما يضمن توفر جميع مكونات العتاد بشكل صحيح عند تشغيل النظام.
 
-# [repos](https://github.com/beagleboard/repos) 👎
-# [repos-riscv64](https://git.beagleboard.org/beagleboard/repos-riscv64) 👎
-# [repos-arm64](https://git.beagleboard.org/beagleboard/repos-arm64) 👎
+# [repos](https://github.com/beagleboard/repos) 👍 - # [repos-riscv64](https://github.com/beagleboard/repos-riscv64) 👎 - [repos-armhf](https://github.com/beagleboard/repos-armhf) - # [repos-arm64](https://git.beagleboard.org/beagleboard/repos-arm64) 👎
 > لما بتعمل apt install فيه packages كتيييير, صح؟ فيه بقى packages معموله مخصوص من شركه beagleboard
 > لو عايز تعرف كل الـ packages دى واسماءها هتلاقيهم هنا
 > مثلا انا جربت على البورده امر: dpkg -l
@@ -341,7 +339,7 @@ sudo apt-get install gcc-pru gnuprumcu
 - [pru-software-support-package](https://github.com/dinuxbg/pru-software-support-package): نسخة معدلة من حزمة دعم برمجيات PRU من TI
 
 
-# [beaglebone-black](https://github.com/beagleboard/beaglebone-black) 👍
+# [beaglebone-black](https://github.com/beagleboard/beaglebone-black) 👍 - [beagley-ai](https://github.com/beagleboard/beagley-ai)
 
 كل الـ docs اللى هتحتاجها هنا 😄
 
@@ -449,4 +447,15 @@ ____
 
 # [zephyr](https://github.com/beagleboard/zephyr)
 دا بديل عن لينكس للـ RTOS
+
+# [u-boot-pocketbeagle2](https://github.com/beagleboard/u-boot-pocketbeagle2) - [beaglev-fire-u-boot](https://github.com/beagleboard/beaglev-fire-u-boot) - [ti-u-boot](https://github.com/beagleboard/ti-u-boot) - [beaglev-ahead-u-boot](https://github.com/beagleboard/beaglev-ahead-u-boot) - 
+
+
+# [bb-imager](https://github.com/beagleboard/bb-imager) 👎👎👎
+
+
+# [micropython](https://github.com/micropython/micropython) 👎
+مشروع الهدف منه انه يوفر python بشكل مبسط على الاجهزه الـ bera-metal microcontrollers اللى مافيهاش لينكس
+
+
 # =====

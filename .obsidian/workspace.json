@@ -64,7 +64,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -184,13 +184,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/Roadmap.md",
+                "file": "content/Understand BBB Debian.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Roadmap"
+              "title": "Outline of Understand BBB Debian"
             }
           }
         ],
@@ -212,8 +212,9 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "25248065e6e61849",
+  "active": "9abd51e14e212101",
   "lastOpenFiles": [
+    "content/Roadmap.md",
     "README.md",
     "content/Understand BBB Debian.md",
     "content/tmp.md",
@@ -243,7 +244,6 @@
     "Clippings/pinctrl.md",
     "content/dotfiles.md",
     "content/Logic analyzer.md",
-    "content/Watchdog.md",
     "http",
     "raindrop/BBB",
     "raindrop",
