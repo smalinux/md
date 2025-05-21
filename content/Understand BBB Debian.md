@@ -171,15 +171,17 @@ _____
 
 # مستودعات BeagleBoard 
 
-# [linux](https://git.beagleboard.org/beagleboard/linux) - [linux](https://github.com/beagleboard/linux) 👍👍👍👍 [mirror-ti-linux-kernel](https://github.com/beagleboard/mirror-ti-linux-kernel)
-
+# [linux](https://git.beagleboard.org/beagleboard/linux) - [linux](https://github.com/beagleboard/linux) 👍👍👍👍 [mirror-ti-linux-kernel](https://github.com/beagleboard/mirror-ti-linux-kernel) - [mirror-linux-stable](https://github.com/beagleboard/mirror-linux-stable) - [arm64-mainline-linux](https://github.com/beagleboard/arm64-mainline-linux) - 
 المستودع الرسمي الذي يحتوي على نواة لينكس للوحات BeagleBoard و BeagleBone. هذا المستودع يوفر كود نواة لينكس المخصص والمُعدل خصيصاً لتعمل بشكل مثالي مع أجهزة BeagleBoard، حيث يتضمن تعريفات الأجهزة وبرامج تشغيل للأجهزة الطرفية المختلفة والكثير من التحسينات الخاصة بهذه الأجهزة.
+
+اكتر مكان فيه حياة دلوقتى: https://github.com/beagleboard/linux
+
 
 # [buildroot](https://git.beagleboard.org/beagleboard/buildroot) 👎
 
 هنا بيحطو تغيراتهم. لكن ما اعتقدش انها تغيرات كبيره وليها لزمه, مجرد starter لان شركه beagle بتدعم debian اكتر من اى حاجه تانيه...
 
-# [librobotcontrol](https://git.beagleboard.org/beagleboard/librobotcontrol) 👎
+# [librobotcontrol](https://github.com/beagleboard/librobotcontrol) 👎
 
 مكتبه user level اول لما بدأت كانت للروبوتات والـ capes 
 مكتبه تقدر تستخدمها بالسى. هتجاهل انى ابص عليها دلوقتى, هبص عليها بعدين
@@ -194,7 +196,7 @@ sudo apt install librobotcontrol
 
 الـ device drivers الـ custom واللى مش شرط تكون موجوده upstream جوا الكيرنال. طبعا مهم جدا. 🥇
 
-# [ti-linux-firmware](https://git.beagleboard.org/beagleboard/ti-linux-firmware) 👍
+# [ti-linux-firmware](https://git.beagleboard.org/beagleboard/ti-linux-firmware) 👍 - [mirror-linux-firmware](https://github.com/beagleboard/mirror-linux-firmware) 
 
 > تعريفات الـ firmware للاجهزه الصغيره اللى بتشتغل مع beaglebone , فيه firmware كتيره جدا زى اجهزه بلوتوث وغيرها, ومش كلهم open source لا ليك access عليهم 
 > المطلوب منك هنا انك تستخدم اكبر قدر ممكن من الـ firmwares دى لحد ما تستريح مع طريقه دمجهم ....
@@ -343,7 +345,7 @@ sudo apt-get install gcc-pru gnuprumcu
 
 كل الـ docs اللى هتحتاجها هنا 😄
 
-# [u-boot](https://github.com/beagleboard/u-boot) 👍
+# [u-boot](https://github.com/beagleboard/u-boot) 👍 - [mirror-ti-u-boot](https://github.com/beagleboard/mirror-ti-u-boot) - [u-boot-archive](https://github.com/beagleboard/u-boot-archive) - 
 
 ## بناء U-Boot مخصص
 
@@ -439,7 +441,8 @@ git checkout bb.org-v[YYYY.MM.DD]
 اللينك: https://forum.digikey.com/t/debian-getting-started-with-the-beaglebone-black/12967
 
 ____
-# محتاج اقف عن عند كل repo وكل ci, وافهم على الاقل استخدامهم: https://git.beagleboard.org/beagleboard/
+# محتاج اقف عن عند كل repo وكل ci, وافهم على الاقل استخدامهم:
+https://git.beagleboard.org/beagleboard/
 
 كمان github و gitlab الاتنين مختلفين تماماً
 وعندك كمان openbeagle: 
@@ -456,6 +459,27 @@ ____
 
 # [micropython](https://github.com/micropython/micropython) 👎
 مشروع الهدف منه انه يوفر python بشكل مبسط على الاجهزه الـ bera-metal microcontrollers اللى مافيهاش لينكس
+
+
+# [k3-image-gen](https://github.com/beagleboard/k3-image-gen) 👎
+كل ما هو مش BBB انا مش مهتم بيه دلوقتى
+
+# [bb.org-overlays](https://github.com/beagleboard/bb.org-overlays) 👍👍
+.
+
+# [mirror-wireless-regdb](https://github.com/beagleboard/mirror-wireless-regdb) 👎
+لما اجاى اللعب مع الـ wireless هحتاجها, لكن مش ضروريه لعمل base للـ BBB
+
+
+# [beagleconnect-freedom](https://github.com/beagleboard/beagleconnect-freedom) 👎
+حاجه شبه الـ microbus , مش اساسى كبدايه, لكن هبص عليه فى المستقبل
+
+# [PRUCookbook](https://github.com/beagleboard/PRUCookbook) - [am335x_pru_package](https://github.com/beagleboard/am335x_pru_package) 👎
+
+مش هبص على حاجه زى كده فى البدايه, ومش عاجبنى انه مفيش اى دعم, طالما اللى عملو البورده ما دعموهاش, انا مش هاجى ادعمها
+
+# [node-beaglebone-usbboot](https://github.com/beagleboard/node-beaglebone-usbboot) - [BBBlfs](https://github.com/ungureanuvladvictor/BBBlfs) 👍
+
 
 
 # =====
