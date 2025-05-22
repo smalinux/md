@@ -19,7 +19,7 @@
       "id": 53875792,
       "title": "BBB",
       "sync": true,
-      "lastSyncDate": "2025-05-21T18:53:01.520Z"
+      "lastSyncDate": "2025-05-22T18:49:38.147Z"
     },
     "54031135": {
       "id": 54031135,
@@ -29,6 +29,11 @@
     "55244750": {
       "id": 55244750,
       "title": "Repos to try",
+      "sync": false
+    },
+    "55534747": {
+      "id": 55534747,
+      "title": "check at home 🏡",
       "sync": false
     },
     "-1": {

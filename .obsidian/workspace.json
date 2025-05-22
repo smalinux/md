@@ -214,6 +214,8 @@
   },
   "active": "e7a7aedba5e5b61a",
   "lastOpenFiles": [
+    "raindrop/BBB/Hackaday.io.md",
+    "raindrop/BBB/Hackster.io - The community dedicated to learning hardware.md",
     "content/Understand BBB Debian.md",
     "content/tmp.md",
     "content/Roadmap.md",
@@ -242,8 +244,6 @@
     "content/Uboot.md",
     "content/NeoPixel matrix.md",
     "content/SPI.md",
-    "content/dts.md",
-    "Clippings/pinctrl.md",
     "http",
     "raindrop/BBB",
     "raindrop",
