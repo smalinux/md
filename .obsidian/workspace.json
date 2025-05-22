@@ -62,9 +62,23 @@
               "icon": "lucide-file",
               "title": "image-builder"
             }
+          },
+          {
+            "id": "0ec30056889dd3a4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "daily/2025-05-22.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2025-05-22"
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -184,17 +198,33 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/image-builder.md",
+                "file": "daily/2025-05-22.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of image-builder"
+              "title": "Outline of 2025-05-22"
             }
           }
         ],
         "currentTab": 3
+      },
+      {
+        "id": "8e6b23747d2a4144",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "dfc9479eae98e8ed",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {},
+              "icon": "calendar-with-checkmark",
+              "title": "Calendar"
+            }
+          }
+        ]
       }
     ],
     "direction": "horizontal",
@@ -212,15 +242,17 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "e7a7aedba5e5b61a",
+  "active": "0ec30056889dd3a4",
   "lastOpenFiles": [
+    "daily/2025-05-22.md",
+    "daily",
+    "content/image-builder.md",
     "raindrop/BBB/Hackaday.io.md",
     "raindrop/BBB/Hackster.io - The community dedicated to learning hardware.md",
     "content/Understand BBB Debian.md",
     "content/tmp.md",
     "content/Roadmap.md",
     "README.md",
-    "content/image-builder.md",
     "content/Timeline.md",
     "raindrop/BBB/Click Boards - MIKROE.md",
     "raindrop/BBB/BeagleBoard Documentation — BeagleBoard Documentation.md",
@@ -243,7 +275,6 @@
     "content/initramfs.md",
     "content/Uboot.md",
     "content/NeoPixel matrix.md",
-    "content/SPI.md",
     "http",
     "raindrop/BBB",
     "raindrop",
