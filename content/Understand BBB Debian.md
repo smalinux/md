@@ -441,14 +441,14 @@ git checkout bb.org-v[YYYY.MM.DD]
 اللينك: https://forum.digikey.com/t/debian-getting-started-with-the-beaglebone-black/12967
 
 ____
-# محتاج اقف عن عند كل repo وكل ci, وافهم على الاقل استخدامهم:
+محتاج اقف عن عند كل repo وكل ci, وافهم على الاقل استخدامهم:
 https://git.beagleboard.org/beagleboard/
 
 كمان github و gitlab الاتنين مختلفين تماماً
 وعندك كمان openbeagle: 
 هنا: https://openbeagle.org/explore/projects/topics/boards
 
-# [zephyr](https://github.com/beagleboard/zephyr)
+# [zephyr](https://github.com/beagleboard/zephyr) 👎
 دا بديل عن لينكس للـ RTOS
 
 # [u-boot-pocketbeagle2](https://github.com/beagleboard/u-boot-pocketbeagle2) - [beaglev-fire-u-boot](https://github.com/beagleboard/beaglev-fire-u-boot) - [ti-u-boot](https://github.com/beagleboard/ti-u-boot) - [beaglev-ahead-u-boot](https://github.com/beagleboard/beaglev-ahead-u-boot) - 
