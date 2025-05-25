@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Timeline.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Timeline"
+              "title": "README"
             }
           },
           {
@@ -61,6 +61,20 @@
               },
               "icon": "lucide-file",
               "title": "image-builder"
+            }
+          },
+          {
+            "id": "75f1272d069e3e93",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "daily/2025-05-24.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2025-05-24"
             }
           }
         ],
@@ -230,12 +244,14 @@
   },
   "active": "e7a7aedba5e5b61a",
   "lastOpenFiles": [
+    "README.md",
+    "content/Timeline.md",
+    "content/image-builder.md",
+    "daily/2025-05-24.md",
     "raindrop/BBB/Linutronix Linux for Industry.md",
     "content/Understand BBB Debian.md",
-    "content/image-builder.md",
     "daily/2025-05-22.md",
     "content/tmp.md",
-    "content/Timeline.md",
     "raindrop/BBB/Latest beaglebone-black topics - BeagleBoard.md",
     "raindrop/BBB/Systemd, read-only rootfs and overlay file system over etc - Bootlin&39;s blog.md",
     "raindrop/BBB/Overlay Filesystem — The Linux Kernel documentation.md",
@@ -243,7 +259,6 @@
     "raindrop/BBB/Hackaday.io.md",
     "raindrop/BBB/Hackster.io - The community dedicated to learning hardware.md",
     "content/Roadmap.md",
-    "README.md",
     "raindrop/BBB/Click Boards - MIKROE.md",
     "raindrop/BBB/BeagleBoard Documentation — BeagleBoard Documentation.md",
     "raindrop/BBB/DigiKey TechForum - An Electronic Component and Engineering Solution Forum.md",
@@ -260,7 +275,6 @@
     "content/dbus.md",
     "content/U-boot.md",
     "content/Linux kernel setup.md",
-    "CLAUDE.md",
     "http",
     "raindrop/BBB",
     "raindrop",

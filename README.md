@@ -52,4 +52,5 @@
 - [[WireGuard]] - [[Tailscale]] ***
 - [Understand BBB Debian](content/Understand%20BBB%20Debian.md)
 	- [[image-builder]]
-	- 
+	- Read about [[Debian philosophy]]
+- 
