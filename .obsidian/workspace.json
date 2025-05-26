@@ -8,7 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "ecf671656c5c6ed0",
+            "id": "e523fd97d1208204",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -22,63 +22,21 @@
             }
           },
           {
-            "id": "fd4d508e2fe07976",
+            "id": "837c15814b97c0c8",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/tmp.md",
+                "file": "content/GPIO - day01.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "tmp"
-            }
-          },
-          {
-            "id": "9abd51e14e212101",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/Understand BBB Debian.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Understand BBB Debian"
-            }
-          },
-          {
-            "id": "e7a7aedba5e5b61a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/image-builder.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "image-builder"
-            }
-          },
-          {
-            "id": "75f1272d069e3e93",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "daily/2025-05-24.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "2025-05-24"
+              "title": "GPIO - day01"
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -135,7 +93,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 357.5
+    "width": 357.5,
+    "collapsed": true
   },
   "right": {
     "id": "00e8531b7b73c201",
@@ -198,13 +157,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/image-builder.md",
+                "file": "content/GPIO - day01.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of image-builder"
+              "title": "Outline of GPIO - day01"
             }
           }
         ],
@@ -228,7 +187,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -242,39 +202,39 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "e7a7aedba5e5b61a",
+  "active": "837c15814b97c0c8",
   "lastOpenFiles": [
+    "content/GPIO - day01.md",
     "README.md",
-    "content/Timeline.md",
+    "raindrop/BBB/boozlachu – Medium.md",
+    "raindrop/BBB/Mounting the root filesystem via NFS (nfsroot) — The Linux Kernel documentation.md",
+    "raindrop/BBB/Rootfs kernel developer.md",
+    "raindrop/BBB/Flashing a Beaglebone Black the COOL Way.md",
+    "raindrop/BBB/Moving to NFS root - Raspberry Pie.md",
+    "raindrop/BBB/m3y54mEmbedded-Engineering-Roadmap Comprehensive roadmap for aspiring Embedded Systems Engineers, featuring a curated list of learning resources.md",
+    "raindrop/BBB/embedded-bostonawesome-embedded-systems A curated list of delightful Embedded Systems libraries, RTOSes, modules, references and more!.md",
+    "raindrop/BBB/nhivpAwesome-Embedded A curated list of awesome embedded programming.md",
+    "raindrop/BBB/Advanced Audio Effects with a BeagleBone Black and Bela Part 1 Getting Up and Running.md",
     "content/image-builder.md",
+    "content/نصائح عامه.md",
+    "content/محتويات التوزيعه.md",
+    "content/دعم معتمد على يكتو.md",
+    "content/tmp.md",
+    "content/Understand BBB Debian.md",
+    "content/Timeline.md",
     "daily/2025-05-24.md",
     "raindrop/BBB/Linutronix Linux for Industry.md",
-    "content/Understand BBB Debian.md",
     "daily/2025-05-22.md",
-    "content/tmp.md",
     "raindrop/BBB/Latest beaglebone-black topics - BeagleBoard.md",
     "raindrop/BBB/Systemd, read-only rootfs and overlay file system over etc - Bootlin&39;s blog.md",
     "raindrop/BBB/Overlay Filesystem — The Linux Kernel documentation.md",
     "daily",
     "raindrop/BBB/Hackaday.io.md",
     "raindrop/BBB/Hackster.io - The community dedicated to learning hardware.md",
-    "content/Roadmap.md",
-    "raindrop/BBB/Click Boards - MIKROE.md",
-    "raindrop/BBB/BeagleBoard Documentation — BeagleBoard Documentation.md",
-    "raindrop/BBB/DigiKey TechForum - An Electronic Component and Engineering Solution Forum.md",
-    "content/My home server.md",
     "assets/Pasted image 20250518170753.jpg",
     "assets/Pasted image 20250518170742.jpg",
     "assets/l7316hlvaah21.webp",
-    "raindrop/BBB/MarkAYoderPRUCookbook This is a cookbook of the Programmable Realtime Unit on the BeagleBoard.md",
-    "raindrop/BBB/PRU Cookbook.md",
-    "content/Dev Setup.md",
-    "content/bbb debian/Untitled.md",
     "content/bbb debian",
-    "content/Boot time optimization.md",
-    "content/dbus.md",
-    "content/U-boot.md",
-    "content/Linux kernel setup.md",
     "http",
     "raindrop/BBB",
     "raindrop",

@@ -7,7 +7,7 @@ sudo apt-get install dosfstools git kpartx wget tree parted
 
 اعملى image base on debian وحطلى فيها كل الـ packages:
 ```bash
-./RootStock-NG.sh -c bb.org-debian-bookworm-iot-v5.10-ti-armhf-am335x.conf
+./RootStock-NG.sh -c sma-bb.org-debian-bookworm-iot-v5.10-ti-armhf-am335x.conf
 ```
 
 اعملى file.img من الـ image اللى انا بنيتها:
@@ -20,10 +20,9 @@ Ubuntu@debian-12.11-iot-armhf-2025-05-25 $ sudo ./setup_sdcard.sh --img-4gb beag
 sudo ./setup_sdcard.sh --img-4gb beaglebone-image --dtb beaglebone --distro-bootloader
 ```
 
+اعمل فلاش للـ sdcard
 ```bash
-Flash to sdcard
 bmaptool create -o beaglebone-image-4gb.img.bmap beaglebone-image-4gb.img
-
 ```
 
 # كل الـ options اللى موجوده فى اسكربت setup_sdcard.sh:

@@ -51,6 +51,8 @@
 - [[initramfs]]
 - [[WireGuard]] - [[Tailscale]] ***
 - [Understand BBB Debian](content/Understand%20BBB%20Debian.md)
-	- [[image-builder]]
+	- image-builder: [[نصائح عامه]]
+	- [[image-builder]]: ازاى تستخدم
 	- Read about [[Debian philosophy]]
-- 
+	- image-builder: [[محتويات التوزيعه]]
+- [[GPIO - day01]]
