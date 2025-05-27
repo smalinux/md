@@ -16,7 +16,7 @@ pipx install Adafruit_BBIO
 ```
 
 
-
+#### Before:
 ```
 device: ocp:P9_12_pinmux current state: default
   state: default
@@ -98,7 +98,21 @@ cmdline=coherent_pool=1M net.ifnames=0 lpj=1990656 rng_core.default_quality=100 
 
 ##enable Generic eMMC Flasher:
 #cmdline=init=/usr/sbin/init-beagle-flasher
-
-debian@BeagleBone:/sys/kernel/debug/pinctrl$ cat /boot/uEnv.txt
-
 ```
+
+
+اولاً روحت للمكان دا:
+## Finding Pin Addresses
+
+To find the correct register offset for your pin:
+
+1. Check the BeagleBone pinout diagram
+2. Look up the processor datasheet (AM335x)
+3. Use existing device tree files as reference in `/opt/source/dtb-5.10-ti/src/arm`
+
+## Compiling and Loading
+
+1. Save as `.dts` file (e.g., `gpio-input.dts`)
+2. Compile: `cd /opt/source/dtb-5.10-ti && make all`
+3. Copy to `/lib/firmware/`
+4. Load via `/boot/uEnv.txt` or dynamically with config-pin

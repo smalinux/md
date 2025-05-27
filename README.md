@@ -56,3 +56,5 @@
 	- Read about [[Debian philosophy]]
 	- image-builder: [[محتويات التوزيعه]]
 - [[GPIO - day01]]
+- [[GPIO - Before]]
+- 
