@@ -116,3 +116,6 @@ To find the correct register offset for your pin:
 2. Compile: `cd /opt/source/dtb-5.10-ti && make all`
 3. Copy to `/lib/firmware/`
 4. Load via `/boot/uEnv.txt` or dynamically with config-pin
+
+عايز اعرف كل الـ overlays اللى اتعملها load فعلا:
+ls /proc/device-tree/chosen/overlays/
