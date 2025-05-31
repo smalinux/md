@@ -7,6 +7,19 @@ src/arm/am335x-boneblack.dts
 
 ```
 
+~~الملف دا طلع عينى: علشان بيتحمل مع xxx لازم تشيل منه اللى مش عايزه مش بس am335x-boneblack.dts ~~
+~~**./src/arm/am335x-boneblack-uboot-univ.dts**~~
+
+Method 1: Switch to Standard DTB (Recommended)
+
+Edit `/boot/uEnv.txt` and add:
+
+```
+dtb=am335x-boneblack.dtb
+```
+
+This will use the standard BeagleBone Black device tree instead of the universal one, which should have different GPIO assignments.
+
 # Usage:
 ```
 debian@BeagleBone:/opt/source/dtb-5.10-ti$ make
