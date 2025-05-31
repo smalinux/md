@@ -50,11 +50,16 @@
 - [[fastboot]] - [[snagboot]] - [[dfu-util]] - [[usbboot]] - [[ums]]
 - [[initramfs]]
 - [[WireGuard]] - [[Tailscale]] ***
+- [[BBB bible]]
 - [Understand BBB Debian](content/Understand%20BBB%20Debian.md)
 	- image-builder: [[نصائح عامه]]
 	- [[image-builder]]: ازاى تستخدم
 	- Read about [[Debian philosophy]]
 	- image-builder: [[محتويات التوزيعه]]
+	- [[pin-utils]]::: https://github.com/mvduin/bbb-pin-utils
+	- [[py-uio]]::: https://github.com/mvduin/py-uio
+	- [[dtb debian]]
+	- 
 - [[GPIO - day01]]
 - [[GPIO - Before]]
 - 
