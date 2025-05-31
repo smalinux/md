@@ -49,8 +49,7 @@
               "title": "GPIO - day01"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -171,13 +170,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/GPIO - day01.md",
+                "file": "README.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of GPIO - day01"
+              "title": "Outline of README"
             }
           }
         ],
@@ -215,10 +214,10 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "837c15814b97c0c8",
+  "active": "e523fd97d1208204",
   "lastOpenFiles": [
-    "content/GPIO - Before.md",
     "content/GPIO - day01.md",
+    "content/GPIO - Before.md",
     "README.md",
     "raindrop/BBB/boozlachu – Medium.md",
     "raindrop/BBB/Mounting the root filesystem via NFS (nfsroot) — The Linux Kernel documentation.md",
