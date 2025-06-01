@@ -20,6 +20,11 @@ dtb=am335x-boneblack.dtb
 
 This will use the standard BeagleBone Black device tree instead of the universal one, which should have different GPIO assignments.
 
+```bash
+sudo apt install lsof
+sudo apt install u-boot-tools
+sudo apt install libubootenv-tool
+```
 # Usage:
 ```
 debian@BeagleBone:/opt/source/dtb-5.10-ti$ make
@@ -179,3 +184,33 @@ debian@BeagleBone:/opt/source/dtb-5.10-ti$ make
   DTC     src/riscv/overlays/BVA-MIKROBUS-0.dtbo
   
 ```
+
+
+#### قفلت كل الـ overlays بنت الجزمه من uEnv.txt واخيرا  كدا انا شايف ملف dtb وحيد هو الـ endpoint بتاعى
+> /boot/dtbs/5.10.168-ti-r82/am335x-boneblack.dtb
+
+
+
+
+
+```bash
+# Read current value
+gpioget gpiochip1 12
+
+# Monitor for changes (connect to 3.3V or GND to test)
+gpiomon gpiochip1 12
+```
+
+### Alternative: Use sysfs to Force Output Direction
+```
+# Export and explicitly set direction
+echo 61 > /sys/class/gpio/export
+echo out > /sys/class/gpio/gpio61/direction
+echo 1 > /sys/class/gpio/gpio61/value
+echo 0 > /sys/class/gpio/gpio61/value
+
+# Clean up
+echo 61 > /sys/class/gpio/unexport
+
+```
+
