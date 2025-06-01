@@ -24,6 +24,7 @@ This will use the standard BeagleBone Black device tree instead of the universal
 sudo apt install lsof
 sudo apt install u-boot-tools
 sudo apt install libubootenv-tool
+sudo apt install linux-headers-$(uname -r) build-essential
 ```
 # Usage:
 ```
@@ -213,4 +214,7 @@ echo 0 > /sys/class/gpio/gpio61/value
 echo 61 > /sys/class/gpio/unexport
 
 ```
+
+فيه عيب ان فى الـ libgpiod انه مش بيظهر القيم الصحيحه, لو الـ pin قيمتها output
+بالرغم من ان show-pins و pinctrl بتظهر القيم بس مش بطريقه readable زى libgpiod هرجع للـ bug دى بعدين....
 
