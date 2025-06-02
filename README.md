@@ -68,4 +68,5 @@ ________
 
 # Done
 1. [[GPIO]]
-2. 
+2. [[Update Linux kernel on Debian]]
+3. 
