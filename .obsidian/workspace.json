@@ -273,9 +273,9 @@
   },
   "active": "4988b0f6070eb900",
   "lastOpenFiles": [
-    "content/GPIO.md",
     "README.md",
     "content/GPIO - Before.md",
+    "content/GPIO.md",
     "content/GPIO - day01.md",
     "content/dtb debian.md",
     "content/py-uio.md",
