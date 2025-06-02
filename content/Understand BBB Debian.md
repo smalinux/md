@@ -483,3 +483,14 @@ https://git.beagleboard.org/beagleboard/
 
 
 # =====
+لو عايز اصلح مشكله الوقت فى دبيان فى الأول:
+Fix date & time:
+```bash
+/usr/bin/ntpdate -b -s -u pool.ntp.org
+```
+#### نسخه الـ Debian محتفظه بمكان بعض الـ sources:
+```bash
+ls /opt/source/
+```
+
+- [ ] فى المستقبل هبقى اشوف ازاى ممكن اعمل update للكيرنال على دبيان, بس لحد دلوقتى انا مش محتاجها.
