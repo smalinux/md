@@ -15,13 +15,14 @@ PasswordAuthentication yes
 **Restart the SSH service:**
 ```bash
 sudo systemctl restart ssh
-# or on older systems:
-sudo service ssh restart
 ```
 
 
 # دلوقتى تقدر تغير الكيرنال:
 ```bash
+# Kernel hacking
+Ubuntu@bb-kernel $ ./tools/rebuild.sh
+# deploy to beaglebone
 Ubuntu@beaglebone-debian-dev $ ./sync_kernel.sh
 ```
 
