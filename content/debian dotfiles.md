@@ -23,6 +23,7 @@ sudo systemctl restart ssh
 # Kernel hacking
 Ubuntu@bb-kernel $ ./tools/rebuild.sh
 # deploy to beaglebone
+# this command need ssh root@ first before...
 Ubuntu@beaglebone-debian-dev $ ./sync_kernel.sh
 ```
 
