@@ -69,12 +69,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/GPIO.md",
+                "file": "content/dtb debian.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "GPIO"
+              "title": "dtb debian"
             }
           },
           {
@@ -180,7 +180,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "apt install",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -201,7 +201,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -315,18 +316,18 @@
   },
   "active": "14a8a46779509973",
   "lastOpenFiles": [
+    "content/dtb debian.md",
+    "content/GPIO.md",
+    "content/GPIO - Before.md",
+    "content/GPIO - day01.md",
     "content/debian dotfiles.md",
-    "README.md",
     "content/Understand BBB Debian.md",
+    "README.md",
     "content/Update Linux kernel on Debian.md",
     "raindrop/BBB/BeagleboardU-boot partitioning layout 2.0 - eLinux.org.md",
     "raindrop/BBB/How to Build Linux kernel for BeagleBone Black - HackMD.md",
     "raindrop/BBB/Updating kernel and bootloader on BeagleBone Black Wireless.md",
-    "content/GPIO - day01.md",
-    "content/GPIO.md",
     "content/pin-utils.md",
-    "content/GPIO - Before.md",
-    "content/dtb debian.md",
     "content/py-uio.md",
     "content/BBB bible.md",
     "raindrop/BBB/BeagleboardBeagleBone Capes - eLinux.org.md",

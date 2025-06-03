@@ -51,7 +51,7 @@ git checkout am33x-v5.10  # or desired branch
 ```
 
 ## Configuration Methods
-الخطوه دى مهمه علشان اخد 
+الخطوه دى مهمه علشان اخد نفس الـ config اللى already شغال على البورده وانقله على الـ host عندى وابنى كيرنال حديثه بنفس الـ defconfig
 ### Method 1: Copy from Running System
 
 #### Extract Current Config
@@ -68,8 +68,8 @@ zcat /proc/config.gz > current_config
 # In bb-kernel directory
 cd KERNEL
 cp /path/to/current_config .config
-make ARCH=arm CROSS_COMPILE=arm-linux-gnueabi- olddefconfig
-make ARCH=arm CROSS_COMPILE=arm-linux-gnueabi- savedefconfig
+make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- olddefconfig
+make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- savedefconfig
 cp defconfig ../patches/defconfig
 ```
 
@@ -77,8 +77,8 @@ cp defconfig ../patches/defconfig
 
 ```bash
 cd KERNEL
-make ARCH=arm CROSS_COMPILE=arm-linux-gnueabi- menuconfig
-make ARCH=arm CROSS_COMPILE=arm-linux-gnueabi- savedefconfig
+make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- menuconfig
+make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- savedefconfig
 cp defconfig ../patches/defconfig
 ```
 
@@ -109,9 +109,9 @@ echo "# CONFIG_STACKPROTECTOR_PER_TASK is not set" >> patches/defconfig
 ```bash
 cd KERNEL
 cp /path/to/old_config .config
-make ARCH=arm CROSS_COMPILE=arm-linux-gnueabi- olddefconfig  # Updates config
+make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- olddefconfig  # Updates config
 # OR
-make ARCH=arm CROSS_COMPILE=arm-linux-gnueabi- oldconfig     # Interactive updates
+make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- oldconfig     # Interactive updates
 ```
 
 ## Build Commands
@@ -196,7 +196,7 @@ zcat /boot/config-$(uname -r) | grep CONFIG_OPTION
 ```bash
 # Ensure defconfig is saved correctly
 cd KERNEL
-make ARCH=arm CROSS_COMPILE=arm-linux-gnueabi- savedefconfig
+make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- savedefconfig
 cp defconfig ../patches/defconfig
 
 # Clean rebuild
@@ -221,9 +221,9 @@ cd KERNEL                                    # Enter kernel source
 cd ..                                        # Back to bb-kernel root
 
 # Configuration
-make ARCH=arm CROSS_COMPILE=arm-linux-gnueabi- menuconfig    # Interactive config
-make ARCH=arm CROSS_COMPILE=arm-linux-gnueabi- olddefconfig  # Update config
-make ARCH=arm CROSS_COMPILE=arm-linux-gnueabi- savedefconfig # Save minimal config
+make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- menuconfig    # Interactive config
+make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- olddefconfig  # Update config
+make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- savedefconfig # Save minimal config
 
 # Building
 ./build_kernel.sh                           # Full build
@@ -284,3 +284,7 @@ deploy/                                     # Main output directory
 - Test configuration changes incrementally
 - Keep backup of working defconfig files
 - Use `diffconfig` to see what actually changed between configs
+
+# الخطوه الجايه apt update
+غيرت الكيرنال ونقلت كل الداتا بتاعتى دلوقتى على الـ target, الخطوه الجايه apt update
+
