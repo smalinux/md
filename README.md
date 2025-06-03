@@ -63,6 +63,7 @@
 	- 
 - [[GPIO - day01]]
 - [[GPIO - Before]]
+- [[debian dotfiles]]
 
 ________
 

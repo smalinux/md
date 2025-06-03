@@ -22,6 +22,20 @@
             }
           },
           {
+            "id": "14a8a46779509973",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/debian dotfiles.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "debian dotfiles"
+            }
+          },
+          {
             "id": "038b62d0b7a23869",
             "type": "leaf",
             "state": {
@@ -299,11 +313,12 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "038b62d0b7a23869",
+  "active": "14a8a46779509973",
   "lastOpenFiles": [
-    "content/Update Linux kernel on Debian.md",
+    "content/debian dotfiles.md",
     "README.md",
     "content/Understand BBB Debian.md",
+    "content/Update Linux kernel on Debian.md",
     "raindrop/BBB/BeagleboardU-boot partitioning layout 2.0 - eLinux.org.md",
     "raindrop/BBB/How to Build Linux kernel for BeagleBone Black - HackMD.md",
     "raindrop/BBB/Updating kernel and bootloader on BeagleBone Black Wireless.md",
@@ -326,7 +341,6 @@
     "raindrop/BBB/Advanced Audio Effects with a BeagleBone Black and Bela Part 1 Getting Up and Running.md",
     "content/image-builder.md",
     "content/نصائح عامه.md",
-    "content/محتويات التوزيعه.md",
     "daily",
     "assets/Pasted image 20250518170753.jpg",
     "assets/Pasted image 20250518170742.jpg",
