@@ -285,6 +285,12 @@ deploy/                                     # Main output directory
 - Keep backup of working defconfig files
 - Use `diffconfig` to see what actually changed between configs
 
-# الخطوه الجايه apt update
+# الخطوه الجايه apt update 
 غيرت الكيرنال ونقلت كل الداتا بتاعتى دلوقتى على الـ target, الخطوه الجايه apt update
-
+ومن هنا تقدر تحمل كل الـ packages بتاعتك
+```bash
+apt update
+apt install lsof
+apt install u-boot-tools
+apt install libubootenv-tool
+```
