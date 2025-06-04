@@ -316,6 +316,8 @@
   },
   "active": "14a8a46779509973",
   "lastOpenFiles": [
+    "raindrop/BBB/Setup BeagleBone Black with Device tree overlays.md",
+    "raindrop/BBB/Understanding the Device Tree in Embedded Linux A Guide for Beaglebone Black  Microcontroller Tutorials.md",
     "content/dtb debian.md",
     "content/debian dotfiles.md",
     "content/Understand BBB Debian.md",
@@ -340,8 +342,6 @@
     "raindrop/BBB/embedded-bostonawesome-embedded-systems A curated list of delightful Embedded Systems libraries, RTOSes, modules, references and more!.md",
     "raindrop/BBB/nhivpAwesome-Embedded A curated list of awesome embedded programming.md",
     "raindrop/BBB/Advanced Audio Effects with a BeagleBone Black and Bela Part 1 Getting Up and Running.md",
-    "content/image-builder.md",
-    "content/نصائح عامه.md",
     "daily",
     "assets/Pasted image 20250518170753.jpg",
     "assets/Pasted image 20250518170742.jpg",
