@@ -162,7 +162,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -328,12 +328,13 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "467a8e5dfa25fb7d",
+  "active": "14a8a46779509973",
   "lastOpenFiles": [
-    "raindrop/BBB/تعديل المبرمجة CH341 Design Problem and 3.3V Logic Level Modification [Arabic Language].md",
     "README.md",
-    "content/dotfiles.md",
     "content/dotfile.md",
+    "content/Electronics - Shopping list.md",
+    "raindrop/BBB/تعديل المبرمجة CH341 Design Problem and 3.3V Logic Level Modification [Arabic Language].md",
+    "content/dotfiles.md",
     "raindrop/BBB/Electronics Club.md",
     "raindrop/BBB/How to Design a Custom ESP32 PCB in 19 Minutes (Full Tutorial).md",
     "raindrop/BBB/Setup BeagleBone Black with Device tree overlays.md",
@@ -355,7 +356,6 @@
     "raindrop/BBB/Mounting the root filesystem via NFS (nfsroot) — The Linux Kernel documentation.md",
     "raindrop/BBB/Rootfs kernel developer.md",
     "raindrop/BBB/Flashing a Beaglebone Black the COOL Way.md",
-    "raindrop/BBB/Moving to NFS root - Raspberry Pie.md",
     "daily",
     "assets/Pasted image 20250518170753.jpg",
     "assets/Pasted image 20250518170742.jpg",
