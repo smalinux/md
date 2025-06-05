@@ -22,17 +22,31 @@
             }
           },
           {
+            "id": "467a8e5dfa25fb7d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/Electronics - Shopping list.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Electronics - Shopping list"
+            }
+          },
+          {
             "id": "14a8a46779509973",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/debian dotfiles.md",
+                "file": "content/dotfile.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "debian dotfiles"
+              "title": "dotfile"
             }
           },
           {
@@ -180,7 +194,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "apt install",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -314,20 +328,22 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "14a8a46779509973",
+  "active": "467a8e5dfa25fb7d",
   "lastOpenFiles": [
+    "raindrop/BBB/تعديل المبرمجة CH341 Design Problem and 3.3V Logic Level Modification [Arabic Language].md",
+    "README.md",
+    "content/dotfiles.md",
+    "content/dotfile.md",
     "raindrop/BBB/Electronics Club.md",
     "raindrop/BBB/How to Design a Custom ESP32 PCB in 19 Minutes (Full Tutorial).md",
     "raindrop/BBB/Setup BeagleBone Black with Device tree overlays.md",
     "raindrop/BBB/Understanding the Device Tree in Embedded Linux A Guide for Beaglebone Black  Microcontroller Tutorials.md",
     "content/dtb debian.md",
-    "content/debian dotfiles.md",
     "content/Understand BBB Debian.md",
     "content/Update Linux kernel on Debian.md",
     "content/GPIO - day01.md",
     "content/GPIO.md",
     "content/GPIO - Before.md",
-    "README.md",
     "raindrop/BBB/BeagleboardU-boot partitioning layout 2.0 - eLinux.org.md",
     "raindrop/BBB/How to Build Linux kernel for BeagleBone Black - HackMD.md",
     "raindrop/BBB/Updating kernel and bootloader on BeagleBone Black Wireless.md",
@@ -340,8 +356,6 @@
     "raindrop/BBB/Rootfs kernel developer.md",
     "raindrop/BBB/Flashing a Beaglebone Black the COOL Way.md",
     "raindrop/BBB/Moving to NFS root - Raspberry Pie.md",
-    "raindrop/BBB/m3y54mEmbedded-Engineering-Roadmap Comprehensive roadmap for aspiring Embedded Systems Engineers, featuring a curated list of learning resources.md",
-    "raindrop/BBB/embedded-bostonawesome-embedded-systems A curated list of delightful Embedded Systems libraries, RTOSes, modules, references and more!.md",
     "daily",
     "assets/Pasted image 20250518170753.jpg",
     "assets/Pasted image 20250518170742.jpg",
