@@ -160,7 +160,8 @@ Miscellaneous
       لازم الـ hardware revision دا تحديداً علشان التحكم عن بُعد بـ uhubctl مدعوم هنا بس
       https://www.ebay.de/p/154014222
 - [x] Sigrok compatible logic analyzer https://sigrok.org/wiki/Supported_hardware#Logic_analyzers
-	- [x] Hantek 6022BL digitales Oszilloskop mit USB-Anschluss, 2 Digital- und 16 Logik-Kanäle https://sigrok.org/wiki/Hantek_6022BL
+	- [x] Hantek 6022BL digitales Oszilloskop mit USB-Anschluss, 2 Digital- und 16 Logik-Kanäle https://sigrok.org/wiki/Hantek_6022BL وحش وما اشتغلش معايا
+	- [ ] 8 Channel USB Logic Analyzer 24 MHz Logic Analyzer Arduino Logikanalysator 0-5.5V https://ebay.us/m/484okv
 - [x] UNI-T UT890C Professionelles Digital Multimeter
 - [x] WS2812B Matrix LED Panel Modul mit individuell adressierbaren RGB LED Pixels
 - [ ] RK3566 Handheld

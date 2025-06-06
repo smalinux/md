@@ -162,7 +162,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -328,10 +328,10 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "14a8a46779509973",
+  "active": "467a8e5dfa25fb7d",
   "lastOpenFiles": [
-    "README.md",
     "content/dotfile.md",
+    "README.md",
     "content/Electronics - Shopping list.md",
     "raindrop/BBB/تعديل المبرمجة CH341 Design Problem and 3.3V Logic Level Modification [Arabic Language].md",
     "content/dotfiles.md",
