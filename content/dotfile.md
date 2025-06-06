@@ -43,6 +43,12 @@ sudo apt install sigrok-cli pulseview libsigrok4 libftdi1-2 libftdi1-dev
 sudo apt install libftdi1-2 libftdi1-dev python3-ftdi1
 sudo apt install ftdi-eeprom
 
+
+======
+sudo apt install git cmake qtbase5-dev libfftw3-dev libusb-1.0-0-dev
+sudo apt install qttools5-dev-tools qttools5-dev qt5-qmake
+sudo apt install libqt5opengl5-dev libgl1-mesa-dev
+
 ```
 
 هنا تقدر تـ build كل الـ modules بتاعتك 😙
