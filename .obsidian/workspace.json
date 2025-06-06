@@ -176,7 +176,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -342,11 +342,12 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "5864f50a5e7e60f1",
+  "active": "fb2c952b56fe17c4",
   "lastOpenFiles": [
+    "content/Update Linux kernel on Debian.md",
+    "content/Logic analyzer.md",
     "README.md",
     "content/dotfile.md",
-    "content/Logic analyzer.md",
     "content/Roadmap.md",
     "raindrop/BBB/Programming BeagleBone Black PRUs.md",
     "raindrop/BBB/BeagleBoard, PRUs, Google Summer of Code, and a Logic Analyzer.md",
@@ -364,7 +365,6 @@
     "raindrop/BBB/Understanding the Device Tree in Embedded Linux A Guide for Beaglebone Black  Microcontroller Tutorials.md",
     "content/dtb debian.md",
     "content/Understand BBB Debian.md",
-    "content/Update Linux kernel on Debian.md",
     "content/GPIO - day01.md",
     "content/GPIO.md",
     "content/GPIO - Before.md",
