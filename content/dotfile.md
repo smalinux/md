@@ -49,6 +49,16 @@ sudo apt install git cmake qtbase5-dev libfftw3-dev libusb-1.0-0-dev
 sudo apt install qttools5-dev-tools qttools5-dev qt5-qmake
 sudo apt install libqt5opengl5-dev libgl1-mesa-dev
 
+======
+
+# Google: fritzing-beaglebone
+sudo apt install fritzing
+# AdaFruit Fritzing Library (includes many development boards)
+git clone https://github.com/adafruit/Fritzing-Library.git
+
+# SparkFun Fritzing Parts
+git clone https://github.com/sparkfun/Fritzing_Parts.git
+
 ```
 
 هنا تقدر تـ build كل الـ modules بتاعتك 😙
