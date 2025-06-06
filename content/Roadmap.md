@@ -7,7 +7,7 @@
 - [ ] [CAT Live \| Linux Kernel Modules \| in Arabic - YouTube](https://www.youtube.com/watch?v=bDnq792OsQg&ab_channel=CATReloaded%28Hangouts%29)
 - [ ] [KarimAllah Ahmed \| Facebook](https://www.facebook.com/karim.allah.ahmed)
 - [ ] [مصطفى حموده linux - YouTube](https://www.youtube.com/results?search_query=%D9%85%D8%B5%D8%B7%D9%81%D9%89+%D8%AD%D9%85%D9%88%D8%AF%D9%87+linux)
-- [ ] [Linux Kernel Mentorship Program](https://github.com/smalinux/md/issues/5) - Thanks @AbdAlRahmanGad
+- [ ] [Linux Kernel Mentorship Program](https://wiki.linuxfoundation.org/lkmp) - [Thanks to @AbdAlRahmanGad](https://github.com/smalinux/md/issues/5)
 - [ ] [C-language Roadmap - Google Docs](https://docs.google.com/document/d/1nAkMyH-bPJ5W3YPujbOXqKblYiM_dWeHuPfaBWqOnBg/edit?tab=t.0)
 - [ ] [Before you continue to YouTube](https://www.youtube.com/c/AhmedSallams/playlists)
 - [ ] [Professional Assembly Language: 9780764579011: Computer Science Books @ Amazon.com](https://www.amazon.com/Professional-Assembly-Language-Richard-Blum/dp/0764579010)
