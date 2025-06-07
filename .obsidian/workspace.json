@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "content/2025-06-07.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "2025-06-07"
             }
           },
           {
@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/arduino-dotfiles.md",
+                "file": "content/Linux kernel setup.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "arduino-dotfiles"
+              "title": "Linux kernel setup"
             }
           },
           {
@@ -189,8 +189,7 @@
               "title": "GPIO - day01"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -243,8 +242,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -356,15 +354,25 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "be1b5dc580f69ed1",
+  "active": "e523fd97d1208204",
   "lastOpenFiles": [
+    "README.md",
+    "content/2025-06-07.md",
+    "content/Linux kernel setup.md",
+    "assets/Pasted image 20250518170753.jpg",
+    "assets/Pasted image 20250518170742.jpg",
+    "assets/Pasted image 20250430225243.png",
+    "assets/Pasted image 20250429224658.png",
+    "assets/Pasted image 20250429002224.png",
+    "assets/Pasted image 20250429001740.png",
+    "daily/2025-05-22.md",
+    "daily/2025-05-24.md",
+    "content/arduino-dotfiles.md",
     "raindrop/BBB/FOSDEM 2025 - Home.md",
     "raindrop/BBB/Kickstart Embedded.md",
     "raindrop/BBB/Tech Explorations.md",
     "raindrop/BBB/Khaled Magdy.md",
     "raindrop/BBB/Walid Issa.md",
-    "content/arduino-dotfiles.md",
-    "README.md",
     "content/Understand BBB Debian.md",
     "raindrop/BBB/Linux Kernel Teaching — The Linux Kernel documentation.md",
     "content/Update Linux kernel on Debian.md",
@@ -380,23 +388,13 @@
     "raindrop/BBB/Abdallah Ali Abdallah.md",
     "raindrop/BBB/كتاب Simply AVR مقدمة مبسطة عن النظم المدمجة.md",
     "raindrop/BBB/تعديل المبرمجة CH341 Design Problem and 3.3V Logic Level Modification [Arabic Language].md",
-    "content/dotfiles.md",
-    "raindrop/BBB/Electronics Club.md",
-    "raindrop/BBB/How to Design a Custom ESP32 PCB in 19 Minutes (Full Tutorial).md",
-    "raindrop/BBB/Setup BeagleBone Black with Device tree overlays.md",
     "daily",
-    "assets/Pasted image 20250518170753.jpg",
-    "assets/Pasted image 20250518170742.jpg",
     "assets/l7316hlvaah21.webp",
     "content/bbb debian",
     "http",
     "raindrop/BBB",
     "raindrop",
-    "assets/Pasted image 20250430225243.png",
-    "assets/Pasted image 20250429224658.png",
     "Clippings",
-    "assets/Pasted image 20250429002224.png",
-    "assets/Pasted image 20250429001740.png",
     "assets",
     "Pasted image 20250429001648.png",
     "content",
