@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "daily/2025-06-07.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2025-06-07"
+              "title": "README"
             }
           }
         ]
@@ -152,13 +152,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "daily/2025-06-07.md",
+                "file": "README.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 2025-06-07"
+              "title": "Outline of README"
             }
           }
         ],
@@ -198,9 +198,9 @@
   },
   "active": "e523fd97d1208204",
   "lastOpenFiles": [
+    "daily/2025-06-07.md",
     "README.md",
     "content/2025-06-07.md",
-    "daily/2025-06-07.md",
     "content/Linux kernel setup.md",
     "assets/Pasted image 20250518170753.jpg",
     "assets/Pasted image 20250518170742.jpg",
