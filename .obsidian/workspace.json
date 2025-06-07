@@ -13,180 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/2025-06-07.md",
+                "file": "daily/2025-06-07.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
               "title": "2025-06-07"
-            }
-          },
-          {
-            "id": "be1b5dc580f69ed1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/Linux kernel setup.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Linux kernel setup"
-            }
-          },
-          {
-            "id": "5864f50a5e7e60f1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/Logic analyzer.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Logic analyzer"
-            }
-          },
-          {
-            "id": "467a8e5dfa25fb7d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/Electronics - Shopping list.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Electronics - Shopping list"
-            }
-          },
-          {
-            "id": "14a8a46779509973",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/dotfile.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "dotfile"
-            }
-          },
-          {
-            "id": "038b62d0b7a23869",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/Update Linux kernel on Debian.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Update Linux kernel on Debian"
-            }
-          },
-          {
-            "id": "fb2c952b56fe17c4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/Understand BBB Debian.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Understand BBB Debian"
-            }
-          },
-          {
-            "id": "4988b0f6070eb900",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/dtb debian.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "dtb debian"
-            }
-          },
-          {
-            "id": "f10b757697330938",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/dtb debian.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "dtb debian"
-            }
-          },
-          {
-            "id": "0b8fd53dadb8d285",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/py-uio.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "py-uio"
-            }
-          },
-          {
-            "id": "f9c60359e748374e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/pin-utils.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "pin-utils"
-            }
-          },
-          {
-            "id": "d55ebd00b838f4ff",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/GPIO - Before.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "GPIO - Before"
-            }
-          },
-          {
-            "id": "837c15814b97c0c8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/GPIO - day01.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "GPIO - day01"
             }
           }
         ]
@@ -241,8 +73,19 @@
               "icon": "lucide-bookmark",
               "title": "Bookmarks"
             }
+          },
+          {
+            "id": "6205e76445027ab1",
+            "type": "leaf",
+            "state": {
+              "type": "recent-files",
+              "state": {},
+              "icon": "clock",
+              "title": "Recent Files"
+            }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -309,13 +152,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/dtb debian.md",
+                "file": "daily/2025-06-07.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of dtb debian"
+              "title": "Outline of 2025-06-07"
             }
           }
         ],
@@ -339,8 +182,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -358,6 +200,7 @@
   "lastOpenFiles": [
     "README.md",
     "content/2025-06-07.md",
+    "daily/2025-06-07.md",
     "content/Linux kernel setup.md",
     "assets/Pasted image 20250518170753.jpg",
     "assets/Pasted image 20250518170742.jpg",
@@ -387,7 +230,6 @@
     "raindrop/BBB/Linux 4 SAM - Developer Help.md",
     "raindrop/BBB/Abdallah Ali Abdallah.md",
     "raindrop/BBB/كتاب Simply AVR مقدمة مبسطة عن النظم المدمجة.md",
-    "raindrop/BBB/تعديل المبرمجة CH341 Design Problem and 3.3V Logic Level Modification [Arabic Language].md",
     "daily",
     "assets/l7316hlvaah21.webp",
     "content/bbb debian",
