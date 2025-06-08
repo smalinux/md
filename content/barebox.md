@@ -1,4 +1,70 @@
-- [ ] https://www.barebox.org/demo/
+
+
+```bash
+git checkout smalinux main branch
+```
+
+
+```bash
+nv net.server=192.168.0.134
+reset
+boot bnet
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+https://www.barebox.org/demo/
 
 
 ```

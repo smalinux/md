@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "barebox",
+      "path": "content/barebox.md"
+    },
+    {
       "basename": "README",
       "path": "README.md"
     },
