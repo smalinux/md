@@ -213,6 +213,8 @@
   },
   "active": "cadf8a589f7b4693",
   "lastOpenFiles": [
+    "raindrop/BBB/SoftHard Reset &amp; Watchdog Timer (WDT)  Micropython Machine Module - Learn aws &amp; iot.md",
+    "raindrop/BBB/Watchdog timer on micro controllers - PIC10F.md",
     "BBB_SCH.pdf",
     "BBB_SCH.pdf.crdownload",
     "raindrop/BBB/How to Create a Remote Benchtop Setup for Electronics Engineers.md",
@@ -245,7 +247,6 @@
     "content/arduino-dotfiles.md",
     "raindrop/BBB/FOSDEM 2025 - Home.md",
     "raindrop/BBB/Kickstart Embedded.md",
-    "raindrop/BBB/Tech Explorations.md",
     "daily",
     "assets/l7316hlvaah21.webp",
     "content/bbb debian",
@@ -255,7 +256,6 @@
     "Clippings",
     "assets",
     "Pasted image 20250429001648.png",
-    "content",
-    "Makefile"
+    "content"
   ]
 }
