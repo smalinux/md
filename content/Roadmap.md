@@ -32,4 +32,4 @@
 - [ ] [The Panel Discussion "Egypt Better Future : Search for the Young Talents " CSCAMP 2015 - YouTube](https://youtu.be/lvkjvPllwZw?si=CIK0O81BG7DwpL6X)
 - [ ] [Build a Modern Computer from First Principles: From Nand to Tetris (Project-Centered Course) \| Coursera](https://www.coursera.org/learn/build-a-computer)
 - [ ] [QNX & MINIX 3 · Issue #6 · smalinux/md](https://github.com/smalinux/md/issues/6)
-- [ ] 
+- [ ] [xv6 OS labs · Issue #7 · smalinux/md](https://github.com/smalinux/md/issues/7)
