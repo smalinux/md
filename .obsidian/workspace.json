@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "content/Roadmap.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "Roadmap"
             }
           },
           {
@@ -35,8 +35,7 @@
               "title": "barebox"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -167,13 +166,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/barebox.md",
+                "file": "content/Roadmap.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of barebox"
+              "title": "Outline of Roadmap"
             }
           }
         ],
@@ -211,8 +210,10 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "cadf8a589f7b4693",
+  "active": "e523fd97d1208204",
   "lastOpenFiles": [
+    "README.md",
+    "content/barebox.md",
     "raindrop/BBB/Adafruit Industries - YouTube.md",
     "raindrop/BBB/SoftHard Reset &amp; Watchdog Timer (WDT)  Micropython Machine Module - Learn aws &amp; iot.md",
     "raindrop/BBB/Watchdog timer on micro controllers - PIC10F.md",
@@ -233,7 +234,6 @@
     "raindrop/BBB/Tanel Poder - YouTube.md",
     "raindrop/BBB/Brian Fraser - YouTube.md",
     "raindrop/BBB/Configure aws instance and laptop with one tool  Set up sock proxy using ssh tunnel.md",
-    "README.md",
     "daily/2025-06-07.md",
     "content/2025-06-07.md",
     "content/Linux kernel setup.md",
@@ -246,7 +246,6 @@
     "daily/2025-05-22.md",
     "daily/2025-05-24.md",
     "content/arduino-dotfiles.md",
-    "raindrop/BBB/FOSDEM 2025 - Home.md",
     "daily",
     "assets/l7316hlvaah21.webp",
     "content/bbb debian",

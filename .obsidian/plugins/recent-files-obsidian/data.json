@@ -1,12 +1,16 @@
 {
   "recentFiles": [
     {
-      "basename": "barebox",
-      "path": "content/barebox.md"
+      "basename": "Roadmap",
+      "path": "content/Roadmap.md"
     },
     {
       "basename": "README",
       "path": "README.md"
+    },
+    {
+      "basename": "barebox",
+      "path": "content/barebox.md"
     },
     {
       "basename": "Linux kernel setup",
