@@ -1,16 +1,24 @@
 {
   "recentFiles": [
     {
-      "basename": "Roadmap",
-      "path": "content/Roadmap.md"
+      "basename": "vim",
+      "path": "content/vim.md"
+    },
+    {
+      "basename": "Linux Kernel Development for Neovim",
+      "path": "Clippings/Linux Kernel Development for Neovim.md"
+    },
+    {
+      "basename": "barebox",
+      "path": "content/barebox.md"
     },
     {
       "basename": "README",
       "path": "README.md"
     },
     {
-      "basename": "barebox",
-      "path": "content/barebox.md"
+      "basename": "Roadmap",
+      "path": "content/Roadmap.md"
     },
     {
       "basename": "Linux kernel setup",

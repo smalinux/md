@@ -1,0 +1,9 @@
+- [ ] لو بتفتح اكتر من tmux tab بس علشان تتنقل بين كود, دا دليل على ان عندك مشكله فى vim
+- [ ] Google: cmp-nvim
+- [ ] G: mason-lspconfig
+- [ ] https://medium.com/@lsig/linux-kernel-development-for-neovim-a783beede29b
+- [ ] [Linux Kernel Development for Neovim](../Clippings/Linux%20Kernel%20Development%20for%20Neovim.md)
+- [ ] https://www.lazyvim.org/
+- [ ] integrate lazyvim into dotfiles
+- [ ] https://qutebrowser.org/ ?
+- [ ] 
