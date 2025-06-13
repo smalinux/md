@@ -11,4 +11,16 @@
 	- [ ] https://github.com/kovidgoyal/kitty
 	- [ ] https://github.com/wezterm/wezterm
 	- [ ] https://github.com/alacritty/alacritty
-	- [ ] 
+
+
+lua/plugins/core.lua https://www.lazyvim.org/configuration
+lua/config/lazy.lua https://www.lazyvim.org/configuration/lazy.nvim
+
+lua/config/options.lua
+lua/config/keymaps.lua
+lua/config/autocmds.lua
+
+lua/plugins/lsp.lua
+
+
+الحلوف: https://github.com/folke/lazy.nvim/blob/main/doc/lazy.nvim.txt
