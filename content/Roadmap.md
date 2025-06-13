@@ -33,3 +33,11 @@
 - [ ] [Build a Modern Computer from First Principles: From Nand to Tetris (Project-Centered Course) \| Coursera](https://www.coursera.org/learn/build-a-computer)
 - [ ] [QNX & MINIX 3 · Issue #6 · smalinux/md](https://github.com/smalinux/md/issues/6)
 - [ ] [xv6 OS labs · Issue #7 · smalinux/md](https://github.com/smalinux/md/issues/7)
+
+___
+# Advanced
+- [ ] https://www.youtube.com/@offlinemark
+- [ ] https://www.youtube.com/@dragonzapeducation/
+- [ ] https://www.youtube.com/@spradotube/
+- [ ] https://www.youtube.com/@MoreReneRebe
+- [ ] 
