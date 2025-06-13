@@ -96,7 +96,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "nixos",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -128,7 +128,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -241,8 +241,9 @@
   },
   "active": "dcff29ad379d742a",
   "lastOpenFiles": [
-    "Clippings/Linux Kernel Development for Neovim.md",
+    "raindrop/BBB/Configure aws instance and laptop with one tool  Set up sock proxy using ssh tunnel.md",
     "content/vim.md",
+    "Clippings/Linux Kernel Development for Neovim.md",
     "content/barebox.md",
     "README.md",
     "content/Roadmap.md",
@@ -265,7 +266,6 @@
     "raindrop/BBB/KVM 1 Important intro (arabic voice).md",
     "raindrop/BBB/Tanel Poder - YouTube.md",
     "raindrop/BBB/Brian Fraser - YouTube.md",
-    "raindrop/BBB/Configure aws instance and laptop with one tool  Set up sock proxy using ssh tunnel.md",
     "daily/2025-06-07.md",
     "content/2025-06-07.md",
     "content/Linux kernel setup.md",

@@ -24,3 +24,16 @@ lua/plugins/lsp.lua
 
 
 الحلوف: https://github.com/folke/lazy.nvim/blob/main/doc/lazy.nvim.txt
+
+==sudo snap install alacritty==
+
+
+==sudo snap install ghostty==
+
+حط ghostty مكان terminator
+
+
+زود سرعه الـ move فى الـ terminal
+اسأل يوسف ازاى بيعمل select بدل طريقه tmux
+
+
