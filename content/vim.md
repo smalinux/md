@@ -6,4 +6,9 @@
 - [ ] https://www.lazyvim.org/
 - [ ] integrate lazyvim into dotfiles
 - [ ] https://qutebrowser.org/ ?
-- [ ] 
+- [ ] ارجع تابع تانى الكميونتى بتاع lua & vim 😙
+- [ ] https://github.com/folke/lazy.nvim
+	- [ ] https://github.com/kovidgoyal/kitty
+	- [ ] https://github.com/wezterm/wezterm
+	- [ ] https://github.com/alacritty/alacritty
+	- [ ] 
