@@ -1,3 +1,22 @@
+---
+title: "⌨️ Keymaps | LazyVim"
+source: "https://www.lazyvim.org/keymaps"
+author:
+published:
+created: 2025-06-14
+description: "LazyVim uses which-key.nvim to help you remember your"
+tags:
+  - "clippings"
+---
+## ⌨️ Keymaps
+
+**LazyVim** uses [which-key.nvim](https://github.com/folke/which-key.nvim) to help you remember your keymaps. Just press any key like `<space>` and you'll see a popup with all possible keymaps starting with `<space>`.
+
+![image](https://user-images.githubusercontent.com/292349/211862473-1ff5ee7a-3bb9-4782-a9f6-014f0e5d4474.png)
+
+- default `<leader>` is `<space>`
+- default `<localleader>` is `\`
+
 ## General
 
 | Key                  | Description                           | Mode                       |
@@ -709,71 +728,3 @@ Part of [lazyvim.plugins.extras.util.rest](https://www.lazyvim.org/extras/util/r
 | `<leader>Rs` | Send the request | **n** |
 | `<leader>RS` | Show stats | **n** |
 | `<leader>Rt` | Toggle headers/body | **n** |
-
-
-_____
-
-- [ ] لو بتفتح اكتر من tmux tab بس علشان تتنقل بين كود, دا دليل على ان عندك مشكله فى vim
-- [ ] Google: cmp-nvim
-- [ ] G: mason-lspconfig
-- [ ] https://medium.com/@lsig/linux-kernel-development-for-neovim-a783beede29b
-- [ ] [Linux Kernel Development for Neovim](../Clippings/Linux%20Kernel%20Development%20for%20Neovim.md)
-- [ ] https://www.lazyvim.org/
-- [ ] integrate lazyvim into dotfiles
-- [ ] https://qutebrowser.org/ ?
-- [ ] ارجع تابع تانى الكميونتى بتاع lua & vim 😙
-- [ ] https://github.com/folke/lazy.nvim
-	- [ ] https://github.com/kovidgoyal/kitty
-	- [ ] https://github.com/wezterm/wezterm
-	- [ ] https://github.com/alacritty/alacritty
-
-
-lua/plugins/core.lua https://www.lazyvim.org/configuration
-lua/config/lazy.lua https://www.lazyvim.org/configuration/lazy.nvim
-
-lua/config/options.lua
-lua/config/keymaps.lua
-lua/config/autocmds.lua
-
-lua/plugins/lsp.lua
-
-
-الحلوف: https://github.com/folke/lazy.nvim/blob/main/doc/lazy.nvim.txt
-
-==sudo snap install alacritty==
-
-
-==sudo snap install ghostty==
-
-حط ghostty مكان terminator
-
-
-زود سرعه الـ move فى الـ terminal
-اسأل يوسف ازاى بيعمل select بدل طريقه tmux
-
-____
-
-leader cm lsp lang server
-
-s (type) to jump to with curser
-
-:lazyExtra
-	stop on any extention and hit x
-		this will install it
-
-gc -> comment
-
-لو الحياة والوقت يسمح هتفرج على كل فيديوهاته :)
-https://www.youtube.com/@devopstoolbox
-
-ui.smear-cursor
-
-
-____
-
-$ m compile_commands.json 😢
-
-____
-
-
-اكتب ملف خاص بيك للـ keymap

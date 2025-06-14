@@ -22,6 +22,20 @@
             }
           },
           {
+            "id": "a54848da360953ba",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Clippings/⌨️ Keymaps  LazyVim.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "⌨️ Keymaps  LazyVim"
+            }
+          },
+          {
             "id": "dd50017072d67ad8",
             "type": "leaf",
             "state": {
@@ -64,7 +78,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -190,6 +204,23 @@
             }
           },
           {
+            "id": "dfc9479eae98e8ed",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {},
+              "icon": "calendar-with-checkmark",
+              "title": "Calendar"
+            }
+          }
+        ],
+        "currentTab": 3
+      },
+      {
+        "id": "48b3f69d0314be7b",
+        "type": "tabs",
+        "children": [
+          {
             "id": "05a75b5dfb1f9cb3",
             "type": "leaf",
             "state": {
@@ -204,28 +235,11 @@
               "title": "Outline of vim"
             }
           }
-        ],
-        "currentTab": 3
-      },
-      {
-        "id": "8e6b23747d2a4144",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "dfc9479eae98e8ed",
-            "type": "leaf",
-            "state": {
-              "type": "calendar",
-              "state": {},
-              "icon": "calendar-with-checkmark",
-              "title": "Calendar"
-            }
-          }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 330.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -241,11 +255,12 @@
   },
   "active": "dcff29ad379d742a",
   "lastOpenFiles": [
-    "raindrop/BBB/Configure aws instance and laptop with one tool  Set up sock proxy using ssh tunnel.md",
-    "content/vim.md",
     "Clippings/Linux Kernel Development for Neovim.md",
-    "content/barebox.md",
+    "Clippings/⌨️ Keymaps  LazyVim.md",
+    "content/vim.md",
     "README.md",
+    "raindrop/BBB/Configure aws instance and laptop with one tool  Set up sock proxy using ssh tunnel.md",
+    "content/barebox.md",
     "content/Roadmap.md",
     "raindrop/BBB/Adafruit Industries - YouTube.md",
     "raindrop/BBB/SoftHard Reset &amp; Watchdog Timer (WDT)  Micropython Machine Module - Learn aws &amp; iot.md",
@@ -268,7 +283,6 @@
     "raindrop/BBB/Brian Fraser - YouTube.md",
     "daily/2025-06-07.md",
     "content/2025-06-07.md",
-    "content/Linux kernel setup.md",
     "assets/Pasted image 20250518170753.jpg",
     "assets/Pasted image 20250518170742.jpg",
     "assets/Pasted image 20250430225243.png",

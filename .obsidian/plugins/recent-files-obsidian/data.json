@@ -5,20 +5,24 @@
       "path": "content/vim.md"
     },
     {
-      "basename": "Configure aws instance and laptop with one tool  Set up sock proxy using ssh tunnel",
-      "path": "raindrop/BBB/Configure aws instance and laptop with one tool  Set up sock proxy using ssh tunnel.md"
-    },
-    {
       "basename": "Linux Kernel Development for Neovim",
       "path": "Clippings/Linux Kernel Development for Neovim.md"
     },
     {
-      "basename": "barebox",
-      "path": "content/barebox.md"
+      "basename": "⌨️ Keymaps  LazyVim",
+      "path": "Clippings/⌨️ Keymaps  LazyVim.md"
     },
     {
       "basename": "README",
       "path": "README.md"
+    },
+    {
+      "basename": "Configure aws instance and laptop with one tool  Set up sock proxy using ssh tunnel",
+      "path": "raindrop/BBB/Configure aws instance and laptop with one tool  Set up sock proxy using ssh tunnel.md"
+    },
+    {
+      "basename": "barebox",
+      "path": "content/barebox.md"
     },
     {
       "basename": "Roadmap",
