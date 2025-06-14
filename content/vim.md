@@ -131,35 +131,49 @@
 | `<S-l>`      | Next Buffer                 | **n** | ⭐    |                               |
 
 ## conform.nvim
-البلاجن دا بيعمل autoformat 
+==البلاجن دا بيعمل autoformat - دا يتقفل على جهاز الشغل! وتشغله بـ shortcut صريح على بس الملف اللى انت واقف عليه.==
 
 | Key | Description | Mode |
 | --- | --- | --- |
 | `<leader>cF` | Format Injected Langs | **n**, **v** |
+[Perfect Code Formatting with conform.nvim \| Neovim Configuration from Scratch Part 5 - YouTube](https://www.youtube.com/watch?v=UVO_cq3xATo&ab_channel=MrJakob)
+[How To Setup Linting And Formatting In Neovim To Replace null-ls - YouTube](https://www.youtube.com/watch?v=ybUE4D80XSk&ab_channel=JoseanMartinez)
+[Neovim Auto-Format and Auto-Save Setup - conform.nvim and auto-save.nvim Explained - YouTube](https://www.youtube.com/watch?v=oq-0ioaI5V4&ab_channel=linkarzu)
 
 ## flash.nvim
+دا اللى بينططق لاماكن بسرعه
 
-| Key | Description | Mode |
-| --- | --- | --- |
-| `<c-s>` | Toggle Flash Search | **c** |
-| `r` | Remote Flash | **o** |
-| `R` | Treesitter Search | **o**, **x** |
-| `s` | Flash | **n**, **o**, **x** |
-| `S` | Flash Treesitter | **n**, **o**, **x** |
+| Key     | Description         | Mode                |     |     |
+| ------- | ------------------- | ------------------- | --- | --- |
+| `<c-s>` | Toggle Flash Search | **c**               | -   |     |
+| `r`     | Remote Flash        | **o**               |     |     |
+| `R`     | Treesitter Search   | **o**, **x**        |     |     |
+| `s`     | Flash               | **n**, **o**, **x** | ⭐   |     |
+| `S`     | Flash Treesitter    | **n**, **o**, **x** |     |     |
 
 ## grug-far.nvim
+ندم, الخاصيه دى كنت بستخدم sublime علشان اعملها
 
-| Key | Description | Mode |
-| --- | --- | --- |
-| `<leader>sr` | Search and Replace | **n**, **v** |
+| Key          | Description        | Mode         |     |
+| ------------ | ------------------ | ------------ | --- |
+| `<leader>sr` | Search and Replace | **n**, **v** | ⭐⭐⭐ |
 
 ## mason.nvim
+محتاجله قاعده تانيه! skip
 
 | Key | Description | Mode |
 | --- | --- | --- |
 | `<leader>cm` | Mason | **n** |
 
+## fold
+
+| Key | Description | Mode  |
+| --- | ----------- | ----- |
+| `z` | fold list   | **n** |
+
 ## noice.nvim
+nvim notifications
+فكك skip
 
 | Key | Description | Mode |
 | --- | --- | --- |
@@ -174,6 +188,7 @@
 | `<S-Enter>` | Redirect Cmdline | **c** |
 
 ## nvim-treesitter
+فكك skip
 
 | Key | Description | Mode |
 | --- | --- | --- |
@@ -181,13 +196,15 @@
 | `<c-space>` | Increment Selection | **n** |
 
 ## persistence.nvim
+اللعب مع الـ Session
+هنا حلو جدا انا تبدأ تشوف ازاى تعمل save للـ sessions
 
-| Key | Description | Mode |
-| --- | --- | --- |
-| `<leader>qd` | Don't Save Current Session | **n** |
-| `<leader>ql` | Restore Last Session | **n** |
-| `<leader>qs` | Restore Session | **n** |
-| `<leader>qS` | Select Session | **n** |
+| Key          | Description                | Mode  | (q) |
+| ------------ | -------------------------- | ----- | --- |
+| `<leader>qd` | Don't Save Current Session | **n** |     |
+| `<leader>ql` | Restore Last Session       | **n** |     |
+| `<leader>qs` | Restore Session            | **n** |     |
+| `<leader>qS` | Select Session             | **n** |     |
 
 ## snacks.nvim
 
@@ -219,6 +236,7 @@
 | `]t`         | Next Todo Comment        | **n** |        |
 
 ## trouble.nvim
+skip!
 
 | Key | Description | Mode |
 | --- | --- | --- |
@@ -232,6 +250,7 @@
 | `]q` | Next Trouble/Quickfix Item | **n** |
 
 ## which-key.nvim
+skip!
 
 | Key | Description | Mode |
 | --- | --- | --- |
@@ -239,7 +258,7 @@
 | `<leader>?` | Buffer Keymaps (which-key) | **n** |
 
 ## CopilotChat.nvim
-
+skip!
 Part of [lazyvim.plugins.extras.ai.copilot-chat](https://www.lazyvim.org/extras/ai/copilot-chat)
 
 | Key | Description | Mode |
@@ -252,7 +271,7 @@ Part of [lazyvim.plugins.extras.ai.copilot-chat](https://www.lazyvim.org/extras/
 | `<leader>ax` | Clear (CopilotChat) | **n**, **v** |
 
 ## mini.surround
-
+skip!
 Part of [lazyvim.plugins.extras.coding.mini-surround](https://www.lazyvim.org/extras/coding/mini-surround)
 
 | Key | Description | Mode |
@@ -266,7 +285,7 @@ Part of [lazyvim.plugins.extras.coding.mini-surround](https://www.lazyvim.org/ex
 | `gsr` | Replace Surrounding | **n** |
 
 ## neogen
-
+skip!
 Part of [lazyvim.plugins.extras.coding.neogen](https://www.lazyvim.org/extras/coding/neogen)
 
 | Key | Description | Mode |
@@ -274,7 +293,7 @@ Part of [lazyvim.plugins.extras.coding.neogen](https://www.lazyvim.org/extras/co
 | `<leader>cn` | Generate Annotations (Neogen) | **n** |
 
 ## yanky.nvim
-
+skip!
 Part of [lazyvim.plugins.extras.coding.yanky](https://www.lazyvim.org/extras/coding/yanky)
 
 | Key | Description | Mode |
@@ -299,7 +318,8 @@ Part of [lazyvim.plugins.extras.coding.yanky](https://www.lazyvim.org/extras/cod
 | `y` | Yank Text | **n**, **x** |
 
 ## nvim-dap
-
+دا debugger !!!
+skip!
 Part of [lazyvim.plugins.extras.dap.core](https://www.lazyvim.org/extras/dap/core)
 
 | Key | Description | Mode |
@@ -323,7 +343,7 @@ Part of [lazyvim.plugins.extras.dap.core](https://www.lazyvim.org/extras/dap/cor
 | `<leader>dw` | Widgets | **n** |
 
 ## nvim-dap-ui
-
+skip!
 Part of [lazyvim.plugins.extras.dap.core](https://www.lazyvim.org/extras/dap/core)
 
 | Key | Description | Mode |
@@ -332,7 +352,7 @@ Part of [lazyvim.plugins.extras.dap.core](https://www.lazyvim.org/extras/dap/cor
 | `<leader>du` | Dap UI | **n** |
 
 ## aerial.nvim
-
+skip!
 Part of [lazyvim.plugins.extras.editor.aerial](https://www.lazyvim.org/extras/editor/aerial)
 
 | Key | Description | Mode |
@@ -340,7 +360,7 @@ Part of [lazyvim.plugins.extras.editor.aerial](https://www.lazyvim.org/extras/ed
 | `<leader>cs` | Aerial (Symbols) | **n** |
 
 ## telescope.nvim
-
+دا حوار لوحده!
 Part of [lazyvim.plugins.extras.editor.aerial](https://www.lazyvim.org/extras/editor/aerial)
 
 | Key | Description | Mode |
@@ -348,7 +368,7 @@ Part of [lazyvim.plugins.extras.editor.aerial](https://www.lazyvim.org/extras/ed
 | `<leader>ss` | Goto Symbol (Aerial) | **n** |
 
 ## dial.nvim
-
+skip!
 Part of [lazyvim.plugins.extras.editor.dial](https://www.lazyvim.org/extras/editor/dial)
 
 | Key | Description | Mode |
@@ -731,7 +751,7 @@ gc -> comment
 لو الحياة والوقت يسمح هتفرج على كل فيديوهاته :)
 https://www.youtube.com/@devopstoolbox
 
-ui.smear-cursor
+smear-cursor.nvim 💙
 
 
 ____
