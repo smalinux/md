@@ -36,4 +36,9 @@ lua/plugins/lsp.lua
 زود سرعه الـ move فى الـ terminal
 اسأل يوسف ازاى بيعمل select بدل طريقه tmux
 
+____
+
+<leader>cm lsp lang server
+
+s <type> to jump to with curser
 
