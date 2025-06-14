@@ -6,7 +6,6 @@
       {
         "id": "f48e06043c2e8b33",
         "type": "tabs",
-        "dimension": 64.97764530551416,
         "children": [
           {
             "id": "e523fd97d1208204",
@@ -23,84 +22,21 @@
             }
           },
           {
-            "id": "a54848da360953ba",
+            "id": "4cd70fb2427da789",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Clippings/⌨️ Keymaps  LazyVim.md",
+                "file": "content/Watchdog.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "⌨️ Keymaps  LazyVim"
-            }
-          },
-          {
-            "id": "dd50017072d67ad8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Clippings/Linux Kernel Development for Neovim.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Linux Kernel Development for Neovim"
-            }
-          },
-          {
-            "id": "cadf8a589f7b4693",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/barebox.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "barebox"
-            }
-          },
-          {
-            "id": "eefd0a928c053f2f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/vim.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "vim"
+              "title": "Watchdog"
             }
           }
         ],
-        "currentTab": 4
-      },
-      {
-        "id": "527a069e19499b71",
-        "type": "tabs",
-        "dimension": 35.02235469448584,
-        "children": [
-          {
-            "id": "dcff29ad379d742a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/vim.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "vim"
-            }
-          }
-        ]
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -250,13 +186,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/vim.md",
+                "file": "content/Watchdog.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of vim"
+              "title": "Outline of Watchdog"
             }
           }
         ]
@@ -277,13 +213,14 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "05a75b5dfb1f9cb3",
+  "active": "4cd70fb2427da789",
   "lastOpenFiles": [
+    "README.md",
+    "content/Watchdog.md",
+    "Clippings/⌨️ Keymaps  LazyVim.md",
+    "Clippings/Linux Kernel Development for Neovim.md",
     "content/barebox.md",
     "content/vim.md",
-    "Clippings/Linux Kernel Development for Neovim.md",
-    "Clippings/⌨️ Keymaps  LazyVim.md",
-    "README.md",
     "raindrop/BBB/Configure aws instance and laptop with one tool  Set up sock proxy using ssh tunnel.md",
     "content/Roadmap.md",
     "raindrop/BBB/Adafruit Industries - YouTube.md",
@@ -306,7 +243,6 @@
     "raindrop/BBB/Tanel Poder - YouTube.md",
     "raindrop/BBB/Brian Fraser - YouTube.md",
     "daily/2025-06-07.md",
-    "content/2025-06-07.md",
     "assets/Pasted image 20250518170753.jpg",
     "assets/Pasted image 20250518170742.jpg",
     "assets/Pasted image 20250430225243.png",

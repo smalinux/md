@@ -9,7 +9,8 @@
 - [Linux kernel setup](content/Linux%20kernel%20setup.md) ## [Dev Setup](content/Dev%20Setup.md)
 - [Electronics - Shopping list](content/Electronics%20-%20Shopping%20list.md)
 - [fastboot](content/fastboot.md)
-- [barebox](content/barebox.md)
+- [barebox](content/barebox.md) ⭐
+	- [Watchdog](content/Watchdog.md)
 - [udev](udev)
 - [[NeoPixel matrix]]
 - [am335x USB mode](content/am335x%20USB%20mode.md)
@@ -61,17 +62,12 @@
 	- [[py-uio]]::: https://github.com/mvduin/py-uio
 	- [[dtb debian]]
 	- 
+- [[GPIO]]
 - [[GPIO - day01]]
 - [[GPIO - Before]]
 - [[content/dotfile]]
 - [[vim]]
-- 
-
-________
-
-# Done
-1. [[GPIO]]
-2. [[Update Linux kernel on Debian]]
+- [[Update Linux kernel on Debian]]
 
 
 ___
