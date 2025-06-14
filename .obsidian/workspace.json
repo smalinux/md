@@ -34,9 +34,23 @@
               "icon": "lucide-file",
               "title": "Watchdog"
             }
+          },
+          {
+            "id": "32f7e0d29f78d706",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/vim.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "vim"
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -68,7 +82,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "nixos",
+                "query": "wezterm",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -100,7 +114,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -186,13 +200,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/Watchdog.md",
+                "file": "content/vim.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Watchdog"
+              "title": "Outline of vim"
             }
           }
         ]
@@ -213,10 +227,10 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "4cd70fb2427da789",
+  "active": "a7081f618757c4ba",
   "lastOpenFiles": [
-    "README.md",
     "content/Watchdog.md",
+    "README.md",
     "Clippings/⌨️ Keymaps  LazyVim.md",
     "Clippings/Linux Kernel Development for Neovim.md",
     "content/barebox.md",
