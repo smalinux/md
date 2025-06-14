@@ -42,3 +42,13 @@ ____
 
 s <type> to jump to with curser
 
+:lazyExtra
+	stop on any extention and hit x
+		this will install it
+
+gc -> comment
+
+لو الحياة والوقت يسمح هتفرج على كل فيديوهاته :)
+https://www.youtube.com/@devopstoolbox
+
+ui.smear-cursor
