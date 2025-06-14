@@ -38,9 +38,9 @@ lua/plugins/lsp.lua
 
 ____
 
-<leader>cm lsp lang server
+leader cm lsp lang server
 
-s <type> to jump to with curser
+s (type) to jump to with curser
 
 :lazyExtra
 	stop on any extention and hit x
@@ -52,3 +52,12 @@ gc -> comment
 https://www.youtube.com/@devopstoolbox
 
 ui.smear-cursor
+
+
+____
+
+$ m compile_commands.json 😢
+
+____
+
+
