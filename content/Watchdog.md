@@ -148,9 +148,8 @@ ____
 32-bit Counter
 Programmable Divider: The divider can be set to 2^n where n=0-7, so you can divide the 32 kHz clock by 1, 2, 4, 8, 16, 32, 64, or 128 to get different timeout granularities.
 اذن قيمه العداد ممكن اخليها اسرع او ابطأ فى العد التنازلى
-
 **On-the-fly Access**: You can read and write registers while the counter is running, which is important for feeding the watchdog.
-اذن انا ممكن اقرأ القيمه دى عادى بـ kernel modules
+
 
 ## System Integration Architecture
 
@@ -161,13 +160,13 @@ Programmable Divider: The divider can be set to 2^n where n=0-7, so you can divi
 
 The PRCM (Power, Reset, and Clock Management) module selects between these using the CLKSEL_WDT1_CLK register. This gives you flexibility between using an internal RC oscillator (less accurate but always available) or a PLL-derived clock (more accurate).
 
-## Key Signal Connections
+### Key Signal Connections
 
 **PO_RSTCMD_N**: This is the reset output that goes to the PRCM module. When the watchdog overflows and is configured for reset mode, this signal triggers a warm reset of the system.
 
 **PO_INT_PEND**: This is the interrupt output that connects to both the MPU Subsystem and WakeM3 processor, allowing either to handle watchdog events.
 
-## Security and Configuration Signals
+### Security and Configuration Signals
 
 The diagram shows several interesting configuration inputs:
 
@@ -175,7 +174,7 @@ The diagram shows several interesting configuration inputs:
 - **PI_SECURE_WDA, PI_AUTO_START_DIS**: Additional security and auto-start control
 - **PI_PTV_RESET_VALUE, PI_WLDR_RESET_VALUE**: These allow configuring default prescaler and load values
 
-## Power Management Integration
+### Power Management Integration
 
 **Power Domain**: Operates in the Wakeup Domain, meaning it stays powered even in low-power states - crucial for a watchdog's function.
 
@@ -183,7 +182,7 @@ The diagram shows several interesting configuration inputs:
 
 **Wakeup Capability**: Can generate wakeup events through the L4 Wakeup Interconnect, allowing it to wake the system from sleep states.
 
-## Important Observations
+### Important Observations
 
 The **0xFFFFB0000 (10s)** notation suggests there's a default 10-second timeout value, which would make sense for typical watchdog applications.
 
@@ -191,6 +190,7 @@ The connection to both MPU and WakeM3 indicates this watchdog can serve multiple
 
 What aspects of this integration would you like to explore further? Are you particularly interested in the clock configuration, the reset/interrupt handling, or the power management aspects?
 
+____
 ____
 
 ## 20.4.4 Watchdog Registers
@@ -282,7 +282,9 @@ ___
 ماتلعبش فى اى قيم تانيه
 
 _____
-
+_____
+_____
+# بدايه الجد.
 ## 20.4.3 Functional Description
 ### 20.4.3.1 Power Management
 **إدارة الطاقة في Watchdog Timer:**
