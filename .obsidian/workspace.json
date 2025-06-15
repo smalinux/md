@@ -64,7 +64,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -214,13 +214,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/Watchdog-cheatsheet.md",
+                "file": "content/watchdog-barebox.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Watchdog-cheatsheet"
+              "title": "Outline of watchdog-barebox"
             }
           }
         ]
@@ -241,10 +241,10 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "852ed7768e19c85c",
+  "active": "a0d88b6b79d515cc",
   "lastOpenFiles": [
-    "content/Watchdog.md",
     "content/Watchdog-cheatsheet.md",
+    "content/Watchdog.md",
     "content/watchdog-barebox.md",
     "README.md",
     "content/barebox.md",

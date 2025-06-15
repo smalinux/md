@@ -1,16 +1,16 @@
 {
   "recentFiles": [
     {
+      "basename": "watchdog-barebox",
+      "path": "content/watchdog-barebox.md"
+    },
+    {
       "basename": "Watchdog-cheatsheet",
       "path": "content/Watchdog-cheatsheet.md"
     },
     {
       "basename": "Watchdog",
       "path": "content/Watchdog.md"
-    },
-    {
-      "basename": "watchdog-barebox",
-      "path": "content/watchdog-barebox.md"
     },
     {
       "basename": "README",

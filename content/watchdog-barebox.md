@@ -83,3 +83,15 @@ Counter_Range = 0xFFFFFFFF + 1 = 2^32
 Starting_Value = Counter_Range - Required_Pulses
 Starting_Value = 0xFFFFFFFF - Required_Pulses + 1
 ```
+
+
+____
+
+```c#
+static void omap_wdt_reload(struct omap_wdt_dev *wdev)
+static void omap_wdt_enable(struct omap_wdt_dev *wdev)
+static void omap_wdt_disable(struct omap_wdt_dev *wdev)
+static void omap_wdt_set_timer(struct omap_wdt_dev *wdev, unsigned int timeout)
+
+static int omap_wdt_set_timeout(struct watchdog *wdog, unsigned int timeout)
+```
