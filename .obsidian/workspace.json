@@ -64,7 +64,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -215,13 +215,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/Watchdog.md",
+                "file": "content/Watchdog-cheatsheet.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Watchdog"
+              "title": "Outline of Watchdog-cheatsheet"
             }
           }
         ]
@@ -243,11 +243,13 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "4cd70fb2427da789",
+  "active": "edca360423dc8350",
   "lastOpenFiles": [
-    "content/WDT_WIER vs WDT_WIRQENSET.md",
-    "content/Watchdog-cheatsheet.md",
     "content/Watchdog.md",
+    "raindrop/BBB/Debian Getting Started with the BeagleBone Black - Embedded  Linux Guides - DigiKey TechForum - An Electronic Component and Engineering Solution Forum.md",
+    "raindrop/BBB/Latest General Discussion topics - BeagleBoard.md",
+    "content/Watchdog-cheatsheet.md",
+    "content/WDT_WIER vs WDT_WIRQENSET.md",
     "README.md",
     "raindrop/BBB/Freien Treiber 7 Zoll 1024600 Display Kapazitiven Touchscreen Monitor Raspberry Pi Alle Modelle PC BeagleBone schwarz Stecker und Spielen - Google Search.md",
     "raindrop/BBB/Flashing a Beaglebone Black the COOL Way.md",
@@ -271,8 +273,6 @@
     "raindrop/BBB/Tracing and Linux-Kernel RCU, Paul E. McKenney (IBM).md",
     "raindrop/BBB/Starting Linux kernel exploration with Eukabuka!.md",
     "raindrop/BBB/EmbeededNotes - 1 - Pointer - 1 - Void Pointers (Arabic).md",
-    "raindrop/BBB/BinaryAdventure - YouTube.md",
-    "raindrop/BBB/Bitwise, Day 66 Self-Hosting Compiler Rewrite, Part 3.md",
     "assets/Pasted image 20250518170753.jpg",
     "assets/Pasted image 20250518170742.jpg",
     "assets/Pasted image 20250430225243.png",

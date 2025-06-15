@@ -13,14 +13,14 @@
 
 ## 📊 **Key Registers**
 
-|Register|Purpose|Notes|
-|---|---|---|
-|`WDT_WCRR`|Current counter value|Read-only, special access|
-|`WDT_WLDR`|Load register|Default: 0xFFFFFFBE|
-|`WDT_WTGR`|Trigger reload|Write any different value|
-|`WDT_WDLY`|Delay interrupt value|Early warning trigger|
-|`WDT_WCLR`|Control/Prescaler|PTV[4:2] + PRE[5]|
-|`WDT_WSPR`|Start/Stop|Special sequences only|
+| Register   | Purpose               | Notes                     |
+| ---------- | --------------------- | ------------------------- |
+| `WDT_WCRR` | Current counter value | Read-only, special access |
+| `WDT_WLDR` | Load register         | Default: 0xFFFFFFBE       |
+| `WDT_WTGR` | Trigger reload        | Write any different value |
+| `WDT_WDLY` | Delay interrupt value | Early warning trigger     |
+| `WDT_WCLR` | Control/Prescaler     | PTV[4:2] + PRE[5]         |
+| `WDT_WSPR` | Start/Stop            | Special sequences only    |
 
 ## ⚙️ **Prescaler Configuration**
 
@@ -194,22 +194,22 @@ WDT_WDSC &= ~(1 << 1);  // EMUFREE=0, allow debug suspend
 
 ## 📋 **Register Addresses (Typical Base + Offset)**
 
-| Register        | Offset | Access |                                                                                        |
-| --------------- | ------ | ------ | -------------------------------------------------------------------------------------- |
-| WDT_WIDR        | 0x00   | R      |                                                                                        |
-| WDT_WDSC        | 0x10   | RW     |                                                                                        |
-| WDT_WDST        | 0x14   | R      |                                                                                        |
-| WDT_WISR        | 0x18   | R      |                                                                                        |
-| WDT_WIER        | 0x1C   | RW     | The Watchdog Interrupt Enable Register controls (enable/disable) the interrupt events. |
-| WDT_WCLR        | 0x24   | RW     |                                                                                        |
-| WDT_WCRR        | 0x28   | R      |                                                                                        |
-| WDT_WLDR        | 0x2C   | RW     |                                                                                        |
-| WDT_WTGR        | 0x30   | RW     |                                                                                        |
-| WDT_WWPS        | 0x34   | R      |                                                                                        |
-| WDT_WDLY        | 0x44   | RW     |                                                                                        |
-| WDT_WSPR        | 0x48   | RW     |                                                                                        |
-| WDT_WIRQSTATRAW | 0x54   | R      |                                                                                        |
-| WDT_WIRQSTAT    | 0x58   | RW     | W IRQ STAT                                                                             |
-| WDT_WIRQENSET   | 0x5C   | RW     | IRQ Enable Set \| Watchdog Interrupt Enable **Set** Register                           |
-| WDT_WIRQENCLR   | 0x60   | RW     | IRQ Enable Clear                                                                       |
+| Register        | Offset | Access |                                                                                                                                                                                                                        |
+| --------------- | ------ | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| WDT_WIDR        | 0x00   | R      |                                                                                                                                                                                                                        |
+| WDT_WDSC        | 0x10   | RW     |                                                                                                                                                                                                                        |
+| WDT_WDST        | 0x14   | R      |                                                                                                                                                                                                                        |
+| WDT_WISR        | 0x18   | R      | Interrupt stat                                                                                                                                                                                                         |
+| WDT_WIER        | 0x1C   | RW     | The Watchdog Interrupt Enable Register controls (enable/disable) the interrupt events.                                                                                                                                 |
+| WDT_WCLR        | 0x24   | RW     | Control Register (change prescaler, )                                                                                                                                                                                  |
+| WDT_WCRR        | 0x28   | R      | CR = Current \| This is the current counter value! <br>You can read this to see how much time is left before timeout. Since it's a 32-bit upward counter, it starts at the WLDR value and counts up toward 0xFFFFFFFF. |
+| WDT_WLDR        | 0x2C   | RW     | LD = load \| This is where you set the timeout value.<br>WLDR => Starting point<br>0xFFFFFFFF => Ending po                                                                                                             |
+| WDT_WTGR        | 0x30   | RW     | TGR = Trigger \| This is the "pet the dog" register. Writing any value here reloads the counter with the WLDR value, preventing timeout. This is what your software writes to periodically to keep the system running. |
+| WDT_WWPS        | 0x34   | R      |                                                                                                                                                                                                                        |
+| WDT_WDLY        | 0x44   | RW     |                                                                                                                                                                                                                        |
+| WDT_WSPR        | 0x48   | RW     |                                                                                                                                                                                                                        |
+| WDT_WIRQSTATRAW | 0x54   | R      | W IRQ STAT Raw                                                                                                                                                                                                         |
+| WDT_WIRQSTAT    | 0x58   | RW     | W IRQ STAT                                                                                                                                                                                                             |
+| WDT_WIRQENSET   | 0x5C   | RW     | IRQ Enable Set \| Watchdog Interrupt Enable **Set** Register                                                                                                                                                           |
+| WDT_WIRQENCLR   | 0x60   | RW     | IRQ Enable Clear                                                                                                                                                                                                       |
 [WDT_WIER vs WDT_WIRQENSET](WDT_WIER%20vs%20WDT_WIRQENSET.md)
