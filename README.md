@@ -31,7 +31,7 @@
 - spi-tools
 - rng-tools
 - pciutils
-- openocd
+- [ ] [[OpenOCD]]
 - i2c-tools
 - hwdata
 - dtbocfg
@@ -42,7 +42,6 @@
 - [[meta-arm]]
 - [[flashing emmc]]
 - Secure Boot
-- OpenOCD
 - [[Watchdog]]
 - [[GPIO subsytem]]
 - [[dotfiles]]
@@ -65,10 +64,17 @@
 - [[GPIO]]
 - [[GPIO - day01]]
 - [[GPIO - Before]]
+- [ ] [[GPIO]]
+	- [ ] [[Ch 25 GPIO]]
+	- [ ] [[GPIO-cheatsheet]]
 - [[content/dotfile]]
 - [[vim]]
+	- [ ] [vim-fugitive](content/vim-fugitive.md)
 - [[Update Linux kernel on Debian]]
-
+- [ ] [Watchdog](content/Watchdog.md)
+	- [ ] [[Watchdog-cheatsheet]]
+	- [ ] [[watchdog-barebox]]
+- [ ] [[bitwise]]
 
 ___
 # Arduino

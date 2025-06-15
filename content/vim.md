@@ -133,9 +133,9 @@
 ## conform.nvim
 ==البلاجن دا بيعمل autoformat - دا يتقفل على جهاز الشغل! وتشغله بـ shortcut صريح على بس الملف اللى انت واقف عليه.==
 
-| Key | Description | Mode |
-| --- | --- | --- |
-| `<leader>cF` | Format Injected Langs | **n**, **v** |
+| Key          | Description           | Mode         |
+| ------------ | --------------------- | ------------ |
+| `<leader>cf` | Format Injected Langs | **n**, **v** |
 [Perfect Code Formatting with conform.nvim \| Neovim Configuration from Scratch Part 5 - YouTube](https://www.youtube.com/watch?v=UVO_cq3xATo&ab_channel=MrJakob)
 [How To Setup Linting And Formatting In Neovim To Replace null-ls - YouTube](https://www.youtube.com/watch?v=ybUE4D80XSk&ab_channel=JoseanMartinez)
 [Neovim Auto-Format and Auto-Save Setup - conform.nvim and auto-save.nvim Explained - YouTube](https://www.youtube.com/watch?v=oq-0ioaI5V4&ab_channel=linkarzu)

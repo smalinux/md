@@ -5,12 +5,16 @@
       "path": "content/vim.md"
     },
     {
-      "basename": "Watchdog",
-      "path": "content/Watchdog.md"
+      "basename": "dotfiles",
+      "path": "content/dotfiles.md"
     },
     {
       "basename": "README",
       "path": "README.md"
+    },
+    {
+      "basename": "Watchdog",
+      "path": "content/Watchdog.md"
     },
     {
       "basename": "⌨️ Keymaps  LazyVim",
