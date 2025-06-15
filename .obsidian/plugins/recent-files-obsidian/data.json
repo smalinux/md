@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "Watchdog-cheatsheet",
+      "path": "content/Watchdog-cheatsheet.md"
+    },
+    {
+      "basename": "Watchdog",
+      "path": "content/Watchdog.md"
+    },
+    {
       "basename": "watchdog-barebox",
       "path": "content/watchdog-barebox.md"
     },
@@ -11,14 +19,6 @@
     {
       "basename": "barebox",
       "path": "content/barebox.md"
-    },
-    {
-      "basename": "Watchdog",
-      "path": "content/Watchdog.md"
-    },
-    {
-      "basename": "Watchdog-cheatsheet",
-      "path": "content/Watchdog-cheatsheet.md"
     },
     {
       "basename": "WDT_WIER vs WDT_WIRQENSET",

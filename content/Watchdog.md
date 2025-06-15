@@ -1050,7 +1050,8 @@ void log_watchdog_reset(void) {
 This mechanism ensures **continuous system monitoring** with **automatic recovery** while maintaining **predictable timing behavior** for reliable system operation.
 
 
-## 20.4.3.6 Prescaler Value/Timer Reset Frequency
+## 20.4.3.6 Prescaler Value/Timer Reset Frequency (Skip! Read later 📍)
+تقريبا دا السكشن الوحيد اللى فيه ماث! 😥
 **إعدادات الـ Prescaler وحساب معدل الـ Reset:**
 
 **جدول الـ Prescaler الكامل:**
@@ -1806,7 +1807,7 @@ void watchdog_service_task(void* parameters) {
 
 This reload mechanism provides the **core safety function** of the watchdog timer while maintaining **precise control** over system reset timing.
 
-## 20.4.3.8 Start/Stop Sequence for Watchdog Timers
+## 20.4.3.8 Start/Stop Sequence for Watchdog Timers ⭐
 **الـ Start/Stop Sequences للـ Watchdog Timer:**
 
 **نقطة مهمة جداً:** الـ watchdog timer مش بيتوقف أو يبدأ بكتابة bit واحد عادي. لازم نكتب **تسلسل معين من القيم** في الـ `WDT_WSPR` register عشان نضمن الأمان.
@@ -2500,7 +2501,7 @@ bool wait_for_register_completion(uint32_t pending_bit, uint32_t timeout) {
 
 This modification procedure ensures **safe runtime reconfiguration** while maintaining **system protection integrity** throughout the process.
 
-## 20.4.3.10 Watchdog Counter Register Access Restriction
+## 20.4.3.10 Watchdog Counter Register Access ==Restriction==
 **قيود قراءة الـ WDT_WCRR Register:**
 
 **المشكلة الأساسية:** الـ `WDT_WCRR` register ده بيحتوي على قيمة الـ counter الحالية (32-bit)، بس **مش ممكن نقراه بشكل عادي** زي باقي الـ registers!
@@ -3952,7 +3953,7 @@ void monitor_write_performance(uint32_t write_duration) {
 
 The register access architecture represents a **carefully engineered compromise** between **performance**, **reliability**, and **hardware complexity** in mixed clock domain systems.
 
-## 20.4.3.14 Low-Level Programming Model
+## 20.4.3.14 Low-Level Programming Model (Skip! Read later 📍)
 **موضوع السكشن الأساسي - الـ Programming Model:**
 
 السكشن ده بيقدم **نموذج برمجي متكامل** لإدارة الـ Watchdog Timer على مستوى منخفض. بيوضح إزاي تتعامل مع الـ hardware بشكل مباشر وإيه هي الـ sequences الصحيحة للعمليات المختلفة.

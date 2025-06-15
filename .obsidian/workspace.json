@@ -64,7 +64,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -214,13 +214,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/watchdog-barebox.md",
+                "file": "content/Watchdog-cheatsheet.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of watchdog-barebox"
+              "title": "Outline of Watchdog-cheatsheet"
             }
           }
         ]
@@ -241,13 +241,13 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "a0d88b6b79d515cc",
+  "active": "852ed7768e19c85c",
   "lastOpenFiles": [
+    "content/Watchdog.md",
+    "content/Watchdog-cheatsheet.md",
     "content/watchdog-barebox.md",
     "README.md",
     "content/barebox.md",
-    "content/Watchdog.md",
-    "content/Watchdog-cheatsheet.md",
     "content/WDT_WIER vs WDT_WIRQENSET.md",
     "raindrop/BBB/Debian Getting Started with the BeagleBone Black - Embedded  Linux Guides - DigiKey TechForum - An Electronic Component and Engineering Solution Forum.md",
     "raindrop/BBB/Latest General Discussion topics - BeagleBoard.md",
