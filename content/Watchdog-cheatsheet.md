@@ -194,21 +194,22 @@ WDT_WDSC &= ~(1 << 1);  // EMUFREE=0, allow debug suspend
 
 ## 📋 **Register Addresses (Typical Base + Offset)**
 
-| Register        | Offset | Access |
-| --------------- | ------ | ------ |
-| WDT_WIDR        | 0x00   | R      |
-| WDT_WDSC        | 0x10   | RW     |
-| WDT_WDST        | 0x14   | R      |
-| WDT_WISR        | 0x18   | R      |
-| WDT_WIER        | 0x1C   | RW     |
-| WDT_WCLR        | 0x24   | RW     |
-| WDT_WCRR        | 0x28   | R      |
-| WDT_WLDR        | 0x2C   | RW     |
-| WDT_WTGR        | 0x30   | RW     |
-| WDT_WWPS        | 0x34   | R      |
-| WDT_WDLY        | 0x44   | RW     |
-| WDT_WSPR        | 0x48   | RW     |
-| WDT_WIRQSTATRAW | 0x54   | R      |
-| WDT_WIRQSTAT    | 0x58   | RW     |
-| WDT_WIRQENSET   | 0x5C   | RW     |
-| WDT_WIRQENCLR   | 0x60   | RW     
+| Register        | Offset | Access |                                                                                        |
+| --------------- | ------ | ------ | -------------------------------------------------------------------------------------- |
+| WDT_WIDR        | 0x00   | R      |                                                                                        |
+| WDT_WDSC        | 0x10   | RW     |                                                                                        |
+| WDT_WDST        | 0x14   | R      |                                                                                        |
+| WDT_WISR        | 0x18   | R      |                                                                                        |
+| WDT_WIER        | 0x1C   | RW     | The Watchdog Interrupt Enable Register controls (enable/disable) the interrupt events. |
+| WDT_WCLR        | 0x24   | RW     |                                                                                        |
+| WDT_WCRR        | 0x28   | R      |                                                                                        |
+| WDT_WLDR        | 0x2C   | RW     |                                                                                        |
+| WDT_WTGR        | 0x30   | RW     |                                                                                        |
+| WDT_WWPS        | 0x34   | R      |                                                                                        |
+| WDT_WDLY        | 0x44   | RW     |                                                                                        |
+| WDT_WSPR        | 0x48   | RW     |                                                                                        |
+| WDT_WIRQSTATRAW | 0x54   | R      |                                                                                        |
+| WDT_WIRQSTAT    | 0x58   | RW     | W IRQ STAT                                                                             |
+| WDT_WIRQENSET   | 0x5C   | RW     | IRQ Enable Set \| Watchdog Interrupt Enable **Set** Register                           |
+| WDT_WIRQENCLR   | 0x60   | RW     | IRQ Enable Clear                                                                       |
+[WDT_WIER vs WDT_WIRQENSET](WDT_WIER%20vs%20WDT_WIRQENSET.md)

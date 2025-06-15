@@ -22,6 +22,20 @@
             }
           },
           {
+            "id": "edca360423dc8350",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/Watchdog-cheatsheet.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Watchdog-cheatsheet"
+            }
+          },
+          {
             "id": "4cd70fb2427da789",
             "type": "leaf",
             "state": {
@@ -34,9 +48,23 @@
               "icon": "lucide-file",
               "title": "Watchdog"
             }
+          },
+          {
+            "id": "20769ee7bbdd84d9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/WDT_WIER vs WDT_WIRQENSET.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "WDT_WIER vs WDT_WIRQENSET"
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -217,13 +245,14 @@
   },
   "active": "4cd70fb2427da789",
   "lastOpenFiles": [
+    "content/WDT_WIER vs WDT_WIRQENSET.md",
+    "content/Watchdog.md",
+    "content/Watchdog-cheatsheet.md",
+    "README.md",
     "raindrop/BBB/Freien Treiber 7 Zoll 1024600 Display Kapazitiven Touchscreen Monitor Raspberry Pi Alle Modelle PC BeagleBone schwarz Stecker und Spielen - Google Search.md",
     "raindrop/BBB/Flashing a Beaglebone Black the COOL Way.md",
-    "content/Watchdog.md",
-    "README.md",
     "content/vim.md",
     "content/dotfiles.md",
-    "content/Watchdog-cheatsheet.md",
     "content/vim-fugitive.md",
     "content/OpenOCD.md",
     "content/Ch 25 GPIO.md",
@@ -244,7 +273,6 @@
     "raindrop/BBB/EmbeededNotes - 1 - Pointer - 1 - Void Pointers (Arabic).md",
     "raindrop/BBB/BinaryAdventure - YouTube.md",
     "raindrop/BBB/Bitwise, Day 66 Self-Hosting Compiler Rewrite, Part 3.md",
-    "raindrop/BBB/Embedded Linux  Introduction To BareBox  Beginners.md",
     "assets/Pasted image 20250518170753.jpg",
     "assets/Pasted image 20250518170742.jpg",
     "assets/Pasted image 20250430225243.png",

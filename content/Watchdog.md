@@ -322,7 +322,7 @@ _____
 
 - الـ **CPU** عايز يوصل لأي **peripheral** (زي الـ watchdog timer)
 - بدل ما يروح مباشرة، بيعدي من خلال الـ **L4 interconnect**
-- الـ L4 ده بيعمل زي **المرور المروري** - بينظم مين يوصل لمين وإمتى
+- الـ L4 ده بيعمل زي **المرور المروري** (! 😄) - بينظم مين يوصل لمين وإمتى
 
 **ليه مهم للـ Watchdog Timer:**
 
@@ -365,19 +365,21 @@ ___
 ## 20.4.3.2 Interrupts
 **الـ Watchdog Timer بيقدر يولد نوعين interrupts:**
 
-**النوع الأول - Overflow Interrupt (EVENT_OVF):**
+==**النوع الأول - Overflow Interrupt (EVENT_OVF):**==
 
 - ده بيحصل لما الـ **counter يوصل لآخره** (يعمل overflow)
 - الـ flag بتاعه في الـ `WDT_WIRQSTAT[0]`
 - بيتفعل/يتلغى من خلال `WDT_WIRQENSET[0]` أو `WDT_WIRQENCLR[0]`
 - **الفكرة:** ده تحذير إن الـ system هيتعمله reset دلوقتي
+صهيب: اذن ممكن اعمل reset للقيمه دى WDT_WIRQENCLR من الـ terminal؟ devmem؟ علشان امنع الـ reset...
 
-**النوع التاني - Delay Interrupt (EVENT_DLY):**
+==**النوع التاني - Delay Interrupt (EVENT_DLY):**==
 
 - ده بيحصل لما الـ **counter يوصل لقيمة معينة** قبل الـ overflow
 - الـ flag بتاعه في الـ `WDT_WIRQSTAT[1]`
 - بيتفعل/يتلغى من خلال `WDT_WIRQENSET[1]` أو `WDT_WIRQENCLR[1]`
 - **الفكرة:** ده تحذير مبكر إن الـ reset قريب يحصل
+صهيب: اكتب درايفر فى barebox واطبع رساله لما توصل للقيمه دى .... 🙂
 
 **إزاي الـ Interrupt Mechanism بيشتغل:**
 
@@ -385,6 +387,10 @@ ___
 2. لو الـ **enable bit** في الـ `WDT_WIRQENSET` كمان **1**
 3. الـ **WDTi_IRQ line** بيتفعل (active low)
 4. عشان تشيل الـ interrupt، لازم تكتب **1** في الـ flag بتاع الـ `WDT_WIRQSTAT`
+
+صهيب: اذن ممكن اكتب درايفر يطبع حاجه فى الـ terminal اول لما قيمه bit من دول يتعملها sit مثلا Goodbye message
+
+Sohaib: [[WDT_WIER vs WDT_WIRQENSET]]
 ### English Technical Analysis:
 
 **Watchdog Timer Interrupt Architecture:**
@@ -411,10 +417,13 @@ ___
 - **IRQ Line:** WDTINT (same line as overflow)
 - **Purpose:** Early warning system before actual reset occurs
 
-**Interrupt Generation Logic:**
+**Interrupt Generation Logic:** ⭐
 
 ```
 IRQ_OUTPUT = (EVENT_OVF & OVF_IT_ENA) | (EVENT_DLY & DLY_IT_ENA)
+
+(EVENT_OVF & OVF_IT_ENA)
+(دا منى انا & دا من النظام)
 ```
 
 **Critical Implementation Details:**

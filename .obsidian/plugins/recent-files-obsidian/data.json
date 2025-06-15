@@ -5,16 +5,24 @@
       "path": "content/Watchdog.md"
     },
     {
+      "basename": "WDT_WIER vs WDT_WIRQENSET",
+      "path": "content/WDT_WIER vs WDT_WIRQENSET.md"
+    },
+    {
+      "basename": "Watchdog-cheatsheet",
+      "path": "content/Watchdog-cheatsheet.md"
+    },
+    {
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
       "basename": "Freien Treiber 7 Zoll 1024600 Display Kapazitiven Touchscreen Monitor Raspberry Pi Alle Modelle PC BeagleBone schwarz Stecker und Spielen - Google Search",
       "path": "raindrop/BBB/Freien Treiber 7 Zoll 1024600 Display Kapazitiven Touchscreen Monitor Raspberry Pi Alle Modelle PC BeagleBone schwarz Stecker und Spielen - Google Search.md"
     },
     {
       "basename": "Flashing a Beaglebone Black the COOL Way",
       "path": "raindrop/BBB/Flashing a Beaglebone Black the COOL Way.md"
-    },
-    {
-      "basename": "README",
-      "path": "README.md"
     },
     {
       "basename": "vim",
