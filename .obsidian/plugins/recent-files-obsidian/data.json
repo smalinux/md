@@ -1,12 +1,12 @@
 {
   "recentFiles": [
     {
-      "basename": "Watchdog-cheatsheet",
-      "path": "content/Watchdog-cheatsheet.md"
-    },
-    {
       "basename": "Watchdog",
       "path": "content/Watchdog.md"
+    },
+    {
+      "basename": "Watchdog-cheatsheet",
+      "path": "content/Watchdog-cheatsheet.md"
     },
     {
       "basename": "WDT_WIER vs WDT_WIRQENSET",

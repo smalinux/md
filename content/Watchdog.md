@@ -662,35 +662,7 @@ void service_watchdog(void) {
 This architecture provides **hardware-enforced system reliability** while maintaining **software control flexibility** for normal operation.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### 20.4.3.4 Reset Context
+## 20.4.3.4 Reset Context
 **وضع الـ Watchdog Timer بعد الـ Reset:**
 
 **نقطة مهمة جداً:** الـ watchdog timers بتكون **مفعلة automatically** بعد أي reset! مش زي peripherals تانية اللي بتكون مقفولة.
@@ -718,6 +690,8 @@ This architecture provides **hardware-enforced system reliability** while mainta
 uint32_t ptv_value = (WDT_WCLR >> 2) & 0x7;  // PTV[4:2]
 uint32_t load_value = WDT_WLDR;              // Load register
 ```
+
+صهيب: واضح ان فيه قيمه افتراضيه بتتحط من الهاردوير بعد كل reboot !! مش متأكد. جرب تـ debug وتطبع القيمه قبل ما تعملها set فى الـ bootloader
 
 ---
 
@@ -883,12 +857,14 @@ This reset context behavior ensures **immediate system protection** while requir
     - بيروح للـ **PRCM module** (Power, Reset, Clock Management)
     - عرض الـ pulse ده = **واحد prescaled timer clock cycle**
 
+
 2. **الـ PRCM بيستقبل الـ Pulse:**
     
     - الـ PRCM module بياخد الـ reset pulse ده
     - يحوله لـ **global WARM reset** للجهاز كله
     - الـ **nRESETIN_OUT pin** بيطلع من الـ device عشان يعمل reset للنظام الخارجي
-
+    - صهيب: اقفش الـ pulse دى بـ logic analyser لو تقدر. دى pulse بتعمل reset للعالم الخارجى.
+    - 
 **بعد توليد الـ Reset:**
 
 **Automatic Reload:**
@@ -1074,7 +1050,7 @@ void log_watchdog_reset(void) {
 This mechanism ensures **continuous system monitoring** with **automatic recovery** while maintaining **predictable timing behavior** for reliable system operation.
 
 
-## 20.4.3.6 Prescaler Value/Timer Reset Frequency - شرح مفصل
+## 20.4.3.6 Prescaler Value/Timer Reset Frequency
 **إعدادات الـ Prescaler وحساب معدل الـ Reset:**
 
 **جدول الـ Prescaler الكامل:**

@@ -10,7 +10,7 @@
 - [Electronics - Shopping list](content/Electronics%20-%20Shopping%20list.md)
 - [fastboot](content/fastboot.md)
 - [barebox](content/barebox.md) ⭐
-	- [Watchdog](content/Watchdog.md)
+	- [Watchdog](content/Watchadog.md)
 - [udev](udev)
 - [[NeoPixel matrix]]
 - [am335x USB mode](content/am335x%20USB%20mode.md)
