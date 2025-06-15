@@ -1,20 +1,20 @@
 {
   "recentFiles": [
     {
-      "basename": "vim",
-      "path": "content/vim.md"
-    },
-    {
-      "basename": "dotfiles",
-      "path": "content/dotfiles.md"
+      "basename": "Watchdog",
+      "path": "content/Watchdog.md"
     },
     {
       "basename": "README",
       "path": "README.md"
     },
     {
-      "basename": "Watchdog",
-      "path": "content/Watchdog.md"
+      "basename": "vim",
+      "path": "content/vim.md"
+    },
+    {
+      "basename": "dotfiles",
+      "path": "content/dotfiles.md"
     },
     {
       "basename": "⌨️ Keymaps  LazyVim",
