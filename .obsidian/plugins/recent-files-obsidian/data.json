@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "bitwise",
+      "path": "content/bitwise.md"
+    },
+    {
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
       "basename": "watchdog-barebox",
       "path": "content/watchdog-barebox.md"
     },
@@ -11,10 +19,6 @@
     {
       "basename": "Watchdog",
       "path": "content/Watchdog.md"
-    },
-    {
-      "basename": "README",
-      "path": "README.md"
     },
     {
       "basename": "barebox",
