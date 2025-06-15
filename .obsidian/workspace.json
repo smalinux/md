@@ -68,7 +68,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "wezterm",
+                "query": "screen",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -215,6 +215,9 @@
   },
   "active": "4cd70fb2427da789",
   "lastOpenFiles": [
+    "raindrop/BBB/Freien Treiber 7 Zoll 1024600 Display Kapazitiven Touchscreen Monitor Raspberry Pi Alle Modelle PC BeagleBone schwarz Stecker und Spielen - Google Search.md",
+    "raindrop/BBB/Flashing a Beaglebone Black the COOL Way.md",
+    "content/Watchdog.md",
     "README.md",
     "content/vim.md",
     "content/dotfiles.md",
@@ -222,7 +225,6 @@
     "content/vim-fugitive.md",
     "content/OpenOCD.md",
     "content/Ch 25 GPIO.md",
-    "content/Watchdog.md",
     "Clippings/⌨️ Keymaps  LazyVim.md",
     "Clippings/Linux Kernel Development for Neovim.md",
     "content/barebox.md",
@@ -241,8 +243,6 @@
     "raindrop/BBB/BinaryAdventure - YouTube.md",
     "raindrop/BBB/Bitwise, Day 66 Self-Hosting Compiler Rewrite, Part 3.md",
     "raindrop/BBB/Embedded Linux  Introduction To BareBox  Beginners.md",
-    "raindrop/BBB/ECE 252 Lecture 29 Asynchronous IO with libevent.md",
-    "raindrop/BBB/Gameboy Emulator Development - Part 02.md",
     "assets/Pasted image 20250518170753.jpg",
     "assets/Pasted image 20250518170742.jpg",
     "assets/Pasted image 20250430225243.png",
