@@ -1,6 +1,18 @@
 {
   "recentFiles": [
     {
+      "basename": "watchdog-barebox",
+      "path": "content/watchdog-barebox.md"
+    },
+    {
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
+      "basename": "barebox",
+      "path": "content/barebox.md"
+    },
+    {
       "basename": "Watchdog",
       "path": "content/Watchdog.md"
     },
@@ -11,10 +23,6 @@
     {
       "basename": "WDT_WIER vs WDT_WIRQENSET",
       "path": "content/WDT_WIER vs WDT_WIRQENSET.md"
-    },
-    {
-      "basename": "README",
-      "path": "README.md"
     },
     {
       "basename": "Freien Treiber 7 Zoll 1024600 Display Kapazitiven Touchscreen Monitor Raspberry Pi Alle Modelle PC BeagleBone schwarz Stecker und Spielen - Google Search",
@@ -39,10 +47,6 @@
     {
       "basename": "Linux Kernel Development for Neovim",
       "path": "Clippings/Linux Kernel Development for Neovim.md"
-    },
-    {
-      "basename": "barebox",
-      "path": "content/barebox.md"
     },
     {
       "basename": "Configure aws instance and laptop with one tool  Set up sock proxy using ssh tunnel",
