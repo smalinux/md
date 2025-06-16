@@ -47,4 +47,6 @@ ls  /sys/kernel/debug/pinctrl
 [https://www.linux4sam.org/bin/view/Linux4SAM/PmFaq?skin=print.myskin](https://www.linux4sam.org/bin/view/Linux4SAM/PmFaq?skin=print.myskin)
 [https://www.linux4sam.org/bin/view/Linux4SAM/DemoArchive4_7](https://www.linux4sam.org/bin/view/Linux4SAM/DemoArchive4_7)
 [https://www.linux4sam.org/bin/view/Linux4SAM/UsingUltraLowPowerMode1](https://www.linux4sam.org/bin/view/Linux4SAM/UsingUltraLowPowerMode1)
+
+https://www.kernel.org/doc/html/v4.13/driver-api/pinctl.html
 # Cheatsheet

@@ -55,3 +55,23 @@ ____
 
 https://wiki.beyondlogic.org/index.php?title=Main_Page
 https://www.instructables.com/
+___
+### Writing complex device driver
+After I have a good rest with writing about SPI & I2C I can apply them to anything and any data sheet.
+
+The next step, as Ahmed Fatoum sees it, is to try to see how complex drivers are written, such as memory mapping.
+
+Generally, by then I will have really understood Linux APIs. Then I will be able to read drivers, no matter how complex they are.
+
+I think then I will like to read a lot of drivers every day.
+
+After you are completely comfortable with Linux APIs You should have read a good amount of drivers.
+
+Try to focus on the nice people like bootlin And the meetings of this community and everything they upload is a video, even if it is old
+
+This is an amazing resource that will really help you understand. You'll find people there you can ask and they'll help you.
+
+Improve yourself in C and Syntax Same, and every strange code you write, you have a simple example on the side in the Repo. To isolate it from any additional complexity.
+___
+https://kernel-recipes.org/en/2019/talks/what-to-do-when-your-device-depends-on-another-one/
+https://docs.kernel.org/driver-api/device_link.html

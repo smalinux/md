@@ -33,6 +33,11 @@
 - [ ] [Build a Modern Computer from First Principles: From Nand to Tetris (Project-Centered Course) \| Coursera](https://www.coursera.org/learn/build-a-computer)
 - [ ] [QNX & MINIX 3 · Issue #6 · smalinux/md](https://github.com/smalinux/md/issues/6)
 - [ ] [xv6 OS labs · Issue #7 · smalinux/md](https://github.com/smalinux/md/issues/7)
+- [ ] https://sysprog21.github.io/lkmpg/
+- [ ] Bootlin: Embedded Linux system development training
+- [ ] https://www.youtube.com/@johannes4gnu_linux96
+- [ ] https://bootlin.com/training/
+- [ ] 
 
 ___
 # Advanced
@@ -40,4 +45,11 @@ ___
 - [ ] https://www.youtube.com/@dragonzapeducation/
 - [ ] https://www.youtube.com/@spradotube/
 - [ ] https://www.youtube.com/@MoreReneRebe
-- [ ] 
+
+
+المفروض تبقى فاهم وعارف ازاى هتستخدم كل حاجه هنا ازاى كصندوق مغلق, ما تدخلنيش فى تفاصيل يا مدحت
+المفروض توثق كويس جدا الاستخدام بتاعك
+المفروض تكون قادر فعلا تفك وتركب اى جزء فى اللينكس كيوزر وتعرف ايه اللى عايزه وليه. مش شرط خالص تضيف جزء جديد ولا حتى بعد 3 سنين. بس هستخدم كل حاجه وعلى اكتر من مستوى من العمق
+https://github.com/torvalds/linux/tree/master/include
+
+دى مرحلتك ودى حاجه ممتعه جدا. ما تستعجلش تبنى, ازاى هتبنى اصلا وانت كيوزر للينكس جاهل جدا؟! 🙂

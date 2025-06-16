@@ -1,32 +1,88 @@
 {
   "recentFiles": [
     {
-      "basename": "LLVM",
-      "path": "content/LLVM.md"
-    },
-    {
       "basename": "README",
       "path": "README.md"
     },
     {
-      "basename": "eBPF",
-      "path": "content/eBPF.md"
+      "basename": "Device Tree",
+      "path": "content/Device Tree.md"
+    },
+    {
+      "basename": "pinctrl",
+      "path": "Clippings/pinctrl.md"
+    },
+    {
+      "basename": "Roadmap",
+      "path": "content/Roadmap.md"
+    },
+    {
+      "basename": "proc_fs.h",
+      "path": "content/proc_fs.h.md"
+    },
+    {
+      "basename": "hrtimer.h",
+      "path": "content/hrtimer.h.md"
+    },
+    {
+      "basename": "i2c",
+      "path": "content/i2c.md"
+    },
+    {
+      "basename": "hash table",
+      "path": "content/hash table.md"
+    },
+    {
+      "basename": "kprobes",
+      "path": "content/kprobes.md"
     },
     {
       "basename": "later",
       "path": "content/later.md"
     },
     {
-      "basename": "BBB bible",
-      "path": "content/BBB bible.md"
+      "basename": "Linux static major numbers",
+      "path": "content/Linux static major numbers.md"
+    },
+    {
+      "basename": "regulator subsystem",
+      "path": "content/regulator subsystem.md"
+    },
+    {
+      "basename": "Linux kernel concurrency cheat sheet",
+      "path": "content/Linux kernel concurrency cheat sheet.md"
+    },
+    {
+      "basename": "udev",
+      "path": "content/udev.md"
+    },
+    {
+      "basename": "USB FTDI",
+      "path": "content/USB FTDI.md"
+    },
+    {
+      "basename": "xboxdrv",
+      "path": "content/xboxdrv.md"
+    },
+    {
+      "basename": "RTC",
+      "path": "content/RTC.md"
     },
     {
       "basename": "fastboot",
       "path": "content/fastboot.md"
     },
     {
-      "basename": "RTC",
-      "path": "content/RTC.md"
+      "basename": "LLVM",
+      "path": "content/LLVM.md"
+    },
+    {
+      "basename": "eBPF",
+      "path": "content/eBPF.md"
+    },
+    {
+      "basename": "BBB bible",
+      "path": "content/BBB bible.md"
     },
     {
       "basename": "Quilt",
@@ -81,20 +137,12 @@
       "path": "content/pin-utils.md"
     },
     {
-      "basename": "i2c",
-      "path": "content/i2c.md"
-    },
-    {
       "basename": "ALSA",
       "path": "content/ALSA.md"
     },
     {
       "basename": "vim-fugitive",
       "path": "content/vim-fugitive.md"
-    },
-    {
-      "basename": "pinctrl",
-      "path": "Clippings/pinctrl.md"
     },
     {
       "basename": "Boot time optimization",
@@ -143,10 +191,6 @@
     {
       "basename": "Configure aws instance and laptop with one tool  Set up sock proxy using ssh tunnel",
       "path": "raindrop/BBB/Configure aws instance and laptop with one tool  Set up sock proxy using ssh tunnel.md"
-    },
-    {
-      "basename": "Roadmap",
-      "path": "content/Roadmap.md"
     },
     {
       "basename": "Linux kernel setup",

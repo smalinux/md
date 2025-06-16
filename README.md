@@ -12,6 +12,7 @@
 - [fastboot](content/fastboot.md)
 - [barebox](content/barebox.md) ⭐
 	- [watchdog-barebox](watchdog-barebox)
+	- لو عايز تعرف فعلا ازاى بيتعمو machine جديده اقرأ الباتش دا: https://lore.barebox.org/barebox/20241107145722.5145-1-jmaselbas@zdiv.net/T/#me2a087ed11de3048873c6795e880b0ef0151df2e
 - [udev](udev)
 - [[NeoPixel matrix]]
 - [am335x USB mode](content/am335x%20USB%20mode.md)
@@ -35,12 +36,15 @@
 - [ ] [[OpenOCD]]
 - [[i2c]]
 - hwdata
+- [[Linux kernel concurrency cheat sheet]]
 - dtbocfg
 - dbus
 - Buildroot > Target Packages > Hardware Handling
 - [[nginx]] on host - [[SQlite]] on target
 - [[umpf]]
 - [[meta-arm]]
+- [[regulator subsystem]]
+- [[Linux static major numbers]]
 - [[flashing emmc]]
 - Secure Boot
 - [[Watchdog]]
@@ -87,6 +91,16 @@
 - [ ] [[fastboot]]
 - [ ] [[eBPF]]
 - [ ] [[LLVM]]
+- [ ] Modules
+	- [ ] [[xboxdrv]] module
+	- [ ] [[USB FTDI]] SIO driver
+- [ ] [[kprobes]]
+- [ ] Linux APIs
+	- [ ] [[hrtimer.h]]
+	- [ ] [[proc_fs.h]]
+- [ ] [[hash table]]
+- [ ] [[Device Tree]] - End of Story
+- [ ] 
 ___
 # Arduino
 

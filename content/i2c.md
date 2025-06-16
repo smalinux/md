@@ -41,3 +41,10 @@ Best I2C Articles:
 Issues
 
 [https://stackoverflow.com/questions/59685432/beagle-bone-black-i2c2-issues](https://stackoverflow.com/questions/59685432/beagle-bone-black-i2c2-issues)
+
+https://embetronicx.com/tutorials/linux/device-drivers/i2c-bus-driver-real-1/
+
+https://www.infradead.org/~mchehab/kernel_docs/i2c/writing-clients.html#
+https://www.infradead.org/~mchehab/kernel_docs/i2c/instantiating-devices.html
+https://github.com/torvalds/linux/blob/master/Documentation/i2c/dev-interface.rst
+https://docs.kernel.org/6.1/i2c/slave-interface.html
