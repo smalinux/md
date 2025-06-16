@@ -22,8 +22,23 @@
             }
           },
           {
+            "id": "5e6f223f291feaf7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/libgpiod.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "libgpiod"
+            }
+          },
+          {
             "id": "5a25eaedc4aab13e",
             "type": "leaf",
+            "pinned": true,
             "state": {
               "type": "markdown",
               "state": {
@@ -31,6 +46,7 @@
                 "mode": "source",
                 "source": false
               },
+              "pinned": true,
               "icon": "lucide-file",
               "title": "bitwise"
             }
@@ -38,6 +54,7 @@
           {
             "id": "a0d88b6b79d515cc",
             "type": "leaf",
+            "pinned": true,
             "state": {
               "type": "markdown",
               "state": {
@@ -45,6 +62,7 @@
                 "mode": "source",
                 "source": false
               },
+              "pinned": true,
               "icon": "lucide-file",
               "title": "watchdog-barebox"
             }
@@ -52,6 +70,7 @@
           {
             "id": "852ed7768e19c85c",
             "type": "leaf",
+            "pinned": true,
             "state": {
               "type": "markdown",
               "state": {
@@ -59,6 +78,7 @@
                 "mode": "source",
                 "source": false
               },
+              "pinned": true,
               "icon": "lucide-file",
               "title": "Watchdog-cheatsheet"
             }
@@ -66,6 +86,7 @@
           {
             "id": "4cd70fb2427da789",
             "type": "leaf",
+            "pinned": true,
             "state": {
               "type": "markdown",
               "state": {
@@ -73,12 +94,12 @@
                 "mode": "source",
                 "source": false
               },
+              "pinned": true,
               "icon": "lucide-file",
               "title": "Watchdog"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -110,7 +131,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "screen",
+                "query": "pin-utils",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -142,7 +163,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -228,13 +249,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/bitwise.md",
+                "file": "README.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of bitwise"
+              "title": "Outline of README"
             }
           }
         ]
@@ -255,11 +276,21 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "5a25eaedc4aab13e",
+  "active": "e523fd97d1208204",
   "lastOpenFiles": [
-    "content/bitwise.md",
+    "content/yocto-dev.md",
     "README.md",
+    "content/libgpiod.md",
+    "content/OTA.md",
     "content/watchdog-barebox.md",
+    "content/bitwise.md",
+    "content/Distro boot.md",
+    "content/pin-utils.md",
+    "content/i2c.md",
+    "content/ALSA.md",
+    "content/vim-fugitive.md",
+    "Clippings/pinctrl.md",
+    "content/Boot time optimization.md",
     "content/Watchdog-cheatsheet.md",
     "content/Watchdog.md",
     "content/barebox.md",
@@ -270,21 +301,11 @@
     "raindrop/BBB/Flashing a Beaglebone Black the COOL Way.md",
     "content/vim.md",
     "content/dotfiles.md",
-    "content/vim-fugitive.md",
     "content/OpenOCD.md",
     "content/Ch 25 GPIO.md",
     "Clippings/⌨️ Keymaps  LazyVim.md",
-    "Clippings/Linux Kernel Development for Neovim.md",
-    "raindrop/BBB/Configure aws instance and laptop with one tool  Set up sock proxy using ssh tunnel.md",
-    "content/Roadmap.md",
-    "raindrop/BBB/Adafruit Industries - YouTube.md",
-    "raindrop/BBB/SoftHard Reset &amp; Watchdog Timer (WDT)  Micropython Machine Module - Learn aws &amp; iot.md",
-    "raindrop/BBB/Watchdog timer on micro controllers - PIC10F.md",
     "BBB_SCH.pdf",
     "BBB_SCH.pdf.crdownload",
-    "raindrop/BBB/How to Create a Remote Benchtop Setup for Electronics Engineers.md",
-    "raindrop/BBB/The Holy Grail of Electronics  Practical Electronics for Inventors.md",
-    "raindrop/BBB/Tracing and Linux-Kernel RCU, Paul E. McKenney (IBM).md",
     "assets/Pasted image 20250518170753.jpg",
     "assets/Pasted image 20250518170742.jpg",
     "assets/Pasted image 20250430225243.png",

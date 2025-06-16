@@ -1,16 +1,56 @@
 {
   "recentFiles": [
     {
-      "basename": "bitwise",
-      "path": "content/bitwise.md"
-    },
-    {
       "basename": "README",
       "path": "README.md"
     },
     {
+      "basename": "yocto-dev",
+      "path": "content/yocto-dev.md"
+    },
+    {
+      "basename": "libgpiod",
+      "path": "content/libgpiod.md"
+    },
+    {
+      "basename": "OTA",
+      "path": "content/OTA.md"
+    },
+    {
       "basename": "watchdog-barebox",
       "path": "content/watchdog-barebox.md"
+    },
+    {
+      "basename": "bitwise",
+      "path": "content/bitwise.md"
+    },
+    {
+      "basename": "Distro boot",
+      "path": "content/Distro boot.md"
+    },
+    {
+      "basename": "pin-utils",
+      "path": "content/pin-utils.md"
+    },
+    {
+      "basename": "i2c",
+      "path": "content/i2c.md"
+    },
+    {
+      "basename": "ALSA",
+      "path": "content/ALSA.md"
+    },
+    {
+      "basename": "vim-fugitive",
+      "path": "content/vim-fugitive.md"
+    },
+    {
+      "basename": "pinctrl",
+      "path": "Clippings/pinctrl.md"
+    },
+    {
+      "basename": "Boot time optimization",
+      "path": "content/Boot time optimization.md"
     },
     {
       "basename": "Watchdog-cheatsheet",

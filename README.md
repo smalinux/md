@@ -4,6 +4,7 @@
 # In progress
 - [Roadmap](content/Roadmap.md)
 - [Yocto](content/Yocto.md)
+	- [[yocto-dev]] debugging image ...
 - [Audio USB](Clippings/Audio%20USB.md)
 - [pinctrl](Clippings/pinctrl.md)
 - [Linux kernel setup](content/Linux%20kernel%20setup.md) ## [Dev Setup](content/Dev%20Setup.md)
@@ -32,7 +33,7 @@
 - rng-tools
 - pciutils
 - [ ] [[OpenOCD]]
-- i2c-tools
+- [[i2c]]
 - hwdata
 - dtbocfg
 - dbus
@@ -75,7 +76,10 @@
 	- [ ] [[Watchdog-cheatsheet]]
 	- [ ] [[watchdog-barebox]]
 - [ ] [[bitwise]]
-
+- [ ] [[ALSA]]
+- [ ] [[Distro boot]] | aka U-Boot extlinux.conf
+- [ ] [[OTA]]
+- [ ] 
 ___
 # Arduino
 

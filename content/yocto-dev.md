@@ -1,0 +1,1 @@
+https://stackoverflow.com/questions/77305042/package-is-not-properly-installed-in-yocto

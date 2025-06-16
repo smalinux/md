@@ -1,3 +1,11 @@
+
+
+https://github.com/tpope/vim-fugitive
+https://github.com/tpope/vim-fugitive/blob/5b62c75238bf04b3156ffe62f821930827de8578/doc/fugitive.txt#L72
+
+
+
+
 # vim-fugitive Quick Reference
 
 vim-fugitive is a powerful Vim plugin that provides a Git wrapper for Vim, allowing you to work with Git repositories directly from within the editor.
