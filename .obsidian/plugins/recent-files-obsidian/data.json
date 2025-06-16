@@ -5,6 +5,18 @@
       "path": "README.md"
     },
     {
+      "basename": "later",
+      "path": "content/later.md"
+    },
+    {
+      "basename": "Design patterns",
+      "path": "content/Design patterns.md"
+    },
+    {
+      "basename": "eBPF",
+      "path": "content/eBPF.md"
+    },
+    {
       "basename": "Device Tree",
       "path": "content/Device Tree.md"
     },
@@ -35,10 +47,6 @@
     {
       "basename": "kprobes",
       "path": "content/kprobes.md"
-    },
-    {
-      "basename": "later",
-      "path": "content/later.md"
     },
     {
       "basename": "Linux static major numbers",
@@ -75,10 +83,6 @@
     {
       "basename": "LLVM",
       "path": "content/LLVM.md"
-    },
-    {
-      "basename": "eBPF",
-      "path": "content/eBPF.md"
     },
     {
       "basename": "BBB bible",

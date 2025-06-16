@@ -21,3 +21,9 @@
 FreeBSD optimizations used by Netflix serving at 800Gb/s - Drew Gallatin - EuroBSDcon 2022
 
 [https://www.youtube.com/watch?v=36qZYL5RlgY](https://www.youtube.com/watch?v=36qZYL5RlgY)
+
+[https://mrale.ph/blog/2013/04/29/performance-tuning-as-weather-forecast.html](https://mrale.ph/blog/2013/04/29/performance-tuning-as-weather-forecast.html)
+
+[https://engineering.squarespace.com/blog/2019/performance-tuning-postgres-within-our-tls-infrastructure](https://engineering.squarespace.com/blog/2019/performance-tuning-postgres-within-our-tls-infrastructure)
+
+[https://github.com/dendibakh/perf-ninja](https://github.com/dendibakh/perf-ninja)

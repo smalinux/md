@@ -22,76 +22,6 @@
             }
           },
           {
-            "id": "d480d579476c3755",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/Device Tree.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Device Tree"
-            }
-          },
-          {
-            "id": "1a7ac8773fb7c44e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/hash table.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "hash table"
-            }
-          },
-          {
-            "id": "abfb33fa979cb8eb",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/i2c.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "i2c"
-            }
-          },
-          {
-            "id": "a0e9eae97d295ddb",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/kprobes.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "kprobes"
-            }
-          },
-          {
-            "id": "99fafffab5d2ed05",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/Linux static major numbers.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Linux static major numbers"
-            }
-          },
-          {
             "id": "5a25eaedc4aab13e",
             "type": "leaf",
             "pinned": true,
@@ -334,32 +264,32 @@
   },
   "active": "e523fd97d1208204",
   "lastOpenFiles": [
+    "content/later.md",
+    "raindrop/BBB/The Soul of A New Machine Kidder, Tracy 9780316491976 Amazon.com Books.md",
+    "raindrop/BBB/How do I prevent Conda from activating the base environment by default.md",
+    "raindrop/BBB/CHIPSEC v1.8.1 UEFI Shell SPI Dump Command TypeError « Musings.md",
+    "raindrop/BBB/How a toolchain is constructed.md",
+    "raindrop/BBB/Grand Idea Studio Home.md",
+    "raindrop/BBB/Blog - Two Six Technologies.md",
+    "raindrop/BBB/BeaglePlay and ClickID magic.md",
+    "raindrop/BBB/Playing with a BeagleBoard.md",
+    "raindrop/BBB/LXA USB-T1L ❤️ Beagle Play Exploring Single Wire Ethernet.md",
+    "raindrop/BBB/Amazon.com Embedded Systems Books.md",
+    "raindrop/BBB/Midnight Commander.md",
+    "raindrop/BBB/ojroquesfzf-dirhistory Use FZF to quickly jump to recently visited directories.md",
+    "raindrop/BBB/Guide to Financial Independence for Young Ambitious People.md",
+    "raindrop/BBB/I Took a Pay Cut for a More Meaningful Job  Hacker News.md",
+    "raindrop/BBB/trimstraythe-book-of-secret-knowledge A collection of inspiring lists, manuals, cheatsheets, blogs, hacks, one-liners, cliweb tools and more.md",
+    "raindrop/BBB/Linux System Programming - Linux System Programming Talking Directly to the Kernel and C Library.pdf.md",
+    "content/Design patterns.md",
+    "README.md",
+    "content/eBPF.md",
     "content/Device Tree.md",
     "raindrop/BBB/What I&39;ve Learned from Hacker News.md",
     "raindrop/BBB/Seeing through hardware counters a journey to threefold performance increase.md",
     "raindrop/BBB/Hardware Debugging for Reverse Engineers Part 1 SWD, OpenOCD and Xbox One Controllers.md",
     "raindrop/BBB/Andys Workshop.md",
-    "README.md",
     "Clippings/pinctrl.md",
-    "content/Roadmap.md",
-    "content/proc_fs.h.md",
-    "content/hrtimer.h.md",
-    "content/i2c.md",
-    "content/hash table.md",
-    "raindrop/BBB/Tutorials - SparkFun Learn.md",
-    "raindrop/BBB/Linux Device Driver Development Everything you need to start with device driver development for Linux kernel and embedded Linux, 2nd Edition John Madieu 9781803240060 Amazon.com Books.md",
-    "content/kprobes.md",
-    "content/later.md",
-    "content/Linux static major numbers.md",
-    "content/regulator subsystem.md",
-    "content/Linux kernel concurrency cheat sheet.md",
-    "content/udev.md",
-    "content/USB FTDI.md",
-    "content/xboxdrv.md",
-    "raindrop/BBB/Anthony Irwin - YouTube.md",
-    "content/RTC.md",
-    "content/fastboot.md",
-    "content/LLVM.md",
     "BBB_SCH.pdf",
     "BBB_SCH.pdf.crdownload",
     "assets/Pasted image 20250518170753.jpg",

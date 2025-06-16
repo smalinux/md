@@ -100,7 +100,7 @@
 	- [ ] [[proc_fs.h]]
 - [ ] [[hash table]]
 - [ ] [[Device Tree]] - End of Story
-- [ ] 
+- [ ] [[Design patterns]]
 ___
 # Arduino
 
