@@ -1,0 +1,1 @@
+[https://www.nxp.com/docs/en/data-sheet/PCF85263A.pdf](https://www.nxp.com/docs/en/data-sheet/PCF85263A.pdf)

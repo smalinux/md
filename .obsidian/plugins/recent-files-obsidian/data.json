@@ -1,20 +1,68 @@
 {
   "recentFiles": [
     {
+      "basename": "LLVM",
+      "path": "content/LLVM.md"
+    },
+    {
       "basename": "README",
       "path": "README.md"
     },
     {
-      "basename": "yocto-dev",
-      "path": "content/yocto-dev.md"
+      "basename": "eBPF",
+      "path": "content/eBPF.md"
+    },
+    {
+      "basename": "later",
+      "path": "content/later.md"
+    },
+    {
+      "basename": "BBB bible",
+      "path": "content/BBB bible.md"
+    },
+    {
+      "basename": "fastboot",
+      "path": "content/fastboot.md"
+    },
+    {
+      "basename": "RTC",
+      "path": "content/RTC.md"
+    },
+    {
+      "basename": "Quilt",
+      "path": "content/Quilt.md"
+    },
+    {
+      "basename": "initramfs",
+      "path": "content/initramfs.md"
+    },
+    {
+      "basename": "OTA",
+      "path": "content/OTA.md"
+    },
+    {
+      "basename": "Yocto",
+      "path": "content/Yocto.md"
     },
     {
       "basename": "libgpiod",
       "path": "content/libgpiod.md"
     },
     {
-      "basename": "OTA",
-      "path": "content/OTA.md"
+      "basename": "pwm subsystem",
+      "path": "content/pwm subsystem.md"
+    },
+    {
+      "basename": "GPIO subsytem",
+      "path": "content/GPIO subsytem.md"
+    },
+    {
+      "basename": "git-template",
+      "path": "content/git-template.md"
+    },
+    {
+      "basename": "yocto-dev",
+      "path": "content/yocto-dev.md"
     },
     {
       "basename": "watchdog-barebox",

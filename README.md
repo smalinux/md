@@ -78,8 +78,15 @@
 - [ ] [[bitwise]]
 - [ ] [[ALSA]]
 - [ ] [[Distro boot]] | aka U-Boot extlinux.conf
-- [ ] [[OTA]]
-- [ ] 
+- [ ] [[OTA]] Image based update
+- [ ] [[git]]
+	- [ ] [[git-template]]
+- [ ] [[Quilt]]
+- [ ] [[later]]
+- [ ] [[RTC]] real-time clock
+- [ ] [[fastboot]]
+- [ ] [[eBPF]]
+- [ ] [[LLVM]]
 ___
 # Arduino
 
