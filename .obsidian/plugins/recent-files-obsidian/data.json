@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "Watchdog-cheatsheet",
+      "path": "content/Watchdog-cheatsheet.md"
+    },
+    {
+      "basename": "drivers",
+      "path": "content/barebox/drivers.md"
+    },
+    {
       "basename": "README",
       "path": "README.md"
     },
@@ -153,10 +161,6 @@
       "path": "content/Boot time optimization.md"
     },
     {
-      "basename": "Watchdog-cheatsheet",
-      "path": "content/Watchdog-cheatsheet.md"
-    },
-    {
       "basename": "Watchdog",
       "path": "content/Watchdog.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "Configure aws instance and laptop with one tool  Set up sock proxy using ssh tunnel",
       "path": "raindrop/BBB/Configure aws instance and laptop with one tool  Set up sock proxy using ssh tunnel.md"
-    },
-    {
-      "basename": "Linux kernel setup",
-      "path": "content/Linux kernel setup.md"
     }
   ],
   "omittedPaths": [],

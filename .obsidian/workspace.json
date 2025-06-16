@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "content/barebox/drivers.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "drivers"
             }
           },
           {
@@ -85,7 +85,8 @@
               "title": "Watchdog"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -148,8 +149,7 @@
               "title": "Recent Files"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -235,13 +235,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md",
+                "file": "content/Watchdog-cheatsheet.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of README"
+              "title": "Outline of Watchdog-cheatsheet"
             }
           }
         ]
@@ -262,8 +262,12 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "e523fd97d1208204",
+  "active": "852ed7768e19c85c",
   "lastOpenFiles": [
+    "content/barebox/drivers.md",
+    "README.md",
+    "content/barebox",
+    "raindrop/BBB/A tour of the ARM architecture and its Linux support.md",
     "content/later.md",
     "raindrop/BBB/The Soul of A New Machine Kidder, Tracy 9780316491976 Amazon.com Books.md",
     "raindrop/BBB/How do I prevent Conda from activating the base environment by default.md",
@@ -282,14 +286,11 @@
     "raindrop/BBB/trimstraythe-book-of-secret-knowledge A collection of inspiring lists, manuals, cheatsheets, blogs, hacks, one-liners, cliweb tools and more.md",
     "raindrop/BBB/Linux System Programming - Linux System Programming Talking Directly to the Kernel and C Library.pdf.md",
     "content/Design patterns.md",
-    "README.md",
     "content/eBPF.md",
     "content/Device Tree.md",
     "raindrop/BBB/What I&39;ve Learned from Hacker News.md",
     "raindrop/BBB/Seeing through hardware counters a journey to threefold performance increase.md",
     "raindrop/BBB/Hardware Debugging for Reverse Engineers Part 1 SWD, OpenOCD and Xbox One Controllers.md",
-    "raindrop/BBB/Andys Workshop.md",
-    "Clippings/pinctrl.md",
     "BBB_SCH.pdf",
     "BBB_SCH.pdf.crdownload",
     "assets/Pasted image 20250518170753.jpg",
@@ -306,7 +307,6 @@
     "raindrop",
     "Clippings",
     "assets",
-    "Pasted image 20250429001648.png",
-    "content"
+    "Pasted image 20250429001648.png"
   ]
 }
