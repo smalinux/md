@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "watchdog-barebox",
+      "path": "content/watchdog-barebox.md"
+    },
+    {
       "basename": "Watchdog-cheatsheet",
       "path": "content/Watchdog-cheatsheet.md"
     },
@@ -131,10 +135,6 @@
     {
       "basename": "yocto-dev",
       "path": "content/yocto-dev.md"
-    },
-    {
-      "basename": "watchdog-barebox",
-      "path": "content/watchdog-barebox.md"
     },
     {
       "basename": "bitwise",

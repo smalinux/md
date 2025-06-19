@@ -86,7 +86,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -235,13 +235,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/Watchdog-cheatsheet.md",
+                "file": "content/watchdog-barebox.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Watchdog-cheatsheet"
+              "title": "Outline of watchdog-barebox"
             }
           }
         ]
@@ -262,8 +262,9 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "852ed7768e19c85c",
+  "active": "a0d88b6b79d515cc",
   "lastOpenFiles": [
+    "content/Watchdog-cheatsheet.md",
     "content/barebox/drivers.md",
     "README.md",
     "content/barebox",
@@ -290,7 +291,6 @@
     "content/Device Tree.md",
     "raindrop/BBB/What I&39;ve Learned from Hacker News.md",
     "raindrop/BBB/Seeing through hardware counters a journey to threefold performance increase.md",
-    "raindrop/BBB/Hardware Debugging for Reverse Engineers Part 1 SWD, OpenOCD and Xbox One Controllers.md",
     "BBB_SCH.pdf",
     "BBB_SCH.pdf.crdownload",
     "assets/Pasted image 20250518170753.jpg",
