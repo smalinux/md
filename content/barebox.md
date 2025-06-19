@@ -14,6 +14,32 @@ boot bnet
 
 
 
+____
+## Memory Management Functions
+
+### `dev_request_mem_resource(dev, 0)`
+
+**Purpose:** Get the hardware address and reserve memory
+**Simple explanation:** "Where is the watchdog hardware located in memory? Get the answer from device tree"
+
+**What it does:**
+
+- Looks up the watchdog hardware address from device tree
+- Reserves that memory area so no other driver can use it
+- Returns information about the memory region
+
+---
+
+### `IOMEM(iores->start)`
+
+**Purpose:** Convert hardware address to usable pointer
+**Simple explanation:** "Make the hardware address usable by the software"
+**What it does:**
+
+- Takes the physical hardware address
+- Converts it to a virtual address the CPU can use
+- Returns a pointer for reading/writing registers
+
 
 
 

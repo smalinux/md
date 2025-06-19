@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "barebox",
+      "path": "content/barebox.md"
+    },
+    {
       "basename": "watchdog-barebox",
       "path": "content/watchdog-barebox.md"
     },
@@ -163,10 +167,6 @@
     {
       "basename": "Watchdog",
       "path": "content/Watchdog.md"
-    },
-    {
-      "basename": "barebox",
-      "path": "content/barebox.md"
     },
     {
       "basename": "WDT_WIER vs WDT_WIRQENSET",
