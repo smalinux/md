@@ -1,8 +1,16 @@
 {
   "recentFiles": [
     {
+      "basename": "barebox-Sparse",
+      "path": "content/barebox-Sparse.md"
+    },
+    {
       "basename": "barebox",
       "path": "content/barebox.md"
+    },
+    {
+      "basename": "barebox-memory-barriers",
+      "path": "content/barebox-memory-barriers.md"
     },
     {
       "basename": "README",
@@ -11,10 +19,6 @@
     {
       "basename": "testfile",
       "path": "content/testfile.md"
-    },
-    {
-      "basename": "barebox-memory-barriers",
-      "path": "content/barebox-memory-barriers.md"
     },
     {
       "basename": "Watchdog",
@@ -195,10 +199,6 @@
     {
       "basename": "dotfiles",
       "path": "content/dotfiles.md"
-    },
-    {
-      "basename": "⌨️ Keymaps  LazyVim",
-      "path": "Clippings/⌨️ Keymaps  LazyVim.md"
     }
   ],
   "omittedPaths": [],

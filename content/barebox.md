@@ -225,10 +225,11 @@ void *phys_to_virt(phys_addr)          // Physical → Virtual address
 ```
 
 ### Address Mapping Macro
-??
 ```c
 IOMEM(addr)    // Convert address to __iomem pointer
+				// Sohaib: covert unsigend int to void pointer
 ```
+عارف لما كنت بتقلب قيمه الـ float لـ int علشان تعرف تحتفظ بيها؟ هو بالضبط هنا دا اللى بيحصل. اقرأ [barebox-Sparse](barebox-Sparse.md)
 ____
 ## 🔧 Key Concepts
 
