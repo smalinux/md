@@ -5,6 +5,10 @@
       "path": "content/barebox-Sparse.md"
     },
     {
+      "basename": "Sparse Semantic Parser",
+      "path": "Clippings/Sparse Semantic Parser.md"
+    },
+    {
       "basename": "vim",
       "path": "content/vim.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "WDT_WIER vs WDT_WIRQENSET",
       "path": "content/WDT_WIER vs WDT_WIRQENSET.md"
-    },
-    {
-      "basename": "Freien Treiber 7 Zoll 1024600 Display Kapazitiven Touchscreen Monitor Raspberry Pi Alle Modelle PC BeagleBone schwarz Stecker und Spielen - Google Search",
-      "path": "raindrop/BBB/Freien Treiber 7 Zoll 1024600 Display Kapazitiven Touchscreen Monitor Raspberry Pi Alle Modelle PC BeagleBone schwarz Stecker und Spielen - Google Search.md"
     }
   ],
   "omittedPaths": [],
