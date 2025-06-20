@@ -1,12 +1,16 @@
 {
   "recentFiles": [
     {
-      "basename": "barebox",
-      "path": "content/barebox.md"
+      "basename": "README",
+      "path": "README.md"
     },
     {
-      "basename": "barebox <io> header",
-      "path": "content/barebox <io> header.md"
+      "basename": "barebox io header",
+      "path": "content/barebox io header.md"
+    },
+    {
+      "basename": "barebox",
+      "path": "content/barebox.md"
     },
     {
       "basename": "barebox-memory-barriers",
@@ -19,10 +23,6 @@
     {
       "basename": "Sparse Semantic Parser",
       "path": "Clippings/Sparse Semantic Parser.md"
-    },
-    {
-      "basename": "README",
-      "path": "README.md"
     },
     {
       "basename": "barebox-Sparse",
