@@ -13,6 +13,9 @@
 - [barebox](content/barebox.md) ⭐
 	- [watchdog-barebox](watchdog-barebox)
 	- لو عايز تعرف فعلا ازاى بيتعمو machine جديده اقرأ الباتش دا: https://lore.barebox.org/barebox/20241107145722.5145-1-jmaselbas@zdiv.net/T/#me2a087ed11de3048873c6795e880b0ef0151df2e
+	- [barebox-Sparse](content/barebox-Sparse.md)
+	- [barebox-memory-barriers](content/barebox-memory-barriers.md)
+	- 
 - [udev](udev)
 - [[NeoPixel matrix]]
 - [am335x USB mode](content/am335x%20USB%20mode.md)

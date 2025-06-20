@@ -1,28 +1,40 @@
 {
   "recentFiles": [
     {
-      "basename": "barebox-Sparse",
-      "path": "content/barebox-Sparse.md"
+      "basename": "barebox",
+      "path": "content/barebox.md"
     },
     {
-      "basename": "Sparse Semantic Parser",
-      "path": "Clippings/Sparse Semantic Parser.md"
+      "basename": "barebox <io> header",
+      "path": "content/barebox <io> header.md"
     },
     {
-      "basename": "vim",
-      "path": "content/vim.md"
+      "basename": "barebox-memory-barriers",
+      "path": "content/barebox-memory-barriers.md"
     },
     {
       "basename": "watchdog-barebox",
       "path": "content/watchdog-barebox.md"
     },
     {
-      "basename": "Watchdog",
-      "path": "content/Watchdog.md"
+      "basename": "Sparse Semantic Parser",
+      "path": "Clippings/Sparse Semantic Parser.md"
     },
     {
-      "basename": "barebox",
-      "path": "content/barebox.md"
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
+      "basename": "barebox-Sparse",
+      "path": "content/barebox-Sparse.md"
+    },
+    {
+      "basename": "vim",
+      "path": "content/vim.md"
+    },
+    {
+      "basename": "Watchdog",
+      "path": "content/Watchdog.md"
     },
     {
       "basename": "tmux",
@@ -31,14 +43,6 @@
     {
       "basename": "Untitled",
       "path": "content/Untitled.md"
-    },
-    {
-      "basename": "barebox-memory-barriers",
-      "path": "content/barebox-memory-barriers.md"
-    },
-    {
-      "basename": "README",
-      "path": "README.md"
     },
     {
       "basename": "testfile",
@@ -195,10 +199,6 @@
     {
       "basename": "Boot time optimization",
       "path": "content/Boot time optimization.md"
-    },
-    {
-      "basename": "WDT_WIER vs WDT_WIRQENSET",
-      "path": "content/WDT_WIER vs WDT_WIRQENSET.md"
     }
   ],
   "omittedPaths": [],
