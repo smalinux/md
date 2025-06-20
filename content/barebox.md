@@ -40,7 +40,7 @@ ____
 - Converts it to a virtual address the CPU can use
 - Returns a pointer for reading/writing registers
 ____
-# `asm-generic/io.h` Cheatsheet
+# ==asm-generic/io.h== Cheatsheet
 
 ## 📖 Basic Read Functions
 
@@ -54,6 +54,7 @@ u64 readq(addr)     // Read 8 bytes (64-bit) [64-bit systems only]
 ```
 
 ### Raw Reads (No Endian Conversion)
+Raw??
 
 ```c
 u8  __raw_readb(addr)   // Raw 8-bit read
@@ -63,7 +64,7 @@ u64 __raw_readq(addr)   // Raw 64-bit read [64-bit only]
 ```
 
 ### Relaxed Reads (Less Memory Barriers)
-Barriers? Relaxed?
+Barriers?? Relaxed??
 
 ```c
 u8  readb_relaxed(addr)
