@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "barebox-gpio",
+      "path": "content/barebox-gpio.md"
+    },
+    {
       "basename": "README",
       "path": "README.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "vim-fugitive",
       "path": "content/vim-fugitive.md"
-    },
-    {
-      "basename": "Boot time optimization",
-      "path": "content/Boot time optimization.md"
     }
   ],
   "omittedPaths": [],

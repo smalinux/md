@@ -19,7 +19,7 @@
 	- [barebox io header](content/barebox%20io%20header.md)
 	- [Sparse Semantic Parser](Clippings/Sparse%20Semantic%20Parser.md)
 	- ---
-	- 
+	- [[barebox-gpio]]
 - [udev](udev)
 - [[NeoPixel matrix]]
 - [am335x USB mode](content/am335x%20USB%20mode.md)
