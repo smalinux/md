@@ -5,8 +5,28 @@
       "path": "content/barebox-Sparse.md"
     },
     {
+      "basename": "vim",
+      "path": "content/vim.md"
+    },
+    {
+      "basename": "watchdog-barebox",
+      "path": "content/watchdog-barebox.md"
+    },
+    {
+      "basename": "Watchdog",
+      "path": "content/Watchdog.md"
+    },
+    {
       "basename": "barebox",
       "path": "content/barebox.md"
+    },
+    {
+      "basename": "tmux",
+      "path": "content/tmux.md"
+    },
+    {
+      "basename": "Untitled",
+      "path": "content/Untitled.md"
     },
     {
       "basename": "barebox-memory-barriers",
@@ -21,16 +41,8 @@
       "path": "content/testfile.md"
     },
     {
-      "basename": "Watchdog",
-      "path": "content/Watchdog.md"
-    },
-    {
       "basename": "Watchdog-cheatsheet",
       "path": "content/Watchdog-cheatsheet.md"
-    },
-    {
-      "basename": "watchdog-barebox",
-      "path": "content/watchdog-barebox.md"
     },
     {
       "basename": "drivers",
@@ -187,18 +199,6 @@
     {
       "basename": "Freien Treiber 7 Zoll 1024600 Display Kapazitiven Touchscreen Monitor Raspberry Pi Alle Modelle PC BeagleBone schwarz Stecker und Spielen - Google Search",
       "path": "raindrop/BBB/Freien Treiber 7 Zoll 1024600 Display Kapazitiven Touchscreen Monitor Raspberry Pi Alle Modelle PC BeagleBone schwarz Stecker und Spielen - Google Search.md"
-    },
-    {
-      "basename": "Flashing a Beaglebone Black the COOL Way",
-      "path": "raindrop/BBB/Flashing a Beaglebone Black the COOL Way.md"
-    },
-    {
-      "basename": "vim",
-      "path": "content/vim.md"
-    },
-    {
-      "basename": "dotfiles",
-      "path": "content/dotfiles.md"
     }
   ],
   "omittedPaths": [],
