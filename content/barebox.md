@@ -64,7 +64,12 @@ u64 __raw_readq(addr)   // Raw 64-bit read [64-bit only]
 ```
 
 ### Relaxed Reads (Less Memory Barriers)
-Barriers?? Relaxed??
+ايه ده؟ وايه لزمتها عن القرآءة العاديه؟ 
+لو مش عندك ترتيب صارم فى تنفيذ العمليات ممكن تستخدم دا. اسرع.
+مثلا فى watchdog دا ماينفعش يستخدم. لان الـ hardware بيفرض ترتيب صارم لعمل initialization. لانه بيجبرك تستنى. تكتب وتستنى. تقرأ وتستنى. وهكذا
+انما فى حاجات تانيه زى قرآءة packets من النت او buffer بس بتقرأ منه, ممكن تستخدم
+معنى barriers حواجز. دى الحاجات اللى بتحددك وتعملك limit فى سرعتك انك تجرى وتقرأ او تكتب. زى المطبات فى الشوارع للعرابيات...
+تفاصيل اكتر: [barebox-memory-barriers](barebox-memory-barriers.md)
 
 ```c
 u8  readb_relaxed(addr)

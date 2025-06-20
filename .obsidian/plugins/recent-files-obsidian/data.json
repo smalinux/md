@@ -5,20 +5,32 @@
       "path": "content/barebox.md"
     },
     {
-      "basename": "watchdog-barebox",
-      "path": "content/watchdog-barebox.md"
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
+      "basename": "testfile",
+      "path": "content/testfile.md"
+    },
+    {
+      "basename": "barebox-memory-barriers",
+      "path": "content/barebox-memory-barriers.md"
+    },
+    {
+      "basename": "Watchdog",
+      "path": "content/Watchdog.md"
     },
     {
       "basename": "Watchdog-cheatsheet",
       "path": "content/Watchdog-cheatsheet.md"
     },
     {
-      "basename": "drivers",
-      "path": "content/barebox/drivers.md"
+      "basename": "watchdog-barebox",
+      "path": "content/watchdog-barebox.md"
     },
     {
-      "basename": "README",
-      "path": "README.md"
+      "basename": "drivers",
+      "path": "content/barebox/drivers.md"
     },
     {
       "basename": "later",
@@ -165,10 +177,6 @@
       "path": "content/Boot time optimization.md"
     },
     {
-      "basename": "Watchdog",
-      "path": "content/Watchdog.md"
-    },
-    {
       "basename": "WDT_WIER vs WDT_WIRQENSET",
       "path": "content/WDT_WIER vs WDT_WIRQENSET.md"
     },
@@ -191,14 +199,6 @@
     {
       "basename": "⌨️ Keymaps  LazyVim",
       "path": "Clippings/⌨️ Keymaps  LazyVim.md"
-    },
-    {
-      "basename": "Linux Kernel Development for Neovim",
-      "path": "Clippings/Linux Kernel Development for Neovim.md"
-    },
-    {
-      "basename": "Configure aws instance and laptop with one tool  Set up sock proxy using ssh tunnel",
-      "path": "raindrop/BBB/Configure aws instance and laptop with one tool  Set up sock proxy using ssh tunnel.md"
     }
   ],
   "omittedPaths": [],
