@@ -1,12 +1,32 @@
 {
   "recentFiles": [
     {
-      "basename": "barebox-gpio",
-      "path": "content/barebox-gpio.md"
+      "basename": "Ch 25 GPIO",
+      "path": "content/Ch 25 GPIO.md"
     },
     {
       "basename": "README",
       "path": "README.md"
+    },
+    {
+      "basename": "GPIO-cheatsheet",
+      "path": "content/GPIO-cheatsheet.md"
+    },
+    {
+      "basename": "GPIO subsytem",
+      "path": "content/GPIO subsytem.md"
+    },
+    {
+      "basename": "GPIO - Before",
+      "path": "content/GPIO - Before.md"
+    },
+    {
+      "basename": "GPIO - day01",
+      "path": "content/GPIO - day01.md"
+    },
+    {
+      "basename": "barebox-gpio",
+      "path": "content/barebox-gpio.md"
     },
     {
       "basename": "barebox io header",
@@ -169,10 +189,6 @@
       "path": "content/pwm subsystem.md"
     },
     {
-      "basename": "GPIO subsytem",
-      "path": "content/GPIO subsytem.md"
-    },
-    {
       "basename": "git-template",
       "path": "content/git-template.md"
     },
@@ -183,22 +199,6 @@
     {
       "basename": "bitwise",
       "path": "content/bitwise.md"
-    },
-    {
-      "basename": "Distro boot",
-      "path": "content/Distro boot.md"
-    },
-    {
-      "basename": "pin-utils",
-      "path": "content/pin-utils.md"
-    },
-    {
-      "basename": "ALSA",
-      "path": "content/ALSA.md"
-    },
-    {
-      "basename": "vim-fugitive",
-      "path": "content/vim-fugitive.md"
     }
   ],
   "omittedPaths": [],
