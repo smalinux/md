@@ -63,8 +63,7 @@
               "title": "GPIO-cheatsheet"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -148,7 +147,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/barebox-gpio.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -158,7 +157,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for barebox-gpio"
+              "title": "Backlinks for README"
             }
           },
           {
@@ -167,12 +166,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/barebox-gpio.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from barebox-gpio"
+              "title": "Outgoing links from README"
             }
           },
           {
@@ -214,13 +213,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/barebox-gpio.md",
+                "file": "README.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of barebox-gpio"
+              "title": "Outline of README"
             }
           }
         ]
@@ -241,15 +240,15 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "127631f2d17f4bfe",
+  "active": "b47f4cf9be424805",
   "lastOpenFiles": [
+    "content/barebox-gpio.md",
     "content/Ch 25 GPIO.md",
     "content/GPIO-cheatsheet.md",
     "README.md",
     "content/barebox-UART.md",
     "content/CHAPTER-REVEW.md",
     "daily/2025-05-22.md",
-    "content/barebox-gpio.md",
     "content/GPIO subsytem.md",
     "content/GPIO - Before.md",
     "content/GPIO - day01.md",

@@ -122,9 +122,13 @@
 - [ ] Linux APIs
 	- [ ] [[hrtimer.h]]
 	- [ ] [[proc_fs.h]]
+	- [ ] [[xzalloc]]
+	- [ ] 
 - [ ] [[hash table]]
 - [ ] [[Device Tree]] - End of Story
 - [ ] [[Design patterns]]
+- [ ] 
+- [ ] 
 ___
 # Arduino
 
