@@ -63,7 +63,8 @@
               "title": "GPIO-cheatsheet"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -95,7 +96,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tmux",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -126,11 +127,13 @@
               "title": "Recent Files"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 217.5
+    "width": 217.5,
+    "collapsed": true
   },
   "right": {
     "id": "00e8531b7b73c201",
@@ -147,7 +150,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "content/barebox-gpio.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -157,7 +160,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for README"
+              "title": "Backlinks for barebox-gpio"
             }
           },
           {
@@ -166,12 +169,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "content/barebox-gpio.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from README"
+              "title": "Outgoing links from barebox-gpio"
             }
           },
           {
@@ -213,13 +216,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md",
+                "file": "content/barebox-gpio.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of README"
+              "title": "Outline of barebox-gpio"
             }
           }
         ]
@@ -240,11 +243,12 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "b47f4cf9be424805",
+  "active": "127631f2d17f4bfe",
   "lastOpenFiles": [
-    "content/barebox-gpio.md",
     "content/Ch 25 GPIO.md",
+    "content/barebox-gpio.md",
     "content/GPIO-cheatsheet.md",
+    "content/dotfile.md",
     "README.md",
     "content/barebox-UART.md",
     "content/CHAPTER-REVEW.md",
@@ -268,7 +272,6 @@
     "content/barebox",
     "raindrop/BBB/A tour of the ARM architecture and its Linux support.md",
     "content/later.md",
-    "raindrop/BBB/The Soul of A New Machine Kidder, Tracy 9780316491976 Amazon.com Books.md",
     "BBB_SCH.pdf",
     "BBB_SCH.pdf.crdownload",
     "assets/Pasted image 20250518170753.jpg",

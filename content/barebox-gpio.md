@@ -14,6 +14,13 @@ https://www.barebox.org/doc/latest/commands/hwmanip/gpio_get_value.html
 https://www.barebox.org/doc/latest/commands/hwmanip/gpio_set_value.html
 ```
 
+```bash
+# files
+dts/Bindings/gpio/ti,omap-gpio.yaml
+dts/src/arm/ti/omap/am33xx-l4.dtsi
+gpio
+
+```
 
 ____
 ____
