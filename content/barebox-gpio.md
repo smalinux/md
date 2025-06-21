@@ -13,3 +13,8 @@ https://www.barebox.org/doc/latest/commands/hwmanip/gpio_direction_input.html
 https://www.barebox.org/doc/latest/commands/hwmanip/gpio_get_value.html
 https://www.barebox.org/doc/latest/commands/hwmanip/gpio_set_value.html
 ```
+
+
+____
+____
+

@@ -1,0 +1,4 @@
+- اكتب **echo program** بسيط
+- جرب **different baud rates**
+- اتعامل مع **flow control**
+- اتعلم **termios configuration**

@@ -1,10 +1,6 @@
 {
   "recentFiles": [
     {
-      "basename": "README",
-      "path": "README.md"
-    },
-    {
       "basename": "barebox-gpio",
       "path": "content/barebox-gpio.md"
     },
@@ -15,6 +11,18 @@
     {
       "basename": "GPIO-cheatsheet",
       "path": "content/GPIO-cheatsheet.md"
+    },
+    {
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
+      "basename": "barebox-UART",
+      "path": "content/barebox-UART.md"
+    },
+    {
+      "basename": "CHAPTER-REVEW",
+      "path": "content/CHAPTER-REVEW.md"
     },
     {
       "basename": "GPIO subsytem",
@@ -187,18 +195,6 @@
     {
       "basename": "pwm subsystem",
       "path": "content/pwm subsystem.md"
-    },
-    {
-      "basename": "git-template",
-      "path": "content/git-template.md"
-    },
-    {
-      "basename": "yocto-dev",
-      "path": "content/yocto-dev.md"
-    },
-    {
-      "basename": "bitwise",
-      "path": "content/bitwise.md"
     }
   ],
   "omittedPaths": [],

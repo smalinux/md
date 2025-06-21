@@ -11,7 +11,7 @@
 - [Electronics - Shopping list](content/Electronics%20-%20Shopping%20list.md)
 - [fastboot](content/fastboot.md)
 - [barebox](content/barebox.md) ⭐
-	- 
+	- [[CHAPTER-REVEW]]  ⭐
 	- لو عايز تعرف فعلا ازاى بيتعمو machine جديده اقرأ الباتش دا: https://lore.barebox.org/barebox/20241107145722.5145-1-jmaselbas@zdiv.net/T/#me2a087ed11de3048873c6795e880b0ef0151df2e
 	- [watchdog-barebox](watchdog-barebox)
 	- [barebox-Sparse](content/barebox-Sparse.md)
