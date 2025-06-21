@@ -21,7 +21,22 @@
 	- ---
 	- [barebox-gpio](content/barebox-gpio.md)
 	- [GPIO-cheatsheet](content/GPIO-cheatsheet.md)
-	- 
+	- ---
+	- [[barebox-UART]]
+	- ---
+	- [[barebox-Timer]]
+	- ---
+	- [[barebox-PWM]]
+	- ---
+	- [[barebox-I2C]]
+	- ---
+	- Advanced:
+		- ADC - Chapter 12
+		- CAN - Chapter 23
+		- Ethernet - Chapter 14
+		- EDMA - Chapter 11
+		- GPMC - Chapter 7
+		- DDR Memory Controller - Chapter 6
 - [udev](udev)
 - [[NeoPixel matrix]]
 - [am335x USB mode](content/am335x%20USB%20mode.md)

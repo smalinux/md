@@ -1,16 +1,16 @@
 {
   "recentFiles": [
     {
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
       "basename": "barebox-gpio",
       "path": "content/barebox-gpio.md"
     },
     {
       "basename": "Ch 25 GPIO",
       "path": "content/Ch 25 GPIO.md"
-    },
-    {
-      "basename": "README",
-      "path": "README.md"
     },
     {
       "basename": "GPIO-cheatsheet",
