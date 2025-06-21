@@ -64,7 +64,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -149,7 +149,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/Ch 25 GPIO.md",
+                "file": "content/barebox-gpio.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -159,7 +159,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Ch 25 GPIO"
+              "title": "Backlinks for barebox-gpio"
             }
           },
           {
@@ -168,12 +168,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/Ch 25 GPIO.md",
+                "file": "content/barebox-gpio.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Ch 25 GPIO"
+              "title": "Outgoing links from barebox-gpio"
             }
           },
           {
@@ -214,13 +214,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/Ch 25 GPIO.md",
+                "file": "content/barebox-gpio.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Ch 25 GPIO"
+              "title": "Outline of barebox-gpio"
             }
           }
         ]
@@ -241,14 +241,14 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "92508f4603bc85a0",
+  "active": "127631f2d17f4bfe",
   "lastOpenFiles": [
+    "content/Ch 25 GPIO.md",
     "README.md",
     "content/GPIO-cheatsheet.md",
     "content/GPIO subsytem.md",
     "content/GPIO - Before.md",
     "content/GPIO - day01.md",
-    "content/Ch 25 GPIO.md",
     "content/barebox-gpio.md",
     "content/barebox io header.md",
     "content/barebox.md",

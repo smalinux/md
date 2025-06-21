@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "barebox-gpio",
+      "path": "content/barebox-gpio.md"
+    },
+    {
       "basename": "Ch 25 GPIO",
       "path": "content/Ch 25 GPIO.md"
     },
@@ -23,10 +27,6 @@
     {
       "basename": "GPIO - day01",
       "path": "content/GPIO - day01.md"
-    },
-    {
-      "basename": "barebox-gpio",
-      "path": "content/barebox-gpio.md"
     },
     {
       "basename": "barebox io header",
