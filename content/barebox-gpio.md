@@ -419,75 +419,8 @@ GPIO_IRQSTATUS_SET_0 |= (1 << k);
 - **استجابة سريعة**: فوري لما الحدث يحصل
 - **مرونة**: ممكن تختار أنواع أحداث مختلفة
 
-**In English:**
 
-#### Understanding Interrupt and Wake-up Mechanism:
-
-**Basic Concept:** Instead of processor continuously checking GPIO pins (polling), we can program GPIO to send **interrupt** or **wake-up signal** when specific events occur on pins.
-
-#### Interrupt Request Generation Requirements:
-
-**Required Steps:**
-
-**1. Enable Interrupts for GPIO Channel:**
-
-```
-GPIO_IRQSTATUS_SET_0 register  // for interrupt line 0
-GPIO_IRQSTATUS_SET_1 register  // for interrupt line 1
-```
-
-**Why Important?** To select which interrupt line will receive events from this GPIO pin.
-
-**2. Select Expected Event Types:**
-
-```
-GPIO_LEVELDETECT0     // detect low level (0)
-GPIO_LEVELDETECT1     // detect high level (1)
-GPIO_RISINGDETECT     // detect rising edge (0→1)
-GPIO_FALLINGDETECT    // detect falling edge (1→0)
-```
-
-#### Wake-up Request Generation Requirements:
-
-**Required Steps:**
-
-**1. Enable GPIO Channel for Wake-up:**
-
-```
-GPIO_IRQWAKEN register  // enable wake-up for specific pin
-```
-
-**2. Select Event Types:**
-
-```
-GPIO_RISINGDETECT     // rising transition only
-GPIO_FALLINGDETECT    // falling transition only
-```
-
-**Important Note:** Wake-up **works only with transitions** (edges), **not with levels**.
-
-#### Practical Example:
-
-**In Arabic:** To generate interrupt on **rising and falling edges** on input pin number **k**:
-
-```c
-// Enable edge detection
-GPIO_RISINGDETECT |= (1 << k);   // enable rising edge detection
-GPIO_FALLINGDETECT |= (1 << k);  // enable falling edge detection
-
-// Enable interrupt for this pin on interrupt line 0
-GPIO_IRQSTATUS_SET_0 |= (1 << k);
-```
-
-**Why Useful?**
-
-- **Processor Saving**: No continuous polling needed
-- **Fast Response**: Immediate when event occurs
-- **Flexibility**: Can select different event types
-
----
-
-**تعليق على هذا القسم:**
+==**تعليق على هذا القسم:**==
 
 **الفوائد:**
 
@@ -506,17 +439,108 @@ GPIO_IRQSTATUS_SET_0 |= (1 << k);
 - أساسي لأي تطبيق يتفاعل مع external signals
 - ضروري لتطبيقات الـ power management
 - مهم لفهم الفرق بين synchronous و asynchronous detection
+==امثله:==
+##### أمثلة ومشاريع عملية على الـ GPIO Interrupt & Wake-up Features
 
----
+1. **مشروع Smart Doorbell System - جرس الباب الذكي**
+**القصة:** تخيل إنك بتعمل جرس باب ذكي للبيت. عندك button للجرس، motion sensor، وكاميرا. النظام محتاج يكون في وضع نوم عشان يوفر البطارية، بس يصحى فوراً لما حد يجي عند الباب.
+**استخدام الـ Features:**
+**Synchronous Detection (Active Mode):**
+لما النظام يكون شغال، بيستخدم **synchronous detection** للـ doorbell button. ليه؟ عشان محتاج **debouncing** - الـ button الميكانيكي بيعمل "bounce" لما ينضغط، فممكن يطلع signal واحد يتقرا كأنه عدة ضغطات. الـ synchronous detection مع الـ debouncing بيحل المشكلة دي.
+**Asynchronous Detection (Sleep Mode):**
+لما النظام في وضع النوم، بيستخدم **asynchronous wake-up** للـ motion sensor. ليه؟ عشان لو حد قرب من الباب، النظام يصحى فوراً بدون انتظار أي clock، ويشغل الكاميرا ويسجل فيديو.
+**التحدي:** الـ motion sensor بيبعت signal سريع جداً (few microseconds)، لو استخدمت synchronous detection مع clock بطيء، ممكن تفوتك الـ signal. لكن الـ asynchronous detection بيشوف أي pulse مهما كان سريع.
+
+2. **مشروع Baby Monitor System - جهاز مراقبة الأطفال**
+**القصة:** جهاز مراقبة للطفل فيه microphone sensor عشان يكشف البكاء، temperature sensor، وcamera. الجهاز لازم يشتغل على البطارية لساعات طويلة.
+**استخدام الـ Features:**
+الـ**Power Management Strategy:**
+الجهاز معظم الوقت في **idle mode** عشان يوفر البطارية. بس محتاج يصحى فوراً لما:
+- الطفل يبكي (sound detection)
+- درجة الحرارة تطلع أو تنزل عن الحد المسموح
+الـ**Level Detection vs Edge Detection:**
+للـ **temperature sensor**: بيستخدم **level detection** عشان لو درجة الحرارة فضلت عالية، يفضل يبعت تنبيهات مستمرة.
+للـ **sound sensor**: بيستخدم **edge detection** عشان يكشف بداية البكاء (transition from quiet to noise).
+الـ**Latency Requirements:**
+الـ sound detection محتاج **asynchronous wake-up** عشان الاستجابة تكون فورية. أما الـ temperature sensor فممكن يستخدم **synchronous detection** مع debouncing عشان يتجنب false alarms من noise.
+
+2. **مشروع Smart Home Security System - نظام أمان المنزل الذكي**
+**القصة:** نظام أمان متكامل فيه door sensors، window sensors، motion detectors، وglass break detectors في كل الشبابيك والأبواب.
+**استخدام الـ Features:**
+**Multiple Interrupt Lines:** كل نوع sensor له **interrupt line منفصل**:
+- **Line 0**: Critical sensors (doors, windows) - أولوية عالية
+- **Line 1**: Motion sensors - أولوية متوسطة
+**Synchronous vs Asynchronous Detection Strategy:**
+
+**للـ Door/Window Sensors:**
+- **Active Mode**: synchronous detection مع debouncing عشان نتجنب false alarms من الهواء أو vibrations
+- **Armed Mode**: asynchronous wake-up عشان أي فتح للباب/شباك يصحي النظام فوراً
+
+**للـ Motion Sensors:**
+- بيستخدم **asynchronous detection** دايماً عشان الـ motion signals سريعة جداً وممكن تفوت لو اعتمدت على clock sampling
+**Glass Break Detection:**
+- محتاج **extremely fast response** عشان كده بيستخدم asynchronous detection بدون debouncing
+- الـ glass break بيعمل unique sound signature محتاجة capture فوري
+
+4. **مشروع Smart Irrigation System - نظام الري الذكي**
+**القصة:** نظام ري للحديقة يعتمد على soil moisture sensors، rain detection، وtimer control. النظام لازم يوفر المياه ويشتغل بكفاءة عالية.
+**استخدام الـ Features:**
+
+**Soil Moisture Monitoring:**
+
+- **Level Detection**: لمراقبة مستوى الرطوبة باستمرار
+- **Synchronous Detection**: مع sampling كل دقيقة عشان نشوف trend الرطوبة
+- **Debouncing**: عشان نتجنب تأثير الـ electrical noise من الـ soil
+
+**Rain Detection:**
+
+- **Asynchronous Wake-up**: لو بدأ المطر، النظام يصحى فوراً ويقفل الري عشان ميضيعش مياه
+- **Edge Detection**: عشان يكشف بداية ونهاية المطر
+
+**Emergency Water Level:**
+
+- **Level Detection مع Interrupt**: لو مستوى المياه في الخزان نزل تحت الحد الأدنى، يبعت تنبيه فوري
+
+5. **مشروع Smart Car Parking Sensor - حساس ركن السيارة الذكي**
+**القصة:** نظام ركن للسيارة فيه multiple ultrasonic sensors حوالين العربية، مع تنبيهات صوتية ومرئية للسائق.
+**استخدام الـ Features:**
+
+**Real-time Distance Monitoring:**
+
+- **Synchronous Detection**: للـ ultrasonic sensors عشان نعمل precise timing للـ echo signals
+- **High Frequency Sampling**: عشان نقيس المسافة بدقة عالية
+
+**Emergency Obstacle Detection:**
+
+- **Asynchronous Wake-up**: لو حاجة قريبة جداً من العربية، النظام يصحى من power saving mode ويشغل الإنذار فوراً
+
+**Multiple Sensor Coordination:**
+
+- كل sensor له **separate interrupt line** عشان نعرف الاتجاه بالضبط
+- **Priority-based handling**: الـ sensors اللي في المقدمة والخلف لهم أولوية أعلى من الجوانب
+
+**الفوائد العملية من فهم هذه المفاهيم:**
+
+**1. أساسي لأي تطبيق يتفاعل مع External Signals:**
+
+- **Smart Home**: أجهزة الاستشعار المختلفة محتاجة response types مختلفة
+- **Industrial Control**: الماكينات محتاجة safety interlocks فورية
+- **Medical Devices**: أجهزة المراقبة محتاجة real-time response للحالات الحرجة
+**2. ضروري لتطبيقات الـ Power Management:**
+- **Battery-powered Devices**: IoT sensors, wearables, remote monitoring
+- **Solar-powered Systems**: weather stations, agricultural sensors
+- **Mobile Applications**: smartphones, tablets بتستخدم نفس المفاهيم
+**3. مهم لفهم الفرق بين Synchronous و Asynchronous Detection:**
+- **Synchronous**: للـ signals اللي محتاجة processing أو filtering
+- **Asynchronous**: للـ emergency signals أو fast response requirements
+- **Timing-critical Applications**: real-time systems, safety systems
+كل مشروع من دول بيوضح ازاي الـ GPIO interrupt و wake-up features مش مجرد تقنيات، لكن حلول عملية لمشاكل حقيقية في التصميم!
 
 ### 25.3.3.2 Synchronous Path: Interrupt Request Generation - المسار المتزامن: توليد طلب المقاطعة
 
-**بالعربي المصري:**
 
 #### آلية العمل في الـ Active Mode:
-
 **الفكرة الأساسية:** في الـ **Active mode**، الـ GPIO بيعمل **sample** للـ input signals باستخدام الـ **internally gated interface clock**. يعني بيشوف الـ signal في أوقات محددة بتردد الـ clock.
-
 #### فهم الـ Sampling Process:
 
 **إيه اللي بيحصل:**
