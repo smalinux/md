@@ -81,3 +81,18 @@ The Saleae Logic software should now be able to access the device without requir
 
 
 قبل ما تشترى اى جهاز اتأكد انه مدعوم كويس الأول: [Supported hardware - sigrok](https://sigrok.org/wiki/Supported_hardware#Logic_analyzers)
+
+https://docs.arduino.cc/built-in-examples/basics/Fade/
+
+https://docs.arduino.cc/learn/microcontrollers/analog-output/
+https://docs.arduino.cc/tutorials/generic/secrets-of-arduino-pwm/
+
+
+
+https://www.youtube.com/watch?v=rR5cEFRO9_s&ab_channel=Electronoobs
+https://www.youtube.com/watch?v=u1DYs2I-_lU&ab_channel=element14presents
+https://www.youtube.com/watch?v=z8Tdz7eQ8n4&ab_channel=GeekTillItHertz
+https://www.youtube.com/watch?v=7x4h7Zq2NNU&ab_channel=Rudy%27sHobbyChannel
+https://www.youtube.com/watch?v=wymRQRFFnFo&ab_channel=MycrostartElectronics
+https://www.youtube.com/watch?v=lEUMJb0xpVU&ab_channel=FastbitEmbeddedBrainAcademy
+https://www.youtube.com/@KumarAbhishekKakkar
