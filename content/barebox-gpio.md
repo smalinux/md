@@ -358,7 +358,7 @@ ____
 #### فهم آلية الـ Interrupt والـ Wake-up:
 
 **الفكرة الأساسية:** بدل ما الـ processor يفضل يشيك على الـ GPIO pins باستمرار (polling)، ممكن نبرمج الـ GPIO عشان يبعت **interrupt** أو **wake-up signal** لما حاجة معينة تحصل على الـ pin.
-
+**صهيب:** فيه حدثين مختلفين عن بعض هنا, كل واحد ليه الـ config الخاصه. حدث الـ wake-up وحدث الـ interrupt
 #### شروط توليد الـ Interrupt Request:
 
 **الخطوات المطلوبة:**
@@ -536,10 +536,8 @@ GPIO_IRQSTATUS_SET_0 |= (1 << k);
 - **Timing-critical Applications**: real-time systems, safety systems
 كل مشروع من دول بيوضح ازاي الـ GPIO interrupt و wake-up features مش مجرد تقنيات، لكن حلول عملية لمشاكل حقيقية في التصميم!
 
-### 25.3.3.2 Synchronous Path: Interrupt Request Generation - المسار المتزامن: توليد طلب المقاطعة
-
-
-#### آلية العمل في الـ Active Mode:
+### 25.3.3.2 Synchronous Path: Interrupt Request Generation - الحدث الأول
+#### Operation Mechanism in Active Mode - آلية العمل في الـ Active Mode
 **الفكرة الأساسية:** في الـ **Active mode**، الـ GPIO بيعمل **sample** للـ input signals باستخدام الـ **internally gated interface clock**. يعني بيشوف الـ signal في أوقات محددة بتردد الـ clock.
 #### فهم الـ Sampling Process:
 
@@ -554,7 +552,7 @@ GPIO_IRQSTATUS_SET_0 |= (1 << k);
 
 **1. Minimum Pulse Width للـ Synchronous Interrupt:**
 
-- **المطلوب**: **ضعف فترة الـ internally gated interface clock**
+- **المطلوب**: **==ضعف== فترة الـ internally gated interface clock**
 - **السبب**: عشان نضمن إن الـ signal يتقرا في sampling points مختلفة
 
 **مثال:** لو الـ interface clock تردده 100 MHz (فترة = 10 ns):
@@ -599,55 +597,6 @@ Latency = 140 ns + (10 × 30.5 μs) + (3 × 30.5 μs)
         = 140 ns + 305 μs + 91.5 μs = ~396.5 μs
 ```
 
-**In English:**
-
-#### Operation Mechanism in Active Mode:
-
-**Basic Concept:** In **Active mode**, GPIO **samples** input signals using **internally gated interface clock**. It reads signals at specific times determined by clock frequency.
-
-#### Understanding Sampling Process:
-
-**What Happens:**
-
-1. **Interface clock** "ticks" at regular intervals
-2. At each "tick", GPIO reads input pin value
-3. Compares new reading with previous reading
-4. If required event (level or transition) found, generates interrupt
-
-#### Timing Requirements:
-
-**1. Minimum Pulse Width for Synchronous Interrupt:**
-
-- **Required**: **Twice the internally gated interface clock period**
-- **Reason**: To ensure signal is read at different sampling points
-
-**Example:** If interface clock is 100 MHz (period = 10 ns):
-
-- Internally gated clock might be slower (e.g., 25 MHz, period = 40 ns)
-- Minimum pulse width = 2 × 40 ns = **80 ns**
-
-**2. Level Detection Requirements:**
-
-- **Required**: Selected level must be **stable** for at least **twice the internally gated interface clock period**
-- **Reason**: To ensure it's not just noise or glitch
-
-#### Understanding Latency:
-
-**1. Without Debouncing:**
-
-- **Time**: No more than **3 internally gated interface clock cycles + 2 interface clock cycles**
-- **Reason**:
-    - 3 cycles for detection and synchronization
-    - 2 cycles for interrupt generation
-
-**2. With Debouncing:**
-
-- **Additional Time**:
-    - Same previous latency
-    - **+ GPIO_DEBOUNCINGTIME value** (in debouncing clock cycles)
-    - **+ 3 debouncing clock cycles** (for synchronization)
-
----
 
 **تعليق على هذا القسم:**
 
@@ -671,7 +620,7 @@ Latency = 140 ns + (10 × 30.5 μs) + (3 × 30.5 μs)
 
 ---
 
-### 25.3.3.3 Asynchronous Path: Wake-up Request Generation - المسار غير المتزامن: توليد طلب الإيقاظ
+### 25.3.3.3 Asynchronous Path: Wake-up Request Generation - الحدث الثانى
 
 **بالعربي المصري:**
 
@@ -679,7 +628,7 @@ Latency = 140 ns + (10 × 30.5 μs) + (3 × 30.5 μs)
 
 **الفكرة الأساسية:** في الـ **Idle mode**، الـ **interface clock مقفول** (عشان توفير الطاقة)، بس الـ GPIO لسه قادر يكشف **transitions** على الـ input pins ويولد **wake-up request** عشان يصحي النظام.
 
-#### المقارنة مع الـ Synchronous Path:
+#### المقارنة مع الـ Synchronous Path: ⭐
 
 |الخاصية|Synchronous Path|Asynchronous Path|
 |---|---|---|
@@ -746,62 +695,6 @@ GPIO_RISINGDETECT |= (1 << 5);
 GPIO_IRQWAKEN |= (1 << 5);
 ```
 
-**In English:**
-
-#### Operation Mechanism in Idle Mode:
-
-**Basic Concept:** In **Idle mode**, **interface clock is shut down** (for power saving), but GPIO can still detect **transitions** on input pins and generate **wake-up request** to wake the system.
-
-#### Comparison with Synchronous Path:
-
-|Feature|Synchronous Path|Asynchronous Path|
-|---|---|---|
-|**Clock Status**|Interface clock running|Interface clock shut down|
-|**Detection Type**|Levels + Transitions|Transitions only|
-|**Purpose**|Interrupt generation|Wake-up generation|
-|**Mode**|Active mode|Idle mode|
-
-#### Understanding Wake-up Configuration:
-
-**Required Conditions:**
-
-1. **GPIO configuration registers pre-programmed** (before entering Idle mode)
-2. **Enable expected transitions**:
-    
-    ```
-    GPIO_RISINGDETECT   // for rising edge detectionGPIO_FALLINGDETECT  // for falling edge detection
-    ```
-    
-3. **Enable wake-up for specific pin**:
-    
-    ```
-    GPIO_IRQWAKEN register
-    ```
-    
-
-#### Important Wake-up Line Characteristics:
-
-**Only One Wake-up Line:**
-
-- **Reason**: All **wake-up sources are merged together**
-- **Meaning**: Cannot identify which specific pin generated wake-up without reading status registers
-- **Benefit**: Simplifies hardware design
-
-#### Pulse Width Requirements:
-
-**1. Without Debouncing:**
-
-- **Required**: **No minimum input pulse width**
-- **Reason**: **No sampling operation** (asynchronous detection)
-- **Meaning**: Any pulse, no matter how fast, can generate wake-up
-
-**2. With Debouncing:**
-
-- **Required**: **Minimum pulse width set by debouncing specified time**
-- **Reason**: Debouncing filter needs sufficient time to confirm signal is not noise
-
----
-
 **تعليق على هذا القسم:**
 
 **الفوائد:**
@@ -827,9 +720,6 @@ GPIO_IRQWAKEN |= (1 << 5);
 ---
 
 ### 25.3.3.4 Interrupt (or Wake-up) Line Release - تحرير خط المقاطعة (أو الإيقاظ)
-
-**بالعربي المصري:**
-
 #### فهم آلية Interrupt Handling:
 
 **المشكلة الأساسية:** لما يحصل interrupt، الـ interrupt line بيفضل **active** لحد ما الـ software يعمل **acknowledge** للـ interrupt ويمسح الـ status bit. لو ده محصلش، الـ interrupt هيفضل pending.
@@ -947,53 +837,6 @@ void system_wake_up_handler(void) {
 }
 ```
 
-**In English:**
-
-#### Understanding Interrupt Handling Mechanism:
-
-**Basic Problem:** When interrupt occurs, interrupt line remains **active** until software **acknowledges** interrupt and clears status bit. If this doesn't happen, interrupt remains pending.
-
-#### Interrupt Handling Steps:
-
-**1. Receiving Interrupt:**
-
-```c
-// Processor receives interrupt request from GPIO module
-// This happens automatically when hardware event occurs
-```
-
-**2. Identifying Interrupt Source:**
-
-```c
-// Read status register to identify which pin generated interrupt
-uint32_t status_line0 = GPIO_IRQSTATUS_0;  // for interrupt line 0
-uint32_t status_line1 = GPIO_IRQSTATUS_1;  // for interrupt line 1
-
-// Example: if bit 5 is set, pin 5 generated interrupt
-if (status_line0 & (1 << 5)) {
-    // GPIO pin 5 generated interrupt
-}
-```
-
-**3. Servicing Interrupt:**
-
-```c
-// Here we do what we're supposed to do in response to interrupt
-// Example: read sensor, change LED, send message, etc.
-handle_gpio_interrupt(pin_number);
-```
-
-**4. Clearing Status Bit (Critical Step):**
-
-```c
-// Must write 1 to corresponding bit to clear it
-GPIO_IRQSTATUS_0 = (1 << 5);  // clear interrupt status for pin 5
-// or
-GPIO_IRQSTATUS_CLR_0 = (1 << 5);  // using clear register
-```
-
----
-
 **تعليق على هذا القسم:**
 
 **الفوائد:**
@@ -1020,3 +863,1016 @@ GPIO_IRQSTATUS_CLR_0 = (1 << 5);  // using clear register
 **الخلاصة العامة للـ Interrupt and Wake-up Features:**
 
 هذا النظام بيوفر آلية متطورة جداً للتفاعل مع external events، مع إمكانيات power management ممتازة. الـ synchronous path مناسب للـ active operation، والـ asynchronous path مناسب للـ power-saving modes. فهم الفروق دي وإزاي تستخدم كل واحد صح هو مفتاح تصميم نظام فعال.
+
+___
+____
+____
+____
+_____
+# 25.3.4: General-Purpose Interface Basic Programming Model
+
+## 25.3.4.1 Power Saving by Grouping the Edge/Level Detection
+
+### الفكرة الأساسية للتجميع
+
+كل **GPIO module** ينفذ أربعة **gated clocks** تُستخدم بواسطة منطق **edge/level detection** لتوفير الطاقة. كل مجموعة من ثمانية **input GPIO pins** تولد إشارة تمكين منفصلة (**separate enable signal**) اعتماداً على إعداد **edge/level detection register** (نظراً لأن المدخل 32 بت، يتم تعريف أربع مجموعات من ثمانية مدخلات لكل **GPIO module**).
+
+### آلية توفير الطاقة
+
+إذا كانت مجموعة لا تتطلب **edge/level detection**، فإن الساعة المقابلة يتم **gating** (قطعها). تجميع **edge/level enable** يمكن أن يوفر استهلاك الطاقة للوحدة كما هو موضح في المثال التالي:
+
+### تحليل السيناريوهات
+
+إذا كان أي من الـ registers التالية:
+
+- **GPIO_LEVELDETECT0**
+- **GPIO_LEVELDETECT1**
+- **GPIO_RISINGDETECT**
+- **GPIO_FALLINGDETECT**
+
+#### السيناريو الأول: استهلاك طاقة عالي
+
+إذا تم تعيينها إلى `0101 0101h`، فإن جميع الساعات تكون نشطة (استهلاك الطاقة مرتفع).
+
+**التحليل**: القيمة `0101 0101h` تعني أن البتات 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30 مفعلة. هذا يعني أن كل مجموعة من الثمان بتات تحتوي على بتات مفعلة:
+
+- المجموعة الأولى (البتات 0-7): تحتوي على البتات 0, 2, 4, 6
+- المجموعة الثانية (البتات 8-15): تحتوي على البتات 8, 10, 12, 14
+- المجموعة الثالثة (البتات 16-23): تحتوي على البتات 16, 18, 20, 22
+- المجموعة الرابعة (البتات 24-31): تحتوي على البتات 24, 26, 28, 30
+
+لذلك جميع الساعات الأربع تكون نشطة.
+
+#### السيناريو الثاني: استهلاك طاقة منخفض
+
+إذا تم تعيينها إلى `0000 00FFh`، فإن ساعة واحدة فقط تكون نشطة.
+
+**التحليل**: القيمة `0000 00FFh` تعني أن البتات 0-7 فقط مفعلة. هذا يعني:
+
+- المجموعة الأولى (البتات 0-7): تحتوي على جميع البتات الثمانية مفعلة
+- المجموعات الأخرى (8-15, 16-23, 24-31): لا تحتوي على أي بتات مفعلة
+
+لذلك ساعة واحدة فقط (المجموعة الأولى) تكون نشطة.
+
+### ملاحظة هامة حول التوقيت
+
+عندما يتم تمكين الساعات بالكتابة إلى الـ registers:
+
+- **GPIO_LEVELDETECT0**
+- **GPIO_LEVELDETECT1**
+- **GPIO_RISINGDETECT**
+- **GPIO_FALLINGDETECT**
+
+فإن الكشف يبدأ بعد **5 clock cycles**. هذه الفترة مطلوبة لتنظيف **synchronization edge/level detection pipeline**.
+
+### استقلالية الآلية
+
+الآلية مستقلة لكل **clock group**. إذا تم تشغيل الساعة من قبل قبل تنفيذ إعداد جديد، فإن ما يُوصى به هو:
+
+1. **أولاً**: تعيين الكشف الجديد المطلوب
+2. **ثانياً**: تعطيل الإعداد السابق (إذا لزم الأمر)
+
+بهذه الطريقة، الساعة المقابلة لا يتم **gating** والكشف يبدأ فوراً.
+
+---
+
+## 25.3.4.2 Set and Clear Instructions
+
+### المفهوم الأساسي
+
+وحدة **GPIO** تنفذ **set-and-clear protocol register update** للـ **data output** و **interrupt enable** و **wake-up enable registers**. هذا البروتوكول هو بديل لعمليات **atomic test and set** ويتكون من عمليات كتابة في عناوين مخصصة (عنوان واحد لتعيين البت(ات) وعنوان آخر لمسح البت(ات)).
+
+### طرق الوصول للـ Registers
+
+يمكن الوصول للـ Registers بطريقتين:
+
+#### الطريقة المعيارية (Standard)
+
+عمليات قراءة وكتابة كاملة للـ register في العنوان الأساسي للـ register.
+
+#### طريقة Set and Clear (الموصى بها)
+
+عناوين منفصلة مُقدمة لتعيين (ومسح) البتات في الـ registers. الكتابة بـ 1 في هذه العناوين تعيّن (أو تمسح) البت المقابل في الـ register المكافئ؛ الكتابة بـ 0 ليس لها تأثير.
+
+### آلية العمل
+
+البيانات المُراد كتابتها هي 1 في موضع(مواضع) البت المُراد مسحه (أو تعيينه) و 0 في البتات غير المتأثرة.
+
+لذلك، لهذه الـ registers، يتم تعريف ثلاثة عناوين لـ register فيزيائي واحد فريد. قراءة هذه العناوين لها نفس التأثير وترجع قيمة الـ register.
+
+---
+
+## 25.3.4.2.1 Clear Instruction - تعليمات المسح
+
+### 25.3.4.2.1.1 Clear Interrupt Enable Registers (GPIO_IRQSTATUS_CLR_0 and GPIO_IRQSTATUS_CLR_1)
+
+#### عملية الكتابة
+
+عملية كتابة في **clear interrupt enable1** (أو **enable2**) register تمسح البت المقابل في **interrupt enable1** (أو **enable2**) register عندما يكون البت المكتوب 1؛ البت المكتوب بـ 0 ليس له تأثير.
+
+#### عملية القراءة
+
+قراءة **clear interrupt enable1** (أو **enable2**) register ترجع قيمة **interrupt enable1** (أو **enable2**) register.
+
+### 25.3.4.2.1.2 Clear Wake-up Enable Register (GPIO_CLEARWKUENA)
+
+#### عملية الكتابة
+
+عملية كتابة في **clear wake-up enable register** تمسح البت المقابل في **wake-up enable register** عندما يكون البت المكتوب 1؛ البت المكتوب بـ 0 ليس له تأثير.
+
+#### عملية القراءة
+
+قراءة **clear wake-up enable register** ترجع قيمة **wake-up enable register**.
+
+### 25.3.4.2.1.3 Clear Data Output Register (GPIO_CLEARDATAOUT)
+
+#### عملية الكتابة
+
+عملية كتابة في **clear data output register** تمسح البت المقابل في **data output register** عندما يكون البت المكتوب 1؛ البت المكتوب بـ 0 ليس له تأثير.
+
+#### عملية القراءة
+
+قراءة **clear data output register** ترجع قيمة **data output register**.
+
+### 25.3.4.2.1.4 Clear Instruction Example - مثال على تعليمة المسح
+
+#### الحالة الابتدائية
+
+افترض أن **data output register** (أو أحد **interrupt/wake-up enable registers**) يحتوي على القيمة الثنائية `0000 0001 0000 0001h`، وتريد مسح البت 0.
+
+#### التنفيذ
+
+مع ميزة **clear instruction**، اكتب `0000 0000 0000 0001h` في عنوان **clear data output register** (أو في عنوان **clear interrupt/wake-up enable register**).
+
+#### النتيجة
+
+بعد عملية الكتابة هذه، قراءة **data output register** (أو **interrupt/wake-up enable register**) ترجع `0000 0001 0000 0000h`؛ البت 0 تم مسحه.
+
+#### ملاحظة التمثيل
+
+رغم أن **general-purpose interface registers** عرضها 32 بت، فقط الـ 16 بت الأقل أهمية ممثلة في هذا المثال.
+
+---
+
+## 25.3.4.2.2 Set Instruction - تعليمات التعيين
+
+### 25.3.4.2.2.1 Set Interrupt Enable Registers (GPIO_IRQSTATUS_SET_0 and GPIO_IRQSTATUS_SET_1)
+
+#### عملية الكتابة
+
+عملية كتابة في **set interrupt enable1** (أو **enable2**) register تعيّن البت المقابل في **interrupt enable1** (أو **enable2**) register عندما يكون البت المكتوب 1؛ البت المكتوب بـ 0 ليس له تأثير.
+
+#### عملية القراءة
+
+قراءة **set interrupt enable1** (أو **enable2**) register ترجع قيمة **interrupt enable1** (أو **enable2**) register.
+
+### 25.3.4.2.2.2 Set Wake-up Enable Register (GPIO_SETWKUENA)
+
+#### عملية الكتابة
+
+عملية كتابة في **set wake-up enable register** تعيّن البت المقابل في **wake-up enable register** عندما يكون البت المكتوب 1؛ البت المكتوب بـ 0 ليس له تأثير.
+
+#### عملية القراءة
+
+قراءة **set wake-up enable register** ترجع قيمة **wake-up enable register**.
+
+### 25.3.4.2.2.3 Set Data Output Register (GPIO_SETDATAOUT)
+
+#### عملية الكتابة
+
+عملية كتابة في **set data output register** تعيّن البت المقابل في **data output register** عندما يكون البت المكتوب 1؛ البت المكتوب بـ 0 ليس له تأثير.
+
+#### عملية القراءة
+
+قراءة **set data output register** ترجع قيمة **data output register**.
+
+### 25.3.4.2.2.4 Set Instruction Example - مثال على تعليمة التعيين
+
+#### الحالة الابتدائية
+
+افترض أن **interrupt enable1** (أو **enable2**) register (أو **data output register**) يحتوي على القيمة الثنائية `0000 0001 0000 0000h`، وتريد تعيين البتات 15، 3، 2، و 1.
+
+#### التنفيذ
+
+مع ميزة **set instruction**، اكتب `1000 0000 0000 1110h` في عنوان **set interrupt enable1** (أو **enable2**) register (أو في عنوان **set data output register**).
+
+#### النتيجة
+
+بعد عملية الكتابة هذه، قراءة **interrupt enable1** (أو **enable2**) register (أو **data output register**) ترجع `1000 0001 0000 1110h`؛ البتات 15، 3، 2، و 1 تم تعيينها.
+
+#### ملاحظة التمثيل
+
+رغم أن **general-purpose interface registers** عرضها 32 بت، فقط الـ 16 بت الأقل أهمية ممثلة في هذا المثال.
+
+---
+
+## الخلاصة التقنية
+
+هذا القسم يوضح نموذجين أساسيين لبرمجة **GPIO interface**:
+
+1. **نموذج توفير الطاقة**: من خلال تجميع **edge/level detection** في مجموعات من 8 بتات، مما يسمح بإغلاق الساعات للمجموعات غير المستخدمة.
+    
+2. **نموذج Set/Clear**: بروتوكول آمن للتعامل مع الـ registers يتجنب مشاكل **race conditions** من خلال توفير عناوين منفصلة للتعيين والمسح بدلاً من عمليات **read-modify-write** التقليدية.
+    
+
+كلا النموذجين يهدفان إلى تحسين الأداء وتوفير الطاقة والموثوقية في التشغيل.
+
+____
+_____
+# 25.3.4.1: Power Saving by Grouping the Edge/Level Detection
+
+## البنية الأساسية للتجميع
+
+### تنظيم الـ Gated Clocks
+
+كل **GPIO module** ينفذ أربعة **gated clocks** مُستخدمة بواسطة منطق **edge/level detection** لتوفير الطاقة. هذا التصميم يعني أن الوحدة تحتوي على أربع مجموعات منفصلة من الساعات، كل مجموعة مسؤولة عن التحكم في جزء محدد من الـ **GPIO pins**.
+
+### آلية التجميع في مجموعات الثمانية
+
+كل مجموعة من ثمانية **input GPIO pins** تولد **separate enable signal** اعتماداً على إعداد **edge/level detection register**. هذا التنظيم يأتي من حقيقة أن المدخل عبارة عن 32 بت، لذلك يتم تعريف أربع مجموعات من ثمانية مدخلات لكل **GPIO module**:
+
+- **المجموعة الأولى**: البتات 0-7
+- **المجموعة الثانية**: البتات 8-15
+- **المجموعة الثالثة**: البتات 16-23
+- **المجموعة الرابعة**: البتات 24-31
+
+### مبدأ توفير الطاقة
+
+إذا كانت مجموعة لا تتطلب **edge/level detection**، فإن الساعة المقابلة يتم **gating** (قطعها). هذا المبدأ يسمح بتوفير استهلاك الطاقة بشكل ديناميكي حسب الاستخدام الفعلي للـ **GPIO pins**.
+
+## تحليل السيناريوهات العملية
+
+### الـ Registers المؤثرة
+
+تجميع **edge/level enable** يعتمد على إعداد أي من الـ registers التالية:
+
+- **GPIO_LEVELDETECT0**: للكشف عن المستوى المنخفض (0)
+- **GPIO_LEVELDETECT1**: للكشف عن المستوى العالي (1)
+- **GPIO_RISINGDETECT**: للكشف عن الحافة الصاعدة (0→1)
+- **GPIO_FALLINGDETECT**: للكشف عن الحافة الهابطة (1→0)
+
+### السيناريو الأول: استهلاك الطاقة العالي
+
+#### القيمة: `0101 0101h`
+
+عندما يتم تعيين أي من الـ registers أعلاه إلى `0101 0101h`، فإن جميع الساعات تكون نشطة.
+
+#### التحليل البتّي:
+
+- **التمثيل الثنائي**: `00000101 00000101 00000101 00000101`
+- **البتات المفعلة**: 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30
+
+#### توزيع المجموعات:
+
+- **المجموعة الأولى (0-7)**: البتات 0, 2, 4, 6 مفعلة → الساعة نشطة
+- **المجموعة الثانية (8-15)**: البتات 8, 10, 12, 14 مفعلة → الساعة نشطة
+- **المجموعة الثالثة (16-23)**: البتات 16, 18, 20, 22 مفعلة → الساعة نشطة
+- **المجموعة الرابعة (24-31)**: البتات 24, 26, 28, 30 مفعلة → الساعة نشطة
+
+#### النتيجة:
+
+استهلاك الطاقة مرتفع لأن جميع الساعات الأربع نشطة.
+
+### السيناريو الثاني: استهلاك الطاقة المنخفض
+
+#### القيمة: `0000 00FFh`
+
+عندما يتم تعيين أي من الـ registers إلى `0000 00FFh`، فإن ساعة واحدة فقط تكون نشطة.
+
+#### التحليل البتّي:
+
+- **التمثيل الثنائي**: `00000000 00000000 00000000 11111111`
+- **البتات المفعلة**: 0, 1, 2, 3, 4, 5, 6, 7
+
+#### توزيع المجموعات:
+
+- **المجموعة الأولى (0-7)**: جميع البتات مفعلة → الساعة نشطة
+- **المجموعة الثانية (8-15)**: لا توجد بتات مفعلة → الساعة مقطوعة (**gated**)
+- **المجموعة الثالثة (16-23)**: لا توجد بتات مفعلة → الساعة مقطوعة (**gated**)
+- **المجموعة الرابعة (24-31)**: لا توجد بتات مفعلة → الساعة مقطوعة (**gated**)
+
+#### النتيجة:
+
+ساعة واحدة فقط نشطة، مما يؤدي إلى توفير كبير في الطاقة.
+
+## التوقيت وبدء الكشف
+
+### فترة التأخير المطلوبة
+
+عندما يتم تمكين الساعات بالكتابة إلى أي من الـ registers التالية:
+
+- **GPIO_LEVELDETECT0**
+- **GPIO_LEVELDETECT1**
+- **GPIO_RISINGDETECT**
+- **GPIO_FALLINGDETECT**
+
+فإن الكشف يبدأ بعد **5 clock cycles**.
+
+### سبب فترة التأخير
+
+هذه الفترة مطلوبة لتنظيف **synchronization edge/level detection pipeline**. الـ **pipeline** هو سلسلة من المراحل التي تمر بها الإشارة قبل أن يتم كشفها بشكل صحيح:
+
+1. **مرحلة أخذ العينات** (**Sampling Stage**)
+2. **مرحلة التزامن** (**Synchronization Stage**)
+3. **مرحلة المقارنة** (**Comparison Stage**)
+4. **مرحلة توليد الحدث** (**Event Generation Stage**)
+5. **مرحلة التأكيد** (**Confirmation Stage**)
+
+### أهمية التنظيف
+
+تنظيف الـ **pipeline** ضروري لضمان:
+
+- عدم وجود **false detections** من البيانات القديمة
+- دقة الكشف منذ اللحظة الأولى لتفعيل الكشف
+- استقرار النظام وموثوقية العمل
+
+## الاستقلالية والتحسين
+
+### استقلالية كل مجموعة ساعة
+
+الآلية مستقلة لكل **clock group**. هذا يعني أن كل مجموعة من الثمانية بتات تُدار بشكل منفصل تماماً عن المجموعات الأخرى. لا يوجد تداخل أو تأثير متبادل بين المجموعات.
+
+### استراتيجية التحسين المُوصى بها
+
+إذا تم تشغيل الساعة من قبل قبل تنفيذ إعداد جديد، فإن ما يُوصى به هو:
+
+#### الخطوة الأولى: التعيين
+
+تعيين الكشف الجديد المطلوب في الـ register المناسب.
+
+#### الخطوة الثانية: التعطيل
+
+تعطيل الإعداد السابق (إذا لزم الأمر) في نفس الـ register أو register آخر.
+
+### فائدة هذه الاستراتيجية
+
+بهذه الطريقة، الساعة المقابلة لا يتم **gating** والكشف يبدأ فوراً دون الحاجة إلى انتظار دورة التنظيف التي تستغرق 5 دورات ساعة.
+
+## التأثير على الأداء
+
+### تحسين استهلاك الطاقة
+
+هذا النهج يحقق توفيراً كبيراً في الطاقة لأن:
+
+- الساعات المُعطلة لا تستهلك طاقة ديناميكية
+- منطق الكشف المُعطل لا يقوم بعمليات غير ضرورية
+- الانتقال بين حالات التشغيل والإيقاف سريع وفعال
+
+### مرونة التشغيل
+
+النظام يوفر مرونة كاملة في:
+
+- تفعيل مجموعات محددة فقط حسب الحاجة
+- تغيير التكوين ديناميكياً أثناء التشغيل
+- التحكم الدقيق في استهلاك الطاقة على مستوى المجموعة
+
+### الكفاءة في التصميم
+
+التصميم يحقق توازناً مثالياً بين:
+
+- **الأداء**: عدم التأثير على سرعة الكشف للمجموعات النشطة
+- **الطاقة**: توفير كبير عند عدم استخدام مجموعات معينة
+- **المرونة**: القدرة على التحكم الدقيق في كل مجموعة على حدة
+
+هذا التصميم يعكس فهماً عميقاً لمتطلبات الأنظمة المدمجة التي تحتاج إلى توازن دقيق بين الأداء واستهلاك الطاقة.
+
+# 25.3.4.2: Set and Clear Instructions
+
+## المفهوم الأساسي للـ Set-and-Clear Protocol
+
+### طبيعة البروتوكول
+
+وحدة **GPIO** تنفذ **set-and-clear protocol register update** للـ **data output** و **interrupt enable** و **wake-up enable registers**. هذا البروتوكول يشكل بديلاً للعمليات **atomic test and set operations**.
+
+### تعريف البروتوكول
+
+البروتوكول يتكون من عمليات كتابة في عناوين مخصصة:
+
+- **عنوان واحد** لتعيين البت(ات) (**setting bit(s)**)
+- **عنوان آخر** لمسح البت(ات) (**clearing bit(s)**)
+
+### آلية البيانات
+
+البيانات المُراد كتابتها تتكون من:
+
+- **1** في موضع(مواضع) البت المُراد مسحه (أو تعيينه)
+- **0** في البتات غير المتأثرة (**unaffected bit(s)**)
+
+## طرق الوصول للـ Registers
+
+### الطريقة المعيارية (Standard)
+
+عمليات قراءة وكتابة كاملة للـ register في **primary register address** (العنوان الأساسي للـ register).
+
+#### خصائص الطريقة المعيارية:
+
+- **القراءة**: ترجع القيمة الكاملة للـ register
+- **الكتابة**: تستبدل القيمة الكاملة للـ register
+- **التعقيد**: تتطلب عمليات **read-modify-write** للتعديل الجزئي
+
+### طريقة Set and Clear (الموصى بها)
+
+عناوين منفصلة مُقدمة لتعيين (**set**) ومسح (**clear**) البتات في الـ registers.
+
+#### خصائص طريقة Set and Clear:
+
+- **الكتابة بـ 1**: تعيّن (أو تمسح) البت المقابل في الـ register المكافئ
+- **الكتابة بـ 0**: ليس لها تأثير (**no effect**)
+- **الأمان**: تتجنب مشاكل **race conditions**
+
+## بنية العناوين
+
+### التنظيم الثلاثي للعناوين
+
+لهذه الـ registers، يتم تعريف **ثلاثة عناوين** لـ **register فيزيائي واحد فريد**:
+
+1. **العنوان الأساسي** (**Primary Address**): للعمليات المعيارية
+2. **عنوان الـ Set** (**Set Address**): لتعيين البتات
+3. **عنوان الـ Clear** (**Clear Address**): لمسح البتات
+
+### سلوك القراءة الموحد
+
+قراءة هذه العناوين الثلاثة لها **نفس التأثير** وترجع **قيمة الـ register** نفسها. الاختلاف فقط في سلوك الكتابة.
+
+---
+
+## 25.3.4.2.1 Clear Instruction - تعليمات المسح
+
+### 25.3.4.2.1.1 Clear Interrupt Enable Registers
+
+#### الـ Registers المتأثرة:
+
+- **GPIO_IRQSTATUS_CLR_0**
+- **GPIO_IRQSTATUS_CLR_1**
+
+#### عملية الكتابة (Write Operation):
+
+عملية كتابة في **clear interrupt enable1** (أو **enable2**) register تؤدي إلى:
+
+- **مسح البت المقابل** في **interrupt enable1** (أو **enable2**) register عندما يكون **البت المكتوب = 1**
+- **عدم التأثير** عندما يكون **البت المكتوب = 0**
+
+#### عملية القراءة (Read Operation):
+
+قراءة **clear interrupt enable1** (أو **enable2**) register ترجع **قيمة** **interrupt enable1** (أو **enable2**) register.
+
+### 25.3.4.2.1.2 Clear Wake-up Enable Register
+
+#### الـ Register المتأثر:
+
+- **GPIO_CLEARWKUENA**
+
+#### عملية الكتابة (Write Operation):
+
+عملية كتابة في **clear wake-up enable register** تؤدي إلى:
+
+- **مسح البت المقابل** في **wake-up enable register** عندما يكون **البت المكتوب = 1**
+- **عدم التأثير** عندما يكون **البت المكتوب = 0**
+
+#### عملية القراءة (Read Operation):
+
+قراءة **clear wake-up enable register** ترجع **قيمة** **wake-up enable register**.
+
+### 25.3.4.2.1.3 Clear Data Output Register
+
+#### الـ Register المتأثر:
+
+- **GPIO_CLEARDATAOUT**
+
+#### عملية الكتابة (Write Operation):
+
+عملية كتابة في **clear data output register** تؤدي إلى:
+
+- **مسح البت المقابل** في **data output register** عندما يكون **البت المكتوب = 1**
+- **عدم التأثير** عندما يكون **البت المكتوب = 0**
+
+#### عملية القراءة (Read Operation):
+
+قراءة **clear data output register** ترجع **قيمة** **data output register**.
+
+### 25.3.4.2.1.4 Clear Instruction Example
+
+#### الحالة الابتدائية (Initial State):
+
+افترض أن **data output register** (أو أحد **interrupt/wake-up enable registers**) يحتوي على القيمة الثنائية:
+
+```
+0000 0001 0000 0001h
+```
+
+#### الهدف (Objective):
+
+مسح **البت 0**.
+
+#### التنفيذ (Execution):
+
+مع ميزة **clear instruction**، اكتب القيمة التالية:
+
+```
+0000 0000 0000 0001h
+```
+
+في عنوان **clear data output register** (أو في عنوان **clear interrupt/wake-up enable register**).
+
+#### تحليل القيمة المكتوبة:
+
+- **البت 0**: قيمته 1 → سيتم مسح البت 0 في الـ register الأساسي
+- **البتات الأخرى**: قيمتها 0 → لن تتأثر
+
+#### النتيجة (Result):
+
+بعد عملية الكتابة هذه، قراءة **data output register** (أو **interrupt/wake-up enable register**) ترجع:
+
+```
+0000 0001 0000 0000h
+```
+
+#### التحليل:
+
+- **البت 0**: تم مسحه من 1 إلى 0
+- **البت 16**: بقي كما هو (1)
+- **باقي البتات**: بقيت كما هي (0)
+
+#### ملاحظة التمثيل:
+
+رغم أن **general-purpose interface registers** عرضها **32 بت**، فقط الـ **16 بت الأقل أهمية** ممثلة في هذا المثال.
+
+---
+
+## 25.3.4.2.2 Set Instruction - تعليمات التعيين
+
+### 25.3.4.2.2.1 Set Interrupt Enable Registers
+
+#### الـ Registers المتأثرة:
+
+- **GPIO_IRQSTATUS_SET_0**
+- **GPIO_IRQSTATUS_SET_1**
+
+#### عملية الكتابة (Write Operation):
+
+عملية كتابة في **set interrupt enable1** (أو **enable2**) register تؤدي إلى:
+
+- **تعيين البت المقابل** في **interrupt enable1** (أو **enable2**) register عندما يكون **البت المكتوب = 1**
+- **عدم التأثير** عندما يكون **البت المكتوب = 0**
+
+#### عملية القراءة (Read Operation):
+
+قراءة **set interrupt enable1** (أو **enable2**) register ترجع **قيمة** **interrupt enable1** (أو **enable2**) register.
+
+### 25.3.4.2.2.2 Set Wake-up Enable Register
+
+#### الـ Register المتأثر:
+
+- **GPIO_SETWKUENA**
+
+#### عملية الكتابة (Write Operation):
+
+عملية كتابة في **set wake-up enable register** تؤدي إلى:
+
+- **تعيين البت المقابل** في **wake-up enable register** عندما يكون **البت المكتوب = 1**
+- **عدم التأثير** عندما يكون **البت المكتوب = 0**
+
+#### عملية القراءة (Read Operation):
+
+قراءة **set wake-up enable register** ترجع **قيمة** **wake-up enable register**.
+
+### 25.3.4.2.2.3 Set Data Output Register
+
+#### الـ Register المتأثر:
+
+- **GPIO_SETDATAOUT**
+
+#### عملية الكتابة (Write Operation):
+
+عملية كتابة في **set data output register** تؤدي إلى:
+
+- **تعيين البت المقابل** في **data output register** عندما يكون **البت المكتوب = 1**
+- **عدم التأثير** عندما يكون **البت المكتوب = 0**
+
+#### عملية القراءة (Read Operation):
+
+قراءة **set data output register** ترجع **قيمة** **data output register**.
+
+### 25.3.4.2.2.4 Set Instruction Example
+
+#### الحالة الابتدائية (Initial State):
+
+افترض أن **interrupt enable1** (أو **enable2**) register (أو **data output register**) يحتوي على القيمة الثنائية:
+
+```
+0000 0001 0000 0000h
+```
+
+#### الهدف (Objective):
+
+تعيين **البتات 15، 3، 2، و 1**.
+
+#### التنفيذ (Execution):
+
+مع ميزة **set instruction**، اكتب القيمة التالية:
+
+```
+1000 0000 0000 1110h
+```
+
+في عنوان **set interrupt enable1** (أو **enable2**) register (أو في عنوان **set data output register**).
+
+#### تحليل القيمة المكتوبة:
+
+- **البت 15**: قيمته 1 → سيتم تعيين البت 15 في الـ register الأساسي
+- **البت 3**: قيمته 1 → سيتم تعيين البت 3 في الـ register الأساسي
+- **البت 2**: قيمته 1 → سيتم تعيين البت 2 في الـ register الأساسي
+- **البت 1**: قيمته 1 → سيتم تعيين البت 1 في الـ register الأساسي
+- **البتات الأخرى**: قيمتها 0 → لن تتأثر
+
+#### النتيجة (Result):
+
+بعد عملية الكتابة هذه، قراءة **interrupt enable1** (أو **enable2**) register (أو **data output register**) ترجع:
+
+```
+1000 0001 0000 1110h
+```
+
+#### التحليل:
+
+- **البت 15**: تم تعيينه من 0 إلى 1
+- **البت 16**: بقي كما هو (1) - لم يتأثر
+- **البت 3**: تم تعيينه من 0 إلى 1
+- **البت 2**: تم تعيينه من 0 إلى 1
+- **البت 1**: تم تعيينه من 0 إلى 1
+- **باقي البتات**: بقيت كما هي
+
+#### ملاحظة التمثيل:
+
+رغم أن **general-purpose interface registers** عرضها **32 بت**، فقط الـ **16 بت الأقل أهمية** ممثلة في هذا المثال.
+
+---
+
+## المزايا التقنية للـ Set-and-Clear Protocol
+
+### تجنب مشاكل Race Conditions
+
+البروتوكول يتجنب المشاكل التي تحدث في العمليات التقليدية **read-modify-write**:
+
+- **عدم الحاجة للقراءة**: لا توجد حاجة لقراءة القيمة الحالية
+- **العملية الذرية**: كل عملية set أو clear هي عملية ذرية واحدة
+- **الأمان في البيئات متعددة الخيوط**: متعدد المعالجات يمكنه الوصول الآمن
+
+### الكفاءة في الأداء
+
+- **سرعة أكبر**: عملية واحدة بدلاً من ثلاث عمليات (read-modify-write)
+- **استهلاك طاقة أقل**: عدد أقل من العمليات على الناقل
+- **موثوقية أعلى**: تقليل فرص الأخطاء
+
+### المرونة في الاستخدام
+
+- **تحكم دقيق**: إمكانية تعديل بتات محددة دون التأثير على الأخرى
+- **بساطة البرمجة**: لا حاجة لحفظ القيم أو استخدام العمليات المنطقية
+- **وضوح المقصد**: الكود يعبر بوضوح عن النية (set أو clear)
+
+# 25.3.4.3: Data Input (Capture)/Output (Drive)
+
+## دور Output Enable Register في التحكم
+
+### وظيفة GPIO_OE Register
+
+**Output enable register** (**GPIO_OE**) يتحكم في قدرة **output/input** لكل **pin**. عند الـ **reset**، جميع الـ **GPIO-related pins** تُظبط كـ **input** وقدرات الـ **output** تكون معطلة.
+
+### أهمية عدم الاستخدام الداخلي
+
+هذا الـ **register** **ليس مُستخدم داخل الوحدة**؛ وظيفته الوحيدة هي **حمل إعداد الـ pads** (**carry the pads configuration**). هذا يعني أن:
+
+- الـ **GPIO module** نفسه لا يعتمد على هذا الـ register في عمله الداخلي
+- الـ register يعمل كـ **interface** بين الـ **GPIO module** والـ **physical pads**
+- الغرض منه هو إخبار الـ **pad control logic** بكيفية تظبيط كل **pin**
+
+---
+
+## تكوين الـ Output Mode
+
+### شرط التكوين كـ Output
+
+عندما يُظبط كـ **output** (البت المطلوب **reset** في **GPIO_OE**)، قيمة البت المقابل في **GPIO_DATAOUT register** يتم **driven** على الـ **GPIO pin** المقابل.
+
+#### التحليل التفصيلي:
+
+- **GPIO_OE bit = 0**: الـ pin يعمل كـ **output**
+- **GPIO_DATAOUT** يحدد القيمة المُخرجة على الـ **pin**
+- العملية تتم بشكل **synchronous** مع **interface clock**
+
+### عملية كتابة البيانات
+
+البيانات تُكتب إلى **data output register** بشكل **synchronous** مع **interface clock**. هذا يضمن:
+
+- **التزامن المثالي** مع دورة الساعة
+- **عدم وجود glitches** في الإخراج
+- **الاستقرار** في التوقيت
+
+### طرق الوصول للـ Data Output Register
+
+هذا الـ **register** يمكن الوصول إليه بـ:
+
+#### الطريقة التقليدية:
+
+عمليات **read/write** عادية
+
+#### الطريقة البديلة (المُوصى بها):
+
+استخدام **alternate set and clear protocol register update feature**. هذه الميزة تسمح بـ **set** أو **clear** بتات محددة من هذا الـ register بـ **single write access** إلى:
+
+- **Set data output register** (**GPIO_SETDATAOUT**)
+- **Clear data output register** (**GPIO_CLEARDATAOUT**)
+
+### اعتبارات الـ Interrupt/Wake-up
+
+إذا كان التطبيق يستخدم **pin** كـ **output** ولا يريد **interrupt/wake-up generation** من هذا الـ **pin**، فإن التطبيق يجب أن يُظبط بشكل صحيح:
+
+- **Wake-up enable register**
+- **Interrupt enable registers**
+
+هذا ضروري لأن الـ **pin** حتى لو كان **output** قد يولد **interrupts** أو **wake-up signals** إذا لم يُظبط بشكل صحيح.
+
+---
+
+## تكوين الـ Input Mode
+
+### شرط التكوين كـ Input
+
+عندما يُظبط كـ **input** (البت المطلوب **set to 1** في **GPIO_OE**)، حالة الـ **input** يمكن قراءتها من البت المقابل في **GPIO_DATAIN register**.
+
+#### التحليل التفصيلي:
+
+- **GPIO_OE bit = 1**: الـ pin يعمل كـ **input**
+- **GPIO_DATAIN** يعكس الحالة الحقيقية للـ **pin**
+- القراءة تعطي القيمة الفعلية الموجودة على الـ **pin**
+
+### عملية أخذ العينات (Sampling Process)
+
+**Input data** يتم أخذ عيناته (**sampled**) بشكل **synchronous** مع **interface clock** ثم يتم **captured** في **data input register** بشكل **synchronous** مع **interface clock**.
+
+#### مراحل العملية:
+
+1. **Sampling Stage**: أخذ عينة من الإشارة الخارجية
+2. **Synchronization Stage**: تزامن العينة مع **interface clock**
+3. **Capture Stage**: حفظ القيمة في **GPIO_DATAIN register**
+
+### التوقيت والتأخير
+
+عندما تتغير مستويات **GPIO pin**، يتم **captured** في هذا الـ **register** بعد **two interface clock cycles** (الدورات المطلوبة للتزامن وكتابة البيانات).
+
+#### تحليل التأخير:
+
+- **الدورة الأولى**: تزامن الإشارة الخارجية مع **interface clock**
+- **الدورة الثانية**: كتابة القيمة المتزامنة في **GPIO_DATAIN register**
+- **النتيجة**: تأخير إجمالي = **2 interface clock cycles**
+
+### تأثير AUTOIDLE على الأداء
+
+#### عندما AUTOIDLE bit مُفعل:
+
+عندما يكون **AUTOIDLE bit** في **system configuration register** (**GPIO_SYSCONFIG**) **set**، فإن **GPIO_DATAIN read command** له **3 OCP cycle latency** بسبب **data in sample gating mechanism**.
+
+#### عندما AUTOIDLE bit غير مُفعل:
+
+عندما يكون **AUTOIDLE bit** **not set**، فإن **GPIO_DATAIN read command** له **2 OCP cycle latency**.
+
+#### تحليل الفرق:
+
+- **مع AUTOIDLE**: تأخير إضافي بسبب **gating mechanism** لتوفير الطاقة
+- **بدون AUTOIDLE**: أداء أسرع لكن استهلاك طاقة أعلى
+
+### اعتبارات الـ Interrupt/Wake-up للـ Input
+
+إذا كان التطبيق يستخدم **pin** كـ **input**، فإن التطبيق يجب أن يُظبط بشكل صحيح:
+
+- **Wake-up enable register**
+- **Interrupt enable registers**
+
+هذا الظبط يكون **to the interrupt and wake-up feature as needed** - أي حسب الحاجة للميزات هذه.
+
+#### خيارات التظبيط:
+
+1. **تفعيل الـ Interrupts**: للاستجابة السريعة لتغيرات الـ **input**
+2. **تفعيل الـ Wake-up**: لتنبيه النظام من **sleep mode**
+3. **تعطيل كليهما**: للـ **polling-based** reading فقط
+
+---
+
+## التفاعل بين Output وInput Modes
+
+### الاستقلالية النسبية
+
+رغم أن كل **pin** يُظبط إما كـ **input** أو **output**، فإن:
+
+- **GPIO_DATAOUT register** موجود دائماً ويمكن كتابته
+- **GPIO_DATAIN register** موجود دائماً ويمكن قراءته
+- **GPIO_OE register** هو الذي يحدد أيهما نشط فعلياً على الـ **pin**
+
+### اعتبارات التصميم
+
+المصمم يجب أن يأخذ في الاعتبار:
+
+- **تظبيط الـ direction** صحيح قبل استخدام الـ **pin**
+- **إعداد الـ interrupt/wake-up registers** حسب الحاجة
+- **فهم التأخيرات** المرتبطة بالقراءة والكتابة
+- **تأثير الـ AUTOIDLE** على الأداء
+
+### أهمية التزامن
+
+جميع العمليات **synchronous** مع **interface clock** مما يضمن:
+
+- **عدم وجود race conditions**
+- **استقرار البيانات**
+- **إمكانية التنبؤ بالتوقيت**
+- **موثوقية العمل** في البيئات الصناعية
+
+هذا التصميم يعكس الحاجة لتوازن مثالي بين **الأداء**، **استهلاك الطاقة**، و**الموثوقية** في الأنظمة المدمجة المتقدمة.
+
+
+# 25.3.4.5: GPIO as a Keyboard Interface
+
+## المفهوم الأساسي لواجهة لوحة المفاتيح
+
+### إمكانية الاستخدام
+
+الـ **general-purpose interface** يمكن استخدامه كـ **keyboard interface**. يمكن تخصيص **channels** حسب **keyboard matrix** (r × c).
+
+### الإشارة إلى Figure 25-7
+
+يُظهر **Figure 25-7** **row channels** مُظبطة كـ **inputs** مع تفعيل ميزة **input debounce**. الـ **row channels** مدفوعة عالياً (**driven high**) بواسطة **external pull-up**. **Column channels** مُظبطة كـ **outputs** وتدفع مستوى منخفض (**drive a low level**).
+
+#### تحليل التكوين:
+
+- **Row channels**:
+    - مُظبطة كـ **inputs**
+    - مع **input debounce feature enabled**
+    - مدفوعة عالياً بـ **external pull-up resistors**
+- **Column channels**:
+    - مُظبطة كـ **outputs**
+    - تدفع **low level** بشكل نشط
+
+---
+
+## آلية الكشف
+
+### عملية الكشف عند الضغط
+
+عندما يتم الضغط على مفتاح في **keyboard matrix**، الـ **row** و **column lines** المقابلة يتم **shorted together** وينتج **low level** على **row channel** المقابل.
+
+#### التسلسل الفيزيائي:
+
+1. **الحالة العادية**: **Row line** في حالة **high** بسبب **pull-up resistor**
+2. **الضغط على المفتاح**: يحدث **short circuit** بين **row** و **column**
+3. **Column** يدفع **low level** فيسحب **row** إلى **low level**
+4. **النتيجة**: **row channel** يصبح **low level**
+
+### توليد الـ Interrupt
+
+هذا التغيير يولد **interrupt** حسب **proper configuration** (انظر **Section 25.3.3**).
+
+#### متطلبات التكوين:
+
+- تفعيل **falling edge detection** على **row channels**
+- تظبيط **interrupt enable registers** للـ **row channels**
+- تكوين **debounce settings** إذا لزم الأمر
+
+---
+
+## عملية المسح (Scanning Process)
+
+### استقبال الـ Keyboard Interrupt
+
+عندما يتم استقبال **keyboard interrupt**، المعالج يمكنه:
+
+1. **تعطيل keyboard interrupt**
+2. **مسح column channels** للحصول على **key coordinates**
+
+### تسلسل المسح
+
+**Scanning sequence** له عدد من الحالات يساوي عدد **column channels**: لكل خطوة في التسلسل، المعالج:
+
+- **يدفع column channel واحد low**
+- **يدفع الآخرين high**
+
+#### تحليل كل خطوة:
+
+1. **تفعيل column واحد**: تعيين **column channel** محدد إلى **low**
+2. **تعطيل الباقي**: تعيين باقي **column channels** إلى **high**
+3. **قراءة الـ rows**: فحص حالة جميع **row channels**
+4. **التحليل**: تحديد أي **keys** في هذا **column** مضغوطة
+
+### قراءة قيم الـ Row Channels
+
+المعالج **يقرأ قيم row channels** وبالتالي **يكتشف أي keys** في **column** مضغوطة.
+
+#### منطق الكشف:
+
+- **Row channel = low**: المفتاح في تقاطع هذا **row** مع **column** النشط مضغوط
+- **Row channel = high**: المفتاح في تقاطع هذا **row** مع **column** النشط غير مضغوط
+
+---
+
+## إنهاء دورة المسح
+
+### إتمام التسلسل
+
+في نهاية **scanning sequence**، المعالج **يحدد أي keys مضغوطة**.
+
+#### المعلومات المستخرجة:
+
+- **عدد المفاتيح المضغوطة**
+- **مواقع المفاتيح** (row, column coordinates)
+- **حالة كل مفتاح** في المصفوفة
+
+### إعادة تكوين واجهة لوحة المفاتيح
+
+**Keyboard interface** يمكن إعادة تكوينها بعد ذلك في **interrupt waiting state**.
+
+#### خطوات إعادة التكوين:
+
+1. **مسح interrupt status**
+2. **إعادة تفعيل keyboard interrupt**
+3. **تجهيز النظام** لـ **interrupt** التالي
+4. **العودة** إلى **waiting state**
+
+---
+
+## تحليل تفصيلي للـ Figure 25-7
+
+### مكونات النظام
+
+حسب الوصف المرفق مع **Figure 25-7**:
+
+#### الجهاز (Device):
+
+- **General Purpose Interface** الرئيسي
+- **L4 interconnect** للتواصل مع النظام
+- **Interrupt generation** logic
+
+#### المصفوفة الخارجية:
+
+- **Keyboard matrix** فيزيائية
+- **I/O pads** للتوصيل الخارجي
+- **VDD** power supply
+- **Pull-up resistors** للـ **row channels**
+
+#### التوصيلات:
+
+- **Row channels**: متصلة بـ **GPIO inputs** مع **pull-ups**
+- **Column channels**: متصلة بـ **GPIO outputs**
+- **Power and ground connections**
+
+### التدفق الكهربائي
+
+#### الحالة العادية (No Key Pressed):
+
+1. **Column outputs**: يمكن أن تكون **high** أو **low**
+2. **Row inputs**: **high** بسبب **pull-up resistors**
+3. **لا يوجد current path** بين **rows** و **columns**
+
+#### عند الضغط على مفتاح:
+
+1. **Physical contact** يحدث بين **row** و **column**
+2. **Current path** يتكون من **VDD** → **pull-up** → **row** → **key contact** → **column** → **ground**
+3. **Row voltage** يصبح مساوياً لـ **column voltage**
+4. إذا كان **column** في حالة **low**، فـ **row** يصبح **low**
+
+---
+
+## الاعتبارات التقنية
+
+### أهمية الـ Debouncing
+
+تفعيل **input debounce feature** على **row channels** ضروري لأن:
+
+- **المفاتيح الميكانيكية** تعاني من **contact bounce**
+- **البوقسة** يمكن أن تسبب **multiple interrupts** لضغطة واحدة
+- **Debouncing** يضمن **interrupt** واحد لكل ضغطة فعلية
+
+### توقيت المسح
+
+**Scanning process** يجب أن يكون:
+
+- **سريعاً** بما يكفي للاستجابة لضغطات المستخدم
+- **بطيئاً** بما يكفي للسماح للـ **debouncing** بالعمل
+- **منتظماً** لضمان **consistent response**
+
+### معالجة المفاتيح المتعددة
+
+النظام يجب أن يتعامل مع:
+
+- **Single key presses**: الحالة العادية
+- **Multiple key presses**: عدة مفاتيح مضغوطة في نفس الوقت
+- **Key combinations**: مفاتيح خاصة كـ **Ctrl+Alt**
+- **Ghosting prevention**: تجنب الكشف الخاطئ للمفاتيح
+
+### تحسين الأداء
+
+لتحسين أداء **keyboard interface**:
+
+- **استخدام interrupts** بدلاً من **polling** لتوفير الطاقة
+- **تحسين scanning frequency** حسب نوع التطبيق
+- **استخدام debouncing** الصحيح لتجنب **false triggers**
+- **تحسين pull-up resistor values** للحصول على أفضل أداء
+
+هذا التصميم يوفر **keyboard interface** فعالة وموثوقة باستخدام **GPIO** العادي مع الحد الأدنى من **external components**.
