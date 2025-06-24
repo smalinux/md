@@ -39,7 +39,7 @@ apt install libubootenv-tool
 apt install linux-headers-$(uname -r) build-essential
 
 # Logic analyser
-sudo apt install sigrok-cli pulseview libsigrok4 libftdi1-2 libftdi1-dev
+sudo apt install sigrok-cli pulseview libsigrok4 libftdi1-2 libftdi1-dev sigrok
 sudo apt install libftdi1-2 libftdi1-dev python3-ftdi1
 sudo apt install ftdi-eeprom
 

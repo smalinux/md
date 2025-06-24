@@ -1,12 +1,20 @@
 {
   "recentFiles": [
     {
-      "basename": "CHAPTER-REVEW",
-      "path": "content/CHAPTER-REVEW.md"
+      "basename": "sigrok",
+      "path": "content/sigrok.md"
+    },
+    {
+      "basename": "dotfile",
+      "path": "content/dotfile.md"
     },
     {
       "basename": "README",
       "path": "README.md"
+    },
+    {
+      "basename": "CHAPTER-REVEW",
+      "path": "content/CHAPTER-REVEW.md"
     },
     {
       "basename": "barebox-gpio",
@@ -19,10 +27,6 @@
     {
       "basename": "GPIO-cheatsheet",
       "path": "content/GPIO-cheatsheet.md"
-    },
-    {
-      "basename": "dotfile",
-      "path": "content/dotfile.md"
     },
     {
       "basename": "barebox-UART",
@@ -195,10 +199,6 @@
     {
       "basename": "libgpiod",
       "path": "content/libgpiod.md"
-    },
-    {
-      "basename": "pwm subsystem",
-      "path": "content/pwm subsystem.md"
     }
   ],
   "omittedPaths": [],

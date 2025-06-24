@@ -127,7 +127,7 @@
 - [ ] [[hash table]]
 - [ ] [[Device Tree]] - End of Story
 - [ ] [[Design patterns]]
-- [ ] 
+- [ ] [sigrok](content/sigrok.md)
 - [ ] 
 ___
 # Arduino

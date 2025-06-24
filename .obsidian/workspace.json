@@ -22,17 +22,31 @@
             }
           },
           {
+            "id": "d046fce9c1a51eb6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/sigrok.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "sigrok"
+            }
+          },
+          {
             "id": "13609992856a4ec6",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/CHAPTER-REVEW.md",
+                "file": "content/dotfile.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "CHAPTER-REVEW"
+              "title": "dotfile"
             }
           },
           {
@@ -110,7 +124,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "sigrok",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -146,8 +160,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 217.5,
-    "collapsed": true
+    "width": 217.5
   },
   "right": {
     "id": "00e8531b7b73c201",
@@ -230,13 +243,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/CHAPTER-REVEW.md",
+                "file": "content/sigrok.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of CHAPTER-REVEW"
+              "title": "Outline of sigrok"
             }
           }
         ]
@@ -257,15 +270,18 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "13609992856a4ec6",
+  "active": "d046fce9c1a51eb6",
   "lastOpenFiles": [
+    "assets/Pasted image 20250624214456.png",
+    "assets/Pasted image 20250624214437.png",
+    "content/dotfile.md",
+    "content/sigrok.md",
     "README.md",
+    "content/CHAPTER-REVEW.md",
     "content/barebox-gpio.md",
     "content/Ch 25 GPIO.md",
     "content/GPIO-cheatsheet.md",
-    "content/dotfile.md",
     "content/barebox-UART.md",
-    "content/CHAPTER-REVEW.md",
     "daily/2025-05-22.md",
     "content/GPIO subsytem.md",
     "content/GPIO - Before.md",
@@ -284,8 +300,6 @@
     "content/Watchdog-cheatsheet.md",
     "content/barebox/drivers.md",
     "content/barebox",
-    "raindrop/BBB/A tour of the ARM architecture and its Linux support.md",
-    "content/later.md",
     "BBB_SCH.pdf",
     "BBB_SCH.pdf.crdownload",
     "assets/Pasted image 20250518170753.jpg",
