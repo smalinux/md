@@ -79,3 +79,5 @@ The Saleae Logic software should now be able to access the device without requir
 انا وصلت الـ logic analyser باردوينو وعلمت led بتعمل pwm واتأكد انى بشوف الـ pwm بعينى, بعدين وصلت بدل الـ led الـ logic analyser
 ما تنساش توصل الـ ground بتاع الـ logic analyser
 
+
+قبل ما تشترى اى جهاز اتأكد انه مدعوم كويس الأول: [Supported hardware - sigrok](https://sigrok.org/wiki/Supported_hardware#Logic_analyzers)
