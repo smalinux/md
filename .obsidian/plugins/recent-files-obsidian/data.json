@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "GPIO-cheatsheet",
+      "path": "content/GPIO-cheatsheet.md"
+    },
+    {
       "basename": "sigrok",
       "path": "content/sigrok.md"
     },
@@ -23,10 +27,6 @@
     {
       "basename": "Ch 25 GPIO",
       "path": "content/Ch 25 GPIO.md"
-    },
-    {
-      "basename": "GPIO-cheatsheet",
-      "path": "content/GPIO-cheatsheet.md"
     },
     {
       "basename": "barebox-UART",

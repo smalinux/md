@@ -92,7 +92,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -243,13 +243,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/sigrok.md",
+                "file": "content/GPIO-cheatsheet.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of sigrok"
+              "title": "Outline of GPIO-cheatsheet"
             }
           }
         ]
@@ -270,12 +270,12 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "d046fce9c1a51eb6",
+  "active": "b688e358ae7c82a8",
   "lastOpenFiles": [
+    "content/sigrok.md",
     "assets/Pasted image 20250624214456.png",
     "assets/Pasted image 20250624214437.png",
     "content/dotfile.md",
-    "content/sigrok.md",
     "README.md",
     "content/CHAPTER-REVEW.md",
     "content/barebox-gpio.md",
