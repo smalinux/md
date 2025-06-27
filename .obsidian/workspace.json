@@ -55,12 +55,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/barebox-gpio.md",
+                "file": "content/barebox-Sparse.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "barebox-gpio"
+              "title": "barebox-Sparse"
             }
           },
           {
@@ -124,7 +124,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tmux",
+                "query": "hmCukzpevUc",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -243,13 +243,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/barebox-gpio.md",
+                "file": "content/barebox-Sparse.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of barebox-gpio"
+              "title": "Outline of barebox-Sparse"
             }
           }
         ]
@@ -272,6 +272,8 @@
   },
   "active": "127631f2d17f4bfe",
   "lastOpenFiles": [
+    "content/barebox.md",
+    "content/barebox-gpio.md",
     "README.md",
     "content/tmux.md",
     "content/GPIO-cheatsheet.md",
@@ -280,7 +282,6 @@
     "assets/Pasted image 20250624214437.png",
     "content/dotfile.md",
     "content/CHAPTER-REVEW.md",
-    "content/barebox-gpio.md",
     "content/Ch 25 GPIO.md",
     "content/barebox-UART.md",
     "daily/2025-05-22.md",
@@ -288,7 +289,6 @@
     "content/GPIO - Before.md",
     "content/GPIO - day01.md",
     "content/barebox io header.md",
-    "content/barebox.md",
     "content/barebox-memory-barriers.md",
     "content/watchdog-barebox.md",
     "Clippings/Sparse Semantic Parser.md",

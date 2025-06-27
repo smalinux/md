@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "barebox-Sparse",
+      "path": "content/barebox-Sparse.md"
+    },
+    {
+      "basename": "barebox",
+      "path": "content/barebox.md"
+    },
+    {
       "basename": "barebox-gpio",
       "path": "content/barebox-gpio.md"
     },
@@ -53,10 +61,6 @@
       "path": "content/barebox io header.md"
     },
     {
-      "basename": "barebox",
-      "path": "content/barebox.md"
-    },
-    {
       "basename": "barebox-memory-barriers",
       "path": "content/barebox-memory-barriers.md"
     },
@@ -67,10 +71,6 @@
     {
       "basename": "Sparse Semantic Parser",
       "path": "Clippings/Sparse Semantic Parser.md"
-    },
-    {
-      "basename": "barebox-Sparse",
-      "path": "content/barebox-Sparse.md"
     },
     {
       "basename": "vim",

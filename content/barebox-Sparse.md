@@ -2,7 +2,7 @@
 https://www.kernel.org/doc/html/v4.9/dev-tools/sparse.html
 [Sparse Semantic Parser](../Clippings/Sparse%20Semantic%20Parser.md)
 https://linux.die.net/man/1/sparse
-
+https://stackoverflow.com/questions/23072093/sparse-warnings-incorrect-type-in-assignment
 
 Enable:
 ```bash
