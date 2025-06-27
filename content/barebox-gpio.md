@@ -1876,3 +1876,27 @@ _____
 - **تحسين pull-up resistor values** للحصول على أفضل أداء
 
 هذا التصميم يوفر **keyboard interface** فعالة وموثوقة باستخدام **GPIO** العادي مع الحد الأدنى من **external components**.
+
+
+
+
+_____
+_____
+_____
+# الجزء العملى:
+الملف دا اللى بيأثر على الـ heartbeat على بوردتى
+```
+# dts/src/arm/ti/omap/am335x-bone-common.dtsi
+
+led2 {
+	label = "beaglebone:green:heartbeat";
+	gpios = <&gpio1 21 GPIO_ACTIVE_HIGH>;
+	linux,default-trigger = "heartbeat";
+	default-state = "off";
+};
+```
+
+مش فاهم ايه لزمه الملف دا, لكن هسجله هنا بس علشان افتكر:
+```
+arch/arm/dts/am335x-bone-common-strip.dtsi
+```
