@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "⌨️ Keymaps  LazyVim",
+      "path": "Clippings/⌨️ Keymaps  LazyVim.md"
+    },
+    {
       "basename": "barebox-Sparse",
       "path": "content/barebox-Sparse.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "Yocto",
       "path": "content/Yocto.md"
-    },
-    {
-      "basename": "libgpiod",
-      "path": "content/libgpiod.md"
     }
   ],
   "omittedPaths": [],
