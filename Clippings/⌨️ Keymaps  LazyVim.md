@@ -674,24 +674,24 @@ Part of [lazyvim.plugins.extras.util.gitui](https://www.lazyvim.org/extras/util/
 
 Part of [lazyvim.plugins.extras.util.octo](https://www.lazyvim.org/extras/util/octo)
 
-| Key | Description | Mode |
-| --- | --- | --- |
-| `<leader>gi` | List Issues (Octo) | **n** |
-| `<leader>gI` | Search Issues (Octo) | **n** |
-| `<leader>gp` | List PRs (Octo) | **n** |
-| `<leader>gP` | Search PRs (Octo) | **n** |
-| `<leader>gr` | List Repos (Octo) | **n** |
-| `<leader>gS` | Search (Octo) | **n** |
-| `<localleader>a` | +assignee (Octo) | **n** |
-| `<localleader>c` | +comment/code (Octo) | **n** |
-| `<localleader>g` | +goto\_issue (Octo) | **n** |
-| `<localleader>i` | +issue (Octo) | **n** |
-| `<localleader>l` | +label (Octo) | **n** |
-| `<localleader>p` | +pr (Octo) | **n** |
-| `<localleader>pr` | +rebase (Octo) | **n** |
-| `<localleader>ps` | +squash (Octo) | **n** |
-| `<localleader>r` | +react (Octo) | **n** |
-| `<localleader>v` | +review (Octo) | **n** |
+| Key               | Description          | Mode  |                                     |
+| ----------------- | -------------------- | ----- | ----------------------------------- |
+| `<leader>gi`      | List Issues (Octo)   | **n** |                                     |
+| `<leader>gI`      | Search Issues (Octo) | **n** |                                     |
+| `<leader>gp`      | List PRs (Octo)      | **n** |                                     |
+| `<leader>gP`      | Search PRs (Octo)    | **n** |                                     |
+| `<leader>gr`      | List Repos (Octo)    | **n** |                                     |
+| `<leader>gS`      | Search (Octo)        | **n** |                                     |
+| `<localleader>a`  | +assignee (Octo)     | **n** |                                     |
+| `<localleader>c`  | +comment/code (Octo) | **n** | للأسف ماعدش شغال, حد عمله overwrite |
+| `<localleader>g`  | +goto\_issue (Octo)  | **n** |                                     |
+| `<localleader>i`  | +issue (Octo)        | **n** |                                     |
+| `<localleader>l`  | +label (Octo)        | **n** |                                     |
+| `<localleader>p`  | +pr (Octo)           | **n** |                                     |
+| `<localleader>pr` | +rebase (Octo)       | **n** |                                     |
+| `<localleader>ps` | +squash (Octo)       | **n** |                                     |
+| `<localleader>r`  | +react (Octo)        | **n** |                                     |
+| `<localleader>v`  | +review (Octo)       | **n** |                                     |
 
 ## fzf-lua
 
