@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "barebox-led",
+      "path": "content/barebox-led.md"
+    },
+    {
       "basename": "⌨️ Keymaps  LazyVim",
       "path": "Clippings/⌨️ Keymaps  LazyVim.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "OTA",
       "path": "content/OTA.md"
-    },
-    {
-      "basename": "Yocto",
-      "path": "content/Yocto.md"
     }
   ],
   "omittedPaths": [],
