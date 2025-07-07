@@ -134,3 +134,6 @@ ___
 
 - [ ] [[arduino-dotfiles]]
 - [ ] [[2025-06-07]] Which kernel I should use as reference?
+___
+- [ ] [كالستنكس](content/كالستنكس.md)
+- [ ] 

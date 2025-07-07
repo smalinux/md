@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "كالستنكس",
+      "path": "content/كالستنكس.md"
+    },
+    {
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
       "basename": "barebox-led",
       "path": "content/barebox-led.md"
     },
@@ -19,10 +27,6 @@
     {
       "basename": "barebox-gpio",
       "path": "content/barebox-gpio.md"
-    },
-    {
-      "basename": "README",
-      "path": "README.md"
     },
     {
       "basename": "tmux",
@@ -191,14 +195,6 @@
     {
       "basename": "Quilt",
       "path": "content/Quilt.md"
-    },
-    {
-      "basename": "initramfs",
-      "path": "content/initramfs.md"
-    },
-    {
-      "basename": "OTA",
-      "path": "content/OTA.md"
     }
   ],
   "omittedPaths": [],
