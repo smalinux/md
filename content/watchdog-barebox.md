@@ -95,3 +95,16 @@ static void omap_wdt_set_timer(struct omap_wdt_dev *wdev, unsigned int timeout)
 
 static int omap_wdt_set_timeout(struct watchdog *wdog, unsigned int timeout)
 ```
+
+
+Google: watchdog linux
+https://linux.die.net/man/8/watchdog
+https://docs.jethome.ru/en/controllers/linux/howto/watchdog.html
+https://www.kernel.org/doc/Documentation/watchdog/watchdog-api.txt
+https://developer.toradex.com/software/linux-resources/linux-features/watchdog-linux/
+https://unix.stackexchange.com/questions/714910/what-is-a-good-way-to-test-watchdog-script-or-command-to-deliberately-overload
+https://github.com/torvalds/linux/blob/master/tools/testing/selftests/watchdog/watchdog-test.c
+https://docs.redhat.com/en/documentation/red_hat_virtualization/4.1/html/virtual_machine_management_guide/sect-configuring_a_watchdog
+https://stackoverflow.com/questions/9072879/how-to-use-linux-software-watchdog
+https://linux.die.net/man/5/watchdog.conf
+https://kernel.org/doc/html/latest/watchdog/

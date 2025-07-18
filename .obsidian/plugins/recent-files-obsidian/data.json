@@ -5,8 +5,16 @@
       "path": "content/neovim.md"
     },
     {
+      "basename": "dts",
+      "path": "content/dts.md"
+    },
+    {
       "basename": "README",
       "path": "README.md"
+    },
+    {
+      "basename": "watchdog-barebox",
+      "path": "content/watchdog-barebox.md"
     },
     {
       "basename": "sigrok",
@@ -79,10 +87,6 @@
     {
       "basename": "barebox-memory-barriers",
       "path": "content/barebox-memory-barriers.md"
-    },
-    {
-      "basename": "watchdog-barebox",
-      "path": "content/watchdog-barebox.md"
     },
     {
       "basename": "Sparse Semantic Parser",
@@ -195,10 +199,6 @@
     {
       "basename": "BBB bible",
       "path": "content/BBB bible.md"
-    },
-    {
-      "basename": "Quilt",
-      "path": "content/Quilt.md"
     }
   ],
   "omittedPaths": [],
