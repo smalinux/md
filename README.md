@@ -128,6 +128,7 @@
 - [ ] [[Device Tree]] - End of Story
 - [ ] [[Design patterns]]
 - [ ] [sigrok](content/sigrok.md)
+- [ ] [neovim](content/neovim.md)
 - [ ] 
 ___
 # Arduino

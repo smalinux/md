@@ -1,0 +1,3 @@
+- [ ] https://github.com/nvim-telescope/telescope-live-grep-args.nvim?tab=readme-ov-file
+- [ ] https://www.youtube.com/@g0t4
+- [ ] 

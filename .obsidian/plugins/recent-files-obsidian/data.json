@@ -1,12 +1,20 @@
 {
   "recentFiles": [
     {
-      "basename": "كالستنكس",
-      "path": "content/كالستنكس.md"
+      "basename": "neovim",
+      "path": "content/neovim.md"
     },
     {
       "basename": "README",
       "path": "README.md"
+    },
+    {
+      "basename": "sigrok",
+      "path": "content/sigrok.md"
+    },
+    {
+      "basename": "كالستنكس",
+      "path": "content/كالستنكس.md"
     },
     {
       "basename": "barebox-led",
@@ -35,10 +43,6 @@
     {
       "basename": "GPIO-cheatsheet",
       "path": "content/GPIO-cheatsheet.md"
-    },
-    {
-      "basename": "sigrok",
-      "path": "content/sigrok.md"
     },
     {
       "basename": "dotfile",
