@@ -18,18 +18,16 @@
 	- [barebox-memory-barriers](content/barebox-memory-barriers.md)
 	- [barebox io header](content/barebox%20io%20header.md)
 	- [Sparse Semantic Parser](Clippings/Sparse%20Semantic%20Parser.md)
-	- ---
-	- [barebox-gpio](content/barebox-gpio.md)
-	- [GPIO-cheatsheet](content/GPIO-cheatsheet.md)
-	- ---
+	
+	
 	- [[barebox-UART]]
-	- ---
+	
 	- [[barebox-Timer]]
-	- ---
+	
 	- [[barebox-PWM]]
-	- ---
+	
 	- [[barebox-I2C]]
-	- ---
+	
 	- Advanced:
 		- ADC - Chapter 12
 		- CAN - Chapter 23
@@ -47,7 +45,7 @@
 - [Logic analyzer](content/Logic%20analyzer.md) - [[JTag]] - 
 - [Boot time optimization](content/Boot%20time%20optimization.md)
 - [[tftp]] - [[proftpd]] - [[atftpd]] - [[dhcp]] - [[unfsd]] - [[nfsd]] - [[ssh]] - [[http]] - [[mDNS]]
-- [[libgpiod]]
+
 - [[pwm subsystem]]
 - [[poky-nfsroot]]
 - [[dbus]]
@@ -72,7 +70,7 @@
 - [[flashing emmc]]
 - Secure Boot
 - [[Watchdog]]
-- [[GPIO subsytem]]
+
 - [[dotfiles]]
 - [[dts]]
 - [[SPI]]
@@ -90,12 +88,14 @@
 	- [[py-uio]]::: https://github.com/mvduin/py-uio
 	- [[dtb debian]]
 	- 
-- [[GPIO]]
+- [[GPIO subsytem]]
 - [[GPIO - day01]]
 - [[GPIO - Before]]
 - [ ] [[GPIO]]
 	- [ ] [[Ch 25 GPIO]]
 	- [ ] [[GPIO-cheatsheet]]
+- [ ] [barebox-gpio](content/barebox-gpio.md)
+- [ ] [[libgpiod]]
 - [[content/dotfile]]
 - [[vim]]
 	- [ ] [vim-fugitive](content/vim-fugitive.md)

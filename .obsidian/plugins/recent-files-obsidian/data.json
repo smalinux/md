@@ -1,16 +1,44 @@
 {
   "recentFiles": [
     {
+      "basename": "Ch 25 GPIO",
+      "path": "content/Ch 25 GPIO.md"
+    },
+    {
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
+      "basename": "GPIO",
+      "path": "content/GPIO.md"
+    },
+    {
+      "basename": "GPIO-cheatsheet",
+      "path": "content/GPIO-cheatsheet.md"
+    },
+    {
+      "basename": "GPIO - Before",
+      "path": "content/GPIO - Before.md"
+    },
+    {
+      "basename": "GPIO - day01",
+      "path": "content/GPIO - day01.md"
+    },
+    {
+      "basename": "barebox-gpio",
+      "path": "content/barebox-gpio.md"
+    },
+    {
+      "basename": "GPIO subsytem",
+      "path": "content/GPIO subsytem.md"
+    },
+    {
       "basename": "neovim",
       "path": "content/neovim.md"
     },
     {
       "basename": "dts",
       "path": "content/dts.md"
-    },
-    {
-      "basename": "README",
-      "path": "README.md"
     },
     {
       "basename": "watchdog-barebox",
@@ -41,16 +69,8 @@
       "path": "content/barebox.md"
     },
     {
-      "basename": "barebox-gpio",
-      "path": "content/barebox-gpio.md"
-    },
-    {
       "basename": "tmux",
       "path": "content/tmux.md"
-    },
-    {
-      "basename": "GPIO-cheatsheet",
-      "path": "content/GPIO-cheatsheet.md"
     },
     {
       "basename": "dotfile",
@@ -61,24 +81,8 @@
       "path": "content/CHAPTER-REVEW.md"
     },
     {
-      "basename": "Ch 25 GPIO",
-      "path": "content/Ch 25 GPIO.md"
-    },
-    {
       "basename": "barebox-UART",
       "path": "content/barebox-UART.md"
-    },
-    {
-      "basename": "GPIO subsytem",
-      "path": "content/GPIO subsytem.md"
-    },
-    {
-      "basename": "GPIO - Before",
-      "path": "content/GPIO - Before.md"
-    },
-    {
-      "basename": "GPIO - day01",
-      "path": "content/GPIO - day01.md"
     },
     {
       "basename": "barebox io header",
@@ -195,10 +199,6 @@
     {
       "basename": "LLVM",
       "path": "content/LLVM.md"
-    },
-    {
-      "basename": "BBB bible",
-      "path": "content/BBB bible.md"
     }
   ],
   "omittedPaths": [],
