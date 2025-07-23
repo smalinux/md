@@ -1,12 +1,16 @@
 {
   "recentFiles": [
     {
-      "basename": "Ch 25 GPIO",
-      "path": "content/Ch 25 GPIO.md"
+      "basename": "German language",
+      "path": "content/German language.md"
     },
     {
       "basename": "README",
       "path": "README.md"
+    },
+    {
+      "basename": "Ch 25 GPIO",
+      "path": "content/Ch 25 GPIO.md"
     },
     {
       "basename": "GPIO",
@@ -195,10 +199,6 @@
     {
       "basename": "fastboot",
       "path": "content/fastboot.md"
-    },
-    {
-      "basename": "LLVM",
-      "path": "content/LLVM.md"
     }
   ],
   "omittedPaths": [],

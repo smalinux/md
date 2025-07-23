@@ -129,7 +129,7 @@
 - [ ] [[Design patterns]]
 - [ ] [sigrok](content/sigrok.md)
 - [ ] [neovim](content/neovim.md)
-- [ ] 
+- [ ] [German language](content/German%20language.md)
 ___
 # Arduino
 
