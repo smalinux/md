@@ -1,12 +1,16 @@
 {
   "recentFiles": [
     {
-      "basename": "German language",
-      "path": "content/German language.md"
+      "basename": "ازاى اتعلم اللغه بسرعه",
+      "path": "content/ازاى اتعلم اللغه بسرعه.md"
     },
     {
       "basename": "README",
       "path": "README.md"
+    },
+    {
+      "basename": "German language",
+      "path": "content/German language.md"
     },
     {
       "basename": "Ch 25 GPIO",
@@ -195,10 +199,6 @@
     {
       "basename": "RTC",
       "path": "content/RTC.md"
-    },
-    {
-      "basename": "fastboot",
-      "path": "content/fastboot.md"
     }
   ],
   "omittedPaths": [],
