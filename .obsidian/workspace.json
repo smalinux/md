@@ -100,11 +100,11 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 217.5
+    "width": 333.5
   },
   "right": {
     "id": "00e8531b7b73c201",
@@ -214,11 +214,11 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "bd11abf9ff700b08",
+  "active": "6205e76445027ab1",
   "lastOpenFiles": [
-    "content/ازاى اتعلم اللغه بسرعه.md",
     "README.md",
     "content/German language.md",
+    "content/ازاى اتعلم اللغه بسرعه.md",
     "content/Ch 25 GPIO.md",
     "raindrop/BBB/GitHub - eunomia-bpfbpf-developer-tutorial eBPF Developer Tutorial Learning eBPF Step by Step with Examples.md",
     "content/GPIO.md",
