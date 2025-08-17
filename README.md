@@ -10,31 +10,6 @@
 - [Linux kernel setup](content/Linux%20kernel%20setup.md) ## [Dev Setup](content/Dev%20Setup.md)
 - [Electronics - Shopping list](content/Electronics%20-%20Shopping%20list.md)
 - [fastboot](content/fastboot.md)
-- [barebox](content/barebox.md) ⭐
-	- [[CHAPTER-REVEW]]  ⭐
-	- لو عايز تعرف فعلا ازاى بيتعمو machine جديده اقرأ الباتش دا: https://lore.barebox.org/barebox/20241107145722.5145-1-jmaselbas@zdiv.net/T/#me2a087ed11de3048873c6795e880b0ef0151df2e
-	- [watchdog-barebox](watchdog-barebox)
-	- [barebox-Sparse](content/barebox-Sparse.md)
-	- [barebox-memory-barriers](content/barebox-memory-barriers.md)
-	- [barebox io header](content/barebox%20io%20header.md)
-	- [Sparse Semantic Parser](Clippings/Sparse%20Semantic%20Parser.md)
-	
-	
-	- [[barebox-UART]]
-	
-	- [[barebox-Timer]]
-	
-	- [[barebox-PWM]]
-	
-	- [[barebox-I2C]]
-	
-	- Advanced:
-		- ADC - Chapter 12
-		- CAN - Chapter 23
-		- Ethernet - Chapter 14
-		- EDMA - Chapter 11
-		- GPMC - Chapter 7
-		- DDR Memory Controller - Chapter 6
 - [udev](udev)
 - [[NeoPixel matrix]]
 - [am335x USB mode](content/am335x%20USB%20mode.md)
@@ -45,7 +20,6 @@
 - [Logic analyzer](content/Logic%20analyzer.md) - [[JTag]] - 
 - [Boot time optimization](content/Boot%20time%20optimization.md)
 - [[tftp]] - [[proftpd]] - [[atftpd]] - [[dhcp]] - [[unfsd]] - [[nfsd]] - [[ssh]] - [[http]] - [[mDNS]]
-
 - [[pwm subsystem]]
 - [[poky-nfsroot]]
 - [[dbus]]
@@ -70,7 +44,6 @@
 - [[flashing emmc]]
 - Secure Boot
 - [[Watchdog]]
-
 - [[dotfiles]]
 - [[dts]]
 - [[SPI]]
@@ -87,15 +60,6 @@
 	- [[pin-utils]]::: https://github.com/mvduin/bbb-pin-utils
 	- [[py-uio]]::: https://github.com/mvduin/py-uio
 	- [[dtb debian]]
-	- 
-- [[GPIO subsytem]]
-- [[GPIO - day01]]
-- [[GPIO - Before]]
-- [ ] [[GPIO]]
-	- [ ] [[Ch 25 GPIO]]
-	- [ ] [[GPIO-cheatsheet]]
-- [ ] [barebox-gpio](content/barebox-gpio.md)
-- [ ] [[libgpiod]]
 - [[content/dotfile]]
 - [[vim]]
 	- [ ] [vim-fugitive](content/vim-fugitive.md)
@@ -129,13 +93,38 @@
 - [ ] [[Design patterns]]
 - [ ] [sigrok](content/sigrok.md)
 - [ ] [neovim](content/neovim.md)
-- [ ] [German language](content/German%20language.md)
 - [ ] 
 ___
 # Arduino
 
 - [ ] [[arduino-dotfiles]]
 - [ ] [[2025-06-07]] Which kernel I should use as reference?
-___
-- [ ] [كالستنكس](content/كالستنكس.md)
+
+# [barebox](content/barebox.md)
+- [ ] [[CHAPTER-REVEW]]  ⭐
+- [ ] How they add new machine: https://lore.barebox.org/barebox/20241107145722.5145-1-jmaselbas@zdiv.net/T/#me2a087ed11de3048873c6795e880b0ef0151df2e
+- [ ] [watchdog-barebox](watchdog-barebox)
+- [ ] [barebox-Sparse](content/barebox-Sparse.md)
+- [ ] [barebox-memory-barriers](content/barebox-memory-barriers.md)
+- [ ] [barebox io header](content/barebox%20io%20header.md)
+- [ ] [Sparse Semantic Parser](Clippings/Sparse%20Semantic%20Parser.md)
+- [ ] [[barebox-UART]]
+- [ ] [[barebox-Timer]]
+- [ ] [[barebox-PWM]]
+- [ ] [[barebox-I2C]]
+- Advanced:
+	- ADC - Chapter 12
+	- CAN - Chapter 23
+	- Ethernet - Chapter 14
+	- EDMA - Chapter 11
+	- GPMC - Chapter 7
+	- DDR Memory Controller - Chapter 6
+- [ ] [[GPIO subsytem]]
+- [ ] [[GPIO - day01]]
+- [ ] [[GPIO - Before]]
+- [ ] [[GPIO]]
+	- [ ] [[Ch 25 GPIO]]
+	- [ ] [[GPIO-cheatsheet]]
+- [ ] [barebox-gpio](content/barebox-gpio.md)
+- [ ] [[libgpiod]]
 - [ ] 

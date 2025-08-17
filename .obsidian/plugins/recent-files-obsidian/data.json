@@ -1,16 +1,20 @@
 {
   "recentFiles": [
     {
-      "basename": "ازاى اتعلم اللغه بسرعه",
-      "path": "content/ازاى اتعلم اللغه بسرعه.md"
+      "basename": "BeagleBone Black P8 and P9 GPIO Pin Reference",
+      "path": "content/BeagleBone Black P8 and P9 GPIO Pin Reference.md"
+    },
+    {
+      "basename": "tmux",
+      "path": "content/tmux.md"
     },
     {
       "basename": "README",
       "path": "README.md"
     },
     {
-      "basename": "German language",
-      "path": "content/German language.md"
+      "basename": "neovim",
+      "path": "content/neovim.md"
     },
     {
       "basename": "Ch 25 GPIO",
@@ -41,10 +45,6 @@
       "path": "content/GPIO subsytem.md"
     },
     {
-      "basename": "neovim",
-      "path": "content/neovim.md"
-    },
-    {
       "basename": "dts",
       "path": "content/dts.md"
     },
@@ -55,10 +55,6 @@
     {
       "basename": "sigrok",
       "path": "content/sigrok.md"
-    },
-    {
-      "basename": "كالستنكس",
-      "path": "content/كالستنكس.md"
     },
     {
       "basename": "barebox-led",
@@ -75,10 +71,6 @@
     {
       "basename": "barebox",
       "path": "content/barebox.md"
-    },
-    {
-      "basename": "tmux",
-      "path": "content/tmux.md"
     },
     {
       "basename": "dotfile",
