@@ -127,4 +127,4 @@ ___
 	- [ ] [[GPIO-cheatsheet]]
 - [ ] [barebox-gpio](content/barebox-gpio.md)
 - [ ] [[libgpiod]]
-- [ ] 
+- [ ] [gpio notes](content/gpio%20notes.md)
