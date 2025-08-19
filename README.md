@@ -120,11 +120,13 @@ ___
 	- GPMC - Chapter 7
 	- DDR Memory Controller - Chapter 6
 - [ ] [[GPIO subsytem]]
-- [ ] [[GPIO - day01]]
-- [ ] [[GPIO - Before]]
-- [ ] [[GPIO]]
+	- [ ] [[GPIO - day01]]
+	- [ ] [[GPIO - Before]]
+	- [ ] [[GPIO]]
 	- [ ] [[Ch 25 GPIO]]
 	- [ ] [[GPIO-cheatsheet]]
-- [ ] [barebox-gpio](content/barebox-gpio.md)
-- [ ] [[libgpiod]]
-- [ ] [gpio notes](content/gpio%20notes.md)
+	- [ ] [barebox-gpio](content/barebox-gpio.md)
+	- [ ] [[libgpiod]]
+	- [ ] [gpio notes](content/gpio%20notes.md)
+	- [ ] [BeagleBone Black P8 and P9 GPIO Pin Reference](content/BeagleBone%20Black%20P8%20and%20P9%20GPIO%20Pin%20Reference.md)
+- [ ] 

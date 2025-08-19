@@ -238,21 +238,18 @@ ____
 
 #### Clock Gating Features - مميزات بوابات الساعة:
 
-**بالعربي المصري:** فيه **خمس clock gating features** متاحة لتوفير الطاقة:
+فيه **خمس clock gating features** متاحة لتوفير الطاقة:
 
-**1. System Interface Logic Clock Gating:**
-
+**1. الـ System Interface Logic Clock Gating:**
 - **الوظيفة**: Clock للـ system interface logic ممكن يتقفل لما الـ module مش متوصل
 - **الشرط**: لو الـ **AUTOIDLE configuration bit** في الـ **GPIO_SYSCONFIG register** مضبوط
 - **البديل**: لو مش مضبوط، الـ logic ده بيكون **free running** على الـ interface clock
 
-**2. Input Data Sample Logic Clock Gating:**
-
+**2. الـ Input Data Sample Logic Clock Gating:**
 - **الوظيفة**: Clock للـ input data sample logic ممكن يتقفل لما الـ **data in register** مش متوصل
 - **الفايدة**: بيوفر طاقة لما مفيش قراءة للـ input data
 
-**3. Synchronous Events Detection Logic Clock Groups:**
-
+**3. الـ Synchronous Events Detection Logic Clock Groups:**
 - **التنظيم**: **أربع clock groups** مستخدمة للـ logic في الـ synchronous events detection
 - **التوزيع**: كل **8 input GPIO pins** لهم **separate enable signal** حسب الـ edge/level detection register setting
 - **الشرط**: لو group مش محتاج detection، الـ clock المقابل هيتقفل
@@ -261,13 +258,11 @@ ____
     - **N = 1**: مفيش gating والـ logic **free running** على الـ interface clock
     - **N = 2-8**: الـ logic بيشتغل على تردد مكافئ لـ **interface clock frequency divided by N**
 
-**4. Inactive Mode Clock Gating:**
-
+**4. الـ Inactive Mode Clock Gating:**
 - **التأثير**: **كل الـ internal clock paths مقفولة** في الـ Inactive mode
 - **الاستثناء**: مفيش استثناءات
 
-**5. Disabled Mode Clock Gating:**
-
+**5. الـ Disabled Mode Clock Gating:**
 - **التأثير**: **كل الـ internal clock paths** اللي **مش مستخدمة للـ system interface مقفولة**
 - **الوصول**: كل الـ **GPIO registers accessible synchronously** مع الـ interface clock
 - **الفايدة**: توفير طاقة مع الحفاظ على إمكانية الوصول للـ configuration
@@ -316,35 +311,30 @@ ____
 **ملاحظة 2:** لما الـ host processor يصدر **Sleep mode request**، الـ GPIO module بيروح للـ **Idle mode بس لو مفيش active bit** في الـ **GPIO_IRQSTATUS_RAW_n registers**.
 
 ### 25.3.2.4 Reset - الإعادة التشغيل
-#### OCP Hardware Reset Signal:
+باختصار: هنا هتعرف طريقتين للـ reset, واحده hardware والتانيه software وهتعرف RESETDONE bit دى اللى بتقرأها علشان تعرف الـ reset تم بنجاح او لا.
+#### أولاً Hardware Reset Signal:
 
 الـ **OCP hardware Reset signal** له **global reset action** على الـ GPIO:
-
-**التأثير الشامل:**
-
 - **كل الـ configuration registers** بترجع لحالتها الأولى
 - **كل الـ DFFs** اللي متزامنة مع الـ **Interface clock** أو **Debouncing clock** بترجع لحالتها الأولى
 - **كل الـ internal state machines** بترجع لحالتها الأولى
 - **الشرط**: لما الـ OCP hardware Reset يكون **active (low level)**
+#### ثانياً: Software Reset:
 
-#### RESETDONE Bit Monitoring:
+الـ **Software Reset** (**SOFTRESET bit** في الـ **GPIO_SYSCONFIG register**):
+- **التأثير**: له **نفس تأثير** الـ **OCP hardware Reset signal**
+- **التحديث**: الـ **RESETDONE bit** في الـ **GPIO_SYSSTATUS** بيتحدث في **نفس الشرط**
+- **الاستخدام**: بيسمحلك تعمل reset بـ software بدل hardware signal
+
+#### ثالثاً واخيراً: RESETDONE Bit Monitoring:
 
 الـ **RESETDONE bit** في الـ **GPIO_SYSSTATUS register**:
-
 - **الوظيفة**: بيراقب الـ **internal reset status**
 - **متى يتحط**: لما الـ **Reset يكمل على الـ OCP والـ Debouncing clock domains** سوا
 - **الفايدة**: بيأكدلك إن الـ reset خلص بنجاح على كل النطاقات
 
-#### Software Reset:
-
-الـ **Software Reset** (**SOFTRESET bit** في الـ **GPIO_SYSCONFIG register**):
-
-- **التأثير**: له **نفس تأثير** الـ **OCP hardware Reset signal**
-- **التحديث**: الـ **RESETDONE bit** في الـ **GPIO_SYSSTATUS** بيتحدث في **نفس الشرط**
-- **الاستخدام**: بيسمحلك تعمل reset بـ software بدل hardware signal
 ### الخلاصة والأهمية - Summary and Importance
 الـ **Clocking and Reset Strategy** مهم جداً لأنه:
-
 1. **بيحدد كيفية توفير الطاقة** من خلال الـ clock gating features المختلفة
 2. **بيضمن synchronization صحيحة** بين العمليات المختلفة
 3. **بيوفر مرونة في التحكم** في الـ power management

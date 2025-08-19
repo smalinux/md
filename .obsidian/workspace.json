@@ -10,33 +10,21 @@
           {
             "id": "b47f4cf9be424805",
             "type": "leaf",
+            "pinned": true,
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/tmux.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               },
+              "pinned": true,
               "icon": "lucide-file",
-              "title": "tmux"
+              "title": "README"
             }
           },
           {
-            "id": "fd3beb779006c347",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/BeagleBone Black P8 and P9 GPIO Pin Reference.md",
-                "mode": "preview",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "BeagleBone Black P8 and P9 GPIO Pin Reference"
-            }
-          },
-          {
-            "id": "4fe9e55738590345",
+            "id": "db3ddfe71f74db9f",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -47,6 +35,48 @@
               },
               "icon": "lucide-file",
               "title": "gpio notes"
+            }
+          },
+          {
+            "id": "fa8e750a4326632d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/barebox-gpio.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "barebox-gpio"
+            }
+          },
+          {
+            "id": "367027ab4ee3a5d4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/GPIO-cheatsheet.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "GPIO-cheatsheet"
+            }
+          },
+          {
+            "id": "75501ca9fe498fd9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/Ch 25 GPIO.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Ch 25 GPIO"
             }
           }
         ],
@@ -201,13 +231,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/gpio notes.md",
+                "file": "content/barebox-gpio.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of gpio notes"
+              "title": "Outline of barebox-gpio"
             }
           }
         ]
@@ -228,11 +258,18 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "4fe9e55738590345",
+  "active": "fa8e750a4326632d",
   "lastOpenFiles": [
-    "README.md",
     "content/gpio notes.md",
+    "content/GPIO-cheatsheet.md",
+    "content/barebox-gpio.md",
+    "README.md",
+    "content/Ch 25 GPIO.md",
     "content/BeagleBone Black P8 and P9 GPIO Pin Reference.md",
+    "content/GPIO.md",
+    "content/GPIO - Before.md",
+    "content/GPIO - day01.md",
+    "content/GPIO subsytem.md",
     "content/tmux.md",
     "raindrop/BBB/Linux Networking How The Kernel Handles A TCP Connection.md",
     "raindrop/BBB/استعباد الشعوب - Google Search.md",
@@ -241,14 +278,7 @@
     "content/ازاى اتعلم اللغه بسرعه.md",
     "content/German language.md",
     "content/كالستنكس.md",
-    "content/Ch 25 GPIO.md",
     "raindrop/BBB/GitHub - eunomia-bpfbpf-developer-tutorial eBPF Developer Tutorial Learning eBPF Step by Step with Examples.md",
-    "content/GPIO.md",
-    "content/GPIO-cheatsheet.md",
-    "content/GPIO - Before.md",
-    "content/GPIO - day01.md",
-    "content/barebox-gpio.md",
-    "content/GPIO subsytem.md",
     "raindrop/BBB/Understanding the Structure of a Linux Kernel Device Driver - Sergio Prado, Toradex.md",
     "content/dts.md",
     "content/watchdog-barebox.md",

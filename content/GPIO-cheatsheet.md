@@ -19,6 +19,19 @@ Base Address + Offset    Register Name           Purpose
 0x190-0x194             Set/Clear Output        Atomic operations
 ```
 
+الـ **GPIO_DATAOUT** هو **32-bit register** بيحدد قيم الـ **output pins** (0 أو 1) لكل pin في الـ GPIO module، وبيتحدث **synchronously** مع الـ interface clock.
+
+الـ **GPIO_SYSCONFIG** هو register بيتحكم في **power management** و **system configuration** للـ GPIO module، زي الـ **AUTOIDLE** (clock gating)، **ENAWAKEUP** (wake-up capability)، **SOFTRESET** (software reset)، و **IDLEMODE** (idle behavior).
+- الـ IDLEMODE اللى بيحدد ننيم الـ GPIO modules ولا لا. بمعنى آخر **IDLEMODE** هو **2-bit field** في الـ GPIO_SYSCONFIG register بيحدد سلوك الـ GPIO لما النظام يطلب **sleep mode**: **0=Force-Idle** (فوري مع منع wake-up)، **1=No-Idle** (مش بيدخل idle)، **2/3=Smart-Idle** (بيقيم الحالة الداخلية قبل دخول idle).
+- الـ ENAWAKEUP لو مش معمولها set الجهاز مش يعرف يصحى ابداً. بمعنى آخر **ENAWAKEUP** هو **bit** في الـ GPIO_SYSCONFIG register بيفعل أو يمنع الـ **wake-up capability** للـ GPIO module **globally** - لو **0** الـ GPIO_IRQWAKEN مالوش تأثير، لو **1** الـ wake-up requests تشتغل عادي.
+- الـ **SOFTRESET** هو **bit** في الـ GPIO_SYSCONFIG register بيعمل **software reset** للـ GPIO module بنفس تأثير الـ **hardware reset**، وبيتمسح **automatically** بعد الـ reset ويحدث الـ **RESETDONE bit** لما يخلص.
+
+الـ **GPIO_SYSSTATUS** هو **read-only register** بيراقب **reset status** للـ GPIO module، والـ **RESETDONE bit** بيأكد إن الـ **reset اكتمل** على الـ **OCP** و **Debouncing clock domains** سوا.
+- الـ **RESETDONE** هو **status bit** في الـ GPIO_SYSSTATUS register بيكون **0** أثناء الـ **reset process** وبيصير **1** لما الـ **reset يكتمل** على الـ **OCP** و **Debouncing clock domains** سوا.
+- الـ **SOFTRESET** هو **bit** في الـ GPIO_SYSCONFIG register بيعمل **software reset** للـ GPIO module بنفس تأثير الـ **hardware reset**، وبيتمسح **automatically** بعد الـ reset ويحدث الـ **RESETDONE bit** لما يخلص.
+
+
+
 ## Quick Start Sequence
 
 ### Basic GPIO Setup Flow
