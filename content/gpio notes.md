@@ -39,6 +39,13 @@ arch/arm/mach-omap/am33xx_generic.c
 common/resource.c
 include/asm-generic/io.h
 
+device.h
+driver.h
+platform.h
+wd_core.c
+io.h
+<asm-generic/io.h>
+xfuncs.h
 ```
 
 TODO:
@@ -69,3 +76,18 @@ led2 {
 arch/arm/dts/am335x-bone-common-strip.dtsi
 ```
 
+# السؤال الأصعب: ايه هى نقطه البدايه؟
+ايه راكب على ايه؟
+الاجابه: البدايه هى الـ defconfig ⭐
+المفروض تبص فى kconfig كمان تبقى فاهم كويس جدا الـ unit دى اولها وآخرها فين
+كمان ملف MAINTAINER علشان تشوف الـ framework كله أوله وآخره فين...
+
+# barebox cmd
+$ led
+التحكم فى كل الـ leds اللى على جهازك... لازم ديما توفر دا لأى جهاز تحت ايدك
+$ trigger
+$ gpioinfo
+$ gpio_direction_input
+$ gpio_direction_output
+$ gpio_set_value
+$ gpio_get_value

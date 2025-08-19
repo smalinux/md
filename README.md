@@ -104,10 +104,9 @@ ___
 - [ ] [[CHAPTER-REVEW]]  ⭐
 - [ ] How they add new machine: https://lore.barebox.org/barebox/20241107145722.5145-1-jmaselbas@zdiv.net/T/#me2a087ed11de3048873c6795e880b0ef0151df2e
 - [ ] [watchdog-barebox](watchdog-barebox)
-- [ ] [barebox-Sparse](content/barebox-Sparse.md)
 - [ ] [barebox-memory-barriers](content/barebox-memory-barriers.md)
 - [ ] [barebox io header](content/barebox%20io%20header.md)
-- [ ] [Sparse Semantic Parser](Clippings/Sparse%20Semantic%20Parser.md)
+- [ ] C Sparse: [barebox-Sparse](content/barebox-Sparse.md) - [Sparse Semantic Parser](Clippings/Sparse%20Semantic%20Parser.md)
 - [ ] [[barebox-UART]]
 - [ ] [[barebox-Timer]]
 - [ ] [[barebox-PWM]]

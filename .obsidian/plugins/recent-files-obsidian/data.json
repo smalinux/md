@@ -1,8 +1,16 @@
 {
   "recentFiles": [
     {
+      "basename": "CHAPTER-REVEW",
+      "path": "content/CHAPTER-REVEW.md"
+    },
+    {
       "basename": "README",
       "path": "README.md"
+    },
+    {
+      "basename": "Sparse Semantic Parser",
+      "path": "Clippings/Sparse Semantic Parser.md"
     },
     {
       "basename": "gpio notes",
@@ -77,10 +85,6 @@
       "path": "content/dotfile.md"
     },
     {
-      "basename": "CHAPTER-REVEW",
-      "path": "content/CHAPTER-REVEW.md"
-    },
-    {
       "basename": "barebox-UART",
       "path": "content/barebox-UART.md"
     },
@@ -91,10 +95,6 @@
     {
       "basename": "barebox-memory-barriers",
       "path": "content/barebox-memory-barriers.md"
-    },
-    {
-      "basename": "Sparse Semantic Parser",
-      "path": "Clippings/Sparse Semantic Parser.md"
     },
     {
       "basename": "vim",
