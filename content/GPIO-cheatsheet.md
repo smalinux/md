@@ -38,18 +38,23 @@ Base Address + Offset    Register Name           Purpose
 - **GPIO_SYSCONFIG**: System configuration and power management
 - **GPIO_IRQSTATUS_RAW_0/1**: Raw interrupt status (all events)
 - **GPIO_IRQSTATUS_0/1**: Enabled interrupt status
+- 
 - **GPIO_IRQSTATUS_SET_0/1**: Interrupt enable registers
 - **GPIO_IRQSTATUS_CLR_0/1**: Interrupt disable registers
+- 
 - **GPIO_OE**: Output enable register (0=output, 1=input)
 - **GPIO_DATAIN**: Input data register (read-only)
+- 
 - **GPIO_DATAOUT**: Output data register
+- **GPIO_CLEARDATAOUT**: Clear data output register
+- **GPIO_SETDATAOUT**: Set data output register
+- 
 - **GPIO_LEVELDETECT0/1**: Level detection enable (low/high)
 - **GPIO_RISINGDETECT**: Rising edge detection enable
 - **GPIO_FALLINGDETECT**: Falling edge detection enable
 - **GPIO_DEBOUNCENABLE**: Debounce feature enable
 - **GPIO_DEBOUNCINGTIME**: Debounce timing configuration
-- **GPIO_CLEARDATAOUT**: Clear data output register
-- **GPIO_SETDATAOUT**: Set data output register
+
 
 ## Quick Start Sequence
 

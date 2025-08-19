@@ -80,7 +80,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -231,13 +231,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/gpio-ref-manual.md",
+                "file": "content/gpio notes.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of gpio-ref-manual"
+              "title": "Outline of gpio notes"
             }
           }
         ]
@@ -258,13 +258,13 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "fa8e750a4326632d",
+  "active": "db3ddfe71f74db9f",
   "lastOpenFiles": [
     "content/GPIO-cheatsheet.md",
-    "content/Ch 25 GPIO.md",
-    "README.md",
     "content/gpio-ref-manual.md",
     "content/gpio notes.md",
+    "content/Ch 25 GPIO.md",
+    "README.md",
     "content/BeagleBone Black P8 and P9 GPIO Pin Reference.md",
     "content/GPIO.md",
     "content/GPIO - Before.md",

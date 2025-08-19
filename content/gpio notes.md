@@ -48,5 +48,24 @@ TODO:
 > - 25.3.2.2
 > - 25.3.3.2
 > - 25.3.3.3
-> - 
+> - 25.3.4.4 هرجع اقرأه بعدين وهحاول اطبقه عملياً. عايز زرار مستقر!
+> - 25.3.4.5 مش متخيله عملياً. فى المستقبل يمكن الاقى حد لعب مع الجزء دا
+
+
+الملف دا اللى بيأثر على الـ heartbeat على بوردتى
+```
+# dts/src/arm/ti/omap/am335x-bone-common.dtsi
+
+led2 {
+	label = "beaglebone:green:heartbeat";
+	gpios = <&gpio1 21 GPIO_ACTIVE_HIGH>;
+	linux,default-trigger = "heartbeat";
+	default-state = "off";
+};
+```
+
+مش فاهم ايه لزمه الملف دا, لكن هسجله هنا بس علشان افتكر:
+```
+arch/arm/dts/am335x-bone-common-strip.dtsi
+```
 

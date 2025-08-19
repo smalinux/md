@@ -973,7 +973,7 @@ Result: Significant power savings in real applications
 ```
 
 
----
+
 
 ### الخلاصة التقنية
 
@@ -998,85 +998,98 @@ Result: Significant power savings in real applications
 - الـ**No performance penalty** للـ active groups
 ## 25.3.4.2 Set and Clear Instructions
 
-### المفهوم الأساسي
-
 وحدة **GPIO** تنفذ **set-and-clear protocol register update** للـ **data output** و **interrupt enable** و **wake-up enable registers**. هذا البروتوكول هو بديل لعمليات **atomic test and set** ويتكون من عمليات كتابة في عناوين مخصصة (عنوان واحد لتعيين البت(ات) وعنوان آخر لمسح البت(ات)).
 
 ### طرق الوصول للـ Registers
-
 يمكن الوصول للـ Registers بطريقتين:
-
 #### الطريقة المعيارية (Standard)
-
 عمليات قراءة وكتابة كاملة للـ register في العنوان الأساسي للـ register.
-
 #### طريقة Set and Clear (الموصى بها)
-
 عناوين منفصلة مُقدمة لتعيين (ومسح) البتات في الـ registers. الكتابة بـ 1 في هذه العناوين تعيّن (أو تمسح) البت المقابل في الـ register المكافئ؛ الكتابة بـ 0 ليس لها تأثير.
-صهيب: يعنى فيه عنوان انت بتكتب فيه, وفيه عنوان تانى بيتأثر بكتابتك. (مش متأكد)
-### آلية العمل
+صهيب: يعنى كل register مش ليه بس عنوان physical واحد, لكن فيه فعلياً 3 عناوين virtual, واحد للـ set و واحد للـ clear والاخير للـ physical
 
-البيانات المُراد كتابتها هي 1 في موضع(مواضع) البت المُراد مسحه (أو تعيينه) و 0 في البتات غير المتأثرة.
+**لكل register مدعوم، فيه 3 virtual addresses:**
+مثال:
+```
+Physical Register: GPIO_DATAOUT (Example)
+                      ↓
+├── Primary Address ──> [Normal R/W] ────> Base + 0x13C
+├── Set Address ──────> [Atomic Set] ────> Base + 0x194  
+└── Clear Address ────> [Atomic Clear] ──> Base + 0x190
+```
 
-لذلك، لهذه الـ registers، يتم تعريف ثلاثة عناوين لـ register فيزيائي واحد فريد. قراءة هذه العناوين لها نفس التأثير وترجع قيمة الـ register.
+**البدائل المتاحه لكل عمليه - Operation Logic:**
 
----
+```
+Write Operation Effects:
+├── Write to Primary ──→ [Complete Register Update]
+├── Write 1 to Set ──→ [Set Corresponding Bits Only]
+├── Write 1 to Clear ──→ [Clear Corresponding Bits Only]  
+└── Write 0 to Set/Clear ──→ [No Effect on Any Bits]
 
-## 25.3.4.2.1 Clear Instruction - تعليمات المسح
+Read Operation Effects:
+All Three Addresses ──→ [Return Same Physical Register Value]
+```
 
-### 25.3.4.2.1.1 Clear Interrupt Enable Registers (GPIO_IRQSTATUS_CLR_0 and GPIO_IRQSTATUS_CLR_1)
+#### امثله:
 
+**Data Output Registers:**
+صهيب: آآآآ اخيراً فهم ايه لزمه التسميه دى والفروقات مابينها! مفيش فرق :)
+```
+GPIO_DATAOUT ──> Primary Register
+├── GPIO_SETDATAOUT ──> Set Operation Address
+└── GPIO_CLEARDATAOUT ──> Clear Operation Address
+```
+
+**Interrupt Enable Registers:**
+
+```
+GPIO_IRQSTATUS_SET_0/1 ──> Set Operation Address (Enable IRQ)
+GPIO_IRQSTATUS_CLR_0/1 ──> Clear Operation Address (Disable IRQ)
+```
+
+**Wake-up Enable Registers:**
+
+```
+GPIO_SETWKUENA ──→ Set Operation Address (Enable Wake-up)
+GPIO_CLEARWKUENA ──→ Clear Operation Address (Disable Wake-up)
+```
+
+### 25.3.4.2.1 Clear Instruction - تعليمات المسح
+صهيب: السكشن دا تافه, وقرآءته من الـ ref مباشر اسهل
+#### 25.3.4.2.1.1 Clear Interrupt Enable Registers (GPIO_IRQSTATUS_CLR_0 and GPIO_IRQSTATUS_CLR_1)
 #### عملية الكتابة
-
-عملية كتابة في **clear interrupt enable1** (أو **enable2**) register تمسح البت المقابل في **interrupt enable1** (أو **enable2**) register عندما يكون البت المكتوب 1؛ البت المكتوب بـ 0 ليس له تأثير.
-
+عملية كتابة 1 في **clear interrupt enable1** (أو **enable2**) register تمسح البت المقابل في **interrupt enable1** (أو **enable2**) register عندما يكون البت المكتوب 1؛ البت المكتوب بـ 0 ليس له تأثير.
 #### عملية القراءة
-
 قراءة **clear interrupt enable1** (أو **enable2**) register ترجع قيمة **interrupt enable1** (أو **enable2**) register.
 
-### 25.3.4.2.1.2 Clear Wake-up Enable Register (GPIO_CLEARWKUENA)
-
+#### 25.3.4.2.1.2 Clear Wake-up Enable Register (GPIO_CLEARWKUENA)
 #### عملية الكتابة
-
 عملية كتابة في **clear wake-up enable register** تمسح البت المقابل في **wake-up enable register** عندما يكون البت المكتوب 1؛ البت المكتوب بـ 0 ليس له تأثير.
-
 #### عملية القراءة
-
 قراءة **clear wake-up enable register** ترجع قيمة **wake-up enable register**.
 
-### 25.3.4.2.1.3 Clear Data Output Register (GPIO_CLEARDATAOUT)
-
+#### 25.3.4.2.1.3 Clear Data Output Register (GPIO_CLEARDATAOUT)
 #### عملية الكتابة
-
 عملية كتابة في **clear data output register** تمسح البت المقابل في **data output register** عندما يكون البت المكتوب 1؛ البت المكتوب بـ 0 ليس له تأثير.
-
 #### عملية القراءة
-
 قراءة **clear data output register** ترجع قيمة **data output register**.
 
-### 25.3.4.2.1.4 Clear Instruction Example - مثال على تعليمة المسح
-
+#### 25.3.4.2.1.4 Clear Instruction Example - مثال على تعليمة المسح
 #### الحالة الابتدائية
-
 افترض أن **data output register** (أو أحد **interrupt/wake-up enable registers**) يحتوي على القيمة الثنائية `0000 0001 0000 0001h`، وتريد مسح البت 0.
-
 #### التنفيذ
-
 مع ميزة **clear instruction**، اكتب `0000 0000 0000 0001h` في عنوان **clear data output register** (أو في عنوان **clear interrupt/wake-up enable register**).
-
 #### النتيجة
-
 بعد عملية الكتابة هذه، قراءة **data output register** (أو **interrupt/wake-up enable register**) ترجع `0000 0001 0000 0000h`؛ البت 0 تم مسحه.
-
 #### ملاحظة التمثيل
-
 رغم أن **general-purpose interface registers** عرضها 32 بت، فقط الـ 16 بت الأقل أهمية ممثلة في هذا المثال.
 
 ---
 
-## 25.3.4.2.2 Set Instruction - تعليمات التعيين
-
-### 25.3.4.2.2.1 Set Interrupt Enable Registers (GPIO_IRQSTATUS_SET_0 and GPIO_IRQSTATUS_SET_1)
+### 25.3.4.2.2 Set Instruction - تعليمات التعيين
+صهيب: السكشن دا تافه, وقرآءته من الـ ref مباشر اسهل
+#### 25.3.4.2.2.1 Set Interrupt Enable Registers (GPIO_IRQSTATUS_SET_0 and GPIO_IRQSTATUS_SET_1)
 
 #### عملية الكتابة
 
@@ -1086,7 +1099,7 @@ Result: Significant power savings in real applications
 
 قراءة **set interrupt enable1** (أو **enable2**) register ترجع قيمة **interrupt enable1** (أو **enable2**) register.
 
-### 25.3.4.2.2.2 Set Wake-up Enable Register (GPIO_SETWKUENA)
+#### 25.3.4.2.2.2 Set Wake-up Enable Register (GPIO_SETWKUENA)
 
 #### عملية الكتابة
 
@@ -1096,7 +1109,7 @@ Result: Significant power savings in real applications
 
 قراءة **set wake-up enable register** ترجع قيمة **wake-up enable register**.
 
-### 25.3.4.2.2.3 Set Data Output Register (GPIO_SETDATAOUT)
+#### 25.3.4.2.2.3 Set Data Output Register (GPIO_SETDATAOUT)
 
 #### عملية الكتابة
 
@@ -1106,7 +1119,7 @@ Result: Significant power savings in real applications
 
 قراءة **set data output register** ترجع قيمة **data output register**.
 
-### 25.3.4.2.2.4 Set Instruction Example - مثال على تعليمة التعيين
+#### 25.3.4.2.2.4 Set Instruction Example - مثال على تعليمة التعيين
 
 #### الحالة الابتدائية
 
@@ -1124,7 +1137,7 @@ Result: Significant power savings in real applications
 
 رغم أن **general-purpose interface registers** عرضها 32 بت، فقط الـ 16 بت الأقل أهمية ممثلة في هذا المثال.
 
----
+
 
 ## الخلاصة التقنية
 
@@ -1133,10 +1146,13 @@ Result: Significant power savings in real applications
 1. **نموذج توفير الطاقة**: من خلال تجميع **edge/level detection** في مجموعات من 8 بتات، مما يسمح بإغلاق الساعات للمجموعات غير المستخدمة.
     
 2. **نموذج Set/Clear**: بروتوكول آمن للتعامل مع الـ registers يتجنب مشاكل **race conditions** من خلال توفير عناوين منفصلة للتعيين والمسح بدلاً من عمليات **read-modify-write** التقليدية.
-    
 
 كلا النموذجين يهدفان إلى تحسين الأداء وتوفير الطاقة والموثوقية في التشغيل.
 
+____
+____
+____
+____
 ____
 _____
 # 25.3.4.1: Power Saving by Grouping the Edge/Level Detection
@@ -1936,27 +1952,3 @@ _____
 - **تحسين pull-up resistor values** للحصول على أفضل أداء
 
 هذا التصميم يوفر **keyboard interface** فعالة وموثوقة باستخدام **GPIO** العادي مع الحد الأدنى من **external components**.
-
-
-
-
-_____
-_____
-_____
-# الجزء العملى:
-الملف دا اللى بيأثر على الـ heartbeat على بوردتى
-```
-# dts/src/arm/ti/omap/am335x-bone-common.dtsi
-
-led2 {
-	label = "beaglebone:green:heartbeat";
-	gpios = <&gpio1 21 GPIO_ACTIVE_HIGH>;
-	linux,default-trigger = "heartbeat";
-	default-state = "off";
-};
-```
-
-مش فاهم ايه لزمه الملف دا, لكن هسجله هنا بس علشان افتكر:
-```
-arch/arm/dts/am335x-bone-common-strip.dtsi
-```

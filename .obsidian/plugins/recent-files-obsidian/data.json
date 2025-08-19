@@ -1,12 +1,16 @@
 {
   "recentFiles": [
     {
-      "basename": "gpio-ref-manual",
-      "path": "content/gpio-ref-manual.md"
+      "basename": "gpio notes",
+      "path": "content/gpio notes.md"
     },
     {
       "basename": "GPIO-cheatsheet",
       "path": "content/GPIO-cheatsheet.md"
+    },
+    {
+      "basename": "gpio-ref-manual",
+      "path": "content/gpio-ref-manual.md"
     },
     {
       "basename": "Ch 25 GPIO",
@@ -15,10 +19,6 @@
     {
       "basename": "README",
       "path": "README.md"
-    },
-    {
-      "basename": "gpio notes",
-      "path": "content/gpio notes.md"
     },
     {
       "basename": "BeagleBone Black P8 and P9 GPIO Pin Reference",
