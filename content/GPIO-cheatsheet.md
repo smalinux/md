@@ -43,6 +43,7 @@ Base Address + Offset    Register Name           Purpose
 - **GPIO_IRQSTATUS_CLR_0/1**: Interrupt disable registers
 - 
 - **GPIO_OE**: Output enable register (0=output, 1=input)
+- 
 - **GPIO_DATAIN**: Input data register (read-only)
 - 
 - **GPIO_DATAOUT**: Output data register

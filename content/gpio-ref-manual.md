@@ -236,7 +236,7 @@ ____
 
 **تحميل البيانات:** البيانات المحملة في الـ **data output register (GPIO_DATAOUT)** بتتحط على الـ output GPIO pins **synchronously** مع الـ **rising edge** من الـ interface clock.
 
-#### Clock Gating Features - مميزات بوابات الساعة:
+#### Clock Gating Features - مميزات قفل الساعة:
 
 فيه **خمس clock gating features** متاحة لتوفير الطاقة:
 
@@ -253,7 +253,7 @@ ____
 - **التنظيم**: **أربع clock groups** مستخدمة للـ logic في الـ synchronous events detection
 - **التوزيع**: كل **8 input GPIO pins** لهم **separate enable signal** حسب الـ edge/level detection register setting
 - **الشرط**: لو group مش محتاج detection، الـ clock المقابل هيتقفل
-- **Clock Gating Scheme**: كل الـ channels كمان مقفولة باستخدام **'one out of N' scheme**
+- الـ**Clock Gating Scheme**: كل الـ channels كمان مقفولة باستخدام **'one out of N' scheme**
     - **N values**: 1, 2, 4, أو 8
     - **N = 1**: مفيش gating والـ logic **free running** على الـ interface clock
     - **N = 2-8**: الـ logic بيشتغل على تردد مكافئ لـ **interface clock frequency divided by N**
