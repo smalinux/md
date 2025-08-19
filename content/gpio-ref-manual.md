@@ -333,7 +333,7 @@ ____
 - **متى يتحط**: لما الـ **Reset يكمل على الـ OCP والـ Debouncing clock domains** سوا
 - **الفايدة**: بيأكدلك إن الـ reset خلص بنجاح على كل النطاقات
 
-### الخلاصة والأهمية - Summary and Importance
+### الخلاصة والأهمية
 الـ **Clocking and Reset Strategy** مهم جداً لأنه:
 1. **بيحدد كيفية توفير الطاقة** من خلال الـ clock gating features المختلفة
 2. **بيضمن synchronization صحيحة** بين العمليات المختلفة
@@ -360,7 +360,7 @@ GPIO_IRQSTATUS_SET_0 register  // للـ interrupt line 0
 GPIO_IRQSTATUS_SET_1 register  // للـ interrupt line 1
 ```
 
-**لايه مهم؟** عشان تقدر تختار أي interrupt line هيستقبل الـ event من الـ GPIO pin ده.
+**لماذا مهم؟** عشان تقدر تختار أي interrupt line هيستقبل الـ event من الـ GPIO pin ده.
 
 **2. تحديد نوع الأحداث المطلوب كشفها:**
 
@@ -402,7 +402,7 @@ GPIO_FALLINGDETECT |= (1 << k);  // تفعيل falling edge detection
 // تفعيل interrupt للـ pin ده على interrupt line 0
 GPIO_IRQSTATUS_SET_0 |= (1 << k);
 ```
-
+### رغى
 **ليه مفيد؟**
 
 - **توفير معالج**: مش محتاج polling مستمر
@@ -608,11 +608,7 @@ Latency = 140 ns + (10 × 30.5 μs) + (3 × 30.5 μs)
 - **اختيار Clock Frequency**: توازن بين power consumption و response time
 - **تحديد Debouncing Parameters**: حسب نوعية الـ input signals المتوقعة
 
----
-
 ### 25.3.3.3 Asynchronous Path: Wake-up Request Generation - الحدث الثانى
-
-**بالعربي المصري:**
 
 #### آلية العمل في الـ Idle Mode:
 
@@ -863,69 +859,143 @@ _____
 
 ## 25.3.4.1 Power Saving by Grouping the Edge/Level Detection
 
-### الفكرة الأساسية للتجميع
+### فهم المشكلة الأساسية
+#### ليه نحتاج Power Saving؟
+**المشكلة:** الـ GPIO module فيه **edge/level detection logic** محتاج **clocks** للتشغيل. لو كل الـ 32 pins تشتغل نفس الوقت، هيكون فيه استهلاك طاقة عالي حتى لو مش كلها مستخدمة.
+**الحل:** تقسيم الـ 32 pins إلى **4 groups** كل group فيه **8 pins**، وكل group له **clock منفصل** يقدر يتقفل لو مش مستخدم.
 
-كل **GPIO module** ينفذ أربعة **gated clocks** تُستخدم بواسطة منطق **edge/level detection** لتوفير الطاقة. كل مجموعة من ثمانية **input GPIO pins** تولد إشارة تمكين منفصلة (**separate enable signal**) اعتماداً على إعداد **edge/level detection register** (نظراً لأن المدخل 32 بت، يتم تعريف أربع مجموعات من ثمانية مدخلات لكل **GPIO module**).
+```
+32 GPIO Pins Division:
+Group 0: Pins [7:0]   ──> Clock Enable Signal 0
+Group 1: Pins [15:8]  ──> Clock Enable Signal 1  
+Group 2: Pins [23:16] ──> Clock Enable Signal 2
+Group 3: Pins [31:24] ──> Clock Enable Signal 3
+```
+#### Clock Enable Logic:
+**كل group له bit واحده, لو شغاله الساعه هتشتغل لـ 8 pins مره واحده:**
+```
+For Group N (8 pins):
+GPIO_LEVELDETECT0[group_bits] ───┐
+GPIO_LEVELDETECT1[group_bits] ───┤
+.                                |──> Clock Enable N
+GPIO_RISINGDETECT[group_bits] ───|
+GPIO_FALLINGDETECT[group_bits] ──┘
 
-### آلية توفير الطاقة
+If ANY bit set in ANY register for this group ──> Clock ON
+If ALL bits clear in ALL registers for this group ──> Clock OFF (Power Saved)
+```
+- **أي bit مضبوط** في أي من الـ 4 registers للـ group ده = Clock شغال
+- **كل الـ bits فاضية** في كل الـ 4 registers للـ group ده = Clock مقفول
+### تأثير تغيير الإعدادات - Detection Pipeline Cleaning
+**المشكلة:** لما تغير الـ detection settings، فيه **synchronization pipeline** جوه الـ GPIO logic محتاج **"cleaning"** عشان يشتغل صح.
+**الحل - 5 Clock Cycles Requirement:**
 
-إذا كانت مجموعة لا تتطلب **edge/level detection**، فإن الساعة المقابلة يتم **gating** (قطعها). تجميع **edge/level enable** يمكن أن يوفر استهلاك الطاقة للوحدة كما هو موضح في المثال التالي:
+الصوره دى بتوضح الوضع الحالى وليه فيه مشكله:
+```
+Pipeline Stages Analysis:
+Stage 1: [Input Sampling] ──→ Stage 2: [Edge Detection] ──→ 
+Stage 3: [Level Detection] ──→ Stage 4: [Event Combination] ──→ 
+Stage 5: [Output Generation]
 
-### تحليل السيناريوهات
+When Settings Change:
+T0: Write new settings ──→ [Pipeline has old data]
+T1-T5: Pipeline cleaning ──→ [Old data shifts out]
+T6: Clean detection ──→ [Reliable results start]
+```
 
-إذا كان أي من الـ registers التالية:
+**الطريقة الصحيحة لتغيير الاعدادات:**
+```
+Recommended Sequence:
+1. Set new detection required ──→ [Enable new functionality]
+2. Keep clock running ──→ [Don't disable old settings yet]
+3. Wait 5 clock cycles ──→ [Pipeline cleans automatically]  
+4. Disable previous setting ──→ [Remove unneeded detection]
 
-- **GPIO_LEVELDETECT0**
-- **GPIO_LEVELDETECT1**
-- **GPIO_RISINGDETECT**
-- **GPIO_FALLINGDETECT**
+Advantage: Immediate detection start (no 5-cycle delay)
+```
 
-#### السيناريو الأول: استهلاك طاقة عالي
+**الطريقة الخاطئة:**
 
-إذا تم تعيينها إلى `0101 0101h`، فإن جميع الساعات تكون نشطة (استهلاك الطاقة مرتفع).
+```
+Wrong Sequence:
+1. Disable old detection ──→ [Clock might be gated]
+2. Enable new detection ──→ [Clock starts, pipeline dirty]
+3. Wait 5 clock cycles ──→ [Required cleaning delay]
 
-**التحليل**: القيمة `0101 0101h` تعني أن البتات 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30 مفعلة. هذا يعني أن كل مجموعة من الثمان بتات تحتوي على بتات مفعلة:
+Disadvantage: 5-cycle delay before reliable detection
+```
 
-- المجموعة الأولى (البتات 0-7): تحتوي على البتات 0, 2, 4, 6
-- المجموعة الثانية (البتات 8-15): تحتوي على البتات 8, 10, 12, 14
-- المجموعة الثالثة (البتات 16-23): تحتوي على البتات 16, 18, 20, 22
-- المجموعة الرابعة (البتات 24-31): تحتوي على البتات 24, 26, 28, 30
+**Clock Gating Impact:**
 
-لذلك جميع الساعات الأربع تكون نشطة.
+```
+Independent Clock Groups Benefit:
+If Group Requires No Detection ──→ Clock Gated Immediately
+If Group Requires Detection ──→ Clock Active for Reliable Operation
 
-#### السيناريو الثاني: استهلاك طاقة منخفض
+Granular Control:
+- مش محتاج تشغل كل الـ module عشان group واحد
+- كل group مستقل في قرار الـ power management
+```
 
-إذا تم تعيينها إلى `0000 00FFh`، فإن ساعة واحدة فقط تكون نشطة.
+### الآثار العملية على التصميم - Design Strategy Implications
 
-**التحليل**: القيمة `0000 00FFh` تعني أن البتات 0-7 فقط مفعلة. هذا يعني:
+**Pin Allocation Planning:**
+```
+Smart Pin Grouping:
+Group 0 [7:0]: Critical/High-Speed Signals
+Group 1 [15:8]: Moderate-Speed Control Signals  
+Group 2 [23:16]: Low-Speed Status Signals
+Group 3 [31:24]: Spare/Future Expansion
 
-- المجموعة الأولى (البتات 0-7): تحتوي على جميع البتات الثمانية مفعلة
-- المجموعات الأخرى (8-15, 16-23, 24-31): لا تحتوي على أي بتات مفعلة
+Benefit: Keep critical signals in active groups
+        Unused groups automatically save power
+```
 
-لذلك ساعة واحدة فقط (المجموعة الأولى) تكون نشطة.
+**Power Management Benefits:**
+```
+Scenario Analysis:
+├── All pins active ──→ 0% power savings
+├── 3 groups active ──→ 25% power savings
+├── 2 groups active ──→ 50% power savings  
+├── 1 group active ──→ 75% power savings
+└── No groups active ──→ 100% power savings (module idle)
+```
 
-### ملاحظة هامة حول التوقيت
+**Real-World Application:**
+```
+Typical Embedded System:
+- قليل من الـ pins محتاجة high-speed detection
+- معظم الـ pins محتاجة occasional monitoring  
+- بعض الـ pins مش مستخدمة خالص
 
-عندما يتم تمكين الساعات بالكتابة إلى الـ registers:
+Result: Significant power savings in real applications
+        without performance compromise
+```
 
-- **GPIO_LEVELDETECT0**
-- **GPIO_LEVELDETECT1**
-- **GPIO_RISINGDETECT**
-- **GPIO_FALLINGDETECT**
-
-فإن الكشف يبدأ بعد **5 clock cycles**. هذه الفترة مطلوبة لتنظيف **synchronization edge/level detection pipeline**.
-
-### استقلالية الآلية
-
-الآلية مستقلة لكل **clock group**. إذا تم تشغيل الساعة من قبل قبل تنفيذ إعداد جديد، فإن ما يُوصى به هو:
-
-1. **أولاً**: تعيين الكشف الجديد المطلوب
-2. **ثانياً**: تعطيل الإعداد السابق (إذا لزم الأمر)
-
-بهذه الطريقة، الساعة المقابلة لا يتم **gating** والكشف يبدأ فوراً.
 
 ---
 
+### الخلاصة التقنية
+
+**بالعربي المصري:**
+
+هذا النظام بيحقق **توازن مثالي** بين:
+
+**الأداء (Performance):**
+
+- الـ **Reliable detection** لكل الـ pins المفعلة
+- الـ**5-cycle pipeline** بيضمن accurate results
+- الـ**Independent group control** مابيأثرش على بعض
+
+**توفير الطاقة (Power Efficiency):**
+- الـ**Up to 75% power savings** في الحالات المثلى
+- الـ**Automatic clock gating** للـ groups غير المستخدمة
+- الـ**Granular control** بدل module-wide control
+
+**سهولة الاستخدام (Usability):**
+- الـ**Transparent operation** - المطور مايحتاجش يتدخل
+- الـ**Automatic optimization** حسب الاستخدام الفعلي
+- الـ**No performance penalty** للـ active groups
 ## 25.3.4.2 Set and Clear Instructions
 
 ### المفهوم الأساسي
@@ -943,7 +1013,7 @@ _____
 #### طريقة Set and Clear (الموصى بها)
 
 عناوين منفصلة مُقدمة لتعيين (ومسح) البتات في الـ registers. الكتابة بـ 1 في هذه العناوين تعيّن (أو تمسح) البت المقابل في الـ register المكافئ؛ الكتابة بـ 0 ليس لها تأثير.
-
+صهيب: يعنى فيه عنوان انت بتكتب فيه, وفيه عنوان تانى بيتأثر بكتابتك. (مش متأكد)
 ### آلية العمل
 
 البيانات المُراد كتابتها هي 1 في موضع(مواضع) البت المُراد مسحه (أو تعيينه) و 0 في البتات غير المتأثرة.

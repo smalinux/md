@@ -1,24 +1,24 @@
 {
   "recentFiles": [
     {
-      "basename": "barebox-gpio",
-      "path": "content/barebox-gpio.md"
-    },
-    {
-      "basename": "gpio notes",
-      "path": "content/gpio notes.md"
+      "basename": "gpio-ref-manual",
+      "path": "content/gpio-ref-manual.md"
     },
     {
       "basename": "GPIO-cheatsheet",
       "path": "content/GPIO-cheatsheet.md"
     },
     {
+      "basename": "Ch 25 GPIO",
+      "path": "content/Ch 25 GPIO.md"
+    },
+    {
       "basename": "README",
       "path": "README.md"
     },
     {
-      "basename": "Ch 25 GPIO",
-      "path": "content/Ch 25 GPIO.md"
+      "basename": "gpio notes",
+      "path": "content/gpio notes.md"
     },
     {
       "basename": "BeagleBone Black P8 and P9 GPIO Pin Reference",

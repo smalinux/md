@@ -43,12 +43,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/barebox-gpio.md",
+                "file": "content/gpio-ref-manual.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "barebox-gpio"
+              "title": "gpio-ref-manual"
             }
           },
           {
@@ -231,13 +231,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/barebox-gpio.md",
+                "file": "content/gpio-ref-manual.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of barebox-gpio"
+              "title": "Outline of gpio-ref-manual"
             }
           }
         ]
@@ -260,11 +260,11 @@
   },
   "active": "fa8e750a4326632d",
   "lastOpenFiles": [
-    "content/gpio notes.md",
     "content/GPIO-cheatsheet.md",
-    "content/barebox-gpio.md",
-    "README.md",
     "content/Ch 25 GPIO.md",
+    "README.md",
+    "content/gpio-ref-manual.md",
+    "content/gpio notes.md",
     "content/BeagleBone Black P8 and P9 GPIO Pin Reference.md",
     "content/GPIO.md",
     "content/GPIO - Before.md",

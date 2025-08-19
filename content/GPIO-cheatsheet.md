@@ -30,7 +30,26 @@ Base Address + Offset    Register Name           Purpose
 - الـ **RESETDONE** هو **status bit** في الـ GPIO_SYSSTATUS register بيكون **0** أثناء الـ **reset process** وبيصير **1** لما الـ **reset يكتمل** على الـ **OCP** و **Debouncing clock domains** سوا.
 - الـ **SOFTRESET** هو **bit** في الـ GPIO_SYSCONFIG register بيعمل **software reset** للـ GPIO module بنفس تأثير الـ **hardware reset**، وبيتمسح **automatically** بعد الـ reset ويحدث الـ **RESETDONE bit** لما يخلص.
 
+الـ **GPIO_IRQSTATUS_SET_0** هو register بيفعل **interrupt generation** للـ **interrupt line 0** - كتابة **1** في أي bit بتفعل interrupt للـ pin المقابل، وكتابة **0** مالهاش تأثير.
 
+## ملخص الـ Registers
+
+- **GPIO_REVISION**: Module revision information
+- **GPIO_SYSCONFIG**: System configuration and power management
+- **GPIO_IRQSTATUS_RAW_0/1**: Raw interrupt status (all events)
+- **GPIO_IRQSTATUS_0/1**: Enabled interrupt status
+- **GPIO_IRQSTATUS_SET_0/1**: Interrupt enable registers
+- **GPIO_IRQSTATUS_CLR_0/1**: Interrupt disable registers
+- **GPIO_OE**: Output enable register (0=output, 1=input)
+- **GPIO_DATAIN**: Input data register (read-only)
+- **GPIO_DATAOUT**: Output data register
+- **GPIO_LEVELDETECT0/1**: Level detection enable (low/high)
+- **GPIO_RISINGDETECT**: Rising edge detection enable
+- **GPIO_FALLINGDETECT**: Falling edge detection enable
+- **GPIO_DEBOUNCENABLE**: Debounce feature enable
+- **GPIO_DEBOUNCINGTIME**: Debounce timing configuration
+- **GPIO_CLEARDATAOUT**: Clear data output register
+- **GPIO_SETDATAOUT**: Set data output register
 
 ## Quick Start Sequence
 
