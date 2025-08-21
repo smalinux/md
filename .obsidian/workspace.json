@@ -85,12 +85,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/CHAPTER-REVEW.md",
+                "file": "content/tmux.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "CHAPTER-REVEW"
+              "title": "tmux"
             }
           }
         ],
@@ -158,7 +158,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -245,13 +245,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/CHAPTER-REVEW.md",
+                "file": "content/tmux.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of CHAPTER-REVEW"
+              "title": "Outline of tmux"
             }
           }
         ]
@@ -274,6 +274,7 @@
   },
   "active": "a759063f21ea16dd",
   "lastOpenFiles": [
+    "content/CHAPTER-REVEW.md",
     "README.md",
     "Clippings/Sparse Semantic Parser.md",
     "content/gpio notes.md",
@@ -299,7 +300,6 @@
     "content/watchdog-barebox.md",
     "content/sigrok.md",
     "Clippings/Tasks.md",
-    "content/barebox-led.md",
     "assets/Pasted image 20250624214456.png",
     "assets/Pasted image 20250624214437.png",
     "content/barebox",

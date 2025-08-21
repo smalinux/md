@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "tmux",
+      "path": "content/tmux.md"
+    },
+    {
       "basename": "CHAPTER-REVEW",
       "path": "content/CHAPTER-REVEW.md"
     },
@@ -43,10 +47,6 @@
     {
       "basename": "GPIO subsytem",
       "path": "content/GPIO subsytem.md"
-    },
-    {
-      "basename": "tmux",
-      "path": "content/tmux.md"
     },
     {
       "basename": "neovim",
