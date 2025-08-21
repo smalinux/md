@@ -91,3 +91,41 @@ $ gpio_direction_input
 $ gpio_direction_output
 $ gpio_set_value
 $ gpio_get_value
+
+
+_____________________________
+________________
+
+```bash
+Ubuntu@barebox $ grep GPIO build/.config
+CONFIG_GENERIC_GPIO=y
+CONFIG_CMD_GPIO=y
+CONFIG_OF_GPIO=y
+# CONFIG_MDIO_BUS_MUX_GPIO is not set
+# CONFIG_DRIVER_SPI_GPIO is not set
+# CONFIG_I2C_GPIO is not set
+CONFIG_LED_GPIO=y
+CONFIG_LED_GPIO_OF=y
+# CONFIG_LED_GPIO_RGB is not set
+# CONFIG_LED_GPIO_BICOLOR is not set
+# CONFIG_KEYBOARD_GPIO is not set
+# CONFIG_GPIO_WATCHDOG is not set
+CONFIG_GPIOLIB=y --------------------------------> gpiolib.c
+# GPIO
+CONFIG_GPIO_GENERIC=y
+# CONFIG_GPIO_74164 is not set
+# CONFIG_GPIO_74XX_MMIO is not set
+CONFIG_GPIO_GENERIC_PLATFORM=y
+CONFIG_GPIO_OMAP=y ------------------------------> gpio-omap.c
+# CONFIG_GPIO_PCA953X is not set
+# CONFIG_GPIO_PCF857X is not set
+# CONFIG_GPIO_PL061 is not set
+# CONFIG_GPIO_DESIGNWARE is not set
+# CONFIG_GPIO_SX150X is not set
+# CONFIG_GPIO_SIFIVE is not set
+# CONFIG_GPIO_LATCH is not set
+# end of GPIO
+# CONFIG_POWER_RESET_GPIO is not set
+# CONFIG_POWER_RESET_GPIO_RESTART is not set
+```
+

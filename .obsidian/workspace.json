@@ -78,23 +78,9 @@
               "icon": "lucide-file",
               "title": "GPIO-cheatsheet"
             }
-          },
-          {
-            "id": "a759063f21ea16dd",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/tmux.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "tmux"
-            }
           }
         ],
-        "currentTab": 5
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -171,7 +157,7 @@
       {
         "id": "6e62e6effa0a0ca0",
         "type": "tabs",
-        "dimension": 18.587360594795538,
+        "dimension": 32.342007434944236,
         "children": [
           {
             "id": "4a73e64d7de27870",
@@ -237,7 +223,7 @@
       {
         "id": "48b3f69d0314be7b",
         "type": "tabs",
-        "dimension": 81.41263940520446,
+        "dimension": 67.65799256505576,
         "children": [
           {
             "id": "05a75b5dfb1f9cb3",
@@ -245,13 +231,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/tmux.md",
+                "file": "content/gpio notes.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of tmux"
+              "title": "Outline of gpio notes"
             }
           }
         ]
@@ -272,13 +258,14 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "a759063f21ea16dd",
+  "active": "db3ddfe71f74db9f",
   "lastOpenFiles": [
+    "content/GPIO-cheatsheet.md",
     "content/CHAPTER-REVEW.md",
+    "content/tmux.md",
     "README.md",
     "Clippings/Sparse Semantic Parser.md",
     "content/gpio notes.md",
-    "content/GPIO-cheatsheet.md",
     "content/Ch 25 GPIO.md",
     "content/gpio-ref-manual.md",
     "content/BeagleBone Black P8 and P9 GPIO Pin Reference.md",
@@ -286,7 +273,6 @@
     "content/GPIO - Before.md",
     "content/GPIO - day01.md",
     "content/GPIO subsytem.md",
-    "content/tmux.md",
     "raindrop/BBB/Linux Networking How The Kernel Handles A TCP Connection.md",
     "raindrop/BBB/استعباد الشعوب - Google Search.md",
     "raindrop/BBB/TCPIP for Programmers.md",

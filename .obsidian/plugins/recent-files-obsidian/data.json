@@ -1,12 +1,20 @@
 {
   "recentFiles": [
     {
-      "basename": "tmux",
-      "path": "content/tmux.md"
+      "basename": "gpio notes",
+      "path": "content/gpio notes.md"
+    },
+    {
+      "basename": "GPIO-cheatsheet",
+      "path": "content/GPIO-cheatsheet.md"
     },
     {
       "basename": "CHAPTER-REVEW",
       "path": "content/CHAPTER-REVEW.md"
+    },
+    {
+      "basename": "tmux",
+      "path": "content/tmux.md"
     },
     {
       "basename": "README",
@@ -15,14 +23,6 @@
     {
       "basename": "Sparse Semantic Parser",
       "path": "Clippings/Sparse Semantic Parser.md"
-    },
-    {
-      "basename": "gpio notes",
-      "path": "content/gpio notes.md"
-    },
-    {
-      "basename": "GPIO-cheatsheet",
-      "path": "content/GPIO-cheatsheet.md"
     },
     {
       "basename": "gpio-ref-manual",
