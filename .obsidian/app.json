@@ -4,7 +4,7 @@
   "newFileLocation": "folder",
   "newFileFolderPath": "content",
   "newLinkFormat": "relative",
-  "showUnsupportedFiles": false,
+  "showUnsupportedFiles": true,
   "attachmentFolderPath": "assets",
   "readableLineLength": false
 }
