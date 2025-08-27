@@ -1,247 +1,76 @@
-it+0x1/0x1c
-initcall-> myir_devices_init+0x1/0x60
-initcall-> physom_coredevice_init+0x1/0x1c
-+0x6b/0x88) from [<9fe00e7b>] (start_barebox+0x4b/0x80)
-[<9fe00e7b>] (start_barebox+0x4b/0x80) from [<9fe6d5a9>] (barebox_non_pbl_start+0xb5/0xdc)
-[<9fe6d5a9>] (barebox_non_pbl_start+0xb5/0xdc) from [<9fe00005>] (__bare_init_start+0x1/0xc)
-[<9fe70021>] (unwind_backtrace+0x1/0x84) from [<9fe111c9>] (register_device+0x9/0xfc)
-[<9fe111c9>] (register_device+0x9/0xfc) from [<9fe388f9>] (i2c_new_device+0x3d/0x68)
-[<9fe388f9>] (i2c_new_device+0x3d/0x68) from [<9fe389b7>] (of_i2c_register_devices+0x93/0xb0)
-[<9fe389b7>] (of_i2c_register_devices+0x93/0xb0) from [<9fe38d53>] (i2c_add_numbered_adapter+0xa7/0x110)
-[<9fe38d53>] (i2c_add_numbered_adapter+0xa7/0x110) from [<9fe386ef>] (i2c_omap_probe+0x313/0x468)
-[<9fe386ef>] (i2c_omap_probe+0x313/0x468) from [<9fe10fd9>] (device_probe+0x59/0xf4)
-[<9fe10fd9>] (device_probe+0x59/0xf4) from [<9fe1108b>] (match+0x17/0x30)
-[<9fe1108b>] (match+0x17/0x30) from [<9fe1135b>] (register_driver+0x6b/0x88)
-[<9fe1135b>] (register_driver+0x6b/0x88) from [<9fe00e7b>] (start_barebox+0x4b/0x80)
-[<9fe00e7b>] (start_barebox+0x4b/0x80) from [<9fe6d5a9>] (barebox_non_pbl_start+0xb5/0xdc)
-[<9fe6d5a9>] (barebox_non_pbl_start+0xb5/0xdc) from [<9fe00005>] (__bare_init_start+0x1/0xc)
-[<9fe70021>] (unwind_backtrace+0x1/0x84) from [<9fe111c9>] (register_device+0x9/0xfc)
-[<9fe111c9>] (register_device+0x9/0xfc) from [<9fe388f9>] (i2c_new_device+0x3d/0x68)
-[<9fe388f9>] (i2c_new_device+0x3d/0x68) from [<9fe389b7>] (of_i2c_register_devices+0x93/0xb0)
-[<9fe389b7>] (of_i2c_register_devices+0x93/0xb0) from [<9fe38d53>] (i2c_add_numbered_adapter+0xa7/0x110)
-[<9fe38d53>] (i2c_add_numbered_adapter+0xa7/0x110) from [<9fe386ef>] (i2c_omap_probe+0x313/0x468)
-[<9fe386ef>] (i2c_omap_probe+0x313/0x468) from [<9fe10fd9>] (device_probe+0x59/0xf4)
-[<9fe10fd9>] (device_probe+0x59/0xf4) from [<9fe1108b>] (match+0x17/0x30)
-[<9fe1108b>] (match+0x17/0x30) from [<9fe1135b>] (register_driver+0x6b/0x88)
-[<9fe1135b>] (register_driver+0x6b/0x88) from [<9fe00e7b>] (start_barebox+0x4b/0x80)
-[<9fe00e7b>] (start_barebox+0x4b/0x80) from [<9fe6d5a9>] (barebox_non_pbl_start+0xb5/0xdc)
-[<9fe6d5a9>] (barebox_non_pbl_start+0xb5/0xdc) from [<9fe00005>] (__bare_init_start+0x1/0xc)
-[<9fe70021>] (unwind_backtrace+0x1/0x84) from [<9fe111c9>] (register_device+0x9/0xfc)
-[<9fe111c9>] (register_device+0x9/0xfc) from [<9fe388f9>] (i2c_new_device+0x3d/0x68)
-[<9fe388f9>] (i2c_new_device+0x3d/0x68) from [<9fe389b7>] (of_i2c_register_devices+0x93/0xb0)
-[<9fe389b7>] (of_i2c_register_devices+0x93/0xb0) from [<9fe38d53>] (i2c_add_numbered_adapter+0xa7/0x110)
-[<9fe38d53>] (i2c_add_numbered_adapter+0xa7/0x110) from [<9fe386ef>] (i2c_omap_probe+0x313/0x468)
-[<9fe386ef>] (i2c_omap_probe+0x313/0x468) from [<9fe10fd9>] (device_probe+0x59/0xf4)
-[<9fe10fd9>] (device_probe+0x59/0xf4) from [<9fe1108b>] (match+0x17/0x30)
-[<9fe1108b>] (match+0x17/0x30) from [<9fe1135b>] (register_driver+0x6b/0x88)
-[<9fe1135b>] (register_driver+0x6b/0x88) from [<9fe00e7b>] (start_barebox+0x4b/0x80)
-[<9fe00e7b>] (start_barebox+0x4b/0x80) from [<9fe6d5a9>] (barebox_non_pbl_start+0xb5/0xdc)
-[<9fe6d5a9>] (barebox_non_pbl_start+0xb5/0xdc) from [<9fe00005>] (__bare_init_start+0x1/0xc)
-i2c-omap 4819c000.i2c@0.of: bus 2 rev0.11 at 100 kHz
-initcall-> omap_mmc_driver_register+0x1/0xc
-    probe-> 48060000.mmc@0.of
-[<9fe70021>] (unwind_backtrace+0x1/0x84) from [<9fe111c9>] (register_device+0x9/0xfc)
-[<9fe111c9>] (register_device+0x9/0xfc) from [<9fe3ab7f>] (mci_register+0x57/0x150)
-[<9fe3ab7f>] (mci_register+0x57/0x150) from [<9fe3af01>] (omap_mmc_probe+0x85/0xa4)
-[<9fe3af01>] (omap_mmc_probe+0x85/0xa4) from [<9fe10fd9>] (device_probe+0x59/0xf4)
-[<9fe10fd9>] (device_probe+0x59/0xf4) from [<9fe1108b>] (match+0x17/0x30)
-[<9fe1108b>] (match+0x17/0x30) from [<9fe1135b>] (register_driver+0x6b/0x88)
-[<9fe1135b>] (register_driver+0x6b/0x88) from [<9fe00e7b>] (start_barebox+0x4b/0x80)
-[<9fe00e7b>] (start_barebox+0x4b/0x80) from [<9fe6d5a9>] (barebox_non_pbl_start+0xb5/0xdc)
-[<9fe6d5a9>] (barebox_non_pbl_start+0xb5/0xdc) from [<9fe00005>] (__bare_init_start+0x1/0xc)
-omap-hsmmc 48060000.mmc@0.of: registered as mmc0
-mmc0: detected SD card version 2.0
-mmc0: registered mmc0
-    probe-> 481d8000.mmc@0.of
-[<9fe70021>] (unwind_backtrace+0x1/0x84) from [<9fe111c9>] (register_device+0x9/0xfc)
-[<9fe111c9>] (register_device+0x9/0xfc) from [<9fe3ab7f>] (mci_register+0x57/0x150)
-[<9fe3ab7f>] (mci_register+0x57/0x150) from [<9fe3af01>] (omap_mmc_probe+0x85/0xa4)
-[<9fe3af01>] (omap_mmc_probe+0x85/0xa4) from [<9fe10fd9>] (device_probe+0x59/0xf4)
-[<9fe10fd9>] (device_probe+0x59/0xf4) from [<9fe1108b>] (match+0x17/0x30)
-[<9fe1108b>] (match+0x17/0x30) from [<9fe1135b>] (register_driver+0x6b/0x88)
-[<9fe1135b>] (register_driver+0x6b/0x88) from [<9fe00e7b>] (start_barebox+0x4b/0x80)
-[<9fe00e7b>] (start_barebox+0x4b/0x80) from [<9fe6d5a9>] (barebox_non_pbl_start+0xb5/0xdc)
-[<9fe6d5a9>] (barebox_non_pbl_start+0xb5/0xdc) from [<9fe00005>] (__bare_init_start+0x1/0xc)
-omap-hsmmc 481d8000.mmc@0.of: registered as mmc1
-mmc1: detected MMC card version 5.0
-mmc1: registered mmc1
-initcall-> led_gpio_of_driver_register+0x1/0xc
-    probe-> leds.of
-initcall-> at24_driver_register+0x1/0x24
-    probe-> 24c2560
-[<9fe70021>] (unwind_backtrace+0x1/0x84) from [<9fe111c9>] (register_device+0x9/0xfc)
-[<9fe111c9>] (register_device+0x9/0xfc) from [<9fe3c2d1>] (nvmem_register+0x79/0x134)
-[<9fe3c2d1>] (nvmem_register+0x79/0x134) from [<9fe3bdf7>] (at24_probe+0x197/0x274)
-[<9fe3bdf7>] (at24_probe+0x197/0x274) from [<9fe1101b>] (device_probe+0x9b/0xf4)
-[<9fe1101b>] (device_probe+0x9b/0xf4) from [<9fe1108b>] (match+0x17/0x30)
-[<9fe1108b>] (match+0x17/0x30) from [<9fe1135b>] (register_driver+0x6b/0x88)
-[<9fe1135b>] (register_driver+0x6b/0x88) from [<9fe00e7b>] (start_barebox+0x4b/0x80)
-[<9fe00e7b>] (start_barebox+0x4b/0x80) from [<9fe6d5a9>] (barebox_non_pbl_start+0xb5/0xdc)
-[<9fe6d5a9>] (barebox_non_pbl_start+0xb5/0xdc) from [<9fe00005>] (__bare_init_start+0x1/0xc)
-    probe-> 24c2561
-[<9fe70021>] (unwind_backtrace+0x1/0x84) from [<9fe111c9>] (register_device+0x9/0xfc)
-[<9fe111c9>] (register_device+0x9/0xfc) from [<9fe3c2d1>] (nvmem_register+0x79/0x134)
-[<9fe3c2d1>] (nvmem_register+0x79/0x134) from [<9fe3bdf7>] (at24_probe+0x197/0x274)
-[<9fe3bdf7>] (at24_probe+0x197/0x274) from [<9fe1101b>] (device_probe+0x9b/0xf4)
-[<9fe1101b>] (device_probe+0x9b/0xf4) from [<9fe1108b>] (match+0x17/0x30)
-[<9fe1108b>] (match+0x17/0x30) from [<9fe1135b>] (register_driver+0x6b/0x88)
-[<9fe1135b>] (register_driver+0x6b/0x88) from [<9fe00e7b>] (start_barebox+0x4b/0x80)
-[<9fe00e7b>] (start_barebox+0x4b/0x80) from [<9fe6d5a9>] (barebox_non_pbl_start+0xb5/0xdc)
-[<9fe6d5a9>] (barebox_non_pbl_start+0xb5/0xdc) from [<9fe00005>] (__bare_init_start+0x1/0xc)
-    probe-> 24c2562
-[<9fe70021>] (unwind_backtrace+0x1/0x84) from [<9fe111c9>] (register_device+0x9/0xfc)
-[<9fe111c9>] (register_device+0x9/0xfc) from [<9fe3c2d1>] (nvmem_register+0x79/0x134)
-[<9fe3c2d1>] (nvmem_register+0x79/0x134) from [<9fe3bdf7>] (at24_probe+0x197/0x274)
-[<9fe3bdf7>] (at24_probe+0x197/0x274) from [<9fe1101b>] (device_probe+0x9b/0xf4)
-[<9fe1101b>] (device_probe+0x9b/0xf4) from [<9fe1108b>] (match+0x17/0x30)
-[<9fe1108b>] (match+0x17/0x30) from [<9fe1135b>] (register_driver+0x6b/0x88)
-[<9fe1135b>] (register_driver+0x6b/0x88) from [<9fe00e7b>] (start_barebox+0x4b/0x80)
-[<9fe00e7b>] (start_barebox+0x4b/0x80) from [<9fe6d5a9>] (barebox_non_pbl_start+0xb5/0xdc)
-[<9fe6d5a9>] (barebox_non_pbl_start+0xb5/0xdc) from [<9fe00005>] (__bare_init_start+0x1/0xc)
-    probe-> 24c2563
-[<9fe70021>] (unwind_backtrace+0x1/0x84) from [<9fe111c9>] (register_device+0x9/0xfc)
-[<9fe111c9>] (register_device+0x9/0xfc) from [<9fe3c2d1>] (nvmem_register+0x79/0x134)
-[n_pbl_start+0xb5/0xdc) from [<9fe00005>] (__bare_init_start+0x1/0xc)
-    probe-> 24c2564
-[<9fe70021>] (unwind_backtrace+0x1/0x84) from [<9fe111c9>] (register_device+0x9/0xfc)
-[<9fe111c9>] (register_device+0x9/0xfc) from [<9fe3c2d1>] (nvmem_register+0x79/0x134)
-[<9fe3c2d1>] (nvmem_register+0x79/0x134) from [<9fe3bdf7>] (at24_probe+0x197/0x274)
-[<9fe3bdf7>] (at24_probe+0x197/0x274) from [<9fe1101b>] (device_probe+0x9b/0xf4)
-[<9fe1101b>] (device_probe+0x9b/0xf4) from [<9fe1108b>] (match+0x17/0x30)
-[<9fe1108b>] (match+0x17/0x30) from [<9fe1135b>] (register_driver+0x6b/0x88)
-[<9fe1135b>] (register_driver+0x6b/0x88) from [<9fe00e7b>] (start_barebox+0x4b/0x80)
-[<9fe00e7b>] (start_barebox+0x4b/0x80) from [<9fe6d5a9>] (barebox_non_pbl_start+0xb5/0xdc)
-[<9fe6d5a9>] (barebox_non_pbl_start+0xb5/0xdc) from [<9fe00005>] (__bare_init_start+0x1/0xc)
-initcall-> state_driver_register+0x1/0xc
-initcall-> mem_init+0x1/0x60
-[<9fe70021>] (unwind_backtrace+0x1/0x84) from [<9fe111c9>] (register_device+0x9/0xfc)
-[<9fe111c9>] (register_device+0x9/0xfc) from [<9fe3c093>] (mem_init+0x43/0x60)
-[<9fe3c093>] (mem_init+0x43/0x60) from [<9fe00e7b>] (start_barebox+0x4b/0x80)
-[<9fe00e7b>] (start_barebox+0x4b/0x80) from [<9fe6d5a9>] (barebox_non_pbl_start+0xb5/0xdc)
-[<9fe6d5a9>] (barebox_non_pbl_start+0xb5/0xdc) from [<9fe00005>] (__bare_init_start+0x1/0xc)
-    probe-> mem0
-    probe-> mem1
-initcall-> nvmem_cells_driver_register+0x1/0xc
-initcall-> omap_wdt_driver_register+0x1/0xc
-    probe-> 44e35000.wdt@0.of
-omap_wdt 44e35000.wdt@0.of: ===> 0x44e35000
-[<9fe70021>] (unwind_backtrace+0x1/0x84) from [<9fe111c9>] (register_device+0x9/0xfc)
-[<9fe111c9>] (register_device+0x9/0xfc) from [<9fe11913>] (class_register_device+0x23/0x5a)
-[<9fe11913>] (class_register_device+0x23/0x5a) from [<9fe3c925>] (watchdog_register+0x21/0x1c0)
-[<9fe3c925>] (watchdog_register+0x21/0x1c0) from [<9fe3cc85>] (omap_wdt_probe+0x4d/0xa8)
-[<9fe3cc85>] (omap_wdt_probe+0x4d/0xa8) from [<9fe10fd9>] (device_probe+0x59/0xf4)
-[<9fe10fd9>] (device_probe+0x59/0xf4) from [<9fe1108b>] (match+0x17/0x30)
-[<9fe1108b>] (match+0x17/0x30) from [<9fe1135b>] (register_driver+0x6b/0x88)
-[<9fe1135b>] (register_driver+0x6b/0x88) from [<9fe00e7b>] (start_barebox+0x4b/0x80)
-[<9fe00e7b>] (start_barebox+0x4b/0x80) from [<9fe6d5a9>] (barebox_non_pbl_start+0xb5/0xdc)
-[<9fe6d5a9>] (barebox_non_pbl_start+0xb5/0xdc) from [<9fe00005>] (__bare_init_start+0x1/0xc)
-omap_wdt 44e35000.wdt@0.of: OMAP Watchdog Timer Rev 0x01
-initcall-> of_partition_init+0x1/0x4c
-initcall-> gpmc_driver_register+0x1/0xc
-initcall-> prng_init+0x1/0x28
-initcall-> null_init+0x1/0x28
-initcall-> full_init+0x1/0x28
-initcall-> zero_init+0x1/0x28
-initcall-> md5_digest_register+0x1/0xc
-initcall-> init_net_poll+0x1/0x14
-initcall-> netconsole_init+0x1/0x100
+
+
+barebox 2025.03.0-00253-g1964c3b5aaf2-dirty #7 Thu Aug 28 00:33:46 CEST 2025
+
+
+Board: TI AM335x BeagleBone black
+d5a9>] (barebox_non_pbl_start+0xb5/0xdc) from [<9fe00005>] (__bare_init_start+0x1/0xc)
+initcall-> net_init+0x1/0x58
+initcall-> init_fs+0x1/0x1c
+initcall-> omap_init+0x1/0xac
+initcall-> ns16550_serial_driver_register+0x1/0xc
+    probe-> 44e09000.serial@0.of
 [<9fe70021>] (unwind_backtrace+0x1/0x84) from [<9fe111c9>] (register_device+0x9/0xfc)
 [<9fe111c9>] (register_device+0x9/0xfc) from [<9fe04dbf>] (console_register+0x4b/0x248)
-[<9fe04dbf>] (console_register+0x4b/0x248) from [<9fe5aac5>] (netconsole_init+0x5d/0x100)
-[<9fe5aac5>] (netconsole_init+0x5d/0x100) from [<9fe00e7b>] (start_barebox+0x4b/0x80)
-[<9fe00e7b>] (start_barebox+0x4b/0x80) from [<9fe6d5a9>] (barebox_non_pbl_start+0xb5/0xdc)
-[<9fe6d5a9>] (barebox_non_pbl_start+0xb5/0xdc) from [<9fe00005>] (__bare_init_start+0x1/0xc)
-netconsole: registered as netconsole-1
-initcall-> beagle_devices_init+0x1/0xe8
-initcall-> physom_devices_init+0x1/0x1c0
-initcall-> omap_bootm_barebox+0x1/0x1c
-initcall-> barebox_memory_areas_init+0x1/0x4
-initcall-> barebox_of_populate+0x1/0x14
-initcall-> of_register_memory_fixup+0x1/0x10
-initcall-> bootm_init+0x1/0x174
-initcall-> init_command_list+0x1/0x2c
-initcall-> display_meminfo+0x1/0x34
-malloc space: 0x8ff00000 -> 0x9fdfffff (size 255 MiB)
-initcall-> of_register_bootargs_fixup+0x1/0x2c
-initcall-> init_boot+0x1/0x80
-i> 47401300.usb-phy@1300.of
-am335x-phy-driver 47401300.usb-phy@1300.of: am_usbphy 900715dc enabled
-    probe-> 47401400.usb@1400.of
-musb-hdrc: ConfigData=0xde (UTMI-8, dyn FIFOs, bulk combine, bulk split, HB-ISO Rx, HB-ISO Tx, SoftConn)
-musb-hdrc: MHDRC RTL version 2.0
-musb-hdrc: setup fifo_mode 4
-musb-hdrc: 28/31 max ep, 16384/16384 memory
-[<9fe70021>] (unwind_backtrace+0x1/0x84) from [<9fe111c9>] (register_device+0x9/0xfc)
-[<9fe111c9>] (register_device+0x9/0xfc) from [<9fe34679>] (usb_add_gadget+0x55/0x1a0)
-[<9fe34679>] (usb_add_gadget+0x55/0x1a0) from [<9fe309a7>] (musb_gadget_setup+0x77/0xc8)
-[<9fe309a7>] (musb_gadget_setup+0x77/0xc8) from [<9fe2ee11>] (musb_init_controller+0x4a1/0x590)
-[<9fe2ee11>] (musb_init_controller+0x4a1/0x590) from [<9fe31535>] (dsps_probe+0x165/0x194)
-[<9fe31535>] (dsps_probe+0x165/0x194) from [<9fe10fd9>] (device_probe+0x59/0xf4)
+[<9fe04dbf>] (console_register+0x4b/0x248) from [<9fe16275>] (ns16550_probe+0x211/0x41c)
+[<9fe16275>] (ns16550_probe+0x211/0x41c) from [<9fe10fd9>] (device_probe+0x59/0xf4)
 [<9fe10fd9>] (device_probe+0x59/0xf4) from [<9fe1108b>] (match+0x17/0x30)
-[<9fe1108b>] (match+0x17/0x30) from [<9fe1111b>] (device_probe_deferred+0x77/0x9c)
-[<9fe1111b>] (device_probe_deferred+0x77/0x9c) from [<9fe00e7b>] (start_barebox+0x4b/0x80)
-[<9fe00e7b>] (start_barebox+0x4b/0x80) from [<9fe6d5a9>] (barebox_non_pbl_start+0xb5/0xdc)
-[<9fe6d5a9>] (barebox_non_pbl_start+0xb5/0xdc) from [<9fe00005>] (__bare_init_start+0x1/0xc)
-[<9fe70021>] (unwind_backtrace+0x1/0x84) from [<9fe111c9>] (register_device+0x9/0xfc)
-[<9fe111c9>] (register_device+0x9/0xfc) from [<9fe346af>] (usb_add_gadget+0x8b/0x1a0)
-[<9fe346af>] (usb_add_gadget+0x8b/0x1a0) from [<9fe309a7>] (musb_gadget_setup+0x77/0xc8)
-[<9fe309a7>] (musb_gadget_setup+0x77/0xc8) from [<9fe2ee11>] (musb_init_controller+0x4a1/0x590)
-[<9fe2ee11>] (musb_init_controller+0x4a1/0x590) from [<9fe31535>] (dsps_probe+0x165/0x194)
-[<9fe31535>] (dsps_probe+0x165/0x194) from [<9fe10fd9>] (device_probe+0x59/0xf4)
-[<9fe10fd9>] (device_probe+0x59/0xf4) from [<9fe1108b>] (match+0x17/0x30)
-[<9fe1108b>] (match+0x17/0x30) from [<9fe1111b>] (device_probe_deferred+0x77/0x9c)
-[<9fe1111b>] (device_probe_deferred+0x77/0x9c) from [<9fe00e7b>] (start_barebox+0x4b/0x80)
-[<9fe00e7b>] (start_barebox+0x4b/0x80) from [<9fe6d5a9>] (barebox_non_pbl_start+0xb5/0xdc)
-[<9fe6d5a9>] (barebox_non_pbl_start+0xb5/0xdc) from [<9fe00005>] (__bare_init_start+0x1/0xc)
-    probe-> 47401c00.usb@1800.of
-musb-hdrc: ConfigData=0xde (UTMI-8, dyn FIFOs, bulk combine, bulk split, HB-ISO Rx, HB-ISO Tx, SoftConn)
-musb-hdrc: MHDRC RTL version 2.0
-musb-hdrc: setup fifo_mode 4
-musb-hdrc: 28/31 max ep, 16384/16384 memory
-initcall-> led_blink_init+0x1/0x14
-initcall-> of_init_hostname+0x1/0x18
-initcall-> barebox_of_driver_init+0x1/0x48
-initcall-> eth_register_of_fixup+0x1/0x10
-initcall-> dhcp_global_init+0x1/0xf8
-initcall-> ifup_all_init+0x1/0x20
-initcall-> ubifs_init+0x1/0x48
-initcall-> pfc200_late_init+0x1/0x40
-initcall-> omap_env_init+0x1/0xd8
-[<9fe70021>] (unwind_backtrace+0x1/0x84) from [<9fe111c9>] (register_device+0x9/0xfc)
-[<9fe111c9>] (register_device+0x9/0xfc) from [<9fe5f835>] (mount+0xe5/0x1e0)
-[<9fe5f835>] (mount+0xe5/0x1e0) from [<9fe5f97f>] (cdev_mount_default+0x4f/0x78)
-[<9fe5f97f>] (cdev_mount_default+0x4f/0x78) from [<9fe6c20b>] (omap_env_init+0x57/0xd8)
-[<9fe6c20b>] (omap_env_init+0x57/0xd8) from [<9fe00e7b>] (start_barebox+0x4b/0x80)
-[<9fe00e7b>] (start_barebox+0x4b/0x80) from [<9fe6d5a9>] (barebox_non_pbl_start+0xb5/0xdc)
-[<9fe6d5a9>] (barebox_non_pbl_start+0xb5/0xdc) from [<9fe00005>] (__bare_init_start+0x1/0xc)
-    probe-> fat0
-initcall-> armlinux_register_image_handler+0x1/0x74
-initcall-> handoff_data_reserve+0x1/0x80
-initcall-> load_environment+0x1/0x2c
-initcall-> baltos_read_eeprom+0x1/0x2b8
-initcall-> usbgadget_autostart_init+0x1/0x18
-initcall-> populate_ethaddr+0x1/0x80
-initcalls done
-Executing '/env/init/automount'...
-Executing '/env/init/automount-ratp'...
-Executing '/env/init/ps1'...
-Executing '/env/init/usb-limit-1300'...
-changing USB current limit to 1300 mA... done
-
-Hit m for menu or any to stop autoboot:    3
-nitcall-> dummy_csrc_warn+0x1/0x2c
-initcall-> device_probe_deferred+0x1/0x9c
-    probe-> 47401c00.usb@1800.of
-    probe-> 47401400.usb@1400.of
-    probe-> 47401b00.usb-phy@1b00.of
-am335x-phy-driver 47401b00.usb-phy@1b00.of: am_usbphy 90071524 enabled
-    probe-<9fe3c2d1>] (nvmem_register+0x79/0x134) from [<9fe3bdf7>] (at24_probe+0x197/0x274)
-[<9fe3bdf7>] (at24_probe+0x197/0x274) from [<9fe1101b>] (device_probe+0x9b/0xf4)
-[<9fe1101b>] (device_probe+0x9b/0xf4) from [<9fe1108b>] (match+0x17/0x30)
 [<9fe1108b>] (match+0x17/0x30) from [<9fe1135b>] (register_driver+0x6b/0x88)
 [<9fe1135b>] (register_driver+0x6b/0x88) from [<9fe00e7b>] (start_barebox+0x4b/0x80)
 [<9fe00e7b>] (start_barebox+0x4b/0x80) from [<9fe6d5a9>] (barebox_non_pbl_start+0xb5/0xdc)
-[<9fe6d5a9>] (barebox_noinitcall-> baltos_devices_init+0x1/0x3c
+[<9fe6d5a9>] (barebox_non_pbl_start+0xb5/0xdc) from [<9fe00005>] (__bare_init_start+0x1/0xc)
+initcall-> beagle_console_init+0x1/0x38
+initcall-> dos_partition_init+0x1/0xc
+initcall-> of_stdoutpath_init+0x1/0x14
+initcall-> of_probe_memory+0x1/0x34
+initcall-> beagle_mem_init+0x1/0x1c
+initcall-> beaglebone_mem_init+0x1/0x3c
+initcall-> pfc200_mem_init+0x1/0x28
+initcall-> am33xx_scrm_driver_init+0x1/0x20
+    probe-> 44e10000.scm@0.of
+initcall-> __exceptions_stop+0x1/0x48
+[<9fe70021>] (unwind_backtrace+0x1/0x84) from [<9fe111c9>] (register_device+0x9/0xfc)
+[<9fe111c9>] (register_device+0x9/0xfc) from [<9fe118bd>] (add_child_device+0x2b/0x32)
+[<9fe118bd>] (add_child_device+0x2b/0x32) from [<9fe00093>] (__exceptions_stop+0x3b/0x48)
+[<9fe00093>] (__exceptions_stop+0x3b/0x48) from [<9fe00e7b>] (start_barebox+0x4b/0x80)
+[<9fe00e7b>] (start_barebox+0x4b/0x80) from [<9fe6d5a9>] (barebox_non_pbl_start+0xb5/0xdc)
+[<9fe6d5a9>] (barebox_non_pbl_start+0xb5/0xdc) from [<9fe00005>] (__bare_init_start+0x1/0xc)
+initcall-> mem_register_barebox+0x1/0x38
+initcall-> of_reserved_mem_walk+0x1/0x100
+initcall-> mmu_init+0x1/0x60
+initcall-> mem_malloc_resource+0x1/0x90
+initcall-> reset_source_init+0x1/0x40
+initcall-> usbgadget_globalvars_init+0x1/0x50
+initcall-> bootsource_init+0x1/0x38
+initcall-> cpsw_mdio_driver_register+0x1/0xc
+initcall-> register_mtdoob+0x1/0x14
+initcall-> usb_udc_init+0x1/0x14
+[<9fe70021>] (unwind_backtrace+0x1/0x84) from [<9fe111c9>] (register_device+0x9/0xfc)
+[<9fe111c9>] (register_device+0x9/0xfc) from [<9fe10d3b>] (bus_register+0x33/0x78)
+[<9fe10d3b>] (bus_register+0x33/0x78) from [<9fe3429f>] (usb_udc_init+0xb/0x14)
+[<9fe3429f>] (usb_udc_init+0xb/0x14) from [<9fe00e7b>] (start_barebox+0x4b/0x80)
+[<9fe00e7b>] (start_barebox+0x4b/0x80) from [<9fe6d5a9>] (barebox_non_pbl_start+0xb5/0xdc)
+[<9fe6d5a9>] (barebox_non_pbl_start+0xb5/0xdc) from [<9fe00005>] (__bare_init_start+0x1/0xc)
+initcall-> bgpio_driver_register+0x1/0xc
+initcall-> omap_gpio_driver_register+0x1/0xc
+    probe-> 44e07000.gpio@0.of
+    probe-> 4804c000.gpio@0.of
+    probe-> 481ac000.gpio@0.of
+    probe-> 481ae000.gpio@0.of
+initcall-> ext_init+0x1/0xc
+initcall-> ramfs_init+0x1/0xc
+initcall-> devfs_init+0x1/0xc
+initcall-> ubifs_init+0x1/0x70
+initcall-> tftp_init+0x1/0x30
+initcall-> nfs_init+0x1/0x50
+initcall-> fat_init+0x1/0xc
+initcall-> board_console_init+0x1/0xa4
+initcall-> beaglebone_devices_init+0x1/0x130
+detected 'BeagleBone Black'
+initcall-> beaglebone_coredevice_init+0x1/0x1c
+initcall-> myir_devices_init+0x1/0x60
+initcall-> physom_coredevice_init+0x1/0x1c
+initcall-> baltos_devices_init+0x1/0x3c
 initcall-> pfc200_devices_init+0x1/0x28
 initcall-> arm_request_stack+0x1/0x3c
 initcall-> mount_root+0x1/0x60
@@ -409,92 +238,296 @@ i2c-omap 44e0b000.i2c@0.of: bus 0 rev0.11 at 400 kHz
 [<9fe386ef>] (i2c_omap_probe+0x313/0x468) from [<9fe10fd9>] (device_probe+0x59/0xf4)
 [<9fe10fd9>] (device_probe+0x59/0xf4) from [<9fe1108b>] (match+0x17/0x30)
 [<9fe1108b>] (match+0x17/0x30) from [<9fe1135b>] (register_driver+0x6b/0x88)
-[<9fe1135b>] (register_driverbarebox@TI AM335x BeagleBone black:/ boot bnet
-Booting entry 'bnet'
-
-Loading ARM barebox image '/mnt/tftp/none-barebox-am335x-bone-black'
-exitcall-> fastboot_shutdown+0x1/0x38
-exitcall-> nv_exit+0x1/0x24
-exitcall-> state_shutdown+0x1/0x24
-exitcall-> devices_shutdown+0x1/0x64
-    remove-> tftp0
-    remove-> fat0
-    remove-> mdio0-phy00
-    remove-> 4a100000.switch@0.of
-    remove-> devfs0
-    remove-> ramfs0
-exitcall-> gsermod_exit+0x1/0xc
-exitcall-> acmmod_exit+0x1/0xc
-exitcall-> dfumod_exit+0x1/0xc
-exitcall-> fastbootmod_exit+0x1/0xc
-exitcall-> arch_shutdown+0x1/0x1a
-
-
-barebox 2025.03.0-00253-g1964c3b5aaf2-dirty #5 Thu Aug 28 00:18:27 CEST 2025
-
-
-Board: TI AM335x BeagleBone black
-d5a9>] (barebox_non_pbl_start+0xb5/0xdc) from [<9fe00005>] (__bare_init_start+0x1/0xc)
-initcall-> net_init+0x1/0x58
-initcall-> init_fs+0x1/0x1c
-initcall-> omap_init+0x1/0xac
-initcall-> ns16550_serial_driver_register+0x1/0xc
-    probe-> 44e09000.serial@0.of
+[<9fe1135b>] (register_driver+0x6b/0x88) from [<9fe00e7b>] (start_barebox+0x4b/0x80)
+[<9fe00e7b>] (start_barebox+0x4b/0x80) from [<9fe6d5a9>] (barebox_non_pbl_start+0xb5/0xdc)
+[<9fe6d5a9>] (barebox_non_pbl_start+0xb5/0xdc) from [<9fe00005>] (__bare_init_start+0x1/0xc)
 [<9fe70021>] (unwind_backtrace+0x1/0x84) from [<9fe111c9>] (register_device+0x9/0xfc)
-[<9fe111c9>] (register_device+0x9/0xfc) from [<9fe04dbf>] (console_register+0x4b/0x248)
-[<9fe04dbf>] (console_register+0x4b/0x248) from [<9fe16275>] (ns16550_probe+0x211/0x41c)
-[<9fe16275>] (ns16550_probe+0x211/0x41c) from [<9fe10fd9>] (device_probe+0x59/0xf4)
+[<9fe111c9>] (register_device+0x9/0xfc) from [<9fe388f9>] (i2c_new_device+0x3d/0x68)
+[<9fe388f9>] (i2c_new_device+0x3d/0x68) from [<9fe389b7>] (of_i2c_register_devices+0x93/0xb0)
+[<9fe389b7>] (of_i2c_register_devices+0x93/0xb0) from [<9fe38d53>] (i2c_add_numbered_adapter+0xa7/0x110)
+[<9fe38d53>] (i2c_add_numbered_adapter+0xa7/0x110) from [<9fe386ef>] (i2c_omap_probe+0x313/0x468)
+[<9fe386ef>] (i2c_omap_probe+0x313/0x468) from [<9fe10fd9>] (device_probe+0x59/0xf4)
 [<9fe10fd9>] (device_probe+0x59/0xf4) from [<9fe1108b>] (match+0x17/0x30)
 [<9fe1108b>] (match+0x17/0x30) from [<9fe1135b>] (register_driver+0x6b/0x88)
 [<9fe1135b>] (register_driver+0x6b/0x88) from [<9fe00e7b>] (start_barebox+0x4b/0x80)
 [<9fe00e7b>] (start_barebox+0x4b/0x80) from [<9fe6d5a9>] (barebox_non_pbl_start+0xb5/0xdc)
 [<9fe6d5a9>] (barebox_non_pbl_start+0xb5/0xdc) from [<9fe00005>] (__bare_init_start+0x1/0xc)
-initcall-> beagle_console_init+0x1/0x38
-initcall-> dos_partition_init+0x1/0xc
-initcall-> of_stdoutpath_init+0x1/0x14
-initcall-> of_probe_memory+0x1/0x34
-initcall-> beagle_mem_init+0x1/0x1c
-initcall-> beaglebone_mem_init+0x1/0x3c
-initcall-> pfc200_mem_init+0x1/0x28
-initcall-> am33xx_scrm_driver_init+0x1/0x20
-    probe-> 44e10000.scm@0.of
-initcall-> __exceptions_stop+0x1/0x48
 [<9fe70021>] (unwind_backtrace+0x1/0x84) from [<9fe111c9>] (register_device+0x9/0xfc)
-[<9fe111c9>] (register_device+0x9/0xfc) from [<9fe118bd>] (add_child_device+0x2b/0x32)
-[<9fe118bd>] (add_child_device+0x2b/0x32) from [<9fe00093>] (__exceptions_stop+0x3b/0x48)
-[<9fe00093>] (__exceptions_stop+0x3b/0x48) from [<9fe00e7b>] (start_barebox+0x4b/0x80)
+[<9fe111c9>] (register_device+0x9/0xfc) from [<9fe388f9>] (i2c_new_device+0x3d/0x68)
+[<9fe388f9>] (i2c_new_device+0x3d/0x68) from [<9fe389b7>] (of_i2c_register_devices+0x93/0xb0)
+[<9fe389b7>] (of_i2c_register_devices+0x93/0xb0) from [<9fe38d53>] (i2c_add_numbered_adapter+0xa7/0x110)
+[<9fe38d53>] (i2c_add_numbered_adapter+0xa7/0x110) from [<9fe386ef>] (i2c_omap_probe+0x313/0x468)
+[<9fe386ef>] (i2c_omap_probe+0x313/0x468) from [<9fe10fd9>] (device_probe+0x59/0xf4)
+[<9fe10fd9>] (device_probe+0x59/0xf4) from [<9fe1108b>] (match+0x17/0x30)
+[<9fe1108b>] (match+0x17/0x30) from [<9fe1135b>] (register_driver+0x6b/0x88)
+[<9fe1135b>] (register_driver+0x6b/0x88) from [<9fe00e7b>] (start_barebox+0x4b/0x80)
 [<9fe00e7b>] (start_barebox+0x4b/0x80) from [<9fe6d5a9>] (barebox_non_pbl_start+0xb5/0xdc)
 [<9fe6d5a9>] (barebox_non_pbl_start+0xb5/0xdc) from [<9fe00005>] (__bare_init_start+0x1/0xc)
-initcall-> mem_register_barebox+0x1/0x38
-initcall-> of_reserved_mem_walk+0x1/0x100
-initcall-> mmu_init+0x1/0x60
-initcall-> mem_malloc_resource+0x1/0x90
-initcall-> reset_source_init+0x1/0x40
-initcall-> usbgadget_globalvars_init+0x1/0x50
-initcall-> bootsource_init+0x1/0x38
-initcall-> cpsw_mdio_driver_register+0x1/0xc
-initcall-> register_mtdoob+0x1/0x14
-initcall-> usb_udc_init+0x1/0x14
 [<9fe70021>] (unwind_backtrace+0x1/0x84) from [<9fe111c9>] (register_device+0x9/0xfc)
-[<9fe111c9>] (register_device+0x9/0xfc) from [<9fe10d3b>] (bus_register+0x33/0x78)
-[<9fe10d3b>] (bus_register+0x33/0x78) from [<9fe3429f>] (usb_udc_init+0xb/0x14)
-[<9fe3429f>] (usb_udc_init+0xb/0x14) from [<9fe00e7b>] (start_barebox+0x4b/0x80)
+[<9fe111c9>] (register_device+0x9/0xfc) from [<9fe388f9>] (i2c_new_device+0x3d/0x68)
+[<9fe388f9>] (i2c_new_device+0x3d/0x68) from [<9fe389b7>] (of_i2c_register_devices+0x93/0xb0)
+[<9fe389b7>] (of_i2c_register_devices+0x93/0xb0) from [<9fe38d53>] (i2c_add_numbered_adapter+0xa7/0x110)
+[<9fe38d53>] (i2c_add_numbered_adapter+0xa7/0x110) from [<9fe386ef>] (i2c_omap_probe+0x313/0x468)
+[<9fe386ef>] (i2c_omap_probe+0x313/0x468) from [<9fe10fd9>] (device_probe+0x59/0xf4)
+[<9fe10fd9>] (device_probe+0x59/0xf4) from [<9fe1108b>] (match+0x17/0x30)
+[<9fe1108b>] (match+0x17/0x30) from [<9fe1135b>] (register_driver+0x6b/0x88)
+[<9fe1135b>] (register_driver+0x6b/0x88) from [<9fe00e7b>] (start_barebox+0x4b/0x80)
 [<9fe00e7b>] (start_barebox+0x4b/0x80) from [<9fe6d5a9>] (barebox_non_pbl_start+0xb5/0xdc)
 [<9fe6d5a9>] (barebox_non_pbl_start+0xb5/0xdc) from [<9fe00005>] (__bare_init_start+0x1/0xc)
-initcall-> bgpio_driver_register+0x1/0xc
-initcall-> omap_gpio_driver_register+0x1/0xc
-    probe-> 44e07000.gpio@0.of
-    probe-> 4804c000.gpio@0.of
-    probe-> 481ac000.gpio@0.of
-    probe-> 481ae000.gpio@0.of
-initcall-> ext_init+0x1/0xc
-initcall-> ramfs_init+0x1/0xc
-initcall-> devfs_init+0x1/0xc
-initcall-> ubifs_init+0x1/0x70
-initcall-> tftp_init+0x1/0x30
-initcall-> nfs_init+0x1/0x50
-initcall-> fat_init+0x1/0xc
-initcall-> board_console_init+0x1/0xa4
-initcall-> beaglebone_devices_init+0x1/0x130
-detected 'BeagleBone Black'
-initcall-> beaglebone_coredevice_in
+i2c-omap 4819c000.i2c@0.of: bus 2 rev0.11 at 100 kHz
+initcall-> omap_mmc_driver_register+0x1/0xc
+    probe-> 48060000.mmc@0.of
+[<9fe70021>] (unwind_backtrace+0x1/0x84) from [<9fe111c9>] (register_device+0x9/0xfc)
+[<9fe111c9>] (register_device+0x9/0xfc) from [<9fe3ab7f>] (mci_register+0x57/0x150)
+[<9fe3ab7f>] (mci_register+0x57/0x150) from [<9fe3af01>] (omap_mmc_probe+0x85/0xa4)
+[<9fe3af01>] (omap_mmc_probe+0x85/0xa4) from [<9fe10fd9>] (device_probe+0x59/0xf4)
+[<9fe10fd9>] (device_probe+0x59/0xf4) from [<9fe1108b>] (match+0x17/0x30)
+[<9fe1108b>] (match+0x17/0x30) from [<9fe1135b>] (register_driver+0x6b/0x88)
+[<9fe1135b>] (register_driver+0x6b/0x88) from [<9fe00e7b>] (start_barebox+0x4b/0x80)
+[<9fe00e7b>] (start_barebox+0x4b/0x80) from [<9fe6d5a9>] (barebox_non_pbl_start+0xb5/0xdc)
+[<9fe6d5a9>] (barebox_non_pbl_start+0xb5/0xdc) from [<9fe00005>] (__bare_init_start+0x1/0xc)
+omap-hsmmc 48060000.mmc@0.of: registered as mmc0
+mmc0: detected SD card version 2.0
+mmc0: registered mmc0
+    probe-> 481d8000.mmc@0.of
+[<9fe70021>] (unwind_backtrace+0x1/0x84) from [<9fe111c9>] (register_device+0x9/0xfc)
+[<9fe111c9>] (register_device+0x9/0xfc) from [<9fe3ab7f>] (mci_register+0x57/0x150)
+[<9fe3ab7f>] (mci_register+0x57/0x150) from [<9fe3af01>] (omap_mmc_probe+0x85/0xa4)
+[<9fe3af01>] (omap_mmc_probe+0x85/0xa4) from [<9fe10fd9>] (device_probe+0x59/0xf4)
+[<9fe10fd9>] (device_probe+0x59/0xf4) from [<9fe1108b>] (match+0x17/0x30)
+[<9fe1108b>] (match+0x17/0x30) from [<9fe1135b>] (register_driver+0x6b/0x88)
+[<9fe1135b>] (register_driver+0x6b/0x88) from [<9fe00e7b>] (start_barebox+0x4b/0x80)
+[<9fe00e7b>] (start_barebox+0x4b/0x80) from [<9fe6d5a9>] (barebox_non_pbl_start+0xb5/0xdc)
+[<9fe6d5a9>] (barebox_non_pbl_start+0xb5/0xdc) from [<9fe00005>] (__bare_init_start+0x1/0xc)
+omap-hsmmc 481d8000.mmc@0.of: registered as mmc1
+mmc1: detected MMC card version 5.0
+mmc1: registered mmc1
+initcall-> led_gpio_of_driver_register+0x1/0xc
+    probe-> leds.of
+initcall-> at24_driver_register+0x1/0x24
+    probe-> 24c2560
+[<9fe70021>] (unwind_backtrace+0x1/0x84) from [<9fe111c9>] (register_device+0x9/0xfc)
+[<9fe111c9>] (register_device+0x9/0xfc) from [<9fe3c2d1>] (nvmem_register+0x79/0x134)
+[<9fe3c2d1>] (nvmem_register+0x79/0x134) from [<9fe3bdf7>] (at24_probe+0x197/0x274)
+[<9fe3bdf7>] (at24_probe+0x197/0x274) from [<9fe1101b>] (device_probe+0x9b/0xf4)
+[<9fe1101b>] (device_probe+0x9b/0xf4) from [<9fe1108b>] (match+0x17/0x30)
+[<9fe1108b>] (match+0x17/0x30) from [<9fe1135b>] (register_driver+0x6b/0x88)
+[<9fe1135b>] (register_driver+0x6b/0x88) from [<9fe00e7b>] (start_barebox+0x4b/0x80)
+[<9fe00e7b>] (start_barebox+0x4b/0x80) from [<9fe6d5a9>] (barebox_non_pbl_start+0xb5/0xdc)
+[<9fe6d5a9>] (barebox_non_pbl_start+0xb5/0xdc) from [<9fe00005>] (__bare_init_start+0x1/0xc)
+    probe-> 24c2561
+[<9fe70021>] (unwind_backtrace+0x1/0x84) from [<9fe111c9>] (register_device+0x9/0xfc)
+[<9fe111c9>] (register_device+0x9/0xfc) from [<9fe3c2d1>] (nvmem_register+0x79/0x134)
+[<9fe3c2d1>] (nvmem_register+0x79/0x134) from [<9fe3bdf7>] (at24_probe+0x197/0x274)
+[<9fe3bdf7>] (at24_probe+0x197/0x274) from [<9fe1101b>] (device_probe+0x9b/0xf4)
+[<9fe1101b>] (device_probe+0x9b/0xf4) from [<9fe1108b>] (match+0x17/0x30)
+[<9fe1108b>] (match+0x17/0x30) from [<9fe1135b>] (register_driver+0x6b/0x88)
+[<9fe1135b>] (register_driver+0x6b/0x88) from [<9fe00e7b>] (start_barebox+0x4b/0x80)
+[<9fe00e7b>] (start_barebox+0x4b/0x80) from [<9fe6d5a9>] (barebox_non_pbl_start+0xb5/0xdc)
+[<9fe6d5a9>] (barebox_non_pbl_start+0xb5/0xdc) from [<9fe00005>] (__bare_init_start+0x1/0xc)
+    probe-> 24c2562
+[<9fe70021>] (unwind_backtrace+0x1/0x84) from [<9fe111c9>] (register_device+0x9/0xfc)
+[<9fe111c9>] (register_device+0x9/0xfc) from [<9fe3c2d1>] (nvmem_register+0x79/0x134)
+[<9fe3c2d1>] (nvmem_register+0x79/0x134) from [<9fe3bdf7>] (at24_probe+0x197/0x274)
+[<9fe3bdf7>] (at24_probe+0x197/0x274) from [<9fe1101b>] (device_probe+0x9b/0xf4)
+[<9fe1101b>] (device_probe+0x9b/0xf4) from [<9fe1108b>] (match+0x17/0x30)
+[<9fe1108b>] (match+0x17/0x30) from [<9fe1135b>] (register_driver+0x6b/0x88)
+[<9fe1135b>] (register_driver+0x6b/0x88) from [<9fe00e7b>] (start_barebox+0x4b/0x80)
+[<9fe00e7b>] (start_barebox+0x4b/0x80) from [<9fe6d5a9>] (barebox_non_pbl_start+0xb5/0xdc)
+[<9fe6d5a9>] (barebox_non_pbl_start+0xb5/0xdc) from [<9fe00005>] (__bare_init_start+0x1/0xc)
+    probe-> 24c2563
+[<9fe70021>] (unwind_backtrace+0x1/0x84) from [<9fe111c9>] (register_device+0x9/0xfc)
+[<9fe111c9>] (register_device+0x9/0xfc) from [<9fe3c2d1>] (nvmem_register+0x79/0x134)
+[<9fe3c2d1>] (nvmem_register+0x79/0x134) from [<9fe3bdf7>] (at24_probe+0x197/0x274)
+[<9fe3bdf7>] (at24_probe+0x197/0x274) from [<9fe1101b>] (device_probe+0x9b/0xf4)
+[<9fe1101b>] (device_probe+0x9b/0xf4) from [<9fe1108b>] (match+0x17/0x30)
+[<9fe1108b>] (match+0x17/0x30) from [<9fe1135b>] (register_driver+0x6b/0x88)
+[<9fe1135b>] (register_driver+0x6b/0x88) from [<9fe00e7b>] (start_barebox+0x4b/0x80)
+[<9fe00e7b>] (start_barebox+0x4b/0x80) from [<9fe6d5a9>] (barebox_non_pbl_start+0xb5/0xdc)
+[<9fe6d5a9>] (barebox_non_pbl_start+0xb5/0xdc) from [<9fe00005>] (__bare_init_start+0x1/0xc)
+    probe-> 24c2564
+[<9fe70021>] (unwind_backtrace+0x1/0x84) from [<9fe111c9>] (register_device+0x9/0xfc)
+[<9fe111c9>] (register_device+0x9/0xfc) from [<9fe3c2d1>] (nvmem_register+0x79/0x134)
+[<9fe3c2d1>] (nvmem_register+0x79/0x134) from [<9fe3bdf7>] (at24_probe+0x197/0x274)
+[<9fe3bdf7>] (at24_probe+0x197/0x274) from [<9fe1101b>] (device_probe+0x9b/0xf4)
+[<9fe1101b>] (device_probe+0x9b/0xf4) from [<9fe1108b>] (match+0x17/0x30)
+[<9fe1108b>] (match+0x17/0x30) from [<9fe1135b>] (register_driver+0x6b/0x88)
+[<9fe1135b>] (register_driver+0x6b/0x88) from [<9fe00e7b>] (start_barebox+0x4b/0x80)
+[<9fe00e7b>] (start_barebox+0x4b/0x80) from [<9fe6d5a9>] (barebox_non_pbl_start+0xb5/0xdc)
+[<9fe6d5a9>] (barebox_non_pbl_start+0xb5/0xdc) from [<9fe00005>] (__bare_init_start+0x1/0xc)
+initcall-> state_driver_register+0x1/0xc
+initcall-> mem_init+0x1/0x60
+[<9fe70021>] (unwind_backtrace+0x1/0x84) from [<9fe111c9>] (register_device+0x9/0xfc)
+[<9fe111c9>] (register_device+0x9/0xfc) from [<9fe3c093>] (mem_init+0x43/0x60)
+[<9fe3c093>] (mem_init+0x43/0x60) from [<9fe00e7b>] (start_barebox+0x4b/0x80)
+[<9fe00e7b>] (start_barebox+0x4b/0x80) from [<9fe6d5a9>] (barebox_non_pbl_start+0xb5/0xdc)
+[<9fe6d5a9>] (barebox_non_pbl_start+0xb5/0xdc) from [<9fe00005>] (__bare_init_start+0x1/0xc)
+    probe-> mem0
+    probe-> mem1
+initcall-> nvmem_cells_driver_register+0x1/0xc
+initcall-> omap_wdt_driver_register+0x1/0xc
+    probe-> 44e35000.wdt@0.of
+omap_wdt 44e35000.wdt@0.of: ===> 0x44e35000
+[<9fe70021>] (unwind_backtrace+0x1/0x84) from [<9fe111c9>] (register_device+0x9/0xfc)
+[<9fe111c9>] (register_device+0x9/0xfc) from [<9fe11913>] (class_register_device+0x23/0x5a)
+[<9fe11913>] (class_register_device+0x23/0x5a) from [<9fe3c925>] (watchdog_register+0x21/0x1c0)
+[<9fe3c925>] (watchdog_register+0x21/0x1c0) from [<9fe3cc85>] (omap_wdt_probe+0x4d/0xa8)
+[<9fe3cc85>] (omap_wdt_probe+0x4d/0xa8) from [<9fe10fd9>] (device_probe+0x59/0xf4)
+[<9fe10fd9>] (device_probe+0x59/0xf4) from [<9fe1108b>] (match+0x17/0x30)
+[<9fe1108b>] (match+0x17/0x30) from [<9fe1135b>] (register_driver+0x6b/0x88)
+[<9fe1135b>] (register_driver+0x6b/0x88) from [<9fe00e7b>] (start_barebox+0x4b/0x80)
+[<9fe00e7b>] (start_barebox+0x4b/0x80) from [<9fe6d5a9>] (barebox_non_pbl_start+0xb5/0xdc)
+[<9fe6d5a9>] (barebox_non_pbl_start+0xb5/0xdc) from [<9fe00005>] (__bare_init_start+0x1/0xc)
+omap_wdt 44e35000.wdt@0.of: OMAP Watchdog Timer Rev 0x01
+initcall-> of_partition_init+0x1/0x4c
+initcall-> gpmc_driver_register+0x1/0xc
+initcall-> prng_init+0x1/0x28
+initcall-> null_init+0x1/0x28
+initcall-> full_init+0x1/0x28
+initcall-> zero_init+0x1/0x28
+initcall-> md5_digest_register+0x1/0xc
+initcall-> init_net_poll+0x1/0x14
+initcall-> netconsole_init+0x1/0x100
+[<9fe70021>] (unwind_backtrace+0x1/0x84) from [<9fe111c9>] (register_device+0x9/0xfc)
+[<9fe111c9>] (register_device+0x9/0xfc) from [<9fe04dbf>] (console_register+0x4b/0x248)
+[<9fe04dbf>] (console_register+0x4b/0x248) from [<9fe5aac5>] (netconsole_init+0x5d/0x100)
+[<9fe5aac5>] (netconsole_init+0x5d/0x100) from [<9fe00e7b>] (start_barebox+0x4b/0x80)
+[<9fe00e7b>] (start_barebox+0x4b/0x80) from [<9fe6d5a9>] (barebox_non_pbl_start+0xb5/0xdc)
+[<9fe6d5a9>] (barebox_non_pbl_start+0xb5/0xdc) from [<9fe00005>] (__bare_init_start+0x1/0xc)
+netconsole: registered as netconsole-1
+initcall-> beagle_devices_init+0x1/0xe8
+initcall-> physom_devices_init+0x1/0x1c0
+initcall-> omap_bootm_barebox+0x1/0x1c
+initcall-> barebox_memory_areas_init+0x1/0x4
+initcall-> barebox_of_populate+0x1/0x14
+initcall-> of_register_memory_fixup+0x1/0x10
+initcall-> bootm_init+0x1/0x174
+initcall-> init_command_list+0x1/0x2c
+initcall-> display_meminfo+0x1/0x34
+malloc space: 0x8ff00000 -> 0x9fdfffff (size 255 MiB)
+initcall-> of_register_bootargs_fixup+0x1/0x2c
+initcall-> init_boot+0x1/0x80
+initcall-> dummy_csrc_warn+0x1/0x2c
+initcall-> device_probe_deferred+0x1/0x9c
+    probe-> 47401c00.usb@1800.of
+    probe-> 47401400.usb@1400.of
+    probe-> 47401b00.usb-phy@1b00.of
+am335x-phy-driver 47401b00.usb-phy@1b00.of: am_usbphy 90071524 enabled
+    probe-> 47401300.usb-phy@1300.of
+am335x-phy-driver 47401300.usb-phy@1300.of: am_usbphy 900715dc enabled
+    probe-> 47401400.usb@1400.of
+musb-hdrc: ConfigData=0xde (UTMI-8, dyn FIFOs, bulk combine, bulk split, HB-ISO Rx, HB-ISO Tx, SoftConn)
+musb-hdrc: MHDRC RTL version 2.0
+musb-hdrc: setup fifo_mode 4
+musb-hdrc: 28/31 max ep, 16384/16384 memory
+[<9fe70021>] (unwind_backtrace+0x1/0x84) from [<9fe111c9>] (register_device+0x9/0xfc)
+[<9fe111c9>] (register_device+0x9/0xfc) from [<9fe34679>] (usb_add_gadget+0x55/0x1a0)
+[<9fe34679>] (usb_add_gadget+0x55/0x1a0) from [<9fe309a7>] (musb_gadget_setup+0x77/0xc8)
+[<9fe309a7>] (musb_gadget_setup+0x77/0xc8) from [<9fe2ee11>] (musb_init_controller+0x4a1/0x590)
+[<9fe2ee11>] (musb_init_controller+0x4a1/0x590) from [<9fe31535>] (dsps_probe+0x165/0x194)
+[<9fe31535>] (dsps_probe+0x165/0x194) from [<9fe10fd9>] (device_probe+0x59/0xf4)
+[<9fe10fd9>] (device_probe+0x59/0xf4) from [<9fe1108b>] (match+0x17/0x30)
+[<9fe1108b>] (match+0x17/0x30) from [<9fe1111b>] (device_probe_deferred+0x77/0x9c)
+[<9fe1111b>] (device_probe_deferred+0x77/0x9c) from [<9fe00e7b>] (start_barebox+0x4b/0x80)
+[<9fe00e7b>] (start_barebox+0x4b/0x80) from [<9fe6d5a9>] (barebox_non_pbl_start+0xb5/0xdc)
+[<9fe6d5a9>] (barebox_non_pbl_start+0xb5/0xdc) from [<9fe00005>] (__bare_init_start+0x1/0xc)
+[<9fe70021>] (unwind_backtrace+0x1/0x84) from [<9fe111c9>] (register_device+0x9/0xfc)
+[<9fe111c9>] (register_device+0x9/0xfc) from [<9fe346af>] (usb_add_gadget+0x8b/0x1a0)
+[<9fe346af>] (usb_add_gadget+0x8b/0x1a0) from [<9fe309a7>] (musb_gadget_setup+0x77/0xc8)
+[<9fe309a7>] (musb_gadget_setup+0x77/0xc8) from [<9fe2ee11>] (musb_init_controller+0x4a1/0x590)
+[<9fe2ee11>] (musb_init_controller+0x4a1/0x590) from [<9fe31535>] (dsps_probe+0x165/0x194)
+[<9fe31535>] (dsps_probe+0x165/0x194) from [<9fe10fd9>] (device_probe+0x59/0xf4)
+[<9fe10fd9>] (device_probe+0x59/0xf4) from [<9fe1108b>] (match+0x17/0x30)
+[<9fe1108b>] (match+0x17/0x30) from [<9fe1111b>] (device_probe_deferred+0x77/0x9c)
+[<9fe1111b>] (device_probe_deferred+0x77/0x9c) from [<9fe00e7b>] (start_barebox+0x4b/0x80)
+[<9fe00e7b>] (start_barebox+0x4b/0x80) from [<9fe6d5a9>] (barebox_non_pbl_start+0xb5/0xdc)
+[<9fe6d5a9>] (barebox_non_pbl_start+0xb5/0xdc) from [<9fe00005>] (__bare_init_start+0x1/0xc)
+    probe-> 47401c00.usb@1800.of
+musb-hdrc: ConfigData=0xde (UTMI-8, dyn FIFOs, bulk combine, bulk split, HB-ISO Rx, HB-ISO Tx, SoftConn)
+musb-hdrc: MHDRC RTL version 2.0
+musb-hdrc: setup fifo_mode 4
+musb-hdrc: 28/31 max ep, 16384/16384 memory
+initcall-> led_blink_init+0x1/0x14
+initcall-> of_init_hostname+0x1/0x18
+initcall-> barebox_of_driver_init+0x1/0x48
+initcall-> eth_register_of_fixup+0x1/0x10
+initcall-> dhcp_global_init+0x1/0xf8
+initcall-> ifup_all_init+0x1/0x20
+initcall-> ubifs_init+0x1/0x48
+initcall-> pfc200_late_init+0x1/0x40
+initcall-> omap_env_init+0x1/0xd8
+[<9fe70021>] (unwind_backtrace+0x1/0x84) from [<9fe111c9>] (register_device+0x9/0xfc)
+[<9fe111c9>] (register_device+0x9/0xfc) from [<9fe5f835>] (mount+0xe5/0x1e0)
+[<9fe5f835>] (mount+0xe5/0x1e0) from [<9fe5f97f>] (cdev_mount_default+0x4f/0x78)
+[<9fe5f97f>] (cdev_mount_default+0x4f/0x78) from [<9fe6c20b>] (omap_env_init+0x57/0xd8)
+[<9fe6c20b>] (omap_env_init+0x57/0xd8) from [<9fe00e7b>] (start_barebox+0x4b/0x80)
+[<9fe00e7b>] (start_barebox+0x4b/0x80) from [<9fe6d5a9>] (barebox_non_pbl_start+0xb5/0xdc)
+[<9fe6d5a9>] (barebox_non_pbl_start+0xb5/0xdc) from [<9fe00005>] (__bare_init_start+0x1/0xc)
+    probe-> fat0
+initcall-> armlinux_register_image_handler+0x1/0x74
+initcall-> handoff_data_reserve+0x1/0x80
+initcall-> load_environment+0x1/0x2c
+initcall-> baltos_read_eeprom+0x1/0x2b8
+initcall-> usbgadget_autostart_init+0x1/0x18
+initcall-> populate_ethaddr+0x1/0x80
+initcalls done
+Executing '/env/init/automount'...
+Executing '/env/init/automount-ratp'...
+Executing '/env/init/ps1'...
+Executing '/env/init/usb-limit-1300'...
+changing USB current limit to 1300 mA... done
+
+Hit m for menu or any to stop autoboot:    1
+Nothing bootable found on 'bootsource'
+Booting entry 'net'
+eth0: 100Mbps full duplex link detected
+T eth0: DHCP client bound to address 192.168.0.98
+[<9fe70021>] (unwind_backtrace+0x1/0x84) from [<9fe111c9>] (register_device+0x9/0xfc)
+[<9fe111c9>] (register_device+0x9/0xfc) from [<9fe5f835>] (mount+0xe5/0x1e0)
+[<9fe5f835>] (mount+0xe5/0x1e0) from [<9fe45e25>] (do_mount+0x17d/0x1c0)
+[<9fe45e25>] (do_mount+0x17d/0x1c0) from [<9fe04845>] (execute_command+0x2d/0x58)
+[<9fe04845>] (execute_command+0x2d/0x58) from [<9fe09fef>] (run_list_real+0x60f/0x6b0)
+[<9fe09fef>] (run_list_real+0x60f/0x6b0) from [<9fe09897>] (parse_stream_outer+0xc7/0x154)
+[<9fe09897>] (parse_stream_outer+0xc7/0x154) from [<9fe099c3>] (parse_string_outer+0x9f/0xbc)
+[<9fe099c3>] (parse_string_outer+0x9f/0xbc) from [<9fe09da7>] (run_list_real+0x3c7/0x6b0)
+[<9fe09da7>] (run_list_real+0x3c7/0x6b0) from [<9fe09897>] (parse_stream_outer+0xc7/0x154)
+[<9fe09897>] (parse_stream_outer+0xc7/0x154) from [<9fe09995>] (parse_string_outer+0x71/0xbc)
+[<9fe09995>] (parse_string_outer+0x71/0xbc) from [<9fe0a227>] (run_command+0x23/0x30)
+[<9fe0a227>] (run_command+0x23/0x30) from [<9fe5e8e1>] (walk_component+0x1d5/0x2c8)
+[<9fe5e8e1>] (walk_component+0x1d5/0x2c8) from [<9fe5ea7b>] (link_path_walk.part.0+0xa7/0xf0)
+[<9fe5ea7b>] (link_path_walk.part.0+0xa7/0xf0) from [<9fe5ebfd>] (filename_lookup+0x85/0x120)
+[<9fe5ebfd>] (filename_lookup+0x85/0x120) from [<9fe5ee4f>] (stat_filename+0x2b/0x80)
+[<9fe5ee4f>] (stat_filename+0x2b/0x80) from [<9fe461ef>] (do_test+0x11f/0x36c)
+[<9fe461ef>] (do_test+0x11f/0x36c) from [<9fe04845>] (execute_command+0x2d/0x58)
+[<9fe04845>] (execute_command+0x2d/0x58) from [<9fe09fef>] (run_list_real+0x60f/0x6b0)
+[<9fe09fef>] (run_list_real+0x60f/0x6b0) from [<9fe09897>] (parse_stream_outer+0xc7/0x154)
+[<9fe09897>] (parse_stream_outer+0xc7/0x154) from [<9fe099c3>] (parse_string_outer+0x9f/0xbc)
+[<9fe099c3>] (parse_string_outer+0x9f/0xbc) from [<9fe09da7>] (run_list_real+0x3c7/0x6b0)
+[<9fe09da7>] (run_list_real+0x3c7/0x6b0) from [<9fe09cb7>] (run_list_real+0x2d7/0x6b0)
+[<9fe09cb7>] (run_list_real+0x2d7/0x6b0) from [<9fe09897>] (parse_stream_outer+0xc7/0x154)
+[<9fe09897>] (parse_stream_outer+0xc7/0x154) from [<9fe09995>] (parse_string_outer+0x71/0xbc)
+[<9fe09995>] (parse_string_outer+0x71/0xbc) from [<9fe0a0d7>] (source_script+0x47/0x6c)
+[<9fe0a0d7>] (source_script+0x47/0x6c) from [<9fe0a159>] (binfmt_sh_excute+0x17/0x22)
+[<9fe0a159>] (binfmt_sh_excute+0x17/0x22) from [<9fe028af>] (binfmt_run+0x4f/0x60)
+[<9fe028af>] (binfmt_run+0x4f/0x60) from [<9fe09fef>] (run_list_real+0x60f/0x6b0)
+[<9fe09fef>] (run_list_real+0x60f/0x6b0) from [<9fe09897>] (parse_stream_outer+0xc7/0x154)
+[<9fe09897>] (parse_stream_outer+0xc7/0x154) from [<9fe09995>] (parse_string_outer+0x71/0xbc)
+[<9fe09995>] (parse_string_outer+0x71/0xbc) from [<9fe0a227>] (run_command+0x23/0x30)
+[<9fe0a227>] (run_command+0x23/0x30) from [<9fe0eb53>] (bootscript_boot+0x5f/0xb0)
+[<9fe0eb53>] (bootscript_boot+0x5f/0xb0) from [<9fe0ed77>] (boot_entry+0x5f/0xac)
+[<9fe0ed77>] (boot_entry+0x5f/0xac) from [<9fe4b0d1>] (do_boot+0x239/0x2a0)
+[<9fe4b0d1>] (do_boot+0x239/0x2a0) from [<9fe04845>] (execute_command+0x2d/0x58)
+[<9fe04845>] (execute_command+0x2d/0x58) from [<9fe09fef>] (run_list_real+0x60f/0x6b0)
+[<9fe09fef>] (run_list_real+0x60f/0x6b0) from [<9fe09897>] (parse_stream_outer+0xc7/0x154)
+[<9fe09897>] (parse_stream_outer+0xc7/0x154) from [<9fe09995>] (parse_string_outer+0x71/0xbc)
+[<9fe09995>] (parse_string_outer+0x71/0xbc) from [<9fe0a227>] (run_command+0x23/0x30)
+[<9fe0a227>] (run_command+0x23/0x30) from [<9fe00f91>] (run_init+0xcd/0x21c)
+[<9fe00f91>] (run_init+0xcd/0x21c) from [<9fe00e67>] (start_barebox+0x37/0x80)
+[<9fe00e67>] (start_barebox+0x37/0x80) from [<9fe6d5a9>] (barebox_non_pbl_start+0xb5/0xdc)
+[<9fe6d5a9>] (barebox_non_pbl_start+0xb5/0xdc) from [<9fe00005>] (__bare_init_start+0x1/0xc)
+    probe-> tftp0
+ERROR: could not open /mnt/tftp/none-linux-am335x-bone-black: No such file or directory
+ERROR: Booting entry 'net' failed: No such file or directory
+Nothing bootable found
+barebox@TI AM335x BeagleBone black:/ WARNING: poller: 'net' took unexpectedly long: 269ms
+
