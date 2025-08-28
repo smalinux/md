@@ -259,6 +259,7 @@
   },
   "active": "db3ddfe71f74db9f",
   "lastOpenFiles": [
+    "raindrop/BBB/How I hacked a hardware crypto wallet and recovered $2 million.md",
     "barebox/dump_stack_register_device-defore.txt",
     "barebox/dump_stack_register_device.txt",
     "barebox",
@@ -303,7 +304,6 @@
     "content/bbb debian",
     "http",
     "raindrop/BBB",
-    "raindrop",
     "Pasted image 20250429001648.png"
   ]
 }
