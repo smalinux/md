@@ -22,65 +22,8 @@
               "icon": "lucide-file",
               "title": "README"
             }
-          },
-          {
-            "id": "09e76926358d0042",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Clippings/Sparse Semantic Parser.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Sparse Semantic Parser"
-            }
-          },
-          {
-            "id": "db3ddfe71f74db9f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/gpio notes.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "gpio notes"
-            }
-          },
-          {
-            "id": "fa8e750a4326632d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/gpio-ref-manual.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "gpio-ref-manual"
-            }
-          },
-          {
-            "id": "367027ab4ee3a5d4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/GPIO-cheatsheet.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "GPIO-cheatsheet"
-            }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -230,13 +173,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/gpio notes.md",
+                "file": "README.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of gpio notes"
+              "title": "Outline of README"
             }
           }
         ]
@@ -257,8 +200,18 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "db3ddfe71f74db9f",
+  "active": "b47f4cf9be424805",
   "lastOpenFiles": [
+    "Clippings/Sparse Semantic Parser.md",
+    "README.md",
+    "content/pinctrl-sunxi.c.md",
+    "content/crust sunxi.md",
+    "content/i2cdev.md",
+    "content/rtc-pcf85363.c.md",
+    "content/thermal.md",
+    "content/gpio notes.md",
+    "raindrop/BBB/Tutorials 📖  iximiuz Labs.md",
+    "raindrop/BBB/m3y54mEmbedded-Engineering-Roadmap Comprehensive roadmap for aspiring Embedded Systems Engineers, featuring a curated list of learning resources (1).md",
     "raindrop/BBB/How I hacked a hardware crypto wallet and recovered $2 million.md",
     "barebox/dump_stack_register_device-defore.txt",
     "barebox/dump_stack_register_device.txt",
@@ -268,9 +221,6 @@
     "content/GPIO-cheatsheet.md",
     "content/CHAPTER-REVEW.md",
     "content/tmux.md",
-    "README.md",
-    "Clippings/Sparse Semantic Parser.md",
-    "content/gpio notes.md",
     "content/Ch 25 GPIO.md",
     "content/gpio-ref-manual.md",
     "content/BeagleBone Black P8 and P9 GPIO Pin Reference.md",
@@ -281,13 +231,6 @@
     "raindrop/BBB/Linux Networking How The Kernel Handles A TCP Connection.md",
     "raindrop/BBB/استعباد الشعوب - Google Search.md",
     "raindrop/BBB/TCPIP for Programmers.md",
-    "content/neovim.md",
-    "content/ازاى اتعلم اللغه بسرعه.md",
-    "content/German language.md",
-    "content/كالستنكس.md",
-    "raindrop/BBB/GitHub - eunomia-bpfbpf-developer-tutorial eBPF Developer Tutorial Learning eBPF Step by Step with Examples.md",
-    "raindrop/BBB/Understanding the Structure of a Linux Kernel Device Driver - Sergio Prado, Toradex.md",
-    "content/dts.md",
     "assets/Pasted image 20250624214456.png",
     "assets/Pasted image 20250624214437.png",
     "content/barebox",

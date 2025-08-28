@@ -1,0 +1,1 @@
+https://github.com/torvalds/linux/tree/master/drivers/thermal

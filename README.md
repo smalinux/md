@@ -93,7 +93,15 @@
 - [ ] [[Design patterns]]
 - [ ] [sigrok](content/sigrok.md)
 - [ ] [neovim](content/neovim.md)
-- [ ] 
+
+
+# Linux
+- [rtc-pcf85363.c](content/rtc-pcf85363.c.md)
+- [thermal](content/thermal.md)
+- [i2cdev](content/i2cdev.md)
+- [crust sunxi](content/crust%20sunxi.md)
+- [pinctrl-sunxi.c](content/pinctrl-sunxi.c.md)
+- 
 ___
 # Arduino
 

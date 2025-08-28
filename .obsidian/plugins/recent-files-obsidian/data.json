@@ -1,6 +1,34 @@
 {
   "recentFiles": [
     {
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
+      "basename": "Sparse Semantic Parser",
+      "path": "Clippings/Sparse Semantic Parser.md"
+    },
+    {
+      "basename": "pinctrl-sunxi.c",
+      "path": "content/pinctrl-sunxi.c.md"
+    },
+    {
+      "basename": "crust sunxi",
+      "path": "content/crust sunxi.md"
+    },
+    {
+      "basename": "i2cdev",
+      "path": "content/i2cdev.md"
+    },
+    {
+      "basename": "rtc-pcf85363.c",
+      "path": "content/rtc-pcf85363.c.md"
+    },
+    {
+      "basename": "thermal",
+      "path": "content/thermal.md"
+    },
+    {
       "basename": "gpio notes",
       "path": "content/gpio notes.md"
     },
@@ -15,14 +43,6 @@
     {
       "basename": "tmux",
       "path": "content/tmux.md"
-    },
-    {
-      "basename": "README",
-      "path": "README.md"
-    },
-    {
-      "basename": "Sparse Semantic Parser",
-      "path": "Clippings/Sparse Semantic Parser.md"
     },
     {
       "basename": "gpio-ref-manual",
@@ -179,18 +199,6 @@
     {
       "basename": "udev",
       "path": "content/udev.md"
-    },
-    {
-      "basename": "USB FTDI",
-      "path": "content/USB FTDI.md"
-    },
-    {
-      "basename": "xboxdrv",
-      "path": "content/xboxdrv.md"
-    },
-    {
-      "basename": "RTC",
-      "path": "content/RTC.md"
     }
   ],
   "omittedPaths": [],
