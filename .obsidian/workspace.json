@@ -37,8 +37,7 @@
               "title": "barebox status Tracker"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -188,13 +187,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/barebox status Tracker.md",
+                "file": "README.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of barebox status Tracker"
+              "title": "Outline of README"
             }
           }
         ]
@@ -215,10 +214,11 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "b2d289c2d3f0f36a",
+  "active": "b47f4cf9be424805",
   "lastOpenFiles": [
-    "README.md",
+    "content/pwm.md",
     "content/barebox status Tracker.md",
+    "README.md",
     "Clippings/Sparse Semantic Parser.md",
     "content/pinctrl-sunxi.c.md",
     "content/crust sunxi.md",
@@ -245,7 +245,6 @@
     "content/GPIO - day01.md",
     "content/GPIO subsytem.md",
     "raindrop/BBB/Linux Networking How The Kernel Handles A TCP Connection.md",
-    "raindrop/BBB/استعباد الشعوب - Google Search.md",
     "assets/Pasted image 20250624214456.png",
     "assets/Pasted image 20250624214437.png",
     "content/barebox",

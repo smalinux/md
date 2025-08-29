@@ -1,12 +1,16 @@
 {
   "recentFiles": [
     {
-      "basename": "barebox status Tracker",
-      "path": "content/barebox status Tracker.md"
-    },
-    {
       "basename": "README",
       "path": "README.md"
+    },
+    {
+      "basename": "pwm",
+      "path": "content/pwm.md"
+    },
+    {
+      "basename": "barebox status Tracker",
+      "path": "content/barebox status Tracker.md"
     },
     {
       "basename": "Sparse Semantic Parser",
@@ -195,10 +199,6 @@
     {
       "basename": "regulator subsystem",
       "path": "content/regulator subsystem.md"
-    },
-    {
-      "basename": "Linux kernel concurrency cheat sheet",
-      "path": "content/Linux kernel concurrency cheat sheet.md"
     }
   ],
   "omittedPaths": [],

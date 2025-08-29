@@ -101,7 +101,7 @@
 - [i2cdev](content/i2cdev.md)
 - [crust sunxi](content/crust%20sunxi.md)
 - [pinctrl-sunxi.c](content/pinctrl-sunxi.c.md)
-- 
+- [pwm](content/pwm.md)
 ___
 # Arduino
 
