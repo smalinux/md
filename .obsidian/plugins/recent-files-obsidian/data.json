@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "barebox status Tracker",
+      "path": "content/barebox status Tracker.md"
+    },
+    {
       "basename": "README",
       "path": "README.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "Linux kernel concurrency cheat sheet",
       "path": "content/Linux kernel concurrency cheat sheet.md"
-    },
-    {
-      "basename": "udev",
-      "path": "content/udev.md"
     }
   ],
   "omittedPaths": [],

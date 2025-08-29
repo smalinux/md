@@ -22,8 +22,23 @@
               "icon": "lucide-file",
               "title": "README"
             }
+          },
+          {
+            "id": "b2d289c2d3f0f36a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/barebox status Tracker.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "barebox status Tracker"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -173,13 +188,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md",
+                "file": "content/barebox status Tracker.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of README"
+              "title": "Outline of barebox status Tracker"
             }
           }
         ]
@@ -200,10 +215,11 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "b47f4cf9be424805",
+  "active": "b2d289c2d3f0f36a",
   "lastOpenFiles": [
-    "Clippings/Sparse Semantic Parser.md",
     "README.md",
+    "content/barebox status Tracker.md",
+    "Clippings/Sparse Semantic Parser.md",
     "content/pinctrl-sunxi.c.md",
     "content/crust sunxi.md",
     "content/i2cdev.md",
@@ -230,7 +246,6 @@
     "content/GPIO subsytem.md",
     "raindrop/BBB/Linux Networking How The Kernel Handles A TCP Connection.md",
     "raindrop/BBB/استعباد الشعوب - Google Search.md",
-    "raindrop/BBB/TCPIP for Programmers.md",
     "assets/Pasted image 20250624214456.png",
     "assets/Pasted image 20250624214437.png",
     "content/barebox",
