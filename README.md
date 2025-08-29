@@ -102,6 +102,35 @@
 - [crust sunxi](content/crust%20sunxi.md)
 - [pinctrl-sunxi.c](content/pinctrl-sunxi.c.md)
 - [pwm](content/pwm.md)
+
+# Mailing list
+- https://lore.kernel.org/linux-pwm/
+- https://lore.kernel.org/linux-api/
+- https://lore.kernel.org/linux-firmware/
+- https://lore.kernel.org/linux-fbdev/
+- https://lore.kernel.org/dtrace/
+- https://lore.kernel.org/linux-next/
+- https://lore.kernel.org/ksummit/
+- https://lore.kernel.org/linux-modules/
+- https://lore.kernel.org/linux-kbuild/
+- https://lore.kernel.org/dm-devel/
+- https://lore.kernel.org/kdevops/
+- https://lore.kernel.org/linux-fsdevel/
+- https://lore.kernel.org/linux-watchdog/
+- https://lore.kernel.org/soc/
+- https://lore.kernel.org/linux-omap/
+- https://lore.kernel.org/linux-sunxi/
+- https://lore.kernel.org/linux-phy/
+- https://lore.kernel.org/linux-rt-devel/
+- https://lore.kernel.org/linux-kselftest/
+- https://lore.kernel.org/linux-mmc/
+- https://lore.kernel.org/kvm/
+- https://lore.kernel.org/linux-spi/
+- https://lore.kernel.org/linux-devicetree/
+- https://lore.kernel.org/linux-iio/
+- https://lore.kernel.org/lkml/
+- https://lore.kernel.org/workflows/
+- https://lore.kernel.org/linux-gpio/
 ___
 # Arduino
 
