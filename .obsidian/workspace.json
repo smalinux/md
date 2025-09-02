@@ -29,12 +29,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/errno.h.md",
+                "file": "content/tmux.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "errno.h"
+              "title": "tmux"
             }
           },
           {
@@ -115,7 +115,8 @@
               "title": "Recent Files"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -202,13 +203,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/errno.h.md",
+                "file": "content/tmux.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of errno.h"
+              "title": "Outline of tmux"
             }
           }
         ]
@@ -219,6 +220,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "bases:Create new base": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -231,8 +233,8 @@
   },
   "active": "21861ebfc2e5a0c5",
   "lastOpenFiles": [
-    "README.md",
     "content/errno.h.md",
+    "README.md",
     "content/headers.md",
     "content/pwm.md",
     "content/barebox status Tracker.md",

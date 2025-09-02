@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "tmux",
+      "path": "content/tmux.md"
+    },
+    {
       "basename": "errno.h",
       "path": "content/errno.h.md"
     },
@@ -51,10 +55,6 @@
     {
       "basename": "CHAPTER-REVEW",
       "path": "content/CHAPTER-REVEW.md"
-    },
-    {
-      "basename": "tmux",
-      "path": "content/tmux.md"
     },
     {
       "basename": "gpio-ref-manual",
