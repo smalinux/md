@@ -1,6 +1,18 @@
 {
   "recentFiles": [
     {
+      "basename": "barebox",
+      "path": "content/barebox.md"
+    },
+    {
+      "basename": "barebox status Tracker",
+      "path": "content/barebox status Tracker.md"
+    },
+    {
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
       "basename": "tmux",
       "path": "content/tmux.md"
     },
@@ -9,16 +21,8 @@
       "path": "content/errno.h.md"
     },
     {
-      "basename": "README",
-      "path": "README.md"
-    },
-    {
       "basename": "pwm",
       "path": "content/pwm.md"
-    },
-    {
-      "basename": "barebox status Tracker",
-      "path": "content/barebox status Tracker.md"
     },
     {
       "basename": "Sparse Semantic Parser",
@@ -107,10 +111,6 @@
     {
       "basename": "barebox-Sparse",
       "path": "content/barebox-Sparse.md"
-    },
-    {
-      "basename": "barebox",
-      "path": "content/barebox.md"
     },
     {
       "basename": "dotfile",
