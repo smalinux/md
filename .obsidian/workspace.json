@@ -50,9 +50,23 @@
               "icon": "lucide-file",
               "title": "barebox"
             }
+          },
+          {
+            "id": "7be3f0f815d43581",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/neovim.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "neovim"
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -203,13 +217,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/barebox.md",
+                "file": "content/neovim.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of barebox"
+              "title": "Outline of neovim"
             }
           }
         ]
@@ -231,8 +245,9 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "64d1fc1b3c15ca06",
+  "active": "7be3f0f815d43581",
   "lastOpenFiles": [
+    "content/barebox.md",
     "content/barebox status Tracker.md",
     "README.md",
     "content/tmux.md",
@@ -261,7 +276,6 @@
     "content/BeagleBone Black P8 and P9 GPIO Pin Reference.md",
     "content/GPIO.md",
     "content/GPIO - Before.md",
-    "content/GPIO - day01.md",
     "assets/Pasted image 20250624214456.png",
     "assets/Pasted image 20250624214437.png",
     "content/barebox",

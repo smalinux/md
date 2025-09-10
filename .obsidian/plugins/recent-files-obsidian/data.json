@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "neovim",
+      "path": "content/neovim.md"
+    },
+    {
       "basename": "barebox",
       "path": "content/barebox.md"
     },
@@ -83,10 +87,6 @@
     {
       "basename": "GPIO subsytem",
       "path": "content/GPIO subsytem.md"
-    },
-    {
-      "basename": "neovim",
-      "path": "content/neovim.md"
     },
     {
       "basename": "dts",
