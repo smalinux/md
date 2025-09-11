@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "xmemalign",
+      "path": "content/xmemalign.md"
+    },
+    {
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
       "basename": "neovim",
       "path": "content/neovim.md"
     },
@@ -11,10 +19,6 @@
     {
       "basename": "barebox status Tracker",
       "path": "content/barebox status Tracker.md"
-    },
-    {
-      "basename": "README",
-      "path": "README.md"
     },
     {
       "basename": "tmux",

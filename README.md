@@ -167,4 +167,7 @@ ___
 - [ ] [barebox status Tracker](content/barebox%20status%20Tracker.md)
 
 - [ ] [errno.h](content/errno.h.md) كل خطأه ومعناه
-- [ ] 
+
+
+
+[xmemalign](content/xmemalign.md)
