@@ -171,3 +171,7 @@ ___
 
 
 [xmemalign](content/xmemalign.md)
+_____________________
+# Porting new boards to barebox - pnbb tag
+- [pnbb resources](content/pnbb%20resources.md)
+- 

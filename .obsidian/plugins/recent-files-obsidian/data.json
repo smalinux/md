@@ -1,12 +1,16 @@
 {
   "recentFiles": [
     {
-      "basename": "xmemalign",
-      "path": "content/xmemalign.md"
+      "basename": "pnbb resources",
+      "path": "content/pnbb resources.md"
     },
     {
       "basename": "README",
       "path": "README.md"
+    },
+    {
+      "basename": "xmemalign",
+      "path": "content/xmemalign.md"
     },
     {
       "basename": "neovim",
@@ -195,10 +199,6 @@
     {
       "basename": "hash table",
       "path": "content/hash table.md"
-    },
-    {
-      "basename": "kprobes",
-      "path": "content/kprobes.md"
     }
   ],
   "omittedPaths": [],
