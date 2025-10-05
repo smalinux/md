@@ -93,8 +93,7 @@
               "title": "xmemalign"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -245,13 +244,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/pnbb resources.md",
+                "file": "README.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of pnbb resources"
+              "title": "Outline of README"
             }
           }
         ]
@@ -273,10 +272,10 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "97825d76c35c3260",
+  "active": "b47f4cf9be424805",
   "lastOpenFiles": [
-    "README.md",
     "content/pnbb resources.md",
+    "README.md",
     "content/xmemalign.md",
     "content/neovim.md",
     "content/barebox.md",
