@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "image-builder",
+      "path": "content/image-builder.md"
+    },
+    {
       "basename": "pnbb resources",
       "path": "content/pnbb resources.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "i2c",
       "path": "content/i2c.md"
-    },
-    {
-      "basename": "hash table",
-      "path": "content/hash table.md"
     }
   ],
   "omittedPaths": [],

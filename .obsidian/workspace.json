@@ -99,12 +99,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/pnbb resources.md",
+                "file": "content/image-builder.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "pnbb resources"
+              "title": "image-builder"
             }
           }
         ],
@@ -167,8 +167,8 @@
             "state": {
               "type": "recent-files",
               "state": {},
-              "icon": "clock",
-              "title": "Recent Files"
+              "icon": "lucide-ghost",
+              "title": "recent-files"
             }
           }
         ],
@@ -259,13 +259,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/pnbb resources.md",
+                "file": "content/image-builder.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of pnbb resources"
+              "title": "Outline of image-builder"
             }
           }
         ]
@@ -289,8 +289,8 @@
   },
   "active": "88279fd142b56b46",
   "lastOpenFiles": [
-    "README.md",
     "content/pnbb resources.md",
+    "README.md",
     "content/xmemalign.md",
     "content/neovim.md",
     "content/barebox.md",

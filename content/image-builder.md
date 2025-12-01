@@ -12,7 +12,8 @@ sudo apt-get install dosfstools git kpartx wget tree parted
 
 اعملى file.img من الـ image اللى انا بنيتها:
 ```bash
-Ubuntu@debian-12.11-iot-armhf-2025-05-25 $ sudo ./setup_sdcard.sh --img-4gb beaglebone-image --dtb beaglebone
+$ cd image-builder/deploy/debian-12.11-iot-armhf-2025-12-01
+$ sudo ./setup_sdcard.sh --img-4gb beaglebone-image --dtb beaglebone
 ```
 
 اثناء الامر اللى فات حصل انه حمل حاجات من النت, لو انا عايز كله يحصل offline:
@@ -22,7 +23,8 @@ sudo ./setup_sdcard.sh --img-4gb beaglebone-image --dtb beaglebone --distro-boot
 
 اعمل فلاش للـ sdcard
 ```bash
-bmaptool create -o beaglebone-image-4gb.img.bmap beaglebone-image-4gb.img
+$ bmaptool create -o beaglebone-image-4gb.img.bmap beaglebone-image-4gb.img
+$ sudo bmaptool copy beaglebone-image-4gb.img /dev/sdX
 ```
 
 # كل الـ options اللى موجوده فى اسكربت setup_sdcard.sh:
