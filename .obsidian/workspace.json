@@ -52,6 +52,18 @@
             }
           },
           {
+            "id": "d52d46f51105101c",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.10.6"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.10.6"
+            }
+          },
+          {
             "id": "97825d76c35c3260",
             "type": "leaf",
             "state": {
@@ -136,7 +148,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -287,13 +299,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/CHAPTER-REVEW.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of CHAPTER-REVEW"
+              "title": "Outline"
             }
           }
         ]
@@ -315,7 +326,7 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "12805b31bee7d759",
+  "active": "d52d46f51105101c",
   "lastOpenFiles": [
     "README.md",
     "content/CHAPTER-REVEW.md",
