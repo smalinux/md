@@ -1,12 +1,16 @@
 {
   "recentFiles": [
     {
-      "basename": "CHAPTER-REVEW",
-      "path": "content/CHAPTER-REVEW.md"
-    },
-    {
       "basename": "README",
       "path": "README.md"
+    },
+    {
+      "basename": "pnbb resources",
+      "path": "content/pnbb resources.md"
+    },
+    {
+      "basename": "CHAPTER-REVEW",
+      "path": "content/CHAPTER-REVEW.md"
     },
     {
       "basename": "gpio-ref-manual",
@@ -15,10 +19,6 @@
     {
       "basename": "image-builder",
       "path": "content/image-builder.md"
-    },
-    {
-      "basename": "pnbb resources",
-      "path": "content/pnbb resources.md"
     },
     {
       "basename": "xmemalign",

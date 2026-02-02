@@ -52,18 +52,6 @@
             }
           },
           {
-            "id": "d52d46f51105101c",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.10.6"
-              },
-              "icon": "lucide-book-up",
-              "title": "Release Notes 1.10.6"
-            }
-          },
-          {
             "id": "97825d76c35c3260",
             "type": "leaf",
             "state": {
@@ -147,8 +135,7 @@
               "title": "image-builder"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -207,12 +194,12 @@
             "state": {
               "type": "recent-files",
               "state": {},
-              "icon": "lucide-ghost",
-              "title": "recent-files"
+              "icon": "clock",
+              "title": "Recent Files"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -299,12 +286,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "README.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of README"
             }
           }
         ]
@@ -326,13 +314,13 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "d52d46f51105101c",
+  "active": "b47f4cf9be424805",
   "lastOpenFiles": [
+    "content/pnbb resources.md",
     "README.md",
     "content/CHAPTER-REVEW.md",
     "content/gpio-ref-manual.md",
     "content/image-builder.md",
-    "content/pnbb resources.md",
     "content/xmemalign.md",
     "content/neovim.md",
     "content/barebox.md",
