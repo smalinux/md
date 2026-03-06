@@ -1,170 +1,208 @@
-# TL;DR
+# BBB 144
 
-I've started my journey by building many Linux kernel modules and my own OS from scratch.
-Then I contributed to open-source projects like Google Summer of Code[^12], Htop [^1],  Barebox [^25], PCP [^2], and Linux kernel [^3].
+## Flashing & Scripting
 
-I needed to choose a Linux subsystem to focus on and to learn Linux through it. I chose the performance aspects of Linux. My experience with Htop and PCP made this decision for me.
+- [ ] اقرأ توزيع BBB في طريقة الـ flashing والسكريبت اللي بتعمل — تستحق الدراسة لأنها فعلاً طريقة فن، لازم أفهم التك-تك دا كويس
+- [ ] `fastboot` man page
+- [ ] اقرأ كل الـ `init scripts` بتاعت الـ Loytec حتى الآخر
+- [ ] **labgrid** — هدف عندي دلوقتي أني يكون عندي lab خاص بيا في البيت وقادر أوصل عليه من بلابتوب بتاعي، لازم معايه واتاه يكون رايح عليه
+- [ ] اشتري جهاز JTAG مع الـ BeagleBone يشتغل عليه
 
-I am passionate about performance engineering and monitoring, because it gave me the power to touch dark places in the system that nobody in other Linux subsystems could touch.
+## Embedded Linux Philosophy
 
-Currently, I'm living in Vienna and working as an embedded Linux engineer at Loytec (https://loytec.com).
+- [ ] ادرس السكربتس اللي كتبها `cirosantilli` — مؤمن أن دي أحسن أكواد اتكتبت وأنت شفتها
+- [ ] اقرأ وتعلم من السكربتس بتاعت `cirosantilli` نفسك — احسن واتعلم منها في الـ automation
 
-[^12]:https://gist.github.com/smalinux/e869b376b5c77cacdcda4cb14f027632
-[^1]: https://github.com/htop-dev/htop/commits?author=smalinux
-[^2]: https://github.com/performancecopilot/pcp/commits?author=smalinux
-[^3]: https://git.kernel.org/pub/scm/linux/kernel/git/next/linux-next.git/log/?qt=grep&q=sohaib
-[^25]: https://github.com/barebox/barebox/commits?author=smalinux
+## Yocto
 
-# Future Projects
+- [ ] دي معايشة في حد ذاتها: افهم Linux وكتابة موديولز ومتابعة اختيار الكود والقرارات اللي هم بياخدوها
+- [ ] لازم تسجل في كتابة دراسات كبيرة والتخصص فيها كبيرة، لحد ما تفتح أي داتاشيت وقراءته تكون هو بيسألك
+- [ ] اكتب ٣٠ دراسة مختلف
+- [ ] عايز أبدأ اكتب أفضل design لكل حاجة علشان أصمم أفضل embedded system موجود في الدنيا
+- [ ] عايز أفضل حاطط عيني على الناس اللي شغاله زى `bootlin` / open embedded source — لأن دي أكتر ناس نشيطة وشغّالها نشيط
+- [ ] عايز أشتري evaluation board زي الصينية اللي نيكو جابها وأحاول أكملها support — بس دلوقتي خليني في الموردات المتوفرة كويس
+- [ ] احترم وحب مرحلتك كـ جونيور: مش الهدف من المرحلة اللي أنا فيها أني أعرف حاجات كتير، الهدف من المرحلة اللي أنا فيها أني أعرف كل حاجة بكل العمق اللي موجود في الدنيا
+- [ ] أنا في بلد الـ yocto & buildroot — بعد سنة هفضل لسه في نفس الحاجات، لكن الجودة هتكون محتملة كعمق ومعلوماتي أعمق بكتير
+- [ ] لو قدرت أعمل كدا حتى وضغط الشغل والشركة ما أثرش عليا، أنا هيقى أفضل من نيكو ومن أي حد وهيقى قربت لطريق أحمد فطوم
+- [ ] هل الـ BeagleBone فيها real time clock؟ — أظن BeaglePlay فيها وشغّال
 
-- Add barebox support for Amlogic (Le Potato AML-S905X-CC)
-- ~~Board support for Kickpi k3~~
-- ~~Board support for Avenger96~~
-- WS2812B LED Matrix Control via the Linux Sound Subsystem
-- Implement secure boot into one of my boards (BeaglePlay maybe)
-- Deep dive into Linux eBPF subsystem.
-- Implement a personal Hacker News filter.
-- Create my own dream keyboard (similar to [dactyl-manuform](https://github.com/abstracthat/dactyl-manuform) with you modifications).
-- Build Labgrid setup, so I can control my boards remotely from anywhere.
-- Block Ads EVERYWHERE — Pi-hole + Tailscale VPN
-- Play with nRF52840 DK
-- pwn.college
+## Datasheets
 
+- [ ] محتاج أتقرج على فيديوهات كتير لناس بتفتح أي كسم داتاشيت وبتكتب دراسات، محتاج أكتب دراسات كتير
 
-# Previous Projects
+## Reference Manual
 
-## Board support for Kickpi k3
+- [ ] مش هتعتبر نفسك سينيور غير لما تفهم كل x335am reference manual بتاع
 
-I wrote code[^24] for the barebox bootloader to support the Rockchip KickPi K3.  
-This work helped me gain a much deeper understanding of the barebox bootloader, and I am now much better oriented within its source code. I also learned how to clean up device trees coming from downstream vendor kernels and downstream U-Boot versions.  
-I made many mistakes along the way due to oversights, but I’m glad I did—they taught me a lot.
+## Learning Resources
 
-![https://lore.barebox.org/barebox/20260116-barebox-kickpi-v1-0-d11fbccd527a@gmail.com/T/](https://raw.githubusercontent.com/smalinux/smalinux.github.io/refs/heads/main/my_assets/imgs/kickpi-k3.jpg)
+- [ ] اقرأ **ARM TF-A source code**
+- [ ] اقرأ **LWN**
+- [ ] **الإلكترونيات العالمية — وليد عيسى**
+- [ ] استعن بفيديوهات الأمبيديد العادية العربي — لأنهم أحسن ناس تفهم هاردوير وسوفتوير عميق جدا
+- [ ] كل حاجة شركة **Pengutronix** عملتها
+- [ ] كتبها بالبايثون — لأني مؤمن أن دي أحسن أكواد اتكتبت
 
-[^24]: https://lore.barebox.org/barebox/20260116-barebox-kickpi-v1-0-d11fbccd527a@gmail.com/T/#t
+## Anti-Design
 
-## Board support for Avenger96
+- [ ] معنى أنك بتحط design لمشكلة: أنك بتعزل نفسك، أنك بتخترع حلول لمشاكل أكيد قابلت حد عرّفك، علشان كدا مهم أنك تحاول تثقف نفسك وتستخدم اللي الـ community بيقدمه
+- [ ] أنت designer — بيقدمه user أنت مش بتخترع حلول لمشاكل اتحلت already، الجهل هو اللي بيخليك تعمل كدا
 
-Contributed a patch series [^23] written to Barebox bootloader for the Arrow STM32MP157A Avenger96 board. Implemented bootloader update handlers supporting both MMC and NOR flash storage devices for safe firmware update.
+## Yocto Resume & Layers
 
-![https://lore.barebox.org/barebox/20251128-avenger96-v1-0-009b13bd8df7@gmail.com/T/](https://raw.githubusercontent.com/smalinux/smalinux.github.io/refs/heads/main/my_assets/imgs/Avenger96.jpg)
+- [ ] ضيف yocto في الـ resume بتاعك
+- [ ] استخدم layer بس فيها htop فقط وتفعلها في الـ image — الهدف تتعلم تقسم كل حاجة
+- [ ] راجع ريكوردز فطوم:
+    - https://youtube.com/watch?v=kT5jlbRNgcE&si=vlkRwcoKYqnJH3hU
+    - https://youtube.com/watch?v=03sOH9GaKO4&si=K0pVyG2-dCUhP6SM
+    - https://youtube.com/watch?v=tuGyfSdMmrc&si=AiaESTfwCHoNEC5_
+    - https://youtube.com/playlist?list=PLYapDeioX1MKrbbcTiM09O33_B3qhvHGF&si=bzwHfHVWaEk56FxV
+- [ ] ارجع لجروبات الأمبيديد العربي وحاول تستفاد من كل محتوى عربي واتعمل زي قناة محمد يوسف
+- [ ] [sysprog21.github.io/lkmpg](https://sysprog21.github.io/lkmpg) — Ch 0 → Ch 5
 
-[^23]: https://lore.barebox.org/barebox/20251203-avenger96-v2-0-95f0cfa50aaa@gmail.com/
+## Log: ماذا بعد أساسيات Yocto
 
-## Google Summer of Code 2022
+- [ ] فيديوهات الـ udemy بتاعت الـ embedded Linux اللي على الكمبيوتر القديم
+- [ ] كورس الـ embedded بتاع جهاد
+- [ ] الكيرنال مليانة drivers محتاج تقرأها
+- [ ] **C for Linux** — عيش وما تقولش
 
-This project is substantial, which is why I've dedicated a separate page to it:
-[Google Summer of Code 2022 · GitHub](https://gist.github.com/smalinux/e869b376b5c77cacdcda4cb14f027632)
+## C Skills
 
-- I'd like to highlight that the lessons I've learned throughout this project are immeasurable.
-- Participating in discussions with senior programmers has been a unique and exceptional experience for me, allowing me to gain invaluable insights.
-- Additionally, working in an open-source environment has been an exceptional experience that has aided me in improving my skills.
-- Before jumping into coding, I wrote a proposal[^22] that helped me organize my workflow and significantly enhanced my productivity.
+- [ ] أطور مستواك في السي كـ 1
+- [ ] side effect — أنت ماشي كل يوم في قراءة كود كيرنال كل يوم هتلاقي
+- [ ] خد snippets & notes في كود سي يعجبك كل لما تلاقي
 
-— [LinkedIn](https://www.linkedin.com/in/smalinux/):
-![https://www.linkedin.com/in/smalinux/](https://raw.githubusercontent.com/smalinux/smalinux.github.io/master/my_assets/imgs/Screenshot-recommentation-0.png)
+## Yocto Book & Docs ✅
 
-[^22]: [PCP proposal - Google docs](https://docs.google.com/document/d/1p3I30ObcgUN60eSIvloHmSQkx71sIA_JIxFMAM2DzW4/edit?usp=sharing)
+- [ ] TODO: Linux interfacing
+- [ ] TODO: Uboot — All docs inside git repo
+- [ ] TODO: Barebox
+- [ ] TODO: Fastboot google docs / Android docs
+- [ ] TODO: Linux kernel `.config`
+- [ ] TODO: buildroot packages — أنا مش عايز أكتب كود جديد، أنا عايز أجرب كل الحاجات اللي موجوده على github وعايز أجرب أعمل integration لأي packages موجوده في الدنيا
+- [ ] TODO: Arm trusted firmware
 
-## Linux kernel modules
+## Current: Exploring BeagleBone Black ✅
 
-**I wrote 80+ simple Linux kernel modules** [^8] while working through the lkmc[^4] repository, the Linux device driver (LDD3) book and many other resources like "The Eudyptula Challenge".
+## BBB Setup Checklist
 
-> “If you didn't get angry and mad and frustrated, that means you don't care about the end result, and are doing something wrong.” — Greg KH
+- [ ] **Arm trusted firmware**
+- [ ] **Adafruit & cute electronics**
+- [ ] **Buildroot docs**
+- [ ] **Contribute to Linux kernel**
+- [ ] `man memtool` — Pengutronix
+- [ ] ذاكر pwm subsystem وجهز تضيف subsystem خاص بيه للكيرنال — شوف الناس اللي عملت custom subsystems وما اندمجتش في الكيرنال، وليه عملوا كدا
+- [ ] **OpenOCD**
+- [ ] مش حياتي ومشروعي كله يكون معتمد tool — أني يكون دايما عندي القدرة أني أقفل وأوقف أي حاجة من ضمن الحاجات الـ healthy / **Rauc** مش عايزها تحصل معايا لما أستخدم healthy لإدارة تانيه، دي حاجة مش migrate عليها بعد فترة وابقى مش عارف ولا
+- [ ] **Uboot & Barebox** — المفروض الاتنين دول تحفظهم عن ظهر قلب وتستخدمهم بشكل يومي
+- [ ] **libgpiod**
 
-- I was able to overcome my fear of navigating a large codebase like Linux and gain a deeper understanding of the operating system by learning about kernel modules.
-- Additionally, I learned how to use kernel APIs such as [hash tables](https://github.com/torvalds/linux/blob/master/include/linux/hashtable.h), which helped me acquire practical knowledge. This knowledge allowed me to make sense of the information I gained from the "operating system dinosaur" book.
-- Ultimately, this understanding enabled me to contribute to the Linux community by submitting my own simple patches [^17].
-- I helped to reproduce a memory leak issue [^18] :)
-- My name is here[^19] with the most Tested-by people :)
+## BBB Deep Dives
 
-— [Linux kernel mailing list](https://lore.kernel.org/linux-perf-users/CAP-5=fWLY2cF97P0oiMpnLzKjBJ-tC_jRyRNicSHjx6m73KrWg@mail.gmail.com/):
-![https://lore.kernel.org/linux-perf-users/CAP-5=fWLY2cF97P0oiMpnLzKjBJ-tC_jRyRNicSHjx6m73KrWg@mail.gmail.com/](https://raw.githubusercontent.com/smalinux/smalinux.github.io/master/my_assets/imgs/Screenshot-from-mem-leak.png)
+- [ ] Make your own distro, instead of poky
+- [ ] Top 30 important things with BBB setup
+- [ ] امتى أعتبر نفسي قفلت اللعبة؟
+- [ ] **Secure boot** — Google images: "secure boot beaglebone black"
+- [ ] جرب تستخدم كل الـ communication protocols اللي موجودة في الكيرنال: SPI, I2C
+- [ ] بعدين جرب تستخدم الـ subsystems اللي مش موجوده في الكيرنال
+- [ ] بعدين جرب تستخدم وتتمتع بالـ subsystems اللي موجودة في الكيرنال
+- [ ] أنك تستخدم الـ BeagleBone كـ server و client
+- [ ] **MQTT**
+- [ ] أنك تعرف كل قطعة إلكترونية موجودة على جهاز LPAD وتفهم الـ software stack والـ hardware stack
+- [ ] جرب تحط Android على BBB
+- [ ] أنك توصل شاشة touch screen
+- [ ] أنك ترجع تستخدم perf وأدوات الـ performance على BBB
+- [ ] أنك ترجع تقرأ docs لكل حاجة من البداية للنهاية
+- [ ] أنك تتعلم shell scripting كويس جدا
+- [ ] أنك تلعب مع strace أكتر
+- [ ] وأنك تفك الكيرنال وتركب بها
+- [ ] أنك تـ interface كل السينسورز اللي موجوده في الدنيا وتشتري سنسورز صيني وتوصلها وتكتبلها drivers
+- [ ] أنك تمسك كل package موجودة في buildroot وتعرف بتاعت إيه
+- [ ] أنك تجيب من chatgpt أهم ٣٠ تكنولوجي not officially supported in Linux زي Modbus
+- [ ] https://youtube.com/watch?v=mi9-rXG_Npw&si=2pm4Bzn1wbj3tlDC
+- [ ] [google/bloaty: Bloaty — a size profiler for binaries](https://github.com/google/bloaty)
 
-[^4]: https://github.com/cirosantilli/linux-kernel-module-cheat
-[^8]: https://github.com/smalinux/linux-kernel-modules-lab - https://github.com/smalinux/ps-aux
-[^17]: https://git.kernel.org/pub/scm/linux/kernel/git/next/linux-next.git/log/?qt=grep&q=sohaib
-[^18]: https://lore.kernel.org/linux-perf-users/CAP-5=fWLY2cF97P0oiMpnLzKjBJ-tC_jRyRNicSHjx6m73KrWg@mail.gmail.com/
-[^19]: https://lwn.net/Articles/880699/
+## Networking & Remote
 
+- [ ] **WireGuard**
+- [ ] تذاكر labgrid بعد
+- [ ] Send email from crontab — `apt install mailutils`
+- [ ] Understand and play with all systemd units that exist on your system and on BBB — مجرد لعب علشان تفهم كل الخدمات اللي موجودة فيه
+- [ ] اشتري جهاز بلوتوث مش مدعوم من لينكس وحاول تدعمه
 
-## Linux From Scratch (LFS)
+## More BBB Tasks
 
-**I wrote bash scripts [^6] while working through the Linux From Scratch book.** These scripts are for building my own independent Linux distribution.
+- [ ] **BBB baremetal**
+- [ ] كمل فيديوهات الـ live كلها — Yocto بتاعت
+- [ ] كمل قراءة في الـ multimedia
+- [ ] **Toradex docs**
+- [ ] **Pinmux** — GPIO modes
+- [ ] Google/YouTube: jtag beaglebone black — وكل حاجة تظهر قدامك شفّها
+- [ ] **yocto ممنوع يعدي أسبوع من غير ما تبعص** — لو عايز تبقى خبير فعلاً في Yocto لازم تروح الجيم، لازم تستخدمه كأن شركتك محتاجاه جدا — تقرأ Yocto Layer جديده — تقرأ وتجرب الـ recipes أو package جديده من الـ Yocto موجوده في الدنيا — تقرأ وتجرب كل — syntax وتبعص فيها لحد ما تستريح تماماً مع الـ docs
+- [ ] اشتري Raspberry Pi بأي من فيلهابين
 
-- I wrote this project with tears because a small mistake caused my machine to be completely erased while entering the Chroot environment.
-- Fortunately, I have crontab[^20] scripts that back up everything on my system every half hour :)
-- LFS is an intensive task that helped me gain a better understanding of how each component of Linux works, how they are interdependent, and how to configure each component according to their specific needs.
+## Initramfs & Modules
 
-— YouTube Demo [^5] & Source code [^6]
+- [ ] **WS2812B Matrix LED Panel** — individuell adressierbare RGB LED Pixels
+- [ ] **Initramfs**
+- [ ] How to load modules fast
+- [ ] How to have history after update
+- [ ] والباتشز اللي بتتبعت، هو دا القرآن بتاعك — git commit message المفروض أكتر مكان تقرأه هو الـ
 
-![https://github.com/smalinux/LFS](https://raw.githubusercontent.com/smalinux/smalinux.github.io/master/my_assets/imgs/LFS-booting-0-50-screenshot.png)
+## Build Systems
 
-[^5]: https://youtu.be/jrx1LhWCcnk
-[^6]: https://github.com/smalinux/LFS
-[^20]: [GitHub - smalinux/dotfiles](https://github.com/smalinux/dotfiles#crontab-backup)
+- [ ] أكون عارفها buildroot جوا build هدف من ضمن أهداف أن كل سنتوفه بيحصلها
+- [ ] أنا اتخلقت علشان أكون أسطورة
+- [ ] **uhubctl via labgrid**
+- [ ] **Systemd** → eudev
+- [ ] **SaltStack** — Ansible لو عايز تتحكم في عشروميت جهاز في وقت واحد فيه مشاريع مشابهة زي
+- [ ] **dfu-util**
+- [ ] لكن أكيد هجرب بيهم SoC والموقع بتاعهم مبهرين بالنسبالي — الحاجات الوحيدة التي بتمنعني هي التشتت بين الـ raspberry pi منتجات
+- [ ] **iPXE & uboot** نقطه بحث — دا سريع جدا boot مثلا وقت الـ nginx وتحمل الكيرنال من http علشان تستخدم
+- [ ] ابحث ازاي تعمل سيرفر لطيف ومنظم وتنظم الاسلاك في البيت
+- [ ] Buildroot docs — ارجع اقرأ و وثق كل حرف في
+- [ ] ارجع شارك في اللينكس كيرنال
+- [ ] في الشركة واستغل الفرصة module اقرأ وافهم كل
+- [ ] **devmem**
 
+## OTA Updates
 
-## SimOS
+- [ ] امسك أهم 5 أدوات بتعمل OTA update واستخدمهم كلهم واقرأ كل الـ docs وشوف الـ community بتاعتهم
+    - Google: OTA update embedded
+    - Google: image based update
+- [ ] Git commit template?
+- [ ] Google: Unit testing for embedded systems
+- [ ] Use labgrid for unit testing
+- [ ] محتاج أقرأ كل اللي مكتوب جوا `meta-arm` layer وعموما أي layer هستخدمها
+- [ ] نفسي أفتح الـ drivers اللي في اللينكس وامشى فيه واللي يعجبني أشتري جهاز ليه وأجرب به
+- [ ] استخدام ديبيان وشوف التسهيلات اللي هم بيعملوها واللي يفيدك أنقله
+    - Google: Beaglebone black jtag
+    - Google YouTube: Long distance GPS tracker
+    - Google: lora arduino
+- [ ] هتشتري Raspberry Pi وتحتك أكتر بالكوميونتي بتاعهم
+- [ ] ضيف env vars uboot إثناء الـ build مش مع الاسكربت
 
-Tiny operating system I wrote using pure Assembly only while working through osdev.org.
-<br>
-x86 architecture in 16-bit mode using BIOS interrupts.
+## Yocto & Integration
 
-— YouTube Demo[^21] & Source code [^7]
+- [ ] افهم كل الداتاشيت و وثق فيديو واكتب
 
-![https://github.com/smalinux/simOS](https://raw.githubusercontent.com/smalinux/smalinux.github.io/master/my_assets/imgs/SimOS-screenshot.png)
+## Watchdog (#wdt)
 
-[^7]: https://github.com/smalinux/simOS
-[^21]: https://www.youtube.com/watch?v=aUWQ_VIuKY4&ab_channel=smalinux
+- [ ] **Remote kernel debugging on device** — `lt_debug.sh` Loytec, openocd & jtag, gdbserver
+- [ ] اللعب مع الـ bitwise في barebox
+- [ ] شوف أمر الـ wd شغّال ازاي
+- [ ] طلع دايا أكتر من الداتاشيت واطبعها
+- [ ] اقرأ كل watchdog التانية بعد ما تفهم الـ core
+- [ ] **Openocd & jtag for reading all processor registers**
+- [ ] اقرأ وتنح لكل الـ dts وأفهمها هيوفر عليك وقت تعديلات
 
+## Misc
 
-## RougeLike game
-
-Classic ASCII game I wrote to improve my C language using ncurses library.
-<br>
-Fortunately, my experience with this library helped me later contribute to Htop. since this same library is used by Htop to create terminal GUI-based apps.
-
->  "These games were popularized among college students and computer programmers of the 1980s and 1990s" [^11]
-
-— YouTube Demo [^13] & Source code [^14]
-
-![https://github.com/smalinux/RougeLike](https://raw.githubusercontent.com/smalinux/smalinux.github.io/master/my_assets/imgs/Roguelike-0-56-screenshot.png)
-
-[^11]: [Roguelike - Wikipedia](https://en.wikipedia.org/wiki/Roguelike)
-[^13]: https://www.youtube.com/watch?v=4vNrjhPuxMM
-[^14]: https://github.com/smalinux/RougeLike
-
-
-## Chess bot
-
-Python script allows me to cheat while I'm playing chess online on chess.com (just for fun) which allows me to beat even top-rated players.
-<br>
-I used Stockfish APIs[^9] and Selenium to implement this project.
-<br>
-— YouTube Demo [^10].
-
-![https://youtu.be/vDjorA9yCEA](https://raw.githubusercontent.com/smalinux/smalinux.github.io/master/my_assets/imgs/chess-bot-4-46-screenshot.png)
-
-[^9]: [Stockfish - Open Source Chess Engine](https://stockfishchess.org/) - [stockfishpy · PyPI](https://pypi.org/project/stockfishpy/)
-[^10]: https://youtu.be/vDjorA9yCEA
-
-## Others
-- [GitHub - smalinux/TBSys](https://github.com/smalinux/TBSys)
-Simple CLI project was written as part of my technical interview assessment.
-
-
-# About Me
-
-Hello, my name is 𝑺𝒐𝒉𝒂𝒊𝒃 and welcome!
-
-Everyone has a hobby, and mine is exploring various life projects and challenges to improve myself. – from technical skills to fitness challenges. I was recently invited to participate in technical podcasts in Arabic, where I shared my insights on the low-level track[^15] and how to participate in Google Summer of Code[^16].
-
-I'm always happy to hear from folks, and if you're ever in the city where I'm currently residing, I would love to meet up for coffee. Don't hesitate to reach out to me at sohaib.amhmd@gmail.com if you want to get in touch. I love meeting & connecting with people, so if you're ever in the neighborhood, feel free to reach out and say hello!
-
-[^15]: https://www.youtube.com/live/JVdH_78oS50
-[^16]: https://youtu.be/zsXe-T-bV5U
-
-<!---
-## اكتب وصف friendly اكتر كانك بتحكى لحد من اصحابك - بس ابداً اول سطرين هم اللى فيهم اهم معلومات بعدين 3 او اسطر رغى ..
--->
+- [ ] **Game hacking**
+- [ ] قرأت 100 دراسة مكتوبين لـ x335am already في barebox
+- [ ] **TinyML** — Naturwissenschaften, Medizin, Informatik & Technik
+- [ ] [The Linux Memory Manager | No Starch Press](https://nostarch.com/)
+- [ ] `ads7846` driver & `ti,tsc2046` are touchscreen
+- [ ] **LLVM & Clang**
+- [ ] `barebox.bb` — You can check with: `$ bitbake-layer show-overlayed`
