@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "Untitled 1",
+      "path": "content/Untitled 1.md"
+    },
+    {
       "basename": "README",
       "path": "README.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "hrtimer.h",
       "path": "content/hrtimer.h.md"
-    },
-    {
-      "basename": "i2c",
-      "path": "content/i2c.md"
     }
   ],
   "omittedPaths": [],
