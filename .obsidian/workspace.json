@@ -149,8 +149,7 @@
               "title": "Untitled 1"
             }
           }
-        ],
-        "currentTab": 9
+        ]
       }
     ],
     "direction": "vertical"
@@ -213,8 +212,7 @@
               "title": "Recent Files"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
@@ -301,13 +299,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/Untitled 1.md",
+                "file": "README.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Untitled 1"
+              "title": "Outline of README"
             }
           }
         ]
@@ -329,7 +327,7 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "ded087857a874a2d",
+  "active": "b47f4cf9be424805",
   "lastOpenFiles": [
     "content/Untitled 1.md",
     "README.md",
