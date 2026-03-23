@@ -148,8 +148,19 @@
               "icon": "lucide-file",
               "title": "Untitled 1"
             }
+          },
+          {
+            "id": "a69a2ce6d064d7f2",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
+            }
           }
-        ]
+        ],
+        "currentTab": 10
       }
     ],
     "direction": "vertical"
@@ -286,7 +297,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       },
       {
         "id": "48b3f69d0314be7b",
@@ -299,13 +310,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of README"
+              "title": "Outline"
             }
           }
         ]
@@ -327,10 +337,12 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "b47f4cf9be424805",
+  "active": "a69a2ce6d064d7f2",
   "lastOpenFiles": [
-    "content/Untitled 1.md",
+    "daily/2026-03-23.md",
+    "daily",
     "README.md",
+    "content/Untitled 1.md",
     "content/pnbb resources.md",
     "content/CHAPTER-REVEW.md",
     "content/gpio-ref-manual.md",
@@ -357,7 +369,6 @@
     "barebox/dump_stack_register_device.txt",
     "barebox",
     "raindrop/BBB/Ron Munitz - YouTube.md",
-    "raindrop/BBB/Linux Kernel Makefiles — The Linux Kernel documentation.md",
     "assets/Pasted image 20250624214456.png",
     "assets/Pasted image 20250624214437.png",
     "content/barebox",
@@ -369,7 +380,6 @@
     "assets/Pasted image 20250429224658.png",
     "assets/Pasted image 20250429002224.png",
     "assets/Pasted image 20250429001740.png",
-    "daily",
     "assets/l7316hlvaah21.webp",
     "content/bbb debian",
     "http",

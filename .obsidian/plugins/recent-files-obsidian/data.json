@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "2026-03-23",
+      "path": "daily/2026-03-23.md"
+    },
+    {
       "basename": "README",
       "path": "README.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "proc_fs.h",
       "path": "content/proc_fs.h.md"
-    },
-    {
-      "basename": "hrtimer.h",
-      "path": "content/hrtimer.h.md"
     }
   ],
   "omittedPaths": [],
