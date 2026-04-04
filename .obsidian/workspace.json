@@ -149,8 +149,7 @@
               "title": "systemd"
             }
           }
-        ],
-        "currentTab": 9
+        ]
       }
     ],
     "direction": "vertical"
@@ -213,8 +212,7 @@
               "title": "Recent Files"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -301,13 +299,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/systemd.md",
+                "file": "README.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of systemd"
+              "title": "Outline of README"
             }
           }
         ]
@@ -329,8 +327,9 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "ded087857a874a2d",
+  "active": "b47f4cf9be424805",
   "lastOpenFiles": [
+    "content/systemd.md",
     "content/Untitled 1.md",
     "daily/2026-03-23.md",
     "daily",
@@ -360,7 +359,6 @@
     "barebox/dump_stack_register_device-defore.txt",
     "barebox/dump_stack_register_device.txt",
     "barebox",
-    "raindrop/BBB/Ron Munitz - YouTube.md",
     "assets/Pasted image 20250624214456.png",
     "assets/Pasted image 20250624214437.png",
     "content/barebox",

@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
       "basename": "systemd",
       "path": "content/systemd.md"
     },
@@ -11,10 +15,6 @@
     {
       "basename": "2026-03-23",
       "path": "daily/2026-03-23.md"
-    },
-    {
-      "basename": "README",
-      "path": "README.md"
     },
     {
       "basename": "pnbb resources",
