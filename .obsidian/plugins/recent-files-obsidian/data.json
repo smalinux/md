@@ -1,16 +1,20 @@
 {
   "recentFiles": [
     {
+      "basename": "systemd",
+      "path": "content/systemd.md"
+    },
+    {
+      "basename": "Untitled 1",
+      "path": "content/Untitled 1.md"
+    },
+    {
       "basename": "2026-03-23",
       "path": "daily/2026-03-23.md"
     },
     {
       "basename": "README",
       "path": "README.md"
-    },
-    {
-      "basename": "Untitled 1",
-      "path": "content/Untitled 1.md"
     },
     {
       "basename": "pnbb resources",
@@ -195,10 +199,6 @@
     {
       "basename": "Roadmap",
       "path": "content/Roadmap.md"
-    },
-    {
-      "basename": "proc_fs.h",
-      "path": "content/proc_fs.h.md"
     }
   ],
   "omittedPaths": [],
